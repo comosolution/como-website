@@ -27,8 +27,8 @@ export default function Hero() {
           />
           <Button
             type="tertiary"
-            text="Mehr erkunden"
             icon="arrow"
+            className="animate-bounce"
             onClick={() => scrollTo("services", 260)}
           />
         </div>

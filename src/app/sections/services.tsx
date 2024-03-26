@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Tile from "./../components/tile";
 import services from "./../data/services.json";
+import { Slide } from "react-awesome-reveal";
 
 export default function Services({
   title,
@@ -13,30 +14,32 @@ export default function Services({
   return (
     <section id="services">
       {title && <h3 className="px-8 py-4">{title}</h3>}
-      <div className="flex gap-4">
-        {services
-          .filter((service) => service.id !== filter)
-          .map((service, index) => {
-            return (
-              <Tile
-                key={index}
-                className="gap-8"
-                href={`/services/${service.icon}`}
-              >
-                <Image
-                  src={`/services/${service.icon}.svg`}
-                  alt={service.name}
-                  width={128}
-                  height={64}
-                />
-                <div className="flex flex-col gap-2">
-                  <h4 className={service.id}>{service.name}</h4>
-                  <p className="opacity-65">{service.description}</p>
-                </div>
-              </Tile>
-            );
-          })}
-      </div>
+      <Slide direction="up" triggerOnce>
+        <div className="flex gap-4">
+          {services
+            .filter((service) => service.id !== filter)
+            .map((service, index) => {
+              return (
+                <Tile
+                  key={index}
+                  className="gap-8"
+                  href={`/services/${service.icon}`}
+                >
+                  <Image
+                    src={`/services/${service.icon}.svg`}
+                    alt={service.name}
+                    width={128}
+                    height={64}
+                  />
+                  <div className="flex flex-col gap-2">
+                    <h4 className={service.id}>{service.name}</h4>
+                    <p className="opacity-65">{service.description}</p>
+                  </div>
+                </Tile>
+              );
+            })}
+        </div>
+      </Slide>
     </section>
   );
 }

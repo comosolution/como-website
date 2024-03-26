@@ -1,5 +1,5 @@
 "use client";
-import data from "./../../data/services/collaboration.json";
+import data from "../../data/services/cybersecurity.json";
 import Services from "@/app/sections/services";
 import ServiceHero from "../sections/hero";
 import Benefits from "../sections/benefits";

@@ -16,5 +16,25 @@
       "title": "Sicherheit auf Unternehmensebene",
       "sub": "Schützen Sie Ihr Unternehmen vor Datenverletzungen und unberechtigtem Zugriff mit Sicherheitsfunktionen auf Unternehmensebene, die in unsere mobilen Arbeitslösungen integriert sind. Profitieren Sie von fortgeschrittener Bedrohungserkennung und Remote-Löschfunktionen, um Risiken zu minimieren und die Einhaltung gesetzlicher Anforderungen sicherzustellen."
     }
+  ],
+  "solutions": [
+    {
+      "name": "BlackBerry UEM",
+      "sub": "Unified Endpoint Management",
+      "description": "BlackBerry UEM bietet Ihnen eine zentrale Verwaltungskonsole für die vollständiger Endpunktverwaltung und Richtlinienkontrolle für Ihre vielfältige Flotte von Geräten und Apps. Die Unified Endpoint Management Lösung basiert auf einem bewährten Ende-zu-Ende Sicherheitsmodell, das die nötige Flexibilität und Sicherheit in der mobilen Zusammenarbeit Ihrer Mitarbeiter ermöglicht."
+    },
+    {
+      "name": "BlackBerry UES",
+      "sub": "Unified Endpoint Security",
+      "description": "Unified Endpoint Security bietet Ihnen eine Lösung zur Erhöhung der Sicherheit Ihrer Anwender und Geräte, die darauf ausgerichtet ist, jeden Endpunkt, jedes Ereignis und jede Transaktion kontinuierlich zu validieren. Dadurch lassen sich Verstöße wirksam verhindern und Ihr Unternehmen mit modernster KI vor komplexen Bedrohungen schützen."
+    },
+    {
+      "name": "BlackBerry Desktop",
+      "description": "BlackBerry Desktop (einschließlich BlackBerry Access und BlackBerry Work) bietet Ihnen einen komfortablen und sicheren Zugriff auf E-Mails, Intranet, Server, Apps und Dateien über Ihr privates Windows 10 oder macOS Gerät. Ganz einfach per Single Sign-on."
+    },
+    {
+      "name": "BlackBerry Support",
+      "description": "Wir sind Ihr Ansprechpartner, wenn Ihre BlackBerry Infrastruktur nicht so arbeitet, wie sie soll. Neben der Installation und dem Betrieb der BlackBerry Lösungen erhalten Sie von uns natürlich auch Unterstützung bei Problemen und Schwierigkeiten. Sprechen Sie und einfach an."
+    }
   ]
 }

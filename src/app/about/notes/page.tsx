@@ -21,7 +21,6 @@ export default async function Page() {
                 <h4>{note.title}</h4>
               </aside>
               <article
-                className="p-6 rounded-2xl backdrop-blur-sm bg-neutral-900/10"
                 dangerouslySetInnerHTML={{
                   __html: await markdownToHtml(note.content),
                 }}

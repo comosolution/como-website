@@ -20,5 +20,5 @@ export default function Feature({
 }
 
 export function FeatureList({ children }: { children: React.ReactElement[] }) {
-  return <div className="w-1/2 flex flex-col gap-8 p-8">{children}</div>;
+  return <div className="md:w-1/2 flex flex-col gap-8 p-8">{children}</div>;
 }

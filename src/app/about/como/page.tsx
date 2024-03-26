@@ -1,11 +1,9 @@
-import Feature, { FeatureList } from "@/app/components/feature";
-import principles from "./../../data/principles.json";
 import News from "@/app/components/news";
 import Team from "./sections/team";
+import { twoColumns } from "@/app/style/style";
+import Principles from "./sections/principles";
 
 export default async function Page() {
-  const twoColumns = "flex flex-col gap-4 p-8 w-1/2";
-
   return (
     <main className="flex flex-col gap-16 p-8">
       <header className="flex flex-col text-center">
@@ -21,7 +19,7 @@ export default async function Page() {
           Mit über einem Jahrzehnt an geballter IT-Expertise und einem Team von
           Spezialisten setzen wir bei der CoMo neue Maßstäbe.
         </h5>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-col md:flex-row">
           <div className={twoColumns}>
             <h3>Unser Anspruch</h3>
             <p className="muted">
@@ -46,22 +44,7 @@ export default async function Page() {
         </div>
       </section>
       <Team />
-      <section className="flex gap-4">
-        <h2 className={twoColumns}>
-          An diesen Prinzipien lassen wir uns messen
-        </h2>
-        <FeatureList>
-          {principles.map((principle, index) => {
-            return (
-              <Feature
-                key={index}
-                title={principle.title}
-                sub={principle.sub}
-              />
-            );
-          })}
-        </FeatureList>
-      </section>
+      <Principles />
       <News />
     </main>
   );

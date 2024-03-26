@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Button({
+  className,
   href,
   disabled,
   icon,
@@ -11,6 +12,7 @@ export default function Button({
   type,
   onClick,
 }: {
+  className?: string;
   href?: string;
   disabled?: boolean;
   icon?: "arrow" | "chevron" | "mail" | "phone" | "send";
@@ -28,7 +30,7 @@ export default function Button({
 
   var button = (
     <button
-      className={`button ${type} flex items-center ${
+      className={`button ${className} ${type} flex items-center ${
         iconLeft ? "flex-row-reverse" : "flex-row"
       } gap-2 px-6 py-2 rounded-full cursor-pointer ${buttonType[type]}`}
       onClick={onClick}

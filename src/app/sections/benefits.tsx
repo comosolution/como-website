@@ -2,6 +2,7 @@
 import benefits from "./../data/benefits.json";
 import Button from "../components/button";
 import Image from "next/image";
+import { Slide } from "react-awesome-reveal";
 
 export default function Benefits() {
   return (
@@ -16,21 +17,20 @@ export default function Benefits() {
       <div className="flex">
         {benefits.map((benefit, index) => {
           return (
-            <div
-              key={index}
-              className="flex flex-col text-center items-center px-4"
-            >
-              <Image
-                src={`/illustrations/${benefit.icon}.svg`}
-                width={160}
-                height={160}
-                alt="Illustration"
-              />
-              <div className="flex flex-col gap-4">
-                <h4>{benefit.title}</h4>
-                <p className="muted">{benefit.sub}</p>
+            <Slide key={index} direction="up" delay={index * 100} triggerOnce>
+              <div className="flex flex-col text-center items-center px-4">
+                <Image
+                  src={`/illustrations/${benefit.icon}.svg`}
+                  width={160}
+                  height={160}
+                  alt="Illustration"
+                />
+                <div className="flex flex-col gap-4">
+                  <h4>{benefit.title}</h4>
+                  <p className="muted">{benefit.sub}</p>
+                </div>
               </div>
-            </div>
+            </Slide>
           );
         })}
       </div>
