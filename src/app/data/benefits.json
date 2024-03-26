@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Mehr Zeit für die wichtigen Aufgaben",
+    "sub": "Wir entlasten Ihre Mitarbeitenden und schaffen entscheidende Freiräume für Ihre Kernaufgaben.",
+    "icon": "time"
+  },
+  {
+    "title": "Mehr Fachwissen + Erfahrung für Sie",
+    "sub": "Unser Team aus Experten agiert auf dem höchsten Level und minimiert potenzielle Fehlerquellen.",
+    "icon": "idea"
+  },
+  {
+    "title": "Mehr finanzieller Spielraum",
+    "sub": "Durch passgenaue Lösungen für Ihre spezifischen Anforderungen senken wir die Betriebskosten Ihrer IT.",
+    "icon": "coin"
+  },
+  {
+    "title": "Mehr Flexibilität + Agilität",
+    "sub": "Wir helfen Ihnen schneller auf Entwicklungen und Veränderungen im Markt und in Ihrem Unternehmen zu reagieren.",
+    "icon": "compass"
+  }
+]

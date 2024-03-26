@@ -1,0 +1,14 @@
+[
+  {
+    "company": "1. FC Nürnberg e.V.",
+    "name": "Max Mustermann",
+    "img": "fcn.svg",
+    "content": "“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\nAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.”"
+  },
+  {
+    "company": "Meinl Distribution GmbH",
+    "name": "Max Mustermann",
+    "img": "meinl.png",
+    "content": "“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\nAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.”"
+  }
+]

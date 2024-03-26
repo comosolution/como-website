@@ -1,0 +1,47 @@
+import rehypeSanitize from "rehype-sanitize";
+import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
+import * as fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+export async function getMarkdown(folder: string) {
+  const noteDirectory = path.join(process.cwd(), folder);
+  const fileNames = fs.readdirSync(noteDirectory);
+
+  const allNotesData = fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(noteDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
+
+    return {
+      id: id,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      content: matterResult.content,
+    };
+  });
+  return allNotesData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
+
+export async function markdownToHtml(content: string) {
+  const file = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeSanitize)
+    .use(rehypeStringify)
+    .process(content);
+
+  return String(file);
+}

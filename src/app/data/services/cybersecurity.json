@@ -1,0 +1,20 @@
+{
+  "id": "cybersecurity",
+  "name": "Cybersecurity",
+  "title": "Maximale Sicherheit",
+  "sub": "Die Bedrohungen im Bereich der Cybersicherheit nehmen stetig zu, deshalb hat der Schutz Ihrer sensiblen Daten und Systeme oberste Priorität. Unsere umfassenden Cybersicherheitslösungen bieten eine mehrschichtige Verteidigung gegen eine Vielzahl von Bedrohungen wie Malware, Phishing-Angriffe und Datenlecks. Von der Netzwerküberwachung bis zur Endpunktsicherheit bieten wir passgenaue Lösungen, die auf die spezifischen Anforderungen Ihres Unternehmens zugeschnitten sind und Ihre digitale Infrastruktur rund um die Uhr schützen.",
+  "benefits": [
+    {
+      "title": "Proaktive Bedrohungserkennung",
+      "sub": "Bleiben Sie einen Schritt voraus in Bezug auf Cyberbedrohungen mit den proaktiven Cybersicherheitslösungen von der CoMo. Durch den Einsatz fortschrittlicher KI-gesteuerter Analysen und Bedrohungsintelligenz erkennen und mindern wir potenzielle Sicherheitsvorfälle, bevor sie eskalieren und minimieren so Ausfallzeiten und schützen Ihre geschäftskritischen Vermögenswerte."
+    },
+    {
+      "title": "Umfassender Schutz",
+      "sub": "Erzielen Sie Sicherheit in einer breiten Palette von Cyberbedrohungen, darunter Malware, Ransomware, Phishing-Angriffe und Insider-Bedrohungen. Unsere Cybersicherheitslösungen, unterstützt von BlackBerry, bieten mehrschichtige Abwehrmechanismen, die Endpunkte, Netzwerke und Cloud-Umgebungen abdecken und so einen ganzheitlichen Schutz für Ihr Unternehmen gewährleisten."
+    },
+    {
+      "title": "Regulatory Compliance",
+      "sub": "Bleiben Sie dank der Cybersicherheitslösungen von der CoMo compliant mit Industriestandards und Datenschutzgesetzen. Von der DSGVO bis zur HIPAA helfen Ihnen unsere Lösungen, komplexe Compliance-Anforderungen zu erfüllen, indem sie robuste Sicherheitskontrollen implementieren, regelmäßige Audits durchführen und detaillierte Berichtsfunktionen bereitstellen, um die Einhaltung gegenüber Regulierungsbehörden und Stakeholdern zu demonstrieren."
+    }
+  ]
+}

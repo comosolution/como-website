@@ -1,0 +1,20 @@
+{
+  "id": "mobile",
+  "name": "Mobile",
+  "title": "Mobiles Arbeiten neu gedacht",
+  "sub": "Die Art und Weise, wie wir arbeiten, verändert sich ständig, und unsere mobilen Arbeitslösungen ermöglichen es Ihnen, flexibel zu bleiben und produktiv zu sein, egal wo Sie sind. Mit sicheren Zugriffsmöglichkeiten auf Unternehmensdaten und Anwendungen von jedem Gerät aus können Ihre Mitarbeiter ihre Aufgaben problemlos erledigen – sei es im Büro, zu Hause oder unterwegs. Unsere mobilen Arbeitslösungen bieten eine nahtlose Benutzererfahrung und maximale Effizienz, ohne dabei die Sicherheit zu vernachlässigen.",
+  "benefits": [
+    {
+      "title": "Überall + jederzeit Zugriff",
+      "sub": "Befähigen Sie Ihre Mitarbeiter, von überall und zu jeder Zeit zu arbeiten, ohne die Sicherheit zu beeinträchtigen. Die mobilen Arbeitslösungen von CoMo, unterstützt durch BlackBerry UEM und UES, bieten nahtlosen Zugriff auf Unternehmensressourcen und -anwendungen und setzen gleichzeitig strenge Sicherheitsrichtlinien durch, um gegen Cyberbedrohungen zu schützen."
+    },
+    {
+      "title": "Produktivität unterwegs",
+      "sub": "Maximieren Sie die Produktivität mit intuitiven mobilen Tools, die eine nahtlose Zusammenarbeit und Aufgabenverwaltung ermöglichen. Von sicheren E-Mail-Zugängen bis hin zum Teilen und Bearbeiten von Dokumenten - unsere mobilen Arbeitslösungen optimieren Arbeitsabläufe und ermöglichen es Ihren Teams, auch unterwegs produktiv zu bleiben."
+    },
+    {
+      "title": "Sicherheit auf Unternehmensebene",
+      "sub": "Schützen Sie Ihr Unternehmen vor Datenverletzungen und unberechtigtem Zugriff mit Sicherheitsfunktionen auf Unternehmensebene, die in unsere mobilen Arbeitslösungen integriert sind. Profitieren Sie von fortgeschrittener Bedrohungserkennung und Remote-Löschfunktionen, um Risiken zu minimieren und die Einhaltung gesetzlicher Anforderungen sicherzustellen."
+    }
+  ]
+}

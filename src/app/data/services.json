@@ -1,0 +1,30 @@
+[
+  {
+    "id": "collaboration",
+    "name": "Collaboration",
+    "description": "Stärken Sie Ihr Team mit unseren Tools für nahtlose Kollaboration, um die Produktivität zu steigern und Innovationen zu fördern.",
+    "icon": "collaboration",
+    "color": "red"
+  },
+  {
+    "id": "mobile",
+    "name": "Mobile",
+    "description": "Bleiben Sie auch unterwegs verbunden und produktiv mit unseren modernen Lösungen für mobiles Arbeiten und erhöhen Sie die Effizienz überall dort, wo Sie sind.",
+    "icon": "mobile",
+    "color": "orange"
+  },
+  {
+    "id": "cybersecurity",
+    "name": "Cybersecurity",
+    "description": "Schützen Sie Ihr Unternehmen vor Cyberangriffen mit unseren KI-gestützten Sicherheitsmaßnahmen und bewahren Sie Ihre Daten und Ihren Ruf.",
+    "icon": "cybersecurity",
+    "color": "blue"
+  },
+  {
+    "id": "solutions",
+    "name": "Solutions",
+    "description": "Optimieren Sie Ihre Abläufe mit unseren maßgeschneiderten Software + Managed-IT Lösungen und konzentrieren Sie sich auf das Wachstum, während wir uns um die technischen Details kümmern.",
+    "icon": "solutions",
+    "color": "gray"
+  }
+]
