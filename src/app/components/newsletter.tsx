@@ -15,7 +15,7 @@ export default function Newsletter() {
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
   return (
-    <div className="w-1/2 flex flex-col gap-4 p-8 items-center justify-center text-center">
+    <div className="md:col-span-2 flex flex-col gap-4 p-8 items-center justify-center text-center">
       <div>
         <p className="muted">Immer informiert bleiben!</p>
         <h3>Der CoMo Newsletter</h3>
@@ -36,19 +36,17 @@ export default function Newsletter() {
           />
         </div>
         <Collapse isOpened={open}>
-          <div className="grid grid-cols-2 gap-4 px-10 py-8 overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 px-10 py-8 overflow-hidden">
             <select className="w-full appearance-none bg-black">
-              <option disabled>(Anrede)</option>
+              <option>(Anrede)</option>
               <option>Herr</option>
               <option>Frau</option>
-              <option></option>
             </select>
             <select className="w-full appearance-none bg-black">
-              <option disabled>(Titel)</option>
+              <option>(Titel)</option>
               <option>Dr.</option>
               <option>Prof.</option>
               <option>Prof. Dr.</option>
-              <option></option>
             </select>
             <input
               type="text"
@@ -70,7 +68,7 @@ export default function Newsletter() {
         text="Newsletter personalisieren"
         onClick={() => setOpen(!open)}
         icon="chevron"
-        iconRotation={open ? 180 : 0}
+        iconRotation={open ? "180" : "0"}
       />
     </div>
   );

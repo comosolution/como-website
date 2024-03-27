@@ -10,10 +10,10 @@ import Button from "./button";
 export default function Nav() {
   return (
     <header className="min-w-screen flex justify-center">
-      <nav className="fixed top-8 z-50 center rounded-full flex items-center gap-8 pl-8 pr-2 py-2 backdrop-blur-sm bg-neutral-900/80">
-        <Link href="/" className="flex items-center gap-2">
+      <nav className="fixed top-8 z-50 center rounded-full flex items-center gap-4 sm:gap-8 pl-8 pr-2 py-2 backdrop-blur-sm bg-neutral-900/80">
+        <Link href="/" className="flex items-center gap-1 sm:gap-2">
           <Image src="/logo.svg" alt="CoMo Logo" width="36" height="36" />
-          <div id="logoSmall" className="flex flex-col gap-0">
+          <div id="logoSmall" className="hidden md:flex flex-col gap-0">
             <span>Collaboration +</span>
             <span>Mobile</span>
             <span>Solution</span>
@@ -67,15 +67,13 @@ function Collapse({ content }: { content: SubNav }) {
   return (
     <span key={content.name} className="flex cursor-pointer" ref={outsideRef}>
       <span className="flex" onClick={() => setOpen(!open)}>
-        <NavItem className="link" href={content.ref}>
-          {content.name}
-        </NavItem>
+        <NavItem href={content.ref}>{content.name}</NavItem>
         <Image
           src={`/icons/chevron.svg`}
           width="24"
           height="24"
           alt="icon"
-          className={`${open && "rotate-180"} transition-all`}
+          className={`${open && "rotate-180"} transition-all hidden sm:inline`}
         />
       </span>
       {open && (
@@ -107,7 +105,9 @@ function NavItem({
     (path.includes(href) && href !== "/") || (path === "/" && href === "/");
 
   return (
-    <p className={`${active ? "text-orange-500" : ""} ${className}`}>
+    <p
+      className={`navItem ${active ? "text-orange-500" : "link"} ${className}`}
+    >
       {children}
     </p>
   );

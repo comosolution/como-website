@@ -2,12 +2,13 @@
 import Image from "next/image";
 import testimonials from "./../data/testimonials.json";
 import { Slide } from "react-awesome-reveal";
+import { twoCols } from "../style/style";
 
 export default function Testimonials() {
   return (
     <section className="flex flex-col gap-4 py-16">
       <h2 className="px-8">Innovative Teams setzen auf uns</h2>
-      <div className="flex gap-4">
+      <div className={twoCols}>
         {testimonials.map((testimonial, index) => {
           return (
             <Slide key={index} direction="up" triggerOnce>

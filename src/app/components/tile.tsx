@@ -12,7 +12,7 @@ export default function Tile({
   href?: string;
 }) {
   const style =
-    "w-1/4 rounded-2xl flex flex-col justify-between items-end gap-4 p-8 backdrop-blur-sm bg-neutral-900/70 transition-all";
+    "flex flex-col justify-between items-end gap-4 p-8 rounded-2xl backdrop-blur-sm bg-neutral-900/70 transition-all";
 
   const tile = (
     <>

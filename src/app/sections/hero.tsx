@@ -11,7 +11,7 @@ export default function Hero() {
       <Circles />
       <section
         id="hero"
-        className="relative z-5 flex flex-col gap-16 items-center w-[650px] text-center py-4"
+        className="relative z-5 flex flex-col gap-16 items-center max-w-[650px] text-center py-4"
       >
         <h1>Ihr Partner für die digitale Transformation</h1>
         <p className="muted">

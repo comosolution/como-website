@@ -9,8 +9,12 @@ export default async function Page() {
       <div className="flex flex-col gap-8 p-8">
         {notes.map(async (note) => {
           return (
-            <section key={note.id} id={note.id} className="flex gap-4 pt-32">
-              <aside className="w-1/4 h-min sticky top-16 flex flex-col gap-2 px-8">
+            <section
+              key={note.id}
+              id={note.id}
+              className="flex flex-col lg:flex-row gap-4 pt-32"
+            >
+              <aside className="lg:w-1/4 lg:h-min lg:sticky top-16 flex flex-col gap-2 px-8">
                 <p className="muted">
                   {new Date(note.date).toLocaleDateString("de-DE", {
                     year: "numeric",
@@ -21,6 +25,7 @@ export default async function Page() {
                 <h4>{note.title}</h4>
               </aside>
               <article
+                className="px-8"
                 dangerouslySetInnerHTML={{
                   __html: await markdownToHtml(note.content),
                 }}

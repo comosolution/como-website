@@ -1,6 +1,6 @@
 import News from "@/app/components/news";
 import Team from "./sections/team";
-import { twoColumns } from "@/app/style/style";
+import { twoCols } from "@/app/style/style";
 import Principles from "./sections/principles";
 
 export default async function Page() {
@@ -19,8 +19,8 @@ export default async function Page() {
           Mit über einem Jahrzehnt an geballter IT-Expertise und einem Team von
           Spezialisten setzen wir bei der CoMo neue Maßstäbe.
         </h5>
-        <div className="flex gap-4 flex-col md:flex-row">
-          <div className={twoColumns}>
+        <div className={twoCols}>
+          <div className="p-8">
             <h3>Unser Anspruch</h3>
             <p className="muted">
               Ihre Anforderungen nicht nur zu erfüllen, sondern zu übertreffen.
@@ -32,7 +32,7 @@ export default async function Page() {
               IT-Landschaft.
             </p>
           </div>
-          <div className={twoColumns}>
+          <div className="p-8">
             <h3>Das Ergebnis</h3>
             <p className="muted">
               Eine effizientere Infrastruktur und Werkzeuge, die Ihre

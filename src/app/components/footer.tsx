@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { aboutNav, serviceNav } from "../config/nav";
 import Link from "next/link";
+import { fourCols } from "../style/style";
 
 export default function Footer() {
   return (
@@ -21,8 +22,8 @@ export default function Footer() {
             <span>Solution</span>
           </div>
         </header>
-        <div className="flex gap-4">
-          <div className="px-8 w-1/2">
+        <div className={fourCols}>
+          <div className="sm:col-span-2 px-8 py-4">
             <p>CoMo Solution GmbH</p>
             <p>Marktplatz 18</p>
             <p>91207 Lauf a. d. Pegnitz</p>
@@ -38,7 +39,7 @@ export default function Footer() {
           </div>
           {[serviceNav, aboutNav].map((nav) => {
             return (
-              <div key={nav.name} className="px-8 w-1/4">
+              <div key={nav.name} className="px-8 py-4">
                 <p>{nav.name}</p>
                 {nav.entries.map((entry) => {
                   return (
@@ -51,12 +52,12 @@ export default function Footer() {
             );
           })}
         </div>
-        <div className="flex gap-4">
-          <p className="px-8 w-1/2">© 2024</p>
-          <Link href="/legal/privacy" className="px-8 w-1/4">
+        <div className={fourCols}>
+          <p className="sm:col-span-2 px-8">© 2024</p>
+          <Link href="/legal/privacy" className="px-8">
             <p>Datenschutz</p>
           </Link>
-          <Link href="/legal/imprint" className="px-8 w-1/4">
+          <Link href="/legal/imprint" className="px-8">
             <p>Impressum</p>
           </Link>
         </div>

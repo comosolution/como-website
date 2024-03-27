@@ -3,13 +3,14 @@ import Button from "./button";
 import Tile from "./tile";
 import ImageWithFallback from "./image";
 import Newsletter from "./newsletter";
+import { header } from "../style/style";
 
 export default async function News() {
   const notes = await getMarkdown("notes");
 
   return (
     <section className="flex flex-col gap-4">
-      <header className="flex justify-between items-center px-8">
+      <header className={`${header} justify-between px-8`}>
         <h2>Was gibt es Neues?</h2>
         <Button
           type="secondary"
@@ -17,7 +18,7 @@ export default async function News() {
           href="/about/notes"
         />
       </header>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {notes.map((note, index) => {
           return (
             // only show last 2 notes

@@ -18,9 +18,9 @@ export default function ServiceHero({ data }: { data: Service }) {
         </div>
         <h1>{data.title}</h1>
       </header>
-      <section className="flex items-center gap-4 px-8 py-32">
-        <h5 className="w-3/4 muted">{data.sub}</h5>
-        <div className="w-1/4 flex flex-col items-end gap-8">
+      <section className="flex flex-col lg:flex-row lg:items-center gap-16 lg:gap-4 px-8 py-32">
+        <h5 className="lg:w-3/4 muted">{data.sub}</h5>
+        <div className="lg:w-1/4 flex flex-col lg:items-end gap-8">
           <p className="muted">
             <b>Unsere Partner</b>
           </p>

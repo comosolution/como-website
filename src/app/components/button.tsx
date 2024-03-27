@@ -6,7 +6,6 @@ export default function Button({
   href,
   disabled,
   icon,
-  iconLeft,
   iconRotation,
   text,
   type,
@@ -16,8 +15,7 @@ export default function Button({
   href?: string;
   disabled?: boolean;
   icon?: "arrow" | "chevron";
-  iconLeft?: boolean;
-  iconRotation?: number;
+  iconRotation?: string;
   text?: string;
   type: "primary" | "secondary" | "tertiary" | "contact";
   onClick?: () => void;
@@ -32,9 +30,7 @@ export default function Button({
 
   var button = (
     <button
-      className={`button ${className} ${type} flex items-center ${
-        iconLeft ? "flex-row-reverse" : "flex-row"
-      } gap-2 px-6 py-2 rounded-full cursor-pointer ${buttonType[type]}`}
+      className={`button ${className} ${type} flex items-center gap-2 px-6 py-2 rounded-full cursor-pointer ${buttonType[type]}`}
       onClick={onClick}
       disabled={disabled}
     >
@@ -45,9 +41,9 @@ export default function Button({
           width={24}
           height={24}
           alt={icon || "icon"}
-          className={`rotate-[${(
-            iconRotation || 0
-          ).toString()}deg] transition-all`}
+          className={
+            iconRotation ? `rotate-[${iconRotation}deg] transition-all` : ""
+          }
         />
       )}
     </button>

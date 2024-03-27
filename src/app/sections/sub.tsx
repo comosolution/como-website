@@ -35,7 +35,9 @@ export default function Sub() {
 
   return (
     <section className="relative z-5 flex gap-2 pt-16">
-      <h2 className="sticky self-start top-1/2">Wir sind die CoMo. Wir </h2>
+      <h2 className="sticky self-start top-1/2">
+        <span className="hidden lg:inline">Wir sind die CoMo. </span>Wir{" "}
+      </h2>
       <div>
         {serviceList.map((service, index) => {
           return (

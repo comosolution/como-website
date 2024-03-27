@@ -3,6 +3,7 @@ import Image from "next/image";
 import Tile from "./../components/tile";
 import services from "./../data/services.json";
 import { Slide } from "react-awesome-reveal";
+import { fourCols } from "../style/style";
 
 export default function Services({
   title,
@@ -15,7 +16,7 @@ export default function Services({
     <section id="services">
       {title && <h3 className="px-8 py-4">{title}</h3>}
       <Slide direction="up" triggerOnce>
-        <div className="flex gap-4">
+        <div className={fourCols}>
           {services
             .filter((service) => service.id !== filter)
             .map((service, index) => {

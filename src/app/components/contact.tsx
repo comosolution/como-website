@@ -1,3 +1,4 @@
+import { header } from "../style/style";
 import Button from "./button";
 
 export default function Contact() {
@@ -10,7 +11,7 @@ export default function Contact() {
         <h3 className="muted">Maximieren Sie Ihr digitales Potenzial</h3>
         <h1>Wir sind bereit, gemeinsam mit Ihnen durchzustarten.</h1>
       </div>
-      <div className="flex gap-2">
+      <div className={header}>
         <Button
           type="primary"
           text="info@como.solution.de"

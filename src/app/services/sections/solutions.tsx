@@ -6,7 +6,7 @@ export default function Solutions({ data }: { data: Service }) {
     <section className="flex flex-col gap-4 px-8">
       <h3>Mögliche Lösungen für Sie</h3>
       <div className="flex gap-4">
-        <aside className="w-1/4 h-min sticky top-8 flex flex-col gap-2">
+        <aside className="hidden w-1/4 h-min sticky top-8 lg:flex flex-col gap-2">
           {data.solutions.map((solution, index) => {
             return (
               <p
@@ -24,7 +24,7 @@ export default function Solutions({ data }: { data: Service }) {
         <div>
           {data.solutions.map((solution, index) => {
             return (
-              <article key={index} className="p-4">
+              <article key={index} className="lg:p-4">
                 <h2 id={solution.name.replaceAll(" ", "-").toLowerCase()}>
                   {solution.name}
                 </h2>
