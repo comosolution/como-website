@@ -15,17 +15,19 @@ export default function Button({
   className?: string;
   href?: string;
   disabled?: boolean;
-  icon?: "arrow" | "chevron" | "mail" | "phone" | "send";
+  icon?: "arrow" | "chevron";
   iconLeft?: boolean;
   iconRotation?: number;
   text?: string;
-  type: "primary" | "secondary" | "tertiary";
+  type: "primary" | "secondary" | "tertiary" | "contact";
   onClick?: () => void;
 }) {
   const buttonType = {
     primary: "bg-orange-500 text-white hover:bg-orange-600",
     secondary: "bg-white text-black",
     tertiary: "bg-transparent text-white hover:bg-neutral-800/80",
+    contact:
+      "font-normal text-white/80 border-solid border border-orange-500 hover:bg-orange-600/10",
   };
 
   var button = (
@@ -43,9 +45,9 @@ export default function Button({
           width={24}
           height={24}
           alt={icon || "icon"}
-          className={`rotate-[${
-            (iconRotation || 0).toString
-          }deg] transition-all`}
+          className={`rotate-[${(
+            iconRotation || 0
+          ).toString()}deg] transition-all`}
         />
       )}
     </button>

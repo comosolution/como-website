@@ -59,7 +59,7 @@ select {
 input:not(.ghost),
 select {
   padding: 0.4rem 1rem;
-  border-bottom: 1px solid rgb(var(--orange-rgb));
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.8);
 }
 
 button[disabled] {
@@ -76,12 +76,14 @@ select {
   margin-right: 2rem;
 }
 
-a:not(.tile) {
+a:not(.tile),
+.link {
   color: rgba(var(--foreground-rgb), 0.7);
   transition: 300ms color ease-in-out;
 }
 
-a:not(.tile):hover {
+a:not(.tile):hover,
+.link:hover {
   color: rgba(var(--orange-rgb), 1);
 }
 

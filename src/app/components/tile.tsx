@@ -18,15 +18,13 @@ export default function Tile({
     <>
       <div className={`flex flex-col ${className}`}>{children}</div>
       {href && (
-        <Link href={href}>
-          <Image
-            src="/icons/arrow.svg"
-            width="32"
-            height="32"
-            alt="arrow"
-            className="-rotate-90"
-          />
-        </Link>
+        <Image
+          src="/icons/arrow.svg"
+          width="32"
+          height="32"
+          alt="arrow"
+          className="-rotate-90"
+        />
       )}
     </>
   );

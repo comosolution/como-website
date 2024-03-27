@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
-import { aboutNav, legalNav, serviceNav } from "../config/nav";
-import { scrollTo } from "../utils/utils";
+import { aboutNav, serviceNav } from "../config/nav";
+import Link from "next/link";
 
 export default function Footer() {
-  const column = "px-8 w-1/4";
-
   return (
     <div className="relative">
       {/* eslint-disable-next-line @next/next/no-img-element*/}
@@ -24,29 +22,29 @@ export default function Footer() {
           </div>
         </header>
         <div className="flex gap-4">
-          <div className={column}>
+          <div className="px-8 w-1/2">
             <p>CoMo Solution GmbH</p>
             <p>Marktplatz 18</p>
             <p>91207 Lauf a. d. Pegnitz</p>
-            <a href="mailto:info@como-solution.de">
+            <Link href="mailto:info@como-solution.de">
               <p>info@como-solution.de</p>
-            </a>
-            <a href="tel:+4991231833700">
+            </Link>
+            <Link href="tel:+4991231833700">
               <p>+49 9123 18337-00</p>
-            </a>
-            <a href="https://www.linkedin.com/company/como-solution-gmbh">
+            </Link>
+            <Link href="https://www.linkedin.com/company/como-solution-gmbh">
               <p>LinkedIn</p>
-            </a>
+            </Link>
           </div>
-          {[serviceNav, aboutNav, legalNav].map((nav) => {
+          {[serviceNav, aboutNav].map((nav) => {
             return (
-              <div key={nav.name} className={column}>
+              <div key={nav.name} className="px-8 w-1/4">
                 <p>{nav.name}</p>
                 {nav.entries.map((entry) => {
                   return (
-                    <a key={entry.name} href={entry.ref}>
+                    <Link key={entry.name} href={entry.ref}>
                       <p>{entry.name}</p>
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -55,19 +53,12 @@ export default function Footer() {
         </div>
         <div className="flex gap-4">
           <p className="px-8 w-1/2">© 2024</p>
-          <p
-            className="px-8 w-1/2 flex gap-2 cursor-pointer muted hover:text-orange-600 transition-all"
-            onClick={() => scrollTo("top")}
-          >
-            Nach oben
-            <Image
-              src="/icons/arrow.svg"
-              width="20"
-              height="20"
-              alt="arrow"
-              className="rotate-180"
-            />
-          </p>
+          <Link href="/legal/privacy" className="px-8 w-1/4">
+            <p>Datenschutz</p>
+          </Link>
+          <Link href="/legal/imprint" className="px-8 w-1/4">
+            <p>Impressum</p>
+          </Link>
         </div>
       </footer>
     </div>

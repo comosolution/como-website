@@ -31,7 +31,7 @@ export default function Nav() {
               <Button
                 key={entry.name}
                 text={entry.name}
-                type="primary"
+                type="contact"
                 onClick={() => scrollTo("contact")}
               />
             );
@@ -67,9 +67,9 @@ function Collapse({ content }: { content: SubNav }) {
   return (
     <span key={content.name} className="flex cursor-pointer" ref={outsideRef}>
       <span className="flex" onClick={() => setOpen(!open)}>
-        <a>
-          <NavItem href={content.ref}>{content.name}</NavItem>
-        </a>
+        <NavItem className="link" href={content.ref}>
+          {content.name}
+        </NavItem>
         <Image
           src={`/icons/chevron.svg`}
           width="24"
@@ -95,14 +95,20 @@ function Collapse({ content }: { content: SubNav }) {
 
 function NavItem({
   children,
+  className,
   href,
 }: {
   children: React.ReactNode;
+  className?: string;
   href: string;
 }) {
   const path = usePathname();
   const active =
     (path.includes(href) && href !== "/") || (path === "/" && href === "/");
 
-  return <p className={active ? "text-orange-500" : ""}>{children}</p>;
+  return (
+    <p className={`${active ? "text-orange-500" : ""} ${className}`}>
+      {children}
+    </p>
+  );
 }

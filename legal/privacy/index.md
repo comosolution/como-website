@@ -9,7 +9,7 @@ Geschäftsführer der CoMo Solution GmbH
 Marktplatz 18  
 91207 Lauf an der Pegnitz  
 Telefon: +49 9123 18377-00  
-Mail: info@como-solution.de
+Mail: [info@como-solution.de](info@como-solution.de)
 
 ## Unser Datenschutzbeauftragter
 
@@ -17,7 +17,7 @@ Der Datenschutzbeauftragte des Verantwortlichen ist:
 
 Unternehmens- & Personalberatung  
 Bernhard Höllerer  
-Mail: datenschutz@como-solution.de
+Mail: [datenschutz@como-solution.de](datenschutz@como-solution.de)
 
 ## Allgemeines zur Datenverarbeitung
 

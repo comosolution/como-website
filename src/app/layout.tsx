@@ -4,6 +4,7 @@ import "./style/globals.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import FAB from "./components/fab";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={`${inter.className} pt-32`} id="top">
         <Nav />
+        <FAB />
         {children}
         <Contact />
         <Footer />

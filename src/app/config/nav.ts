@@ -4,8 +4,8 @@ export const serviceNav = {
   entries: [
     { name: "Collaboration", ref: "/services/collaboration" },
     { name: "Mobile", ref: "/services/mobile" },
-    { name: "Cybersecurity", ref: "/services/cybersecurity" },
     { name: "Solutions", ref: "/services/solutions" },
+    { name: "Cybersecurity", ref: "/services/cybersecurity" },
   ],
 };
 
@@ -15,14 +15,6 @@ export const aboutNav = {
   entries: [
     { name: "Unternehmen", ref: "/about/como" },
     { name: "Notizen", ref: "/about/notes" },
-  ],
-};
-
-export const legalNav = {
-  name: "Rechtliches",
-  entries: [
-    { name: "Impressum", ref: "/legal/imprint" },
-    { name: "Datenschutzhinweis", ref: "/legal/privacy" },
   ],
 };
 
