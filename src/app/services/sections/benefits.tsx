@@ -9,11 +9,11 @@ export default function Benefits({ data }: { data: Service }) {
       {data.benefits.map((benefit, index) => {
         return (
           <Slide key={index} direction="up" delay={100 * index} triggerOnce>
-            <div className="flex flex-col gap-4 ">
+            <div className="flex flex-col gap-4">
               <Image
-                src="/illustrations/reward.svg"
+                src={`/illustrations/circle-${index + 1}.svg`}
                 alt="Reward"
-                width={120}
+                width={140}
                 height={140}
               />
               <h3>{benefit.title}</h3>

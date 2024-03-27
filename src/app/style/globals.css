@@ -214,14 +214,6 @@ article img {
   color: rgb(var(--gray-rgb));
 }
 
-.bg-gradient {
-  background-image: radial-gradient(
-    circle farthest-corner at 50% 100%,
-    rgba(var(--orange-rgb), 1) 14%,
-    rgba(var(--orange-rgb), 0) 50%
-  );
-}
-
 .ReactCollapse--collapse {
-  transition: height 300ms;
+  transition: height 300ms ease-in-out;
 }

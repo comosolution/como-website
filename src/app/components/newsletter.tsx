@@ -2,7 +2,6 @@
 import { Collapse } from "react-collapse";
 import { ChangeEvent, useState } from "react";
 import Button from "./button";
-import Image from "next/image";
 
 export default function Newsletter() {
   const [open, setOpen] = useState(false);
@@ -16,15 +15,7 @@ export default function Newsletter() {
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
   return (
-    <div className="w-1/2 flex flex-col gap-4 p-8 items-center text-center">
-      <Collapse isOpened={!open}>
-        <Image
-          src="/illustrations/mail.svg"
-          width={240}
-          height={240}
-          alt="Plane"
-        />
-      </Collapse>
+    <div className="w-1/2 flex flex-col gap-4 p-8 items-center justify-center text-center">
       <div>
         <p className="muted">Immer informiert bleiben!</p>
         <h3>Der CoMo Newsletter</h3>
@@ -47,15 +38,17 @@ export default function Newsletter() {
         <Collapse isOpened={open}>
           <div className="grid grid-cols-2 gap-4 px-10 py-8 overflow-hidden">
             <select className="w-full appearance-none bg-black">
-              <option></option>
+              <option disabled>(Anrede)</option>
               <option>Herr</option>
               <option>Frau</option>
+              <option></option>
             </select>
             <select className="w-full appearance-none bg-black">
-              <option></option>
+              <option disabled>(Titel)</option>
               <option>Dr.</option>
               <option>Prof.</option>
               <option>Prof. Dr.</option>
+              <option></option>
             </select>
             <input
               type="text"

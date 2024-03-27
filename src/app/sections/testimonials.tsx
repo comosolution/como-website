@@ -10,11 +10,7 @@ export default function Testimonials() {
       <div className="flex gap-4">
         {testimonials.map((testimonial, index) => {
           return (
-            <Slide
-              key={index}
-              direction={index === 0 ? "left" : "right"}
-              triggerOnce
-            >
+            <Slide key={index} direction="up" triggerOnce>
               <div className="flex flex-col gap-8 p-8">
                 <Image
                   key={index}

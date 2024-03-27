@@ -5,7 +5,7 @@ import { Service } from "@/app/types";
 
 export default function ServiceHero({ data }: { data: Service }) {
   return (
-    <div className="bg-gradient pb-8">
+    <div className="pb-8">
       <header className="px-8">
         <div className="flex items-end gap-2">
           <Image
@@ -40,7 +40,7 @@ export default function ServiceHero({ data }: { data: Service }) {
             })}
         </div>
       </section>
-      <ServicesOverview id={data.id} />
+      <ServicesOverview />
     </div>
   );
 }

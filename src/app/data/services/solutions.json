@@ -5,7 +5,7 @@
   "sub": "Die Verwaltung Ihrer IT-Infrastruktur kann eine komplexe und zeitaufwändige Aufgabe sein. Unsere Managed-IT Lösungen nehmen Ihnen diese Last ab, indem wir die Verwaltung, Überwachung und Wartung Ihrer Systeme und Anwendungen übernehmen. Von der Anwendungsentwicklung über Cloud-Hosting bis zur Datenbanksicherung bieten wir einen umfassenden Service, der sicherstellt, dass Ihre IT-Infrastruktur stets reibungslos funktioniert und Ihren geschäftlichen Anforderungen entspricht. Mit unserem Expertenteam an Ihrer Seite können Sie sich darauf verlassen, dass Ihre IT-Systeme optimal funktionieren, damit Sie sich auf das Wachstum Ihres Unternehmens konzentrieren können.",
   "benefits": [
     {
-      "title": "Maßgeschneiderte Lösungen",
+      "title": "Passgenaue Lösungen",
       "sub": "Erschließen Sie das volle Potenzial Ihrer IT-Infrastruktur mit den maßgeschneiderten Managed-IT- und Softwarelösungen von der CoMo. Ob Sie Hilfe bei der Infrastrukturverwaltung, der Anwendungsentwicklung oder der Cloud-Migration benötigen, unser erfahrenes Team arbeitet eng mit Ihnen zusammen, um Ihre einzigartigen Anforderungen zu verstehen und maßgeschneiderte Lösungen zu liefern, die sich mit Ihren Geschäftszielen decken."
     },
     {
@@ -14,23 +14,35 @@
     },
     {
       "title": "Agilität + Innovation",
-      "sub": "Bleiben Sie mit agilen, innovativen Softwarelösungen, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten sind, einen Schritt voraus. Ob Sie manuelle Prozesse digitalisieren, kundenorientierte Anwendungen entwickeln oder disparate Systeme integrieren möchten - die Individualsoftwareentwicklungsdienste von der CoMo ermöglichen es Ihnen, in einem wettbewerbsintensiven Markt zu innovieren und sich zu differenzieren."
+      "sub": "Bleiben Sie mit agilen, innovativen Softwarelösungen, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten sind, einen Schritt voraus. Ob Sie manuelle Prozesse digitalisieren, kundenorientierte Anwendungen entwickeln oder disparate Systeme integrieren möchten - die CoMo ermöglicht es Ihnen, in einem wettbewerbsintensiven Markt zu innovieren und sich zu differenzieren."
     }
   ],
   "solutions": [
     {
       "name": "Managed Services",
-      "description": "Nehmen Sie unser umfangreiches Know-how und langjährigen Erfahrungen in Anspruch, nutzen Sie die CoMo Solution Managed Services. Es ergeben sich Freiräume, die Sie für Ihre eigentlichen Aufgaben nutzen können. Sie sprechen mit unseren professionellen Beratern und Administratoren auf Augenhöhe und planen gemeinsam den Einsatz der auf Ihre Anforderungen maßgeschneiderten Dienste. Wir bieten Ihnen Services auf verschiedenen Ebenen und auf Ihre Anforderungen passenden Rahmenbedingungen. Sei es die Administration und Instandhaltung Ihrer HCL Notes und Domino Infrastruktur oder das Mobile Device Management und die Endpoint Security für die im Unternehmen eingesetzten mobilen Endpunkte. Darüber hinaus ermöglichen wir das Outtasking Ihres IT-Service Desks, also wir übernehmen und organisieren den Support für die Mitarbeitenden in Ihrem Unternehmen. Gemeinsam besprechen wir nach eingehender Analyse den Leistungsumfang unserer Dienste, wie z. B. Stundenkontingente für regelmäßige Wartungen, die Reaktionszeiten bei Störungen durch unser Fachpersonal oder die Lösung Ihres internen Service Desks mit unterschiedlichen Service Levels. Konzentrieren Sie sich wieder auf Ihr Unternehmen, bringen Sie es voran – wir unterstützen Sie dabei."
+      "description": [
+        "Nehmen Sie unser umfangreiches Know-how und langjährigen Erfahrungen in Anspruch, nutzen Sie die CoMo  Managed Services. Es ergeben sich Freiräume, die Sie für Ihre eigentlichen Aufgaben nutzen können. Sie sprechen mit unseren professionellen Beratern und Administratoren auf Augenhöhe und planen gemeinsam den Einsatz der auf Ihre Anforderungen maßgeschneiderten Dienste.",
+        "Wir bieten Ihnen Services auf verschiedenen Ebenen und auf Ihre Anforderungen passenden Rahmenbedingungen. Sei es die Administration und Instandhaltung Ihrer HCL Notes und Domino Infrastruktur oder das Mobile Device Management und die Endpoint Security für die im Unternehmen eingesetzten mobilen Endpunkte.",
+        "Darüber hinaus ermöglichen wir das Outtasking Ihres IT-Service Desks, also wir übernehmen und organisieren den Support für die Mitarbeitenden in Ihrem Unternehmen. Gemeinsam besprechen wir nach eingehender Analyse den Leistungsumfang unserer Dienste, wie z. B. Stundenkontingente für regelmäßige Wartungen, die Reaktionszeiten bei Störungen durch unser Fachpersonal oder die Lösung Ihres internen Service Desks mit unterschiedlichen Service Levels.",
+        "Konzentrieren Sie sich wieder auf Ihr Unternehmen, bringen Sie es voran – wir unterstützen Sie dabei."
+      ]
     },
     {
       "name": "MOLIRIS Time",
       "sub": "Mobile Zeiterfassung auf dem Smartphone",
-      "description": "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen, egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche. Mit dem Smartphone können einzelne Personen oder ganze Gruppen einfach und intuitiv an- und abgemeldet werden. Die erfassten Zeiten werden nach Kostenstellen aufgeschlüsselt und direkt an die Buchhaltung zur Verarbeitung und Abrechnung weitergeleitet. Die Gefahren von Manipulationen werden durch Sicherheitsmechanismen und Eskalationsstufen minimiert, die auch die Einhaltung von definierten Abläufen der Zeiterfassung sicherstellen. Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
+      "description": [
+        "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen – egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche.",
+        "Mit dem Smartphone können einzelne Personen oder ganze Gruppen einfach und intuitiv an- und abgemeldet werden. Die erfassten Zeiten werden nach Kostenstellen aufgeschlüsselt und direkt an die Buchhaltung zur Verarbeitung und Abrechnung weitergeleitet. Die Gefahren von Manipulationen werden durch Sicherheitsmechanismen und Eskalationsstufen minimiert, die auch die Einhaltung von definierten Abläufen der Zeiterfassung sicherstellen.",
+        "Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
+      ]
     },
     {
       "name": "MOLIRIS Vote",
       "sub": "Sichere Termin- und Online-Umfragen für Ihr Unternehmen",
-      "description": "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmeninternen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen. Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
+      "description": [
+        "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmen-internen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen.",
+        "Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
+      ]
     }
   ]
 }

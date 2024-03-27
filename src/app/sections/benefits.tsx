@@ -18,9 +18,9 @@ export default function Benefits() {
         {benefits.map((benefit, index) => {
           return (
             <Slide key={index} direction="up" delay={index * 100} triggerOnce>
-              <div className="flex flex-col text-center items-center px-4">
+              <div className="flex flex-col items-start px-4">
                 <Image
-                  src={`/illustrations/${benefit.icon}.svg`}
+                  src={`/illustrations/circle-${index + 1}.svg`}
                   width={160}
                   height={160}
                   alt="Illustration"

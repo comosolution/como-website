@@ -20,19 +20,35 @@
   "solutions": [
     {
       "name": "HCL Notes Domino",
-      "description": "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten. Domino ermöglicht komplexe Geschäftsabläufe als professionelle Anwendungen mit modernen Entwicklungstools. Nutzen Sie Pro-Code Tools wie das App Dev Pack sowie Low-Code Optionen wie Domino Volt für schnelle Produktivität. HCL Notes ist ein moderner E-Mail-Client für Mail, Kalender und Aufgaben sowie für die Ausführung von Businessanwendungen. Mit HCL Nomad greifen Sie mobil auf alle Notes-Anwendungen und Daten zu, erweitern den Wirkungsbereich und steigern den Wert. Domino bietet eine sichere, stabile Infrastruktur und eine wirtschaftlich rentable Investition mit bis zu 300% ROI und bis zu 25% niedrigeren TCO."
+      "description": [
+        "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten. Domino ermöglicht komplexe Geschäftsabläufe als professionelle Anwendungen mit modernen Entwicklungstools. Nutzen Sie Pro-Code Tools wie das App Dev Pack sowie Low-Code Optionen wie Domino Volt für schnelle Produktivität.",
+        "HCL Notes ist ein moderner E-Mail-Client für Mail, Kalender und Aufgaben sowie für die Ausführung von Businessanwendungen. Mit HCL Nomad greifen Sie mobil auf alle Notes-Anwendungen und Daten zu, erweitern den Wirkungsbereich und steigern den Wert.",
+        "Domino bietet eine sichere, stabile Infrastruktur und eine wirtschaftlich rentable Investition mit bis zu 300% ROI und bis zu 25% niedrigeren TCO."
+      ]
     },
     {
       "name": "HCL Sametime",
-      "description": "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime bietet moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann. HCL Sametime bietet Ihnen eine moderne Videokonferenzplattform mit persistentem Chat, die an die heutige digitale Arbeitsweise in Unternehmen angepasst ist und vor allem das Zusammenarbeiten schneller, sicherer und aus der Ferne ermöglicht – und das bei halbierten Betriebskosten!"
+      "description": [
+        "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime bietet moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann.",
+        "HCL Sametime bietet Ihnen eine moderne Videokonferenzplattform mit persistentem Chat, die an die heutige digitale Arbeitsweise in Unternehmen angepasst ist und vor allem das Zusammenarbeiten schneller, sicherer und aus der Ferne ermöglicht – und das bei halbierten Betriebskosten!"
+      ]
     },
     {
       "name": "Crossware Mail Signature",
-      "description": "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien. Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen. Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
+      "description": [
+        "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
+        "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
+        "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
+      ]
     },
     {
       "name": "RingCentral",
-      "description": "RingCentral ist eine umfassende Kommunikationsplattform, die Unternehmen hilft, ihre Kommunikation und Zusammenarbeit zu verbessern. Mit RingCentral können Teams nahtlos über verschiedene Kanäle wie Sprache, Video, Messaging und Konferenzen kommunizieren, unabhängig von ihrem Standort oder Gerät. Die Plattform bietet eine Vielzahl von Funktionen, darunter Cloud-Telefonie, Unternehmens-SMS, Video-Meetings und Team-Messaging. Benutzer können Anrufe tätigen und empfangen, Voicemails verwalten, Faxnachrichten senden und empfangen sowie an Video-Meetings teilnehmen, alles über eine einzige intuitive Benutzeroberfläche. RingCentral ermöglicht eine nahtlose Integration mit anderen Unternehmensanwendungen wie CRM-Systemen und Helpdesk-Tools, um den Arbeitsablauf zu optimieren und die Produktivität zu steigern. Darüber hinaus bietet es fortschrittliche Funktionen wie automatisierte Anrufweiterleitung, Anrufanalytik und Anrufaufzeichnung für verbessertes Call-Management und -Reporting. Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern, sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
+      "description": [
+        "RingCentral ist eine umfassende Kommunikationsplattform, die Unternehmen hilft, ihre Kommunikation und Zusammenarbeit zu verbessern. Mit RingCentral können Teams nahtlos über verschiedene Kanäle wie Sprache, Video, Messaging und Konferenzen kommunizieren, unabhängig von ihrem Standort oder Gerät.",
+        "Die Plattform bietet eine Vielzahl von Funktionen, darunter Cloud-Telefonie, Unternehmens-SMS, Video-Meetings und Team-Messaging. Benutzer können Anrufe tätigen und empfangen, Voicemails verwalten, Faxnachrichten senden und empfangen sowie an Video-Meetings teilnehmen, alles über eine einzige intuitive Benutzeroberfläche.",
+        "RingCentral ermöglicht eine nahtlose Integration mit anderen Unternehmensanwendungen wie CRM-Systemen und Helpdesk-Tools, um den Arbeitsablauf zu optimieren und die Produktivität zu steigern. Darüber hinaus bietet es fortschrittliche Funktionen wie automatisierte Anrufweiterleitung, Anrufanalytik und Anrufaufzeichnung für verbessertes Call-Management und -Reporting.",
+        "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
+      ]
     }
   ]
 }

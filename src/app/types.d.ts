@@ -1,2 +1,2 @@
-import service from "./data/services/collaboration.json";
+import service from "./data/services/solutions.json";
 export type Service = typeof service;

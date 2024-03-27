@@ -4,7 +4,7 @@ import { scrollTo } from "@/app/utils/utils";
 export default function Solutions({ data }: { data: Service }) {
   return (
     <section className="flex flex-col gap-4 px-8">
-      <h3>Damit arbeiten Sie leichter zusammen</h3>
+      <h3>Mögliche Lösungen für Sie</h3>
       <div className="flex gap-4">
         <aside className="w-1/4 h-min sticky top-8 flex flex-col gap-2">
           {data.solutions.map((solution, index) => {
@@ -28,7 +28,10 @@ export default function Solutions({ data }: { data: Service }) {
                 <h2 id={solution.name.replaceAll(" ", "-").toLowerCase()}>
                   {solution.name}
                 </h2>
-                <p>{solution.description}</p>
+                {solution.sub && <h3>{solution.sub}</h3>}
+                {solution.description.map((description, index) => {
+                  return <p key={index}>{description}</p>;
+                })}
               </article>
             );
           })}

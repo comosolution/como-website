@@ -11,7 +11,7 @@ export default function Principles() {
       <FeatureList>
         {principles.map((principle, index) => {
           return (
-            <Slide key={index} direction="right" triggerOnce>
+            <Slide key={index} direction="up" triggerOnce>
               <Feature title={principle.title} sub={principle.sub} />
             </Slide>
           );
