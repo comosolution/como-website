@@ -15,24 +15,23 @@ export default function NewsletterPage() {
       </header>
       <article>
         <p>
-          Unsere CoMo Short-News sind der direkte Draht zu den neuesten
-          Entwicklungen rund um die CoMo. Hier bekommen Sie alle wichtigen Infos
-          – sei es zu bevorstehenden Veranstaltungen, frischen Releases in der
-          Softwarewelt oder spannenden Updates zu unseren Partnern. Und keine
-          Sorge, wir halten unser Versprechen: Wir spammen nicht.
+          Unsere Short-News sind der direkte Draht zu den neuesten Entwicklungen
+          rund um die CoMo. Hier bekommen Sie alle wichtigen Infos – sei es zu
+          bevorstehenden Veranstaltungen, frischen Releases in der Softwarewelt
+          oder spannenden Updates zu unseren Partnern. Und keine Sorge, wir
+          halten unser Versprechen: Wir spammen nicht.
         </p>
         <p>
-          Wir freuen uns, dass Sie sich für unsere CoMo Short-News und
-          Event-News anmelden möchten. Der Schutz Ihrer Daten liegt uns
-          besonders am Herzen, deshalb beachten Sie bitte unsere Informationen
-          zu CoMo Mailings unten und werfen Sie einen Blick auf{" "}
+          Wir freuen uns, dass Sie sich für unsere CoMo Short- und Event-News
+          anmelden möchten. Für die Anmeldung benötigen wir lediglich Ihre
+          E-Mail-Adresse. Alle weiteren Angaben sind optional und helfen uns,
+          Sie persönlich anzusprechen und passende Inhalte zu liefern, die zu
+          Ihren Interessen in der CoMo Solution passen.
+        </p>
+        <p>
+          Der Schutz Ihrer Daten liegt uns besonders am Herzen, werfen Sie für
+          mehr Informationen gerne einen Blick auf{" "}
           <Link href="/legal/privacy">unsere Datenschutzbestimmungen</Link>.
-        </p>
-        <p>
-          Für die Anmeldung benötigen wir lediglich Ihre E-Mail-Adresse. Alle
-          weiteren Angaben sind optional und helfen uns, Sie persönlich
-          anzusprechen und passende Inhalte zu liefern, die zu Ihren Interessen
-          in der CoMo Solution passen.
         </p>
       </article>
       <NewsletterSubscribe />
