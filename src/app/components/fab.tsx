@@ -7,10 +7,16 @@ import { Slide } from "react-awesome-reveal";
 export default function FAB() {
   const [show, setShow] = useState(false);
 
+  const handleScroll = () => {
+    setShow(window.scrollY > 600 ? true : false);
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setShow(window.scrollY > 600 ? true : false);
-    });
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
   return (
