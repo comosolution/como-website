@@ -8,18 +8,18 @@ import { scrollTo } from "../utils/utils";
 import Button from "./button";
 
 export default function Nav() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [headerFixed, setHeaderFixed] = useState(true);
+  const [prevPos, setPrevPos] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (prevScrollPos > currentScrollPos || prevScrollPos < 200) {
-        setHeaderFixed(true);
+      const currentPos = window.scrollY;
+      if (prevPos > currentPos || prevPos < 200) {
+        setHeaderVisible(true);
       } else {
-        setHeaderFixed(false);
+        setHeaderVisible(false);
       }
-      setPrevScrollPos(currentScrollPos);
+      setPrevPos(currentPos);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,13 +27,13 @@ export default function Nav() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [prevPos]);
 
   return (
     <header
-      className={`fixed top-0 z-50 w-screen flex justify-between px-8 py-2 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300 ${
-        headerFixed ? "" : "-top-20"
-      }`}
+      className={`fixed  ${
+        headerVisible ? "top-0" : "-top-24"
+      } z-50 w-screen flex justify-between px-8 py-2 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300`}
     >
       <Link href="/" className="flex items-center gap-1 sm:gap-2">
         <Image src="/logo.svg" alt="CoMo Logo" width="48" height="48" />
