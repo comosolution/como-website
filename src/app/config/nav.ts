@@ -15,6 +15,7 @@ export const aboutNav = {
   entries: [
     { name: "Unternehmen", ref: "/about/como" },
     { name: "Notizen", ref: "/about/notes" },
+    { name: "Newsletter", ref: "/about/newsletter" },
   ],
 };
 

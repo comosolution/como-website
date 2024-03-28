@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from "react";
 import Button from "./button";
 import { validateEmail } from "../utils/utils";
 
-export default function Newsletter() {
+export default function NewsletterSubscribe() {
   const [open, setOpen] = useState(false);
   const [newsletter, setNewsletter] = useState({
     email: "",
@@ -31,7 +31,7 @@ export default function Newsletter() {
         <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full shadow-lg shadow-orange-500/50">
           <input
             id="text6226376"
-            className="w-full ml-4 px-4 bg-black ghost"
+            className="w-full ml-4 px-4 ghost"
             name="email"
             type="text"
             placeholder="name@unternehmen.de *"
@@ -47,7 +47,7 @@ export default function Newsletter() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 px-10 py-8 overflow-hidden">
             <select
               id="select_6252620"
-              className="cr_font w-full appearance-none bg-black"
+              className="cr_font w-full appearance-none"
               name="1055885"
               onChange={handleChange}
             >
@@ -57,7 +57,7 @@ export default function Newsletter() {
             </select>
             <select
               id="select_6226473"
-              className="cr_font w-full appearance-none bg-black"
+              className="cr_font w-full appearance-none"
               name="1055886"
               onChange={handleChange}
             >
@@ -91,5 +91,32 @@ export default function Newsletter() {
         iconRotation={open ? "180" : "0"}
       />
     </div>
+  );
+}
+
+export function NewsletterUnsubscribe() {
+  const [email, setEmail] = useState("");
+
+  const handleChange = (e: ChangeEvent<any>) => setEmail(e.target.value);
+
+  return (
+    <form
+      action="https://seu2.cleverreach.com/f/283459-283561/wcu/"
+      method="post"
+      target="_blank"
+      className="flex gap-4"
+    >
+      <input
+        type="text"
+        name="email"
+        placeholder="name@unternehmen.de *"
+        onChange={handleChange}
+      />
+      <Button
+        type="secondary"
+        text="Abmelden"
+        disabled={!validateEmail(email)}
+      />
+    </form>
   );
 }

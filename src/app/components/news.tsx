@@ -2,7 +2,7 @@ import { getMarkdown } from "../utils/generator";
 import Button from "./button";
 import Tile from "./tile";
 import ImageWithFallback from "./image";
-import Newsletter from "./newsletter";
+import NewsletterSubscribe from "./newsletter";
 import { header } from "../style/style";
 
 export default async function News() {
@@ -51,7 +51,7 @@ export default async function News() {
             )
           );
         })}
-        <Newsletter />
+        <NewsletterSubscribe />
       </div>
     </section>
   );

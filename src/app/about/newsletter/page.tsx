@@ -1,0 +1,54 @@
+import Button from "@/app/components/button";
+import NewsletterSubscribe, {
+  NewsletterUnsubscribe,
+} from "@/app/components/newsletter";
+import Link from "next/link";
+
+export default function NewsletterPage() {
+  return (
+    <main className="flex flex-col items-center gap-16 p-8">
+      <header className="flex flex-col text-center">
+        <p className="text-orange-500">
+          <b>Das wichtigste in Kurzform</b>
+        </p>
+        <h1>Der CoMo Newsletter</h1>
+      </header>
+      <article>
+        <p>
+          Unsere CoMo Short-News sind der direkte Draht zu den neuesten
+          Entwicklungen rund um die CoMo. Hier bekommen Sie alle wichtigen Infos
+          – sei es zu bevorstehenden Veranstaltungen, frischen Releases in der
+          Softwarewelt oder spannenden Updates zu unseren Partnern. Und keine
+          Sorge, wir halten unser Versprechen: Wir spammen nicht.
+        </p>
+        <p>
+          Wir freuen uns, dass Sie sich für unsere CoMo Short-News und
+          Event-News anmelden möchten. Der Schutz Ihrer Daten liegt uns
+          besonders am Herzen, deshalb beachten Sie bitte unsere Informationen
+          zu CoMo Mailings unten und werfen Sie einen Blick auf{" "}
+          <Link href="/legal/privacy">unsere Datenschutzbestimmungen</Link>.
+        </p>
+        <p>
+          Für die Anmeldung benötigen wir lediglich Ihre E-Mail-Adresse. Alle
+          weiteren Angaben sind optional und helfen uns, Sie persönlich
+          anzusprechen und passende Inhalte zu liefern, die zu Ihren Interessen
+          in der CoMo Solution passen.
+        </p>
+      </article>
+      <NewsletterSubscribe />
+      <article id="abmeldung" className="pt-16">
+        <h3>Abmeldung vom Newsletter</h3>
+        <p>
+          Wenn Sie sich von unseren CoMo Solution Mailings abmelden möchten, ist
+          das absolut in Ordnung. Bitte tragen Sie einfach Ihre E-Mail-Adresse
+          in das Feld ein und wir kümmern uns darum.
+        </p>
+        <p>
+          Wenn Sie es sich anders überlegen, können Sie sich hier gerne
+          jederzeit wieder für den Newsletter anmelden.
+        </p>
+      </article>
+      <NewsletterUnsubscribe />
+    </main>
+  );
+}

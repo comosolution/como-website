@@ -33,7 +33,7 @@ export default function Nav() {
     <header
       className={`fixed  ${
         headerVisible ? "top-0" : "-top-24"
-      } z-50 w-screen flex justify-between px-8 py-2 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300`}
+      } z-50 w-screen flex justify-between px-16 py-4 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300`}
     >
       <Link href="/" className="flex items-center gap-1 sm:gap-2">
         <Image src="/logo.svg" alt="CoMo Logo" width="48" height="48" />
