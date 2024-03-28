@@ -8,35 +8,58 @@ import { scrollTo } from "../utils/utils";
 import Button from "./button";
 
 export default function Nav() {
+  const [prevPos, setPrevScrollPos] = useState(0);
+  const [headerFixed, setHeaderFixed] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPos = window.scrollY;
+      if (prevPos > currentPos || prevPos < 100) {
+        setHeaderFixed(true);
+      } else {
+        setHeaderFixed(false);
+      }
+      setPrevScrollPos(currentPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevPos]);
+
   return (
-    <header className="min-w-screen flex justify-center">
-      <nav className="fixed top-8 z-50 center rounded-full flex items-center gap-4 sm:gap-8 pl-8 pr-2 py-2 backdrop-blur-sm bg-neutral-900/80">
-        <Link href="/" className="flex items-center gap-1 sm:gap-2">
-          <Image src="/logo.svg" alt="CoMo Logo" width="36" height="36" />
-          <div id="logoSmall" className="hidden md:flex flex-col gap-0">
-            <span>Collaboration +</span>
-            <span>Mobile</span>
-            <span>Solution</span>
-          </div>
-        </Link>
-        <div className="flex items-center gap-6">
-          {mainNav.map((entry) => {
-            return entry.ref ? (
-              <Link key={entry.name} href={entry.ref}>
-                <NavItem href={entry.ref}>{entry.name}</NavItem>
-              </Link>
-            ) : entry.child ? (
-              <Collapse key={entry.name} content={entry.child} />
-            ) : (
-              <Button
-                key={entry.name}
-                text={entry.name}
-                type="contact"
-                onClick={() => scrollTo("contact")}
-              />
-            );
-          })}
+    <header
+      className={`fixed top-0 z-50 w-screen flex justify-between px-8 py-2 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300 ${
+        headerFixed ? "" : "-top-24"
+      }`}
+    >
+      <Link href="/" className="flex items-center gap-1 sm:gap-2">
+        <Image src="/logo.svg" alt="CoMo Logo" width="48" height="48" />
+        <div id="logoSmall" className="hidden md:flex flex-col gap-0">
+          <span>Collaboration +</span>
+          <span>Mobile</span>
+          <span>Solution</span>
         </div>
+      </Link>
+      <nav className="flex items-center gap-6">
+        {mainNav.map((entry) => {
+          return entry.ref ? (
+            <Link key={entry.name} href={entry.ref}>
+              <NavItem href={entry.ref}>{entry.name}</NavItem>
+            </Link>
+          ) : entry.child ? (
+            <Collapse key={entry.name} content={entry.child} />
+          ) : (
+            <Button
+              key={entry.name}
+              text={entry.name}
+              type="contact"
+              onClick={() => scrollTo("contact")}
+            />
+          );
+        })}
       </nav>
     </header>
   );
@@ -77,7 +100,7 @@ function Collapse({ content }: { content: SubNav }) {
         />
       </span>
       {open && (
-        <div className="fixed top-16 -ml-4 p-4 rounded-2xl backdrop-blur-sm bg-neutral-900/80">
+        <nav className="fixed top-16 -ml-4 p-4 rounded-2xl backdrop-blur-sm bg-neutral-900/80">
           {content.entries.map((entry) => {
             return (
               <Link key={entry.name} href={entry.ref}>
@@ -85,7 +108,7 @@ function Collapse({ content }: { content: SubNav }) {
               </Link>
             );
           })}
-        </div>
+        </nav>
       )}
     </span>
   );
