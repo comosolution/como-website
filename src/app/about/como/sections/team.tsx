@@ -22,7 +22,11 @@ export default function Team() {
           <Image src="/user.svg" width={120} height={120} alt="User Image" />
           <div>
             <h3>Ihr Bild fehlt? Jetzt bewerben:</h3>
-            <Button type="primary" text="bewerbung@como-solution.de" />
+            <Button
+              type="primary"
+              text="jobs@como-solution.de"
+              href="mailto:jobs@como-solution.de"
+            />
           </div>
         </div>
       </div>

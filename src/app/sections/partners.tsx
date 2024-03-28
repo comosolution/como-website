@@ -8,7 +8,7 @@ export default function Partners() {
       <h3 className="text-center">
         Mit der CoMo und ihren Partnern zum Erfolg
       </h3>
-      <Marquee gradient gradientColor="black">
+      <Marquee gradient gradientColor="black" autoFill>
         <div className="flex justify-between gap-20 p-10">
           {partners.map((partner, index) => {
             return (

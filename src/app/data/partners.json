@@ -28,10 +28,5 @@
     "name": "RingCentral",
     "img": "ringcentral.svg",
     "category": ["collaboration"]
-  },
-  {
-    "name": "SAM",
-    "img": "sam.svg",
-    "category": []
   }
 ]
