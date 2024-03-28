@@ -27,9 +27,9 @@ export default function Footer() {
             <p>CoMo Solution GmbH</p>
             <p>Marktplatz 18</p>
             <p>91207 Lauf a. d. Pegnitz</p>
-            <Link href="mailto:info@como-solution.de">
+            <a href="mailto:info@como-solution.de">
               <p>info@como-solution.de</p>
-            </Link>
+            </a>
             <Link href="tel:+4991231833700">
               <p>+49 9123 18337-00</p>
             </Link>

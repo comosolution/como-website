@@ -7,7 +7,7 @@ Deutschland
 
 Fon: +49 9123 18337-00  
 Fax: +49 9123 18337-10  
-Mail: [info@como-solution.de](info@como-solution.de)
+Mail: [info@como-solution.de](mailto:info@como-solution.de)
 
 ## Sitz der Gesellschaft
 

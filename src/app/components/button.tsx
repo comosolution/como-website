@@ -50,7 +50,11 @@ export default function Button({
   );
 
   if (href) {
-    return <Link href={href}>{button}</Link>;
+    return href.includes("mailto:") ? (
+      <a href={href}>{button}</a>
+    ) : (
+      <Link href={href}>{button}</Link>
+    );
   }
 
   return button;

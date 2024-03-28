@@ -1,6 +1,6 @@
 "use client";
 import { Collapse } from "react-collapse";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Button from "./button";
 import { validateEmail } from "../utils/utils";
 
@@ -17,24 +17,6 @@ export default function Newsletter() {
   const handleChange = (e: ChangeEvent<any>) =>
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    try {
-      const res = await fetch(
-        "https://seu2.cleverreach.com/f/283459-283561/wcs/",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newsletter),
-        }
-      );
-      const json = await res.json();
-      console.log(json);
-    } catch (e: any) {
-      console.log("Error:", e);
-    }
-  };
-
   return (
     <div className="md:col-span-2 flex flex-col gap-4 p-8 items-center justify-center text-center">
       <div>
@@ -44,7 +26,7 @@ export default function Newsletter() {
       <form
         action="https://seu2.cleverreach.com/f/283459-283561/wcs/"
         method="post"
-        onSubmit={handleSubmit}
+        target="_blank"
       >
         <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full">
           <input
