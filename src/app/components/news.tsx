@@ -28,7 +28,7 @@ export default async function News() {
                 href={`/about/notes#${note.id}`}
                 className="gap-4"
               >
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                <div className="relative w-full aspect-video lg:aspect-square overflow-hidden rounded-lg">
                   <ImageWithFallback
                     src={`/notes/${note.id}.png`}
                     alt="Thumbnail"
