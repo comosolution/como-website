@@ -54,12 +54,18 @@ select {
   background-color: rgb(var(--background-start-rgb));
   border: none;
   border-radius: 0;
+  transition: 300ms all ease-in-out;
 }
 
 input:not(.ghost),
 select {
   padding: 0.4rem 1rem;
   border-bottom: 1px solid rgba(var(--foreground-rgb), 0.8);
+}
+
+input:not(.ghost):focus,
+select:focus {
+  border-bottom: 1px solid rgba(var(--orange-rgb), 1);
 }
 
 button[disabled] {

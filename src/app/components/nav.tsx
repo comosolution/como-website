@@ -76,9 +76,11 @@ function Collapse({ content }: { content: SubNav }) {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("scroll", () => setOpen(false));
 
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("scroll", () => setOpen(false));
     };
   });
 
