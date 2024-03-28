@@ -8,18 +8,18 @@ import { scrollTo } from "../utils/utils";
 import Button from "./button";
 
 export default function Nav() {
-  const [prevPos, setPrevScrollPos] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [headerFixed, setHeaderFixed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPos = window.scrollY;
-      if (prevPos > currentPos || prevPos < 100) {
+      const currentScrollPos = window.scrollY;
+      if (prevScrollPos > currentScrollPos || prevScrollPos < 200) {
         setHeaderFixed(true);
       } else {
         setHeaderFixed(false);
       }
-      setPrevScrollPos(currentPos);
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,12 +27,12 @@ export default function Nav() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevPos]);
+  }, [prevScrollPos]);
 
   return (
     <header
       className={`fixed top-0 z-50 w-screen flex justify-between px-8 py-2 backdrop-blur-sm bg-neutral-900/20 transition-all duration-300 ${
-        headerFixed ? "" : "-top-24"
+        headerFixed ? "" : "-top-20"
       }`}
     >
       <Link href="/" className="flex items-center gap-1 sm:gap-2">
