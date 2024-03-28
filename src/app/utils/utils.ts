@@ -11,3 +11,8 @@ export function scrollTo(id: string, offset?: number) {
     behavior: "smooth",
   });
 }
+
+export function validateEmail(email: string) {
+  var reg = /\S+@\S+\.\S+/;
+  return reg.test(email);
+}
