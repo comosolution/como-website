@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./style/globals.css";
+import "./style/sm.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
 import FAB from "./components/fab";
+import ScrollProgress from "./components/scrollProgress";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${inter.className} pt-32`} id="top">
+        <ScrollProgress />
         <Nav />
         <FAB />
         {children}

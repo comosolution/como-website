@@ -9,9 +9,9 @@ export default function NewsletterPage() {
     <main className="flex flex-col items-center gap-16 p-8">
       <header className="flex flex-col text-center">
         <p className="text-orange-500">
-          <b>Das wichtigste in Kurzform</b>
+          <b>Das Wichtigste in Kurzform</b>
         </p>
-        <h1>Der CoMo Newsletter</h1>
+        <h1>Unser Newsletter</h1>
       </header>
       <article>
         <p>
