@@ -41,16 +41,15 @@ export default function Button({
           width={24}
           height={24}
           alt={icon || "icon"}
-          className={
-            iconRotation ? `rotate-[${iconRotation}deg] transition-all` : ""
-          }
+          className="transition-all"
+          style={{ transform: `rotate(${iconRotation}deg)` }}
         />
       )}
     </button>
   );
 
   if (href) {
-    return href.includes("mailto:") ? (
+    return href.includes("mailto:") || href.includes("tel:") ? (
       <a href={href}>{button}</a>
     ) : (
       <Link href={href}>{button}</Link>
