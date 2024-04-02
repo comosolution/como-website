@@ -1,9 +1,10 @@
+import { link } from "@/app/style/style";
 import { Service } from "@/app/types";
 import { scrollTo } from "@/app/utils/utils";
 
 export default function Solutions({ data }: { data: Service }) {
   return (
-    <section className="flex flex-col gap-4 px-8">
+    <section id="solutions" className="flex flex-col gap-4 px-8">
       <h3>Mögliche Lösungen für Sie</h3>
       <div className="flex gap-4">
         <aside className="hidden w-1/4 h-min sticky top-8 lg:flex flex-col gap-2">
@@ -11,7 +12,7 @@ export default function Solutions({ data }: { data: Service }) {
             return (
               <p
                 key={index}
-                className="muted cursor-pointer hover:text-orange-600 transition-all"
+                className={link}
                 onClick={() =>
                   scrollTo(solution.name.replaceAll(" ", "-").toLowerCase())
                 }

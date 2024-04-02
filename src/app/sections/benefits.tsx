@@ -9,7 +9,7 @@ export default function Benefits() {
   return (
     <section className="flex flex-col gap-8 py-16">
       <header className={`${header} justify-between`}>
-        <h5 className="lg:w-3/4">
+        <h5 className="lg:w-3/4 px-4">
           Über 14 Jahre Innovation + Exzellenz – Ihr zuverlässiger Partner für
           maßgeschneiderte IT Lösungen und erstklassigen Support.
         </h5>

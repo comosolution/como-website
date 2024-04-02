@@ -25,6 +25,11 @@
     "category": []
   },
   {
+    "name": "{privatescope}",
+    "img": "privatescope.png",
+    "category": []
+  },
+  {
     "name": "RingCentral",
     "img": "ringcentral.svg",
     "category": ["collaboration"]

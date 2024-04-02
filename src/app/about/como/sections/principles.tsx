@@ -7,7 +7,7 @@ import { Slide } from "react-awesome-reveal";
 export default function Principles() {
   return (
     <section className={twoCols}>
-      <h2>An diesen Prinzipien lassen wir uns messen</h2>
+      <h2 className="px-8">An diesen Prinzipien lassen wir uns messen</h2>
       <FeatureList>
         {principles.map((principle, index) => {
           return (

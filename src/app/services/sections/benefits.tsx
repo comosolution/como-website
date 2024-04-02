@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 
 export default function Benefits({ data }: { data: Service }) {
   return (
-    <section className="grid lg:grid-cols-3 gap-16 px-8 py-16">
+    <section id="benefits" className="grid lg:grid-cols-3 gap-16 px-8 py-16">
       {data.benefits.map((benefit, index) => {
         return (
           <Slide key={index} direction="up" delay={100 * index} triggerOnce>
