@@ -18,7 +18,8 @@
     line-height: 2.8rem;
   }
 
-  p {
+  p,
+  li {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
