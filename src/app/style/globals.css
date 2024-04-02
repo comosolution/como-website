@@ -152,8 +152,10 @@ button {
 }
 
 article {
+  width: 80vw;
   max-width: 880px;
   overflow: hidden;
+  padding-bottom: 4rem;
 }
 
 article h1 {
@@ -165,7 +167,7 @@ article h2,
 article h3,
 article h4 {
   margin-block-start: 2rem;
-  margin-block-end: 1rem;
+  margin-block-end: 0.4rem;
 }
 
 article p,
@@ -184,12 +186,17 @@ article li {
   margin-block-end: 1rem;
 }
 
+article li::marker {
+  color: rgb(var(--orange-rgb));
+}
+
 article img {
   border-radius: var(--default-border-radius);
   margin-bottom: 2rem;
-  width: 100%;
-  max-width: 1024px;
+  width: 80vw;
+  max-width: 840px;
   height: auto;
+  max-height: 440px;
 }
 
 .circles {

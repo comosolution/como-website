@@ -35,11 +35,13 @@
     },
     {
       "name": "Crossware Mail Signature",
+      "sub": "Most Trusted Email Signature Solution",
       "description": [
         "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
         "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
         "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
-      ]
+      ],
+      "img": "crossware.png"
     },
     {
       "name": "RingCentral",
@@ -48,7 +50,8 @@
         "Die Plattform bietet eine Vielzahl von Funktionen, darunter Cloud-Telefonie, Unternehmens-SMS, Video-Meetings und Team-Messaging. Benutzer können Anrufe tätigen und empfangen, Voicemails verwalten, Faxnachrichten senden und empfangen sowie an Video-Meetings teilnehmen, alles über eine einzige intuitive Benutzeroberfläche.",
         "RingCentral ermöglicht eine nahtlose Integration mit anderen Unternehmensanwendungen wie CRM-Systemen und Helpdesk-Tools, um den Arbeitsablauf zu optimieren und die Produktivität zu steigern. Darüber hinaus bietet es fortschrittliche Funktionen wie automatisierte Anrufweiterleitung, Anrufanalytik und Anrufaufzeichnung für verbessertes Call-Management und -Reporting.",
         "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
-      ]
+      ],
+      "img": "ringcentral.jpeg"
     }
   ]
 }

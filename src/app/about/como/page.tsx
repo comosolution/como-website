@@ -46,7 +46,7 @@ export default async function Page() {
             </div>
           </div>
         </section>
-        <Team />
+        {/* <Team /> */}
         <Principles />
         <News />
       </main>
