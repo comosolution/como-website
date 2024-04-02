@@ -5,8 +5,17 @@ import NewsletterSubscribe, {
 } from "@/app/components/newsletter";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function NewsletterPage() {
+  return (
+    <Suspense>
+      <NewsletterPageContent />
+    </Suspense>
+  );
+}
+
+function NewsletterPageContent() {
   const searchParams = useSearchParams();
 
   return (
