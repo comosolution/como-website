@@ -18,7 +18,7 @@ export default function PageNav() {
   return (
     <ScrollSpy activeClass="nav-active">
       <header className="min-w-screen flex justify-center">
-        <nav className="hidden fixed top-48 -right-28 z-50 rotate-90 center rounded-full lg:flex items-center gap-8 px-8 py-4">
+        <nav className="hidden fixed top-64 -right-28 z-50 rotate-90 center rounded-full lg:flex items-center gap-8 px-8 py-4">
           {sections.map((section) => {
             return (
               <a
