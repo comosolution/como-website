@@ -37,22 +37,12 @@
       "name": "Microsoft Teams",
       "description": [
         "Microsoft Teams ist eine äußerst vielseitige und leistungsstarke Kollaborationsplattform, die Teams dabei unterstützt, effektiv zusammenzuarbeiten und zu kommunizieren.",
-        "Chat und Konversationen: Teams können in Echtzeit über Chatnachrichten kommunizieren. Dies kann sowohl in Einzelgesprächen als auch in Gruppenchats erfolgen. Benutzer können Nachrichten senden, Dateien teilen, GIFs verwenden und Emojis senden, um die Kommunikation zu bereichern.",
-        "Besprechungen und Videoanrufe: Benutzer können über Teams Besprechungen abhalten und Videokonferenzen durchführen. Diese Funktion umfasst Audio-, Video- und Bildschirmfreigabe, sowie die Möglichkeit, Besprechungen aufzuzeichnen und später zu teilen.",
-        "Dateifreigabe und Zusammenarbeit: Teams können Dateien in Teams hochladen und freigeben. Mehrere Benutzer können gleichzeitig an Dokumenten arbeiten und Änderungen in Echtzeit vornehmen. Dies ermöglicht eine nahtlose Zusammenarbeit, ohne dass Dateien hin und her gesendet werden müssen.",
-        "Integration mit Microsoft 365 und Drittanbieter-Apps: Microsoft Teams ist eng mit anderen Microsoft 365-Anwendungen wie SharePoint, OneNote, Planner und mehr integriert. Darüber hinaus bietet es eine umfangreiche Integration mit Drittanbieter-Apps und Diensten über Microsoft AppSource.",
-        "Insgesamt bietet Microsoft Teams eine umfassende Lösung für die Zusammenarbeit, die Kommunikation, Dateifreigabe, Projektmanagement und mehr in einer einzigen Plattform integriert. Es ist besonders nützlich für verteilte Teams, Remote-Arbeit und Unternehmen, die eine effiziente und effektive Zusammenarbeit benötigen."
-      ]
-    },
-    {
-      "name": "Crossware Mail Signature",
-      "sub": "Most Trusted Email Signature Solution",
-      "description": [
-        "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
-        "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
-        "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
+        "Chat + Konversationen: Teams können in Echtzeit über Chatnachrichten kommunizieren. Dies kann sowohl in Einzelgesprächen als auch in Gruppenchats erfolgen. Benutzer können Nachrichten senden, Dateien teilen, GIFs verwenden und Emojis senden, um die Kommunikation zu bereichern.",
+        "Besprechungen + Videoanrufe: Benutzer können über Teams Besprechungen abhalten und Videokonferenzen durchführen. Diese Funktion umfasst Audio-, Video- und Bildschirmfreigabe, sowie die Möglichkeit, Besprechungen aufzuzeichnen und später zu teilen.",
+        "Dateifreigabe + Zusammenarbeit: Teams können Dateien in Teams hochladen und freigeben. Mehrere Benutzer können gleichzeitig an Dokumenten arbeiten und Änderungen in Echtzeit vornehmen. Dies ermöglicht eine nahtlose Zusammenarbeit, ohne dass Dateien hin und her gesendet werden müssen.",
+        "Microsoft Teams ist eng mit anderen Microsoft 365-Anwendungen wie SharePoint, OneNote, Planner und mehr integriert. Darüber hinaus bietet es eine umfangreiche Integration mit Drittanbieter-Apps und Diensten über Microsoft AppSource. Insgesamt bietet Microsoft Teams eine umfassende Lösung für die Zusammenarbeit, die Kommunikation, Dateifreigabe, Projektmanagement und mehr in einer einzigen Plattform integriert. Es ist besonders nützlich für verteilte Teams, Remote-Arbeit und Unternehmen, die eine effiziente und effektive Zusammenarbeit benötigen."
       ],
-      "img": "crossware.png"
+      "img": "teams.png"
     },
     {
       "name": "RingCentral",
@@ -63,6 +53,16 @@
         "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
       ],
       "img": "ringcentral.jpeg"
+    },
+    {
+      "name": "Crossware Mail Signature",
+      "sub": "Most Trusted Email Signature Solution",
+      "description": [
+        "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
+        "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
+        "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
+      ],
+      "img": "crossware.png"
     }
   ]
 }

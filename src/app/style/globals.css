@@ -146,15 +146,21 @@ button {
 }
 
 article {
-  width: 90vw;
+  width: 85vw;
   max-width: 880px;
   overflow: hidden;
   padding-bottom: 4rem;
+  box-sizing: border-box;
 }
 
 article h1 {
   text-align: center;
   margin-block-end: 2rem;
+}
+
+article h2 {
+  border-top: 1px solid rgb(var(--orange-rgb));
+  padding-top: 2rem;
 }
 
 article h2,

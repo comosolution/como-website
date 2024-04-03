@@ -9,7 +9,7 @@ export default function Solutions({ data }: { data: Service }) {
     <section id="solutions" className="flex flex-col gap-4 px-8">
       <h3>Mögliche Lösungen für Sie</h3>
       <div className="flex flex-col gap-4">
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-wrap">
           {data.solutions.map((solution, index) => {
             return (
               <p
