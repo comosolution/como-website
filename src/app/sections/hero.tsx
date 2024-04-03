@@ -16,8 +16,8 @@ export default function Hero() {
         <h1>Ihr Partner für die digitale Transformation</h1>
         <p className="muted">
           Von der Lösungsentwicklung für die mobile Zusammenarbeit bis zum
-          Management und der Absicherung Ihrer digitalen Infrastruktur – immer
-          die passende Lösung für Sie!
+          Management und der Absicherung Ihrer digitalen Infrastruktur haben wir
+          immer die passende Lösung für Sie!
         </p>
         <div className="flex gap-4">
           <Button
