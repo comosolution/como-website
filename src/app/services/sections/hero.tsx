@@ -4,8 +4,12 @@ import partners from "./../../data/partners.json";
 import { Service } from "@/app/types";
 
 export default function ServiceHero({ data }: { data: Service }) {
+  const partnersForService = partners.filter((partner) =>
+    partner.category.includes(data.id)
+  );
+
   return (
-    <div id="overview" className="pb-8">
+    <section id="overview" className="pb-8">
       <header className="px-8">
         <div className="flex items-end gap-2">
           <Image
@@ -18,29 +22,27 @@ export default function ServiceHero({ data }: { data: Service }) {
         </div>
         <h1>{data.title}</h1>
       </header>
-      <section className="flex flex-col lg:flex-row lg:items-center gap-16 lg:gap-4 px-8 py-32">
+      <section className="flex flex-col lg:flex-row lg:items-end gap-16 lg:gap-4 px-8 py-32">
         <h5 className="lg:w-3/4 muted">{data.sub}</h5>
         <div className="lg:w-1/4 flex flex-col lg:items-end gap-8">
           <p className="muted">
-            <b>Unsere Partner</b>
+            <b>Unser{partnersForService.length > 1 && "e"} Partner</b>
           </p>
-          {partners
-            .filter((partner) => partner.category.includes(data.id))
-            .map((partner, index) => {
-              return (
-                <Image
-                  key={index}
-                  src={`/logos/${partner.img}`}
-                  width={120}
-                  height={120}
-                  style={{ objectFit: "contain", opacity: 0.8 }}
-                  alt={`Logo ${partner.name}`}
-                />
-              );
-            })}
+          {partnersForService.map((partner, index) => {
+            return (
+              <Image
+                key={index}
+                src={`/logos/${partner.img}`}
+                width={120}
+                height={120}
+                style={{ objectFit: "contain", opacity: 0.8 }}
+                alt={`Logo ${partner.name}`}
+              />
+            );
+          })}
         </div>
       </section>
       <ServicesOverview />
-    </div>
+    </section>
   );
 }

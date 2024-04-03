@@ -2,7 +2,6 @@
 import { link } from "@/app/style/style";
 import { Service } from "@/app/types";
 import { scrollTo } from "@/app/utils/utils";
-import Image from "next/image";
 
 export default function Solutions({ data }: { data: Service }) {
   return (

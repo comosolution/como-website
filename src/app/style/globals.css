@@ -97,6 +97,10 @@ a:not(.tile):hover,
   color: rgba(var(--orange-rgb), 1);
 }
 
+.nav-active {
+  color: rgba(var(--orange-rgb), 1) !important;
+}
+
 h1 {
   font-size: 5.4rem;
   line-height: 6rem;
