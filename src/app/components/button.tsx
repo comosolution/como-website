@@ -25,7 +25,7 @@ export default function Button({
     secondary: "bg-white text-black",
     tertiary: "bg-transparent text-white hover:bg-neutral-800/80",
     contact:
-      "font-normal text-white/80 border-solid border border-orange-500 hover:bg-orange-600/10 shadow-lg shadow-orange-500/50",
+      "font-normal text-white/80 border-solid border border-orange-500 hover:bg-orange-600/10",
   };
 
   var button = (

@@ -191,6 +191,7 @@ article img {
   max-width: 840px;
   height: auto;
   max-height: 440px;
+  object-fit: cover;
 }
 
 .circles {

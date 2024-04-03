@@ -11,8 +11,8 @@ export default function PageNav() {
 
   return (
     <header className="min-w-screen flex justify-center">
-      <nav className="fixed bottom-4 z-50 center rounded-full flex items-center gap-4 sm:gap-8 px-8 py-4 backdrop-blur-sm bg-neutral-900/80">
-        {sections.map((section) => {
+      <nav className="fixed top-1/2 -left-32 z-50 -rotate-90 center rounded-full flex items-center gap-4 sm:gap-8 px-8 py-4">
+        {sections.reverse().map((section) => {
           return (
             <p
               key={section.id}

@@ -22,7 +22,7 @@ export default function FAB() {
   return (
     show && (
       <div
-        className="fixed right-8 bottom-8 z-50 p-2 border-solid border border-orange-500 shadow-lg shadow-orange-500/50 rounded-full cursor-pointer transition-all hover:bg-orange-600/20"
+        className="fixed right-8 bottom-8 z-50 p-2 border-solid border border-orange-500 rounded-full cursor-pointer transition-all hover:bg-orange-600/20"
         onClick={() => scrollTo("top")}
       >
         <Image
