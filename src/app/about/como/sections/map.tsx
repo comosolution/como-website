@@ -32,7 +32,15 @@ export default function Map() {
         className="absolute top-0 left-0 z-50 flex justify-center items-center"
         style={style}
       >
-        <div className="w-16 h-16 rounded-full border-solid border border-orange-600 transition-all hover:bg-orange-600/20" />
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=CoMo+Solution+GmbH"
+          target="_blank"
+        >
+          <div
+            id="mapPin"
+            className="relative w-16 h-16 rounded-full border-solid border hover:border-[160px] border-orange-600 transition-all hover:bg-orange-600/20"
+          />
+        </a>
       </div>
     </div>
   );

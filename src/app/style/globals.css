@@ -243,6 +243,18 @@ article img {
   transition: height 300ms ease-in-out;
 }
 
+#mapPin:hover::after {
+  content: "Route planen";
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(var(--foreground-rgb), 0.8);
+}
+
 @media (max-width: 640px) {
   html {
     font-size: 10px;
