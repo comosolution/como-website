@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
+    "@types/google.maps": "^3.55.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-collapse": "^5.0.4",

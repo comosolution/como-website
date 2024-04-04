@@ -2,6 +2,7 @@ import News from "@/app/components/news";
 import Team from "./sections/team";
 import { twoCols } from "@/app/style/style";
 import Principles from "./sections/principles";
+import Map from "./sections/map";
 
 export default async function Page() {
   return (
@@ -47,6 +48,7 @@ export default async function Page() {
           </div>
         </section>
         {/* <Team /> */}
+        <Map />
         <Principles />
         <News />
       </main>

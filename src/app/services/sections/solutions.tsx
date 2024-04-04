@@ -46,11 +46,7 @@ export default function Solutions({ data }: { data: Service }) {
                     })}
                   </div>
                 </div>
-                <div
-                  className={`${
-                    index % 2 === 1 ? "lg:order-first" : ""
-                  } lg:h-min lg:sticky top-20`}
-                >
+                <div className="lg:h-min lg:sticky top-20">
                   {solution.img ? (
                     <img
                       src={`/solutions/${solution.img}`}

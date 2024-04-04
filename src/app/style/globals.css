@@ -111,14 +111,14 @@ h1 {
 h2 {
   font-size: 3rem;
   line-height: 4rem;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 2rem;
   line-height: 3rem;
-  font-weight: bold;
-  letter-spacing: -8%;
+  font-weight: 500;
+  letter-spacing: -4%;
 }
 
 h4 {
