@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 
 export default function Map() {
   const mapRef = useRef<any>(null);
-  const style = { height: "400px", width: "100%" };
+  const style = { height: "480px", width: "100%" };
 
   useEffect(() => {
     const googleMapsScript = document.createElement("script");
@@ -14,7 +14,7 @@ export default function Map() {
     googleMapsScript.addEventListener("load", async () => {
       const map = new window.google.maps.Map(mapRef.current, {
         center: { lat: 49.51227, lng: 11.28143 },
-        zoom: 13,
+        zoom: 11,
         disableDefaultUI: true,
         gestureHandling: "none",
         keyboardShortcuts: false,

@@ -98,7 +98,7 @@ a:not(.tile):hover,
 }
 
 .nav-active {
-  color: rgba(var(--orange-rgb), 1) !important;
+  color: rgba(var(--red-rgb), 1) !important;
 }
 
 h1 {

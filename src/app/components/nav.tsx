@@ -131,9 +131,7 @@ function NavItem({
     (path.includes(href) && href !== "/") || (path === "/" && href === "/");
 
   return (
-    <p
-      className={`navItem ${active ? "text-orange-500" : "link"} ${className}`}
-    >
+    <p className={`navItem ${active ? "text-rose-600" : "link"} ${className}`}>
       {children}
     </p>
   );
