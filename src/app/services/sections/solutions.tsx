@@ -31,7 +31,7 @@ export default function Solutions({ data }: { data: Service }) {
             return (
               <div
                 key={index}
-                className={`${twoCols} justify-items-center py-16`}
+                className={`${twoCols} justify-items-center items-center py-16`}
               >
                 <div>
                   <header className="flex flex-col pb-8">
@@ -46,11 +46,7 @@ export default function Solutions({ data }: { data: Service }) {
                     })}
                   </div>
                 </div>
-                <div
-                  className={`${
-                    index % 2 === 1 ? "lg:order-first" : ""
-                  } lg:h-min lg:sticky top-20`}
-                >
+                <div className={index % 2 === 1 ? "lg:order-first" : ""}>
                   {solution.img ? (
                     <img
                       src={`/solutions/${solution.img}`}
