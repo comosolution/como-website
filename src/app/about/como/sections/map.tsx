@@ -8,7 +8,7 @@ export default function Map() {
 
   useEffect(() => {
     const googleMapsScript = document.createElement("script");
-    googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyChCf-XF3d2C-kSCMWBVNP6q-WWKi9rqi4`;
+    googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}`;
     googleMapsScript.async = true;
     googleMapsScript.defer = true;
     googleMapsScript.addEventListener("load", async () => {
