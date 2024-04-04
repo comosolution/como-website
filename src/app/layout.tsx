@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./style/globals.css";
-import "./style/sm.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Contact from "./components/contact";

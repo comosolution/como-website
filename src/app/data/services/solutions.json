@@ -34,7 +34,8 @@
         "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen – egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche.",
         "Mit dem Smartphone können einzelne Personen oder ganze Gruppen einfach und intuitiv an- und abgemeldet werden. Die erfassten Zeiten werden nach Kostenstellen aufgeschlüsselt und direkt an die Buchhaltung zur Verarbeitung und Abrechnung weitergeleitet. Die Gefahren von Manipulationen werden durch Sicherheitsmechanismen und Eskalationsstufen minimiert, die auch die Einhaltung von definierten Abläufen der Zeiterfassung sicherstellen.",
         "Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
-      ]
+      ],
+      "img": "time.png"
     },
     {
       "name": "MOLIRIS Vote",
@@ -42,7 +43,8 @@
       "description": [
         "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmen-internen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen.",
         "Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
-      ]
+      ],
+      "img": "vote.png"
     }
   ]
 }
