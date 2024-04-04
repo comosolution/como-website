@@ -12,13 +12,13 @@ export default function PageNav() {
 
   const handleClick = (e: any, id: string) => {
     e.preventDefault();
-    scrollTo(id);
+    scrollTo(id, 64);
   };
 
   return (
     <ScrollSpy activeClass="nav-active">
       <header className="min-w-screen flex justify-center">
-        <nav className="hidden fixed top-64 -right-28 z-50 rotate-90 center rounded-full lg:flex items-center gap-8 px-8 py-4">
+        <nav className="hidden fixed top-64 -right-24 z-50 rotate-90 rounded-full lg:flex items-center gap-8 px-4 py-2 backdrop-blur-sm bg-neutral-900/80">
           {sections.map((section) => {
             return (
               <a

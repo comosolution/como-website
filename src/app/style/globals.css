@@ -162,11 +162,6 @@ article h1 {
   margin-block-end: 2rem;
 }
 
-article h2 {
-  border-top: 1px solid rgba(var(--orange-rgb), 0.5);
-  padding-top: 4rem;
-}
-
 article h2,
 article h3,
 article h4 {

@@ -19,9 +19,9 @@ export default function ServicesOverview() {
     <Marquee gradient gradientColor="black" speed={90}>
       {serviceList.map((service, index) => {
         return (
-          <h2 key={index} className="p-1">
+          <h4 key={index} className="p-2">
             Wir {service}.
-          </h2>
+          </h4>
         );
       })}
     </Marquee>
