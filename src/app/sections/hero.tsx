@@ -19,19 +19,6 @@ export default function Hero() {
           Management und der Absicherung Ihrer digitalen Infrastruktur haben wir
           immer die passende Lösung für Sie.
         </p>
-        <div className="flex gap-4">
-          <Button
-            type="primary"
-            text="Jetzt Kontakt aufnehmen"
-            onClick={() => scrollTo("contact")}
-          />
-          <Button
-            type="tertiary"
-            icon="arrow"
-            className="animate-bounce"
-            onClick={() => scrollTo("services", 260)}
-          />
-        </div>
         <div className="flex gap-20">
           {clients.map((client, index) => {
             return (
@@ -46,6 +33,12 @@ export default function Hero() {
             );
           })}
         </div>
+        <Button
+          type="tertiary"
+          icon="arrow"
+          className="animate-bounce"
+          onClick={() => scrollTo("services", 260)}
+        />
       </section>
     </>
   );

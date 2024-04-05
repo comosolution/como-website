@@ -5,7 +5,7 @@ export default function Circles() {
     <img
       src="/circles.svg"
       alt=""
-      className="absolute top-0 -z-1 w-full circles"
+      className="absolute top-20 -z-1 w-full circles"
     />
   );
 }

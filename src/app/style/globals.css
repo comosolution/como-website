@@ -200,7 +200,7 @@ article img {
 }
 
 .circles {
-  max-height: 2240px;
+  max-height: 2200px;
   position: absolute;
   z-index: -1000;
 }
@@ -295,5 +295,12 @@ article img {
   .navItem,
   .button.contact {
     font-size: 1.3rem;
+  }
+
+  .circles {
+    top: 0;
+    min-height: 2000px;
+    max-height: auto;
+    object-fit: cover;
   }
 }
