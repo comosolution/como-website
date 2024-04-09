@@ -5,6 +5,11 @@
     "category": ["mobile", "cybersecurity", "solutions"]
   },
   {
+    "name": "codeless Platforms",
+    "img": "codeless.svg",
+    "category": []
+  },
+  {
     "name": "Crossware",
     "img": "crossware.png",
     "category": ["collaboration"]

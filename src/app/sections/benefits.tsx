@@ -10,7 +10,7 @@ export default function Benefits() {
     <section className="flex flex-col gap-8 py-16">
       <header className={`${header} justify-between`}>
         <h5 className="lg:w-3/4 px-4">
-          Über 14 Jahre Innovation + Exzellenz – Ihr zuverlässiger Partner für
+          Über 14 Jahre Innovation + Expertise – Ihr zuverlässiger Partner für
           maßgeschneiderte IT Lösungen und erstklassigen Support.
         </h5>
         <Button type="secondary" text="Mehr erfahren" href="/about/como" />

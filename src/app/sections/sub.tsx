@@ -11,7 +11,6 @@ export default function Sub() {
     "migrieren,",
     "installieren,",
     "managen,",
-    "schulen,",
     "supporten.",
   ];
 

@@ -11,7 +11,6 @@ export default function ServicesOverview() {
     "migrieren",
     "installieren",
     "managen",
-    "schulen",
     "supporten",
   ];
 

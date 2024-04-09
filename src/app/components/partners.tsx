@@ -5,14 +5,14 @@ import partners from "./../data/partners.json";
 export default function PartnersMarquee() {
   return (
     <Marquee gradient gradientColor="black" autoFill>
-      <div className="flex justify-between gap-32 p-10 overflow-hidden">
+      <div className="flex justify-between gap-32 p-16 overflow-hidden">
         {partners.map((partner, index) => {
           return (
             <Image
               key={index}
               src={`/logos/${partner.img}`}
-              width={96}
-              height={96}
+              width={120}
+              height={120}
               style={{ objectFit: "contain" }}
               alt={`Logo ${partner.name}`}
             />

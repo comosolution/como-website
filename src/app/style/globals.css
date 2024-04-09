@@ -200,7 +200,7 @@ article img {
 }
 
 .circles {
-  max-height: 2200px;
+  max-height: 2100px;
   position: absolute;
   z-index: -1000;
 }

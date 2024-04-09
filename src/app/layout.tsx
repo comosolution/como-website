@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   authors: [
     { name: "CoMo Solution GmbH", url: "https://www.como-solution.de" },
   ],
+  keywords: ["collaboration", "mobile", "solution", "cybersecurity"],
 };
 
 export default function RootLayout({
