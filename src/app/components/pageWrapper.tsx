@@ -18,9 +18,5 @@ export default function PageWrapper({
     s.parentNode!.insertBefore(g, s);
   }, []);
 
-  return (
-    <main className="flex min-h-screen flex-col items-center gap-16 p-8">
-      {children}
-    </main>
-  );
+  return <>{children}</>;
 }

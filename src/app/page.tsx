@@ -5,11 +5,10 @@ import Partners from "./sections/partners";
 import Services from "./sections/services";
 import Testimonials from "./sections/testimonials";
 import Sub from "./sections/sub";
-import PageWrapper from "./components/pageWrapper";
 
 export default function Home() {
   return (
-    <PageWrapper>
+    <main className="flex min-h-screen flex-col items-center gap-16 p-8">
       <Hero />
       <Sub />
       <Services />
@@ -17,6 +16,6 @@ export default function Home() {
       <Partners />
       {/* <Testimonials /> */}
       <News />
-    </PageWrapper>
+    </main>
   );
 }

@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Contact from "./components/contact";
 import FAB from "./components/fab";
 import ScrollProgress from "./components/scrollProgress";
+import PageWrapper from "./components/pageWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
         <ScrollProgress />
         <Nav />
         <FAB />
-        {children}
+        <PageWrapper>{children}</PageWrapper>
         <Contact />
         <Footer />
       </body>
