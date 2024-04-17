@@ -8,10 +8,6 @@ import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Newsletter | CoMo Solution GmbH",
-};
-
 export default function NewsletterPage() {
   return (
     <Suspense>

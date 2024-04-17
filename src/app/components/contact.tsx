@@ -14,8 +14,8 @@ export default function Contact() {
       <div className={header}>
         <Button
           type="primary"
-          text="info@como.solution.de"
-          href="mailto:info@como.solution.de"
+          text="info@como-solution.de"
+          href="mailto:info@como-solution.de"
         />
         <Button
           type="tertiary"
