@@ -17,7 +17,7 @@ export default function Solutions({ data }: { data: Service }) {
         <div>
           {data.solutions.map((solution, index) => {
             return (
-              <Slide key={index} direction="up">
+              <Slide key={index} direction="up" triggerOnce>
                 <div className="border-solid border-t border-orange-600 ">
                   <header
                     className={`flex justify-between py-4 transition-opacity opacity-80 ${
