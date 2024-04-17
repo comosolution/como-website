@@ -8,7 +8,7 @@ export default async function Page() {
   return (
     <main className="flex flex-col gap-16 p-8">
       <header className="flex flex-col text-center">
-        <p className="text-orange-500">
+        <p className="text-orange-500 pb-2">
           <b>Willkommen bei der CoMo</b>
         </p>
         <h1>
