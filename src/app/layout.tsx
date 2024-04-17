@@ -11,7 +11,7 @@ import PageWrapper from "./components/pageWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CoMo Solution – Ihr Partner für die digitale Transformation",
+  title: "CoMo Solution GmbH – Ihr Partner für die digitale Transformation",
   description: "Innovative Lösungen für Collaboration und Mobile Work",
   authors: [
     { name: "CoMo Solution GmbH", url: "https://www.como-solution.de" },

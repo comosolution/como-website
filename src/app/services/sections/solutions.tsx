@@ -20,7 +20,7 @@ export default function Solutions({ data }: { data: Service }) {
               <Slide key={index} direction="up" triggerOnce>
                 <div className="border-solid border-t border-orange-600 ">
                   <header
-                    className={`flex justify-between py-4 transition-opacity opacity-80 ${
+                    className={`flex justify-between items-center py-4 transition-opacity opacity-80 ${
                       open !== index
                         ? "cursor-pointer hover:opacity-100"
                         : "opacity-100"

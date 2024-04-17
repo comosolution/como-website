@@ -1,5 +1,10 @@
 import { getMarkdown } from "../../utils/generator";
 import NoteElement from "@/app/components/note";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notizen | CoMo Solution GmbH",
+};
 
 export default async function Page() {
   const notes = await getMarkdown("notes");

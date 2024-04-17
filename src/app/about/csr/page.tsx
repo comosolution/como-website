@@ -2,6 +2,11 @@ import News from "@/app/components/news";
 import NoteElement from "@/app/components/note";
 import { twoCols } from "@/app/style/style";
 import { getMarkdown } from "@/app/utils/generator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CSR | CoMo Solution GmbH",
+};
 
 export default async function Page() {
   const articles = await getMarkdown("csr");

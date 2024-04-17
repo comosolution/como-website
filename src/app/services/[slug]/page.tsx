@@ -3,6 +3,11 @@ import mobile from "../../data/services/mobile.json";
 import solutions from "../../data/services/solutions.json";
 import cybersecurity from "../../data/services/cybersecurity.json";
 import ServicePage from "../sections/servicePage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Leistungen | CoMo Solution GmbH",
+};
 
 const serviceNames = ["collaboration", "mobile", "solutions", "cybersecurity"];
 

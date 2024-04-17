@@ -1,4 +1,9 @@
 import { getMarkdown, markdownToHtml } from "@/app/utils/generator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Datenschutz | CoMo Solution GmbH",
+};
 
 export default async function Page() {
   const data = await getMarkdown("legal/privacy");
