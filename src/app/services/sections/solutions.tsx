@@ -1,62 +1,68 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import { link, twoCols } from "@/app/style/style";
+import { twoCols } from "@/app/style/style";
 import { Service } from "@/app/types";
-import { scrollTo } from "@/app/utils/utils";
+import Image from "next/image";
+import { useState } from "react";
+import { Collapse } from "react-collapse";
 
 export default function Solutions({ data }: { data: Service }) {
+  const [open, setOpen] = useState(-1);
+
   return (
-    <section
-      id="solutions"
-      className="relative flex flex-col gap-4 p-8 rounded-2xl backdrop-blur-sm bg-neutral-900/80 "
-    >
+    <section id="solutions" className="relative flex flex-col gap-4 p-8">
       <h3>Mögliche Lösungen für Sie</h3>
       <div className="flex flex-col gap-16">
-        <div className="flex gap-8 flex-wrap">
-          {data.solutions.map((solution, index) => {
-            return (
-              <p
-                key={index}
-                className={link}
-                onClick={() =>
-                  scrollTo(solution.name.replaceAll(" ", "-").toLowerCase())
-                }
-              >
-                {solution.name}
-              </p>
-            );
-          })}
-        </div>
         <div>
           {data.solutions.map((solution, index) => {
             return (
               <div
                 key={index}
-                className={`${twoCols} justify-items-center items-center py-16`}
+                className="border-solid border-t border-orange-600 "
               >
-                <div>
-                  <header className="flex flex-col pb-8">
-                    <h2 id={solution.name.replaceAll(" ", "-").toLowerCase()}>
-                      {solution.name}
-                    </h2>
-                    {solution.sub && <h3>{solution.sub}</h3>}
-                  </header>
-                  <div className="flex flex-col gap-4 pr-4 muted">
-                    {solution.description.map((description, index) => {
-                      return <p key={index}>{description}</p>;
-                    })}
+                <header
+                  className="flex justify-between py-4"
+                  onClick={() => setOpen(index)}
+                >
+                  <h2>{solution.name}</h2>
+                  <Image
+                    src="/icons/plus.svg"
+                    alt="Plus"
+                    width={64}
+                    height={64}
+                    style={
+                      open === index
+                        ? {
+                            transform: "rotate(45deg)",
+                            transition: "300ms all ease-in-out",
+                          }
+                        : {}
+                    }
+                  />
+                </header>
+                <Collapse isOpened={open === index}>
+                  <div className={`${twoCols} pb-8`}>
+                    <div className="flex flex-col">
+                      {solution.sub && <h3>{solution.sub}</h3>}
+                      <div className="flex flex-col gap-4 muted">
+                        {solution.description.map((description, index) => {
+                          return <p key={index}>{description}</p>;
+                        })}
+                      </div>
+                    </div>
+                    <div>
+                      {solution.img ? (
+                        <img
+                          src={`/solutions/${solution.img}`}
+                          alt={solution.name}
+                          className="rounded-2xl"
+                        />
+                      ) : (
+                        <div />
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div className={index % 2 === 1 ? "lg:order-first" : ""}>
-                  {solution.img ? (
-                    <img
-                      src={`/solutions/${solution.img}`}
-                      alt={solution.name}
-                      className="rounded-2xl"
-                    />
-                  ) : (
-                    <div />
-                  )}
-                </div>
+                </Collapse>
               </div>
             );
           })}
