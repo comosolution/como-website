@@ -21,7 +21,11 @@ export default function Solutions({ data }: { data: Service }) {
                 className="border-solid border-t border-orange-600 "
               >
                 <header
-                  className="flex justify-between py-4"
+                  className={`flex justify-between py-4 transition-opacity opacity-80 ${
+                    open !== index
+                      ? "cursor-pointer hover:opacity-100"
+                      : "opacity-100"
+                  }`}
                   onClick={() => setOpen(index)}
                 >
                   <h2>{solution.name}</h2>
