@@ -4,6 +4,7 @@ import { twoCols } from "@/app/style/style";
 import { Service } from "@/app/types";
 import Image from "next/image";
 import { useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Collapse } from "react-collapse";
 
 export default function Solutions({ data }: { data: Service }) {
@@ -16,58 +17,57 @@ export default function Solutions({ data }: { data: Service }) {
         <div>
           {data.solutions.map((solution, index) => {
             return (
-              <div
-                key={index}
-                className="border-solid border-t border-orange-600 "
-              >
-                <header
-                  className={`flex justify-between py-4 transition-opacity opacity-80 ${
-                    open !== index
-                      ? "cursor-pointer hover:opacity-100"
-                      : "opacity-100"
-                  }`}
-                  onClick={() => setOpen(index)}
-                >
-                  <h2>{solution.name}</h2>
-                  <Image
-                    src="/icons/plus.svg"
-                    alt="Plus"
-                    width={64}
-                    height={64}
-                    style={
-                      open === index
-                        ? {
-                            transform: "rotate(45deg)",
-                            transition: "300ms all ease-in-out",
-                          }
-                        : {}
-                    }
-                  />
-                </header>
-                <Collapse isOpened={open === index}>
-                  <div className={`${twoCols} pb-8`}>
-                    <div className="flex flex-col">
-                      {solution.sub && <h3>{solution.sub}</h3>}
-                      <div className="flex flex-col gap-4 muted">
-                        {solution.description.map((description, index) => {
-                          return <p key={index}>{description}</p>;
-                        })}
+              <Slide key={index} direction="up">
+                <div className="border-solid border-t border-orange-600 ">
+                  <header
+                    className={`flex justify-between py-4 transition-opacity opacity-80 ${
+                      open !== index
+                        ? "cursor-pointer hover:opacity-100"
+                        : "opacity-100"
+                    }`}
+                    onClick={() => setOpen(index)}
+                  >
+                    <h2>{solution.name}</h2>
+                    <Image
+                      src="/icons/plus.svg"
+                      alt="Plus"
+                      width={64}
+                      height={64}
+                      style={
+                        open === index
+                          ? {
+                              transform: "rotate(45deg)",
+                              transition: "300ms all ease-in-out",
+                            }
+                          : {}
+                      }
+                    />
+                  </header>
+                  <Collapse isOpened={open === index}>
+                    <div className={`${twoCols} pb-8`}>
+                      <div className="flex flex-col">
+                        {solution.sub && <h3>{solution.sub}</h3>}
+                        <div className="flex flex-col gap-4 muted">
+                          {solution.description.map((description, index) => {
+                            return <p key={index}>{description}</p>;
+                          })}
+                        </div>
+                      </div>
+                      <div>
+                        {solution.img ? (
+                          <img
+                            src={`/solutions/${solution.img}`}
+                            alt={solution.name}
+                            className="rounded-2xl"
+                          />
+                        ) : (
+                          <div />
+                        )}
                       </div>
                     </div>
-                    <div>
-                      {solution.img ? (
-                        <img
-                          src={`/solutions/${solution.img}`}
-                          alt={solution.name}
-                          className="rounded-2xl"
-                        />
-                      ) : (
-                        <div />
-                      )}
-                    </div>
-                  </div>
-                </Collapse>
-              </div>
+                  </Collapse>
+                </div>
+              </Slide>
             );
           })}
         </div>
