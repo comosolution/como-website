@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { twoCols } from "@/app/style/style";
 import { Service } from "@/app/types";
+import { scrollTo } from "@/app/utils/utils";
 import Image from "next/image";
 import { useState } from "react";
 import { Slide } from "react-awesome-reveal";
@@ -20,12 +21,13 @@ export default function Solutions({ data }: { data: Service }) {
               <Slide key={index} direction="up" triggerOnce>
                 <div className="border-solid border-t border-orange-600 ">
                   <header
-                    className={`flex justify-between items-center py-4 transition-opacity opacity-80 ${
-                      open !== index
-                        ? "cursor-pointer hover:opacity-100"
-                        : "opacity-100"
+                    id={solution.name.replaceAll(" ", "-")}
+                    className={`flex justify-between items-center py-4 transition-opacity opacity-80 cursor-pointer ${
+                      open !== index ? "hover:opacity-100" : "opacity-100"
                     }`}
-                    onClick={() => setOpen(index)}
+                    onClick={() => {
+                      setOpen(index !== open ? index : -1);
+                    }}
                   >
                     <h2>{solution.name}</h2>
                     <Image
@@ -39,7 +41,10 @@ export default function Solutions({ data }: { data: Service }) {
                               transform: "rotate(45deg)",
                               transition: "300ms all ease-in-out",
                             }
-                          : {}
+                          : {
+                              transform: "rotate(0)",
+                              transition: "300ms all ease-in-out",
+                            }
                       }
                     />
                   </header>
