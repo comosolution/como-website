@@ -200,13 +200,13 @@ article img {
 }
 
 .circles {
-  max-height: 2100px;
+  max-height: 2000px;
   position: absolute;
   z-index: -1000;
 }
 
 .footerCircles {
-  max-height: 880px;
+  max-height: 820px;
   position: absolute;
   z-index: -1000;
 }

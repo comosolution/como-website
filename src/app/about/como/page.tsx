@@ -18,15 +18,14 @@ export default async function Page() {
           <b>Willkommen bei der CoMo</b>
         </p>
         <h1>
-          Mit innovativen IT-Lösungen machen wir Ihre Arbeit effizienter +
+          Mit innovativen Lösungen machen wir Ihre Arbeit effizienter und
           sicherer!
         </h1>
       </header>
       <section>
         <h5 className="p-8">
-          Mit über einem Jahrzehnt an IT-Expertise setzt sich unser Team von
-          Spezialisten für Ihre Ziele ein – kompetent, freundlich und
-          bodenständig.
+          Seit über einem Jahrzehnt setzt sich unser Team von Spezialisten für
+          Ihre Ziele ein – kompetent, freundlich und bodenständig.
         </h5>
         <div className={twoCols}>
           <div className="p-8">
