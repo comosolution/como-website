@@ -8,7 +8,7 @@ export default function Contact() {
       className="relative z-5 flex flex-col items-center gap-8 mt-32 p-16"
     >
       <div className="flex flex-col text-center">
-        <h3 className="muted">Maximieren Sie Ihr digitales Potenzial</h3>
+        <h3 className="muted">Sprechen Sie uns an.</h3>
         <h1>Wir sind bereit, gemeinsam mit Ihnen durchzustarten.</h1>
       </div>
       <div className={header}>

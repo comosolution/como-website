@@ -18,13 +18,15 @@ export default async function Page() {
           <b>Willkommen bei der CoMo</b>
         </p>
         <h1>
-          Ihr Partner für <br /> innovative IT-Lösungen
+          Mit innovativen IT-Lösungen machen wir Ihre Arbeit effizienter +
+          sicherer!
         </h1>
       </header>
       <section>
         <h5 className="p-8">
-          Mit über einem Jahrzehnt an geballter IT-Expertise und einem Team von
-          Spezialisten setzen wir bei der CoMo neue Maßstäbe.
+          Mit über einem Jahrzehnt an IT-Expertise setzt sich unser Team von
+          Spezialisten für Ihre Ziele ein – kompetent, freundlich und
+          bodenständig.
         </h5>
         <div className={twoCols}>
           <div className="p-8">
@@ -43,9 +45,11 @@ export default async function Page() {
             <h3>Das Ergebnis</h3>
             <p className="muted">
               Eine effizientere Infrastruktur und Werkzeuge, die Ihre
-              Mitarbeiterinnen und Mitarbeiter begeistern. Lassen Sie uns
-              gemeinsam die Zukunft Ihrer IT gestalten und Ihr Unternehmen
-              voranbringen – mit CoMo an Ihrer Seite.
+              Mitarbeiterinnen und Mitarbeiter begeistern. Für Ihr Unternehmen
+              bedeutet eine effizientere Arbeit Einsparpotentiale und
+              Ressourcenschonung. Lassen Sie uns gemeinsam die Zukunft Ihrer IT
+              gestalten und Ihr Unternehmen voranbringen – mit CoMo an Ihrer
+              Seite.
             </p>
           </div>
         </div>
