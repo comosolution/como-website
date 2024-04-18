@@ -38,7 +38,7 @@ export default function Map() {
         >
           <div
             id="mapPin"
-            className="relative w-16 h-16 rounded-full border-solid border hover:border-[160px] border-orange-600 transition-all hover:bg-orange-600/20"
+            className="relative w-16 h-16 rounded-full border-solid border border-orange-600 transition-all hover:w-20 hover:h-20 hover:bg-orange-600/20"
           />
         </a>
       </div>
