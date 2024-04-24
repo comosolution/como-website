@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { twoCols } from "@/app/style/style";
 import { Service } from "@/app/types";
-import { scrollTo } from "@/app/utils/utils";
 import Image from "next/image";
 import { useState } from "react";
 import { Slide } from "react-awesome-reveal";
@@ -29,7 +28,7 @@ export default function Solutions({ data }: { data: Service }) {
                       setOpen(index !== open ? index : -1);
                     }}
                   >
-                    <h2>{solution.name}</h2>
+                    <h2 className="solutionElement">{solution.name}</h2>
                     <Image
                       src="/icons/plus.svg"
                       alt="Plus"
@@ -54,8 +53,27 @@ export default function Solutions({ data }: { data: Service }) {
                         {solution.sub && <h3>{solution.sub}</h3>}
                         <div className="flex flex-col gap-4 muted">
                           {solution.description.map((description, index) => {
-                            return <p key={index}>{description}</p>;
+                            return description.startsWith("- ") ? (
+                              <ul key={index}>
+                                <li>{description.substring(2)}</li>
+                              </ul>
+                            ) : (
+                              <p key={index}>{description}</p>
+                            );
                           })}
+                          {solution.href && (
+                            <p>
+                              Mehr Informationen finden Sie{" "}
+                              <a
+                                href={solution.href}
+                                target="_blank"
+                                className="underline"
+                              >
+                                hier
+                              </a>
+                              .
+                            </p>
+                          )}
                         </div>
                       </div>
                       <div>
