@@ -101,13 +101,13 @@ a:not(.tile):hover,
   color: rgba(var(--red-rgb), 1) !important;
 }
 
-li {
+li.accordion {
   list-style-type: circle;
   margin-left: 2rem;
   margin-block-end: 1rem;
 }
 
-li::marker {
+li.accordion::marker {
   color: rgb(var(--orange-rgb));
 }
 

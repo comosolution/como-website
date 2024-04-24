@@ -55,7 +55,9 @@ export default function Solutions({ data }: { data: Service }) {
                           {solution.description.map((description, index) => {
                             return description.startsWith("- ") ? (
                               <ul key={index}>
-                                <li>{description.substring(2)}</li>
+                                <li className="accordion">
+                                  {description.substring(2)}
+                                </li>
                               </ul>
                             ) : (
                               <p key={index}>{description}</p>
