@@ -1,5 +1,4 @@
 "use client";
-import Button from "@/app/components/button";
 import NewsletterSubscribe, {
   NewsletterUnsubscribe,
 } from "@/app/components/newsletter";

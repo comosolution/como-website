@@ -103,8 +103,6 @@ Im Falle einer Speicherung der Daten in Logfiles werden diese nach spätestens s
 
 ### Umfang der Verarbeitung
 
-Unsere Website verwendet keine Cookies, außer solchen, die technisch für die Funktionsfähigkeit unserer Webseite erforderlich sind.
-
 Wir setzen Cookies ein, um unsere Website technisch funktionsfähig und nutzerfreundlich zu gestalten. Einige Elemente unserer Webseite erfordern es, dass der aufrufende Browser auch nach einem Seitenwechsel identifiziert werden kann. In den Cookies werden dabei folgende Daten gespeichert und übermittelt:
 
 - Log-In-Informationen
@@ -126,7 +124,13 @@ Cookies werden auf dem Rechner des Besuchers gespeichert und von diesem an unser
 
 ## Webanalyse
 
-Wir verwenden keine Tools zur Webanalyse und verarbeiten folglich auch keine personenbezogenen Daten.
+Mit Ihrer Einwilligung verwenden wir die Open-Source-Software Matomo zur Analyse und statistischen Auswertung der Nutzung der Website. Hierzu werden Cookies eingesetzt. Die dadurch erhaltenen Informationen über die Websitenutzung werden ausschließlich an unsere Server übertragen und in pseudonymen Nutzungsprofilen zusammengefasst. Die Daten verwenden wir zur Auswertung der Nutzung der Website. Eine Weitergabe der erfassten Daten an Dritte erfolgt nicht.
+
+Die IP-Adressen werden anonymisiert (IPMasking), sodass eine Zuordnung zu einzelnen Nutzern nicht möglich ist.
+
+Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 S. 1 lit. a DSGVO. Wir verfolgen damit unser berechtigtes Interesse an der Optimierung unserer Webseite für unsere Außendarstellung.
+
+Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookies in Ihrem Browser löschen oder Ihre Datenschutzeinstellungen ändern.
 
 ## Newsletter
 
