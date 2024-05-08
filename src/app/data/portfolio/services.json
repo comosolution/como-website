@@ -1,0 +1,98 @@
+[
+  {
+    "id": "consulting",
+    "name": "Consulting",
+    "title": "Wir beraten, analysieren & optimieren.",
+    "icon": "consulting",
+    "services": [
+      {
+        "name": "Beratung",
+        "description": "Unser Beratungsservice bietet maßgeschneiderte Lösungen, die auf Ihre individuellen geschäftlichen Herausforderungen zugeschnitten sind."
+      },
+      {
+        "name": "Analyse",
+        "description": "Mit unserer Analysekompetenz erhalten Sie Einblicke, die es Ihnen ermöglichen, fundierte Entscheidungen zu treffen und Chancen zu identifizieren."
+      },
+      {
+        "name": "Prozessoptimierung",
+        "description": "Wir optimieren Ihre Geschäftsprozesse, um Effizienz zu steigern, Kosten zu senken und Ihre Wettbewerbsfähigkeit zu verbessern."
+      },
+      {
+        "name": "IT Health Check",
+        "description": "Durch unseren IT-Gesundheitscheck identifizieren wir potenzielle Schwachstellen und Risiken in Ihrer IT-Infrastruktur und entwickeln Lösungen zur Verbesserung Ihrer IT-Performance."
+      }
+    ]
+  },
+  {
+    "id": "development",
+    "name": "Development",
+    "title": "Maßanfertigung oder Konfektionsware?",
+    "icon": "development",
+    "services": [
+      {
+        "name": "Neukonzeption",
+        "description": "Wir gestalten und entwickeln innovative Lösungen von Grund auf neu, die genau auf Ihre Anforderungen zugeschnitten sind und Ihr Unternehmen in die Zukunft führen."
+      },
+      {
+        "name": "Entwicklung",
+        "description": "Egal ob App, Website oder Desktop-Anwendung – unsere Entwickler bringen unabhängig vom Tech Stack Ihre Ideen zum Leben und schaffen maßgeschneiderte Lösungen."
+      },
+      {
+        "name": "Installation",
+        "description": "Mit unserer Installationsunterstützung implementieren wir professionell und effektiv Ihre neuen Softwarelösungen, um sicherzustellen, dass Ihr Unternehmen sofort von den Vorteilen profitiert."
+      },
+      {
+        "name": "Migration",
+        "description": "Durch unsere Migrationsservices unterstützen wir Sie bei einem nahtlosen Übergang zu neuen Systemen oder Plattformen, um Unterbrechungen zu minimieren und den Geschäftsbetrieb aufrechtzuerhalten."
+      }
+    ]
+  },
+  {
+    "id": "support",
+    "name": "Support + Service",
+    "title": "So läuft Ihre IT reibungslos.",
+    "icon": "support",
+    "services": [
+      {
+        "name": "Betrieb",
+        "description": "Wir übernehmen den reibungslosen Betrieb Ihrer IT-Infrastruktur, damit Sie sich voll und ganz auf Ihr Kerngeschäft konzentrieren können."
+      },
+      {
+        "name": "Hosting",
+        "description": "Wir bieten Ihnen zuverlässige und sichere Hosting-Lösungen, die Ihren Anforderungen entsprechen und Ihnen die Flexibilität bieten, die Sie benötigen."
+      },
+      {
+        "name": "Wartung",
+        "description": "Unsere Wartungsdienstleistungen sorgen dafür, dass Ihre Systeme stets auf dem neuesten Stand sind und reibungslos funktionieren, um Ausfallzeiten zu minimieren und die Produktivität zu maximieren."
+      },
+      {
+        "name": "Helpdesk",
+        "description": "Unser Helpdesk steht Ihnen jederzeit zur Verfügung, um Ihnen bei technischen Fragen und Problemen schnell und effizient zu helfen."
+      },
+      {
+        "name": "Support",
+        "description": "Mit unserem umfassenden Support bieten wir Ihnen eine schnelle und kompetente Unterstützung, um sicherzustellen, dass Ihre IT-Systeme immer optimal funktionieren."
+      }
+    ]
+  },
+  {
+    "id": "training",
+    "name": "Training + Workshops",
+    "title": "Unterstützung für Ihre Mitarbeiter.",
+    "icon": "training",
+    "services": [
+      {
+        "name": "Training",
+        "description": "Unsere Trainingsprogramme bieten Ihnen das Wissen und die Fähigkeiten, die Sie benötigen, um das volle Potenzial Ihrer IT-Systeme auszuschöpfen und Ihre Mitarbeiter zu befähigen das Gleiche zu tun."
+      },
+      {
+        "name": "Workshops",
+        "description": "In unseren interaktiven Workshops arbeiten wir gemeinsam mit Ihnen an konkreten Herausforderungen und entwickeln praktische Lösungen, die sofort umsetzbar sind."
+      },
+      {
+        "name": "Seminare",
+        "description": "Unsere Seminare bieten Ihnen fundierte Einblicke in aktuelle Technologietrends und Best Practices, um Sie auf dem neuesten Stand zu halten und Ihre Fachkenntnisse zu vertiefen."
+      }
+    ]
+  }
+]

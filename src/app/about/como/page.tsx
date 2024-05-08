@@ -3,7 +3,6 @@ import Team from "./sections/team";
 import { twoCols } from "@/app/style/style";
 import Principles from "./sections/principles";
 import Map from "./sections/map";
-import Services from "@/app/sections/services";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,7 +52,6 @@ export default async function Page() {
           </div>
         </div>
       </section>
-      <Services title="Unsere Leistungen" />
       {/* <Team /> */}
       <Map />
       <Principles />

@@ -37,7 +37,7 @@ export default function Hero() {
           type="tertiary"
           icon="arrow"
           className="animate-bounce"
-          onClick={() => scrollTo("services", 260)}
+          onClick={() => scrollTo("portfolio", 160)}
         />
       </section>
     </>

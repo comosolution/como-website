@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { aboutNav, serviceNav } from "../config/nav";
+import { aboutNav, portfolioNav } from "../config/nav";
 import Link from "next/link";
 import { fourCols } from "../style/style";
 
@@ -37,7 +37,7 @@ export default function Footer() {
               <p>LinkedIn</p>
             </Link>
           </div>
-          {[serviceNav, aboutNav].map((nav) => {
+          {[portfolioNav, aboutNav].map((nav) => {
             return (
               <div key={nav.name} className="px-8 py-4">
                 <p>{nav.name}</p>

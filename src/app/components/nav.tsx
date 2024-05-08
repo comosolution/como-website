@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { mainNav, SubNav } from "../config/nav";
-import React, { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { mainNav } from "../config/nav";
+import React, { useEffect, useState } from "react";
 import { scrollTo } from "../utils/utils";
 import Button from "./button";
+import NavItem from "./navItem";
+import Menu from "./menu";
 
 export default function Nav() {
   const [prevPos, setPrevPos] = useState(0);
@@ -50,7 +51,7 @@ export default function Nav() {
               <NavItem href={entry.ref}>{entry.name}</NavItem>
             </Link>
           ) : entry.child ? (
-            <Collapse key={entry.name} content={entry.child} />
+            <Menu key={entry.name} content={entry.child} />
           ) : (
             <Button
               key={entry.name}
@@ -62,77 +63,5 @@ export default function Nav() {
         })}
       </nav>
     </header>
-  );
-}
-
-function Collapse({ content }: { content: SubNav }) {
-  const [open, setOpen] = useState(false);
-  const outsideRef = useRef<any>(null);
-  const path = usePathname();
-
-  useEffect(() => {
-    setOpen(false);
-  }, [path]);
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    document.addEventListener("scroll", () => setOpen(false));
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-      document.removeEventListener("scroll", () => setOpen(false));
-    };
-  });
-
-  const handleOutsideClick = (e: Event) => {
-    if (outsideRef.current && !outsideRef.current.contains(e.target)) {
-      setOpen(false);
-    }
-  };
-
-  return (
-    <span key={content.name} className="flex cursor-pointer" ref={outsideRef}>
-      <span className="flex" onClick={() => setOpen(!open)}>
-        <NavItem href={content.ref}>{content.name}</NavItem>
-        <Image
-          src={`/icons/chevron.svg`}
-          width="24"
-          height="24"
-          alt="icon"
-          className={`${open && "rotate-180"} transition-all hidden sm:inline`}
-        />
-      </span>
-      {open && (
-        <nav className="fixed top-16 -ml-4 p-4 rounded-2xl backdrop-blur-sm bg-neutral-900/80">
-          {content.entries.map((entry) => {
-            return (
-              <Link key={entry.name} href={entry.ref}>
-                <NavItem href={entry.ref}>{entry.name}</NavItem>
-              </Link>
-            );
-          })}
-        </nav>
-      )}
-    </span>
-  );
-}
-
-function NavItem({
-  children,
-  className,
-  href,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  href: string;
-}) {
-  const path = usePathname();
-  const active =
-    (path.includes(href) && href !== "/") || (path === "/" && href === "/");
-
-  return (
-    <p className={`navItem ${active ? "text-rose-600" : "link"} ${className}`}>
-      {children}
-    </p>
   );
 }

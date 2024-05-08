@@ -1,42 +1,34 @@
 [
   {
     "name": "BlackBerry",
-    "img": "blackberry.svg",
-    "category": ["mobile", "cybersecurity", "solutions"]
+    "img": "blackberry.svg"
   },
   {
     "name": "codeless Platforms",
-    "img": "codeless.svg",
-    "category": []
+    "img": "codeless.svg"
   },
   {
     "name": "Crossware",
-    "img": "crossware.png",
-    "category": ["collaboration"]
+    "img": "crossware.png"
   },
   {
     "name": "HCL",
-    "img": "hcl.svg",
-    "category": ["collaboration", "solutions"]
+    "img": "hcl.svg"
   },
   {
     "name": "Microsoft",
-    "img": "microsoft.png",
-    "category": ["collaboration", "solutions"]
+    "img": "microsoft.png"
   },
   {
     "name": "Panagenda",
-    "img": "panagenda.png",
-    "category": []
+    "img": "panagenda.svg"
   },
   {
     "name": "{privatescope}",
-    "img": "privatescope.png",
-    "category": []
+    "img": "privatescope.png"
   },
   {
     "name": "RingCentral",
-    "img": "ringcentral.svg",
-    "category": ["collaboration"]
+    "img": "ringcentral.svg"
   }
 ]

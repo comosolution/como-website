@@ -1,0 +1,32 @@
+[
+  {
+    "id": "handel",
+    "name": "Handel",
+    "description": "Im Handel gehen Innovation und Effizienz Hand in Hand. Unser IT-Dienstleistungsangebot unterstützt Unternehmen dabei, sich in einem sich ständig wandelnden Marktumfeld zu behaupten. Von E-Commerce-Lösungen bis hin zu Bestandsmanagement-Systemen - wir optimieren Ihre Abläufe, damit Sie sich auf das konzentrieren können, was wirklich zählt: Ihr Geschäftswachstum.",
+    "icon": "handel"
+  },
+  {
+    "id": "produktion",
+    "name": "Produktion",
+    "description": "In der Welt der Produktion dreht sich alles um Präzision und Leistung. Unsere maßgeschneiderten IT-Lösungen bieten Ihnen die Tools, die Sie benötigen, um Ihre Produktionsprozesse zu optimieren und Ihre Effizienz zu steigern. Von der Automatisierung bis hin zur Datenanalyse helfen wir Ihnen dabei, den Wettbewerbsvorsprung zu behalten und Ihre Produktivität zu maximieren.",
+    "icon": "produktion"
+  },
+  {
+    "id": "dienstleistungen",
+    "name": "Dienstleistungen",
+    "description": "Unsere IT-Dienstleistungen sind darauf ausgerichtet, Ihr Unternehmen dabei zu unterstützen, erstklassige Dienstleistungen anzubieten, die Ihre Kunden begeistern. Von CRM-Systemen bis hin zu Helpdesk-Lösungen - wir sorgen dafür, dass Ihre Servicebereitstellung reibungslos und effektiv verläuft.",
+    "icon": "dienstleistungen"
+  },
+  {
+    "id": "sport",
+    "name": "Sport",
+    "description": "Im Bereich des Profisports zählt jede Sekunde und jedes Detail. Unsere spezialisierten IT-Lösungen sind darauf ausgerichtet, professionelle Sportvereine dabei zu unterstützen, ihre Leistung zu maximieren und ihren Erfolg zu steigern. Von der Mitgliederverwaltung bis hin zu Ticket-Plattformen bieten wir Ihnen die Technologie, die Sie benötigen, um an die Spitze zu gelangen und dort zu bleiben.",
+    "icon": "sport"
+  },
+  {
+    "id": "behoerden",
+    "name": "Behörden + Kommunen",
+    "description": "Als verlässlicher Partner für Behörden und Kommunen stehen wir Ihnen zur Seite, um Ihnen dabei zu helfen, die Bedürfnisse Ihrer Bürger effektiv zu erfüllen. Unsere maßgeschneiderten IT-Lösungen unterstützen Sie dabei, Ihre Dienstleistungen zu optimieren, Prozesse zu rationalisieren und die Bürgernähe zu verbessern. Von digitalen Verwaltungssystemen bis hin zu Bürgerservice-Portalen - wir bringen Ihre Stadtverwaltung ins digitale Zeitalter.",
+    "icon": "behörden"
+  }
+]

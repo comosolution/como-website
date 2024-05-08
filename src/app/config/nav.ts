@@ -1,14 +1,3 @@
-export const serviceNav = {
-  name: "Leistungen",
-  ref: "/services",
-  entries: [
-    { name: "Collaboration", ref: "/services/collaboration" },
-    { name: "Mobile", ref: "/services/mobile" },
-    { name: "Solutions", ref: "/services/solutions" },
-    { name: "Cybersecurity", ref: "/services/cybersecurity" },
-  ],
-};
-
 export const aboutNav = {
   name: "Über uns",
   ref: "/about",
@@ -20,11 +9,21 @@ export const aboutNav = {
   ],
 };
 
+export const portfolioNav = {
+  name: "Portfolio",
+  ref: "/portfolio",
+  entries: [
+    { name: "Dienstleistungen", ref: "/portfolio/services" },
+    { name: "Produkte", ref: "/portfolio/products" },
+    { name: "Branchen", ref: "/portfolio/branches" },
+  ],
+};
+
 export const mainNav = [
   { name: "Home", ref: "/" },
-  { name: "Leistungen", child: serviceNav },
+  { name: "Portfolio", ref: "/portfolio" },
   { name: "Über uns", child: aboutNav },
   { name: "Kontakt" },
 ];
 
-export type SubNav = typeof serviceNav;
+export type SubNav = typeof aboutNav;

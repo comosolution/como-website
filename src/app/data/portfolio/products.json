@@ -1,0 +1,97 @@
+[
+  {
+    "name": "MOLIRIS Time",
+    "sub": "Mobile Zeiterfassung auf dem Smartphone",
+    "description": [
+      "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen – egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche.",
+      "Mit dem Smartphone können einzelne Personen oder ganze Gruppen einfach und intuitiv an- und abgemeldet werden. Die erfassten Zeiten werden nach Kostenstellen aufgeschlüsselt und direkt an die Buchhaltung zur Verarbeitung und Abrechnung weitergeleitet. Die Gefahren von Manipulationen werden durch Sicherheitsmechanismen und Eskalationsstufen minimiert, die auch die Einhaltung von definierten Abläufen der Zeiterfassung sicherstellen.",
+      "Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
+    ],
+    "logo": "como.svg",
+    "img": "time.png"
+  },
+  {
+    "name": "MOLIRIS Vote",
+    "sub": "Sichere Termin- und Online-Umfragen für Ihr Unternehmen",
+    "description": [
+      "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmen-internen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen.",
+      "Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
+    ],
+    "logo": "como.svg",
+    "img": "vote.png"
+  },
+  {
+    "name": "Cylance Security",
+    "sub": "Cybersecurity Driven by Cylance AI",
+    "description": [
+      "BlackBerry Cybersecurity Driven by Cylance AI ist eine fortschrittliche Cybersecurity-Lösung, die auf künstlicher Intelligenz basiert und entwickelt wurde, um Organisationen vor einer breiten Palette von Cyberbedrohungen zu schützen. Durch die Nutzung von maschinellem Lernen und Verhaltensanalyse kann die Lösung nicht nur bekannte Bedrohungen erkennen, sondern auch bisher unbekannte Angriffe in Echtzeit abwehren. Die Cylance AI ist eine der ersten Cybersicherheits-KIs mit dem umfangreichsten KI-Wissen, von dem Ihr Unternehmen profitiert.",
+      "Ein wichtiger Vorteil dieser Lösung ist ihre Fähigkeit, präzise Bedrohungen zu identifizieren und gleichzeitig die Anzahl falscher Alarme zu minimieren. Dies bedeutet, dass Sicherheitsteams effektiver arbeiten können, da sie sich auf echte Bedrohungen konzentrieren können, anstatt Zeit mit der Überprüfung von irreführenden Warnungen zu verschwenden.",
+      "Die BlackBerry Cylance Sicherheitslösungen bieten eine umfassende Endpunktsicherheit mit zentralisiertem Management und Berichterstattungsfunktionen. Dazu ermöglichen die Lösungen Sicherheitsteams die gesamte Sicherheitslage ihrer Organisation effizient zu verwalten und zu überwachen oder im Managed Service überwachen zu lassen.",
+      "Stärken Sie die Cybersicherheit Ihres Unternehmens oder Organisation und verbessern Sie die Reaktionsfähigkeit auf Bedrohungen bei gleichzeitiger Reduzierung der Komplexität Ihrer Sicherheitsinfrastruktur."
+    ],
+    "logo": "blackberry.svg",
+    "img": "cylance.png"
+  },
+  {
+    "name": "UEM",
+    "sub": "Unified Endpoint Management",
+    "description": [
+      "BlackBerry UEM bietet Ihnen eine zentrale Verwaltungskonsole für die vollständiger Endpunktverwaltung und Richtlinienkontrolle für Ihre vielfältige Flotte von Geräten und Apps. Die Unified Endpoint Management Lösung basiert auf einem bewährten Ende-zu-Ende Sicherheitsmodell, das die nötige Flexibilität und Sicherheit in der mobilen Zusammenarbeit Ihrer Mitarbeiter ermöglicht."
+    ],
+    "logo": "blackberry.svg",
+    "img": "uem.png"
+  },
+  {
+    "name": "BPA Platform",
+    "description": [""],
+    "logo": "codeless.svg",
+    "img": "codeless.png"
+  },
+  {
+    "name": "Mail Signature",
+    "sub": "Most Trusted Email Signature Solution",
+    "description": [
+      "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
+      "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
+      "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
+    ],
+    "logo": "crossware.png",
+    "img": "crossware.png"
+  },
+  {
+    "name": "Notes Domino",
+    "description": [
+      "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten. Domino ermöglicht komplexe Geschäftsabläufe als professionelle Anwendungen mit modernen Entwicklungstools. Nutzen Sie Pro-Code Tools wie das App Dev Pack sowie Low-Code Optionen wie Domino Volt für schnelle Produktivität.",
+      "HCL Notes ist ein moderner E-Mail-Client für Mail, Kalender und Aufgaben sowie für die Ausführung von Businessanwendungen. Mit HCL Nomad greifen Sie mobil auf alle Notes-Anwendungen und Daten zu, erweitern den Wirkungsbereich und steigern den Wert.",
+      "Domino bietet eine sichere, stabile Infrastruktur und eine wirtschaftlich rentable Investition mit bis zu 300% ROI und bis zu 25% niedrigeren TCO."
+    ],
+    "logo": "hcl.svg",
+    "img": "notes.png"
+  },
+  {
+    "name": "Sametime",
+    "description": [
+      "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime bietet moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann.",
+      "HCL Sametime bietet Ihnen eine moderne Videokonferenzplattform mit persistentem Chat, die an die heutige digitale Arbeitsweise in Unternehmen angepasst ist und vor allem das Zusammenarbeiten schneller, sicherer und aus der Ferne ermöglicht – und das bei halbierten Betriebskosten!"
+    ],
+    "logo": "hcl.svg",
+    "img": "sametime.png"
+  },
+  {
+    "name": "Analyse",
+    "description": [""],
+    "logo": "panagenda.svg",
+    "img": "panagenda.png"
+  },
+  {
+    "name": "Contact Center",
+    "description": [
+      "RingCentral ist eine umfassende Kommunikationsplattform, die Unternehmen hilft, ihre Kommunikation und Zusammenarbeit zu verbessern. Mit RingCentral können Teams nahtlos über verschiedene Kanäle wie Sprache, Video, Messaging und Konferenzen kommunizieren, unabhängig von ihrem Standort oder Gerät.",
+      "Die Plattform bietet eine Vielzahl von Funktionen, darunter Cloud-Telefonie, Unternehmens-SMS, Video-Meetings und Team-Messaging. Benutzer können Anrufe tätigen und empfangen, Voicemails verwalten, Faxnachrichten senden und empfangen sowie an Video-Meetings teilnehmen, alles über eine einzige intuitive Benutzeroberfläche.",
+      "RingCentral ermöglicht eine nahtlose Integration mit anderen Unternehmensanwendungen wie CRM-Systemen und Helpdesk-Tools, um den Arbeitsablauf zu optimieren und die Produktivität zu steigern. Darüber hinaus bietet es fortschrittliche Funktionen wie automatisierte Anrufweiterleitung, Anrufanalytik und Anrufaufzeichnung für verbessertes Call-Management und -Reporting.",
+      "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
+    ],
+    "logo": "ringcentral.svg",
+    "img": "ringcentral.png"
+  }
+]
