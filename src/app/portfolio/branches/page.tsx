@@ -21,7 +21,7 @@ export default function Page() {
           );
         })}
       </div>
-      <Button type="tertiary" text="Zurück zur Übersicht" href="/portfolio" />
+      <Button type="tertiary" text="Zurück zum Portfolio" href="/portfolio" />
     </main>
   );
 }

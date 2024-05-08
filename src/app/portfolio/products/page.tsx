@@ -11,7 +11,7 @@ export default function Page() {
       <h3 className="text-center">
         Diese Produkte haben wir für Sie im Angebot
       </h3>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
         {products.map((product, index) => {
           return (
             <Slide key={index} direction="up" delay={index * 50} triggerOnce>
