@@ -19,7 +19,7 @@ export default function CardActionButton({
   return (
     <Link href={href} className="tile">
       <Slide direction="up" delay={delay} triggerOnce>
-        <div className="flex items-center gap-6 px-8 py-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 transition-all hover:bg-neutral-900 cursor-pointer">
+        <div className="flex items-center gap-6 px-8 py-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all hover:bg-neutral-900 cursor-pointer">
           <Image
             src={icon}
             alt="Icon"

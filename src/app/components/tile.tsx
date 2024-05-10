@@ -11,7 +11,7 @@ export default function Tile({
   href?: string;
 }) {
   const style =
-    "flex flex-col justify-between items-end gap-4 p-8 rounded-2xl backdrop-blur-sm bg-neutral-900/70 transition-all";
+    "flex flex-col justify-between items-end gap-4 p-8 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all";
 
   const tile = (
     <>

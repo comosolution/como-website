@@ -15,7 +15,7 @@ export default function Page() {
         {products.map((product, index) => {
           return (
             <Slide key={index} direction="up" delay={index * 50} triggerOnce>
-              <div className="lg:min-h-[340px] flex flex-col justify-between items-center gap-2 pt-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 transition-all hover:bg-neutral-900 cursor-pointer">
+              <div className="lg:min-h-[340px] flex flex-col justify-between items-center gap-2 pt-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl  transition-all hover:bg-neutral-900 cursor-pointer">
                 <Image
                   src={`/logos/${product.logo}`}
                   alt="Logo"

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { getMarkdown } from "../utils/generator";
 import Button from "./button";
 import Tile from "./tile";
@@ -9,7 +10,16 @@ export default async function News() {
   const notes = await getMarkdown("notes");
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="relative flex flex-col gap-4 pt-16 border-t border-t-white/20">
+      <div className="absolute -z-1 inset-0 flex justify-center overflow-hidden">
+        <img
+          src="/glow-2.png"
+          alt=""
+          width="2000"
+          height="1200"
+          className="max-w-none origin-top"
+        />
+      </div>
       <header className={`${header} justify-between px-8`}>
         <h2>Was gibt es Neues?</h2>
         <Button

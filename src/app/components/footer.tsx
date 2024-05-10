@@ -13,7 +13,7 @@ export default function Footer() {
         alt=""
         className="absolute -bottom-8 -z-1 w-full footerCircles"
       />
-      <footer className="flex flex-col gap-16 mb-8 px-8 py-16 rounded-2xl backdrop-blur-sm bg-neutral-900/10">
+      <footer className="flex flex-col gap-16 mb-8 px-8 py-16 rounded-2xl backdrop-blur-sm bg-neutral-900/10 ring-1 ring-white/10 shadow-2xl ">
         <header className="flex items-center gap-4 px-8">
           <Image src="/logo.svg" width="72" height="72" alt="Logo" />
           <div id="logoLarge" className="flex flex-col gap-0">

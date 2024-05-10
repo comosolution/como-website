@@ -1,7 +1,7 @@
 import Image from "next/image";
 import services from "../../../data/portfolio/services.json";
 import { Metadata } from "next";
-import { ServiceOverview } from "../page";
+import ServiceOverview from "../sections/overview";
 
 export const metadata: Metadata = {
   title: "Dienstleistungen | CoMo Solution GmbH",

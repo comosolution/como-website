@@ -18,7 +18,7 @@ export default function NewsletterSubscribe() {
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
   return (
-    <div className="md:col-span-2 flex flex-col gap-4 p-8 items-center justify-center text-center">
+    <div className="relative z-1 md:col-span-2 flex flex-col gap-4 p-8 items-center justify-center text-center">
       <div>
         <p className="muted">Immer informiert bleiben!</p>
         <h3>Der CoMo Newsletter</h3>
@@ -28,7 +28,7 @@ export default function NewsletterSubscribe() {
         method="post"
         target="_blank"
       >
-        <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full">
+        <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full backdrop-blur-sm bg-neutral-900/70">
           <input
             id="text6226376"
             className="w-full ml-4 px-4 ghost"
