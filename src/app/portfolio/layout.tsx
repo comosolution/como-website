@@ -2,7 +2,7 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
-      <div className="absolute -z-1 inset-0 flex justify-center overflow-hidden">
+      <div className="absolute -z-1 inset-0 flex justify-center overflow-hidden -translate-y-32">
         <img
           src="/glow-1.png"
           alt=""

@@ -8,7 +8,21 @@
   {
     "id": "produktion",
     "name": "Produktion",
-    "description": "In der Welt der Produktion dreht sich alles um Präzision und Leistung. Unsere maßgeschneiderten IT-Lösungen bieten Ihnen die Tools, die Sie benötigen, um Ihre Produktionsprozesse zu optimieren und Ihre Effizienz zu steigern. Von der Automatisierung bis hin zur Datenanalyse helfen wir Ihnen dabei, den Wettbewerbsvorsprung zu behalten und Ihre Produktivität zu maximieren.",
+    "title": "Digitale Innovation im produzierenden Gewerbe – CoMo Solution ist der richtige Partner",
+    "description": "Willkommen in der Welt der Produktion, wo Präzision und Effizienz den Unterschied zwischen Erfolg und Misserfolg ausmachen. Bei CoMo Solution kennen wir die Herausforderungen des produzierenden Gewerbes aus unseren langjährigen Kundenverbindungen in diesem Bereich. Insbesondere stellt die digitale Transformation des Marktes und neue Technologien veränderte Anforderungen an die Unternehmen.",
+    "conditions": "Effizienz und Produktivität im Wettbewerb, neue Technologien sowie verändernde Marktsituationen sind besondere Herausforderungen, die es zu lösen gilt. Auch die Absicherung des Unternehmens mit seinem Know-how und der Schutz der Produktion sind heute wichtige Faktoren, um das Fortbestehen zu sichern. Mit uns als Partner und den passenden Lösungen können Sie sich auf den Weg Richtung Zukunft machen.",
+    "knowledge": [
+      "Wir haben über die letzten 15 Jahre mehrere Kunden des produzierenden Gewerbes gewinnen können, deren Arbeit wir mit unterschiedlichen Lösungen voranbringen konnten. Das leisten wir für Sie:",
+      "- Digitale Transformation in Verwaltung und Produktion",
+      "- Digitale Prozesse für die spezifischen Anforderungen entwickeln und etablieren",
+      "- Passgenaue Anwendungsentwicklungen für die Abläufe in der Produktion mit Analysen, Status und Qualitätssicherung",
+      "- Lösungen für digitale Zusammenarbeit und Kommunikation",
+      "- Absicherung der Operational Technology und der Endpunkte im Unternehmen mit KI-gestützten und maschinenlernenden Sicherheitsanwendungen",
+      "- IT-Service Desk für die Mitarbeitenden in Ihrem Unternehmen sowie Wartung und Service Ihrer Infrastrukturen",
+      "- Compliance-Unterstützung zur Einhaltung von IT- und Datenschutzrichtlinien und -Vorschriften",
+      "- Entwicklung und Gestaltung Ihres digitalen Auftritts im Internet mit einer modernen Webseite"
+    ],
+    "outro": "Für Ihren Unternehmenserfolg halten wir uns kontinuierlich über die neuesten Technologietrends auf dem Laufenden, insbesondere im produzierenden Gewerbe. Dadurch stellen wir sicher, dass Ihr Unternehmen stets einen Schritt voraus ist. Falls erforderlich, entwickeln wir maßgeschneiderte Lösungen, die genau auf die individuellen Bedürfnisse Ihres Unternehmens zugeschnitten sind, unabhängig von seiner Größe.",
     "icon": "produktion"
   },
   {
@@ -20,7 +34,20 @@
   {
     "id": "sport",
     "name": "Sport",
-    "description": "Im Bereich des Profisports zählt jede Sekunde und jedes Detail. Unsere spezialisierten IT-Lösungen sind darauf ausgerichtet, professionelle Sportvereine dabei zu unterstützen, ihre Leistung zu maximieren und ihren Erfolg zu steigern. Von der Mitgliederverwaltung bis hin zu Ticket-Plattformen bieten wir Ihnen die Technologie, die Sie benötigen, um an die Spitze zu gelangen und dort zu bleiben.",
+    "title": "Digitale Exzellenz im Sportsektor erreichen – mit CoMo Solutions Know-how",
+    "description": "Sie bewegen sich in der Welt des Sports und arbeiten für einen Sportverein, wo Leistung eben nicht nur auf einem Spielfeld oder einer Laufbahnerbracht werden muss? Bei CoMo Solution kennen und verstehen wir die einzigartigen Anforderungen und Ambitionen von Sportvereinen, sich digital aufzustellen und in der schnelllebigen, zunehmend digitalisierten Umgebung des modernen Sports zu bestehen.",
+    "conditions": "Viele Sportvereine sind historisch gewachsen und entwickeln sich stetig weiter. Dabei passiert es, dass sich ineffiziente und kostensteigernde Abläufe etablieren und Wachstum hemmen. Wir kennen diese Probleme und wissen, mit welchen Werkzeugen Strukturen effizienter gestaltet und Informationen zusammengefasst werden können – das senkt Kosten und Synergien entstehen.",
+    "knowledge": [
+      "Mit unserer langjährigen Erfahrung in der Bereitstellung verschiedener IT-Dienstleistungen für Sportvereine sind wir Ihr vertrauenswürdiger Partner für administrative Spitzenleistungen. Das leisten wir für Sie:",
+      "- Mitgliederverwaltung und -kommunikation",
+      "- Digitales Ticketing und Rückabwicklungen",
+      "- Werkzeuge für die Vermarktung (Endkunden und Sponsoren)",
+      "- Digitales Management der Sport- und Trainingsstätten",
+      "- Promo und Merchandise für Onlineshops und Fanläden",
+      "- Gestaltung digitaler Elemente für Vereinsmuseen",
+      "- Digitale Ausstattung für Trainerstab und Nachwuchsförderung"
+    ],
+    "outro": "Innovation für den Erfolg: Wir halten uns stets über die neuesten Technologietrends – speziell in der Sportbranche – auf dem Laufenden und stellen so sicher, dass Ihr Verein einen Schritt voraus ist. Wo erforderlich entwickeln wir maßgeschneiderte Lösungen, die genau auf die Bedürfnisse zugeschnitten sind, unabhängig vor der Größe des Vereins.",
     "icon": "sport"
   },
   {

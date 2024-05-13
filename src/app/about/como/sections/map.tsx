@@ -27,7 +27,11 @@ export default function Map() {
 
   return (
     <div id="map" className="relative">
-      <div ref={mapRef} className="rounded-2xl" style={style} />
+      <div
+        ref={mapRef}
+        className="rounded-2xl ring-1 ring-white/10 shadow-2xl"
+        style={style}
+      />
       <div
         className="absolute top-0 left-0 z-50 flex justify-center items-center"
         style={style}

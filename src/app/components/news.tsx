@@ -20,7 +20,7 @@ export default async function News() {
           className="max-w-none origin-top"
         />
       </div>
-      <header className={`${header} justify-between px-8`}>
+      <header className={`${header} relative z-5 justify-between px-8`}>
         <h2>Was gibt es Neues?</h2>
         <Button
           type="secondary"

@@ -11,7 +11,7 @@ export default function Hero() {
       <Circles />
       <section
         id="hero"
-        className="relative z-5 flex flex-col gap-16 items-center max-w-[800px] text-center pb-4"
+        className="relative z-5 flex flex-col gap-16 items-center max-w-[880px] text-center pb-4"
       >
         <h1>Ihr Partner für smarte IT-Lösungen</h1>
         <p className="max-w-[680px] muted">

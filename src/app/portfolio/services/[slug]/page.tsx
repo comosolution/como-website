@@ -2,6 +2,7 @@ import Image from "next/image";
 import services from "../../../data/portfolio/services.json";
 import { Metadata } from "next";
 import ServiceOverview from "../sections/overview";
+import { twoCols } from "@/app/style/style";
 
 export const metadata: Metadata = {
   title: "Dienstleistungen | CoMo Solution GmbH",
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
-    <main className="flex flex-col gap-24 p-16">
+    <main className="flex flex-col gap-24 px-16">
       {services
         .filter((service) => service.id === params.slug)
         .map((service, index) => {
@@ -35,14 +36,11 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </div>
                 <h1 className="text-center">{service.title}</h1>
               </header>
-              <div className="grid sm:grid-cols-2 gap-16">
+              <div className={twoCols}>
                 {service.services.map((s, index) => {
                   return (
-                    <div
-                      key={index}
-                      className="flex flex-col justify-start items-start gap-4"
-                    >
-                      <h4>{s.name}</h4>
+                    <div key={index} className="p-8">
+                      <h3>{s.name}</h3>
                       <p className="muted">{s.description}</p>
                     </div>
                   );

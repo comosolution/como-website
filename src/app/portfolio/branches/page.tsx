@@ -1,10 +1,15 @@
 import branches from "../../data/portfolio/branches.json";
 import Button from "@/app/components/button";
 import CardActionButton from "@/app/components/card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Branchen | CoMo Solution GmbH",
+};
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center gap-8 p-8">
+    <main className="flex flex-col items-center gap-8 px-8">
       <h3 className="text-center max-w-[880px]">
         In welcher Branche sind Sie tätig?
       </h3>
