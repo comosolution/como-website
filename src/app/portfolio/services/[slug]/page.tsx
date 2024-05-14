@@ -16,13 +16,13 @@ export function generateStaticParams() {
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
-    <main className="flex flex-col gap-24 px-16">
+    <main className="flex flex-col gap-24">
       {services
         .filter((service) => service.id === params.slug)
         .map((service, index) => {
           return (
             <div key={index} className="flex flex-col gap-16">
-              <header className="flex flex-col items-center">
+              <header className="flex flex-col items-center px-8">
                 <div className="flex justify-start items-center gap-1 pb-2">
                   <Image
                     src={`/services/${service.icon}.svg`}

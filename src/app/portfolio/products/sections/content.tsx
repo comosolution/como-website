@@ -8,14 +8,14 @@ import { Product } from "@/app/types";
 export default function ProductContent({ product }: { product: Product }) {
   return (
     <div>
-      <header className="flex flex-col items-center gap-2">
+      <header className="flex flex-col items-center gap-2 px-8">
         <Image
           src={`/logos/${product.logo}`}
           alt="Logo"
           width={100}
           height={40}
         />
-        <h1>{product.name}</h1>
+        <h1 className="text-center">{product.name}</h1>
       </header>
       <div className="flex flex-col py-8">
         <article>
@@ -23,7 +23,7 @@ export default function ProductContent({ product }: { product: Product }) {
           {product.description.map((description, index) => {
             return description.startsWith("- ") ? (
               <ul key={index}>
-                <li className="accordion">{description.substring(2)}</li>
+                <li>{description.substring(2)}</li>
               </ul>
             ) : description.startsWith("# ") ? (
               <h3>{description.substring(2)}</h3>
@@ -42,7 +42,10 @@ export default function ProductContent({ product }: { product: Product }) {
             alt={product.name}
             className="rounded-2xl"
             width={880}
-            style={{ maxHeight: "400px", objectFit: "contain" }}
+            style={{
+              maxHeight: "400px",
+              objectFit: "contain",
+            }}
           />
         )}
       </div>

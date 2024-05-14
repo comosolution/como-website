@@ -13,6 +13,7 @@ export const portfolioNav = {
   name: "Portfolio",
   ref: "/portfolio",
   entries: [
+    { name: "Übersicht", ref: "/portfolio" },
     { name: "Dienstleistungen", ref: "/portfolio/services" },
     { name: "Produkte", ref: "/portfolio/products" },
     { name: "Branchen", ref: "/portfolio/branches" },

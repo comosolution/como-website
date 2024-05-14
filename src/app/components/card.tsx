@@ -17,9 +17,9 @@ export default function CardActionButton({
   largeIcon?: boolean;
 }) {
   return (
-    <Link href={href} className="tile">
-      <Slide direction="up" delay={delay} triggerOnce>
-        <div className="flex items-center gap-6 px-8 py-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all hover:bg-neutral-900 cursor-pointer">
+    <Slide direction="up" delay={delay} triggerOnce>
+      <Link href={href} className="tile">
+        <div className="flex items-center gap-6 mx-4 px-8 py-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all hover:bg-neutral-900 cursor-pointer">
           <Image
             src={icon}
             alt="Icon"
@@ -28,7 +28,7 @@ export default function CardActionButton({
           />
           <h2>{name}</h2>
         </div>
-      </Slide>
-    </Link>
+      </Link>
+    </Slide>
   );
 }
