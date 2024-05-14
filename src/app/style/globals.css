@@ -72,6 +72,15 @@ input:focus::placeholder {
   color: rgba(var(--foreground-rgb), 0.2);
 }
 
+input[type="search"] {
+  box-sizing: border-box;
+  background-image: url("/icons/search.svg");
+  background-size: 2.2rem;
+  background-position: 0 0.4rem;
+  background-repeat: no-repeat;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+}
+
 button[disabled] {
   opacity: 0.8;
   cursor: not-allowed;

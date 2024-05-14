@@ -1,8 +1,18 @@
 [
   {
     "id": "consulting",
+    "type": "services",
     "name": "Consulting",
     "title": "Wir beraten, analysieren & optimieren.",
+    "keywords": [
+      "Beratung",
+      "Analyse",
+      "Prozessoptimierung",
+      "Optimierung",
+      "Health Check",
+      "Projekt",
+      "Management"
+    ],
     "icon": "consulting",
     "services": [
       {
@@ -21,13 +31,24 @@
         "name": "IT Health Check",
         "description": "Durch unseren IT-Gesundheitscheck identifizieren wir potenzielle Schwachstellen und Risiken in Ihrer IT-Infrastruktur und entwickeln Lösungen zur Verbesserung Ihrer IT-Performance."
       }
-    ]
+    ],
+    "additional": ""
   },
   {
     "id": "development",
+    "type": "services",
     "name": "Development",
     "title": "Maßanfertigung oder Konfektionsware?",
     "icon": "development",
+    "keywords": [
+      "Konzeption",
+      "Entwicklung",
+      "App",
+      "Website",
+      "Desktop",
+      "Installation",
+      "Migration"
+    ],
     "services": [
       {
         "name": "Neukonzeption",
@@ -45,13 +66,23 @@
         "name": "Migration",
         "description": "Durch unsere Migrationsservices unterstützen wir Sie bei einem nahtlosen Übergang zu neuen Systemen oder Plattformen, um Unterbrechungen zu minimieren und den Geschäftsbetrieb aufrechtzuerhalten."
       }
-    ]
+    ],
+    "additional": ""
   },
   {
     "id": "support",
+    "type": "services",
     "name": "Support + Service",
     "title": "So läuft Ihre IT reibungslos.",
     "icon": "support",
+    "keywords": [
+      "Betrieb",
+      "Hosting",
+      "Wartung",
+      "Helpdesk",
+      "Support",
+      "Service"
+    ],
     "services": [
       {
         "name": "Betrieb",
@@ -73,12 +104,15 @@
         "name": "Support",
         "description": "Mit unserem umfassenden Support bieten wir Ihnen eine schnelle und kompetente Unterstützung, um sicherzustellen, dass Ihre IT-Systeme immer optimal funktionieren."
       }
-    ]
+    ],
+    "additional": ""
   },
   {
     "id": "training",
+    "type": "services",
     "name": "Training + Workshops",
     "title": "Unterstützung für Ihre Mitarbeiter.",
+    "keywords": ["Seminare", "Workshops", "Schulung"],
     "icon": "training",
     "services": [
       {
@@ -93,6 +127,7 @@
         "name": "Seminare",
         "description": "Unsere Seminare bieten Ihnen fundierte Einblicke in aktuelle Technologietrends und Best Practices, um Sie auf dem neuesten Stand zu halten und Ihre Fachkenntnisse zu vertiefen."
       }
-    ]
+    ],
+    "additional": ""
   }
 ]

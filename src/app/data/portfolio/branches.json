@@ -1,6 +1,28 @@
 [
   {
+    "id": "handel",
+    "type": "branches",
+    "name": "Handel",
+    "title": "IT für die Zukunft des Handels",
+    "description": "Seit längerem unterliegt der Handel einem stetigen Wandel und die digitale Transformation kann entscheidend für den Erfolg werden. Egal, ob stationärer Handel oder Onlinehändler, ob Direktvertrieb oder mit Zwischenhändlern, verschiedene Herausforderungen haben alle zu stemmen. Mit unseren maßgeschneiderten IT-Dienstleistungen und passgenauen Anwendungsentwicklungen unterstützen wir Ihr Handelsunternehmen, damit Sie wieder Zeit und Ressourcen haben, um Ihre Geschäftsziele zu erreichen.",
+    "sub": "Unsere Erfahrungen mit Unternehmen des Handels werden Ihr Vorteil",
+    "conditions": "Unternehmen, die mit Produkten und Waren handeln, müssen sich immer wieder auf die Marktsituationen einstellen. Neben dem eigentlichen Handel spiele wichtige Faktoren, wie die Digitalisierung im Unternehmen, Prozessoptimierung in den Abläufen, der Fachkräftemangel oder auch die Cybersicherheit eine große Rolle. Ziel sind effizientere Abläufe, bessere Kommunikation  und benutzerfreundliche Apps und Portale, um die Kundenakquise und Kundenbindung zu verbessern.",
+    "knowledge": [
+      "Mit einem großen Produzenten, der seine Produkte sowohl selbst vertreibt als auch mit Vertriebspartnern arbeitet, haben wir langjährige Erfahrungen im Bereich Handel sammeln können. Das leisten wir für Sie:",
+      "- Maßgeschneiderte Anwendungsentwicklung für digitale Prozesse und Abläufe, bspw. im Bereich Lager und Vertrieb mit einem B2B-Portal oder eine App für den Vertrieb für Kunden- und Bestellmanagement",
+      "- Unified Communications und Customer Care mit cloud-basierten Tools für beste Kundenkommunikation",
+      "- Cybersecurity als Managed Service zur Entlastung der unternehmenseigenen IT",
+      "- Unterstützung der unternehmenseigenen IT bei Implementierung, Wartung und Service sowie ein IT-Service Desk für die Mitarbeitenden",
+      "- Compliance-Unterstützung zur Einhaltung von IT- und Datenschutzrichtlinien und –Vorschriften"
+    ],
+    "outro": "Unsere Fähig- und Fertigkeiten bei der passgenaue Anwendungsentwicklung an die individuellen Bedarfe der Unternehmen und unsere Dienste zur Verbesserung der Zusamenarbeit und Effizienz, macht die CoMo Solution für Sie zum idealen IT-Partner.",
+    "cto": "Sprechen Sie uns noch heute an, was wir für Sie tun können, damit Ihre digitalen Services und Angebote effizient und sicher umgesetzt werden können.",
+    "icon": "handel",
+    "additional": ""
+  },
+  {
     "id": "produktion",
+    "type": "branches",
     "name": "Produktion",
     "title": "Digitale Innovation im produzierenden Gewerbe",
     "description": "Willkommen in der Welt der Produktion, wo Präzision und Effizienz den Unterschied zwischen Erfolg und Misserfolg ausmachen. Bei CoMo Solution kennen wir die Herausforderungen des produzierenden Gewerbes aus unseren langjährigen Kundenverbindungen in diesem Bereich. Insbesondere stellt die digitale Transformation des Marktes und neue Technologien veränderte Anforderungen an die Unternehmen.",
@@ -19,10 +41,12 @@
     ],
     "outro": "Für Ihren Unternehmenserfolg halten wir uns kontinuierlich über die neuesten Technologietrends auf dem Laufenden, insbesondere im produzierenden Gewerbe. Dadurch stellen wir sicher, dass Ihr Unternehmen stets einen Schritt voraus ist. Falls erforderlich, entwickeln wir maßgeschneiderte Lösungen, die genau auf die individuellen Bedürfnisse Ihres Unternehmens zugeschnitten sind, unabhängig von seiner Größe.",
     "cto": "Verlassen Sie sich auf CoMo Solution, um Ihr Unternehmen auf dem Weg zum digitalen Vorreiter zu begleiten. Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie wir Ihnen dabei helfen können, Ihr Unternehmen zu optimieren.",
-    "icon": "produktion"
+    "icon": "produktion",
+    "additional": ""
   },
   {
     "id": "sport",
+    "type": "branches",
     "name": "Sport",
     "title": "Erreichen Sie digitale Exzellenz im Sportsektor",
     "description": "Sie bewegen sich in der Welt des Sports und arbeiten für einen Sportverein, wo Leistung eben nicht nur auf einem Spielfeld oder einer Laufbahnerbracht werden muss? Bei CoMo Solution kennen und verstehen wir die einzigartigen Anforderungen und Ambitionen von Sportvereinen, sich digital aufzustellen und in der schnelllebigen, zunehmend digitalisierten Umgebung des modernen Sports zu bestehen.",
@@ -40,10 +64,13 @@
     ],
     "outro": "Innovation für den Erfolg: Wir halten uns stets über die neuesten Technologietrends – speziell in der Sportbranche – auf dem Laufenden und stellen so sicher, dass Ihr Verein einen Schritt voraus ist. Wo erforderlich entwickeln wir maßgeschneiderte Lösungen, die genau auf die Bedürfnisse zugeschnitten sind, unabhängig vor der Größe des Vereins.",
     "cto": "Vertrauen Sie auf CoMo Solution, um Ihren Verein auf dem Weg zum digitalen Spitzenreiter zu führen. Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie wir Ihnen helfen können, Ihren Klub zu verbessern.",
-    "icon": "sport"
+    "keywords": ["Fußball", "FC"],
+    "icon": "sport",
+    "additional": ""
   },
   {
     "id": "behoerden",
+    "type": "branches",
     "name": "Behörden + Kommunen",
     "title": "Die öffentliche Hand im Blick der CoMo",
     "description": "In einer Zeit, in der Digitalisierung zur treibenden Kraft für Effizienz und Nutzerfreundlichkeit wird, stehen Kommunen und Behörden vor der Herausforderung, ihre Services nahtlos in die digitale Welt zu überführen. Genau so steht die Öffentliche Hand auch immer wieder im Fadenkreuz von Bedrohungsakteuren. Sicherheit ist also auch ein wichtiger Faktor. Genau hier kommen wir ins Spiel.",
@@ -62,6 +89,7 @@
     ],
     "outro": "Als Spezialisten für IT-Dienstleistungen bieten wir maßgeschneiderte Lösungen, die den digitalen Wandel in Ihrer Kommune vorantreiben. Von der sicheren Verwaltung sämtlicher Endpunkte über die Stärkung Ihrer Cyberabwehr bis hin zur Schaffung eines reaktionsschnellen IT-Service Desks – wir kümmern uns um jeden Aspekt Ihrer digitalen Infrastruktur Ihrer Behörde oder Einrichtung. ",
     "cto": "Setzen Sie auf CoMo Solution als Partner für Ihre digitale Kommune oder Behörde. Sprechen Sie uns noch heute an, was wir für Sie tun können, damit Ihre digitalen Services und Angebote effizient und sicher umgesetzt werden können.",
-    "icon": "behoerden"
+    "icon": "behoerden",
+    "additional": ""
   }
 ]

@@ -1,6 +1,7 @@
 [
   {
     "id": "moliris-time",
+    "type": "products",
     "name": "MOLIRIS Time",
     "sub": "Mobile Zeiterfassung auf dem Smartphone",
     "description": [
@@ -9,10 +10,12 @@
       "Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
     ],
     "logo": "como.svg",
-    "img": "time.png"
+    "img": "time.png",
+    "additional": "CoMo Solution"
   },
   {
     "id": "moliris-vote",
+    "type": "products",
     "name": "MOLIRIS Vote",
     "sub": "Sichere Termin- und Online-Umfragen für Ihr Unternehmen",
     "description": [
@@ -20,10 +23,12 @@
       "Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
     ],
     "logo": "como.svg",
-    "img": "vote.png"
+    "img": "vote.png",
+    "additional": "CoMo Solution"
   },
   {
     "id": "blackberry-cylance",
+    "type": "products",
     "name": "Cylance Security",
     "sub": "Cybersecurity Driven by Cylance AI",
     "description": [
@@ -66,10 +71,12 @@
       "- Ein Unternehmen kann mit CylanceGUARD einen ROI von 293% erzielen."
     ],
     "logo": "blackberry.svg",
-    "img": "cylance.png"
+    "img": "cylance.png",
+    "additional": "BlackBerry"
   },
   {
     "id": "blackberry-uem",
+    "type": "products",
     "name": "UEM",
     "sub": "Unified Endpoint Management",
     "description": [
@@ -82,10 +89,12 @@
       "Insgesamt bietet BlackBerry UEM Unternehmen eine robuste Lösung für das Management ihrer Endgeräte, die Sicherheit, Effizienz und Compliance gewährleistet."
     ],
     "logo": "blackberry.svg",
-    "img": "uem.png"
+    "img": "uem.png",
+    "additional": "BlackBerry"
   },
   {
     "id": "codeless",
+    "type": "products",
     "name": "BPA Platform",
     "sub": "Business Process Automation",
     "description": [
@@ -95,10 +104,12 @@
       "In Collaboration mit Codeless Platforms helfen wir Ihnen, Ihre Abläufe zu optimieren, manuelle Arbeiten zu reduzieren und Innovationen voranzutreiben. Wir bieten eine kosteneffiziente und skalierbare Lösung für Unternehmen jeder Größe, um in der dynamischen Marktlandschaft von heute wettbewerbsfähig zu bleiben."
     ],
     "logo": "codeless.svg",
-    "img": "codeless.png"
+    "img": "codeless.png",
+    "additional": "Codeless"
   },
   {
     "id": "crossware",
+    "type": "products",
     "name": "Mail Signature",
     "sub": "Most Trusted Email Signature Solution",
     "description": [
@@ -107,10 +118,12 @@
       "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
     ],
     "logo": "crossware.png",
-    "img": "crossware.png"
+    "img": "crossware.png",
+    "additional": "Crossware"
   },
   {
     "id": "hcl-notes",
+    "type": "products",
     "name": "Notes Domino",
     "description": [
       "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten.",
@@ -119,20 +132,24 @@
       "Domino bietet eine sichere, stabile Infrastruktur und eine wirtschaftlich rentable Investition mit bis zu 300% ROI und bis zu 25% niedrigeren TCO."
     ],
     "logo": "hcl.svg",
-    "img": "notes.png"
+    "img": "notes.png",
+    "additional": "HCL"
   },
   {
     "id": "hcl-sametime",
+    "type": "products",
     "name": "Sametime",
     "description": [
       "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime liefert moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann.",
       "HCL Sametime bietet Ihnen eine moderne Videokonferenzplattform mit persistentem Chat, die an die heutige digitale Arbeitsweise in Unternehmen angepasst ist und vor allem das Zusammenarbeiten schneller, sicherer und aus der Ferne ermöglicht – und das bei halbierten Betriebskosten!"
     ],
     "logo": "hcl.svg",
-    "img": "sametime.png"
+    "img": "sametime.png",
+    "additional": "HCL"
   },
   {
     "id": "panagenda",
+    "type": "products",
     "name": "Analyse",
     "description": [
       "Panagenda Analyse ist eine fortschrittliche Analyseplattform, die Unternehmen dabei unterstützt, umfassende Einblicke in ihre IT-Infrastruktur und -Prozesse zu gewinnen. Die Plattform bietet eine Vielzahl von Funktionen, um Daten zu sammeln, zu analysieren und zu visualisieren, um fundierte Entscheidungen zu treffen und die Leistung zu optimieren.",
@@ -143,10 +160,12 @@
       "- Berichterstellung und Visualisierung: Panagenda Analyse bietet leistungsstarke Berichterstellungsfunktionen und interaktive Dashboards, um Daten einfach zu visualisieren und zu präsentieren. Dadurch können Unternehmen komplexe Informationen verständlich darstellen und fundierte Entscheidungen treffen."
     ],
     "logo": "panagenda.svg",
-    "img": "panagenda.png"
+    "img": "panagenda.png",
+    "additional": "Panagenda"
   },
   {
     "id": "ringcentral",
+    "type": "products",
     "name": "Contact Center",
     "description": [
       "RingCentral ist eine umfassende Kommunikationsplattform, die Unternehmen hilft, ihre Kommunikation und Zusammenarbeit zu verbessern. Mit RingCentral können Teams nahtlos über verschiedene Kanäle wie Sprache, Video, Messaging und Konferenzen kommunizieren, unabhängig von ihrem Standort oder Gerät.",
@@ -155,6 +174,7 @@
       "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
     ],
     "logo": "ringcentral.svg",
-    "img": "ringcentral.png"
+    "img": "ringcentral.png",
+    "additional": "RingCentral"
   }
 ]

@@ -10,7 +10,7 @@ export default async function News() {
   const notes = await getMarkdown("notes");
 
   return (
-    <section className="relative flex flex-col gap-4 pt-16 border-t border-t-orange-500">
+    <section className="relative flex flex-col gap-4 pt-16 border-t border-t-white/20">
       <div className="absolute -z-1 inset-0 flex justify-center overflow-hidden">
         <img
           src="/glow-2.png"
