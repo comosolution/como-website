@@ -14,7 +14,7 @@ export default function Search() {
   const portfolioType: {
     [key: string]: string;
   } = {
-    services: "Service",
+    services: "Dienstleistung",
     products: "Produkt",
     branches: "Branche",
   };
@@ -22,20 +22,22 @@ export default function Search() {
   useEffect(() => {
     const idx = lunr(function () {
       this.ref("id");
-      this.field("name");
-      this.field("title", { boost: 10 });
+      this.field("name", { boost: 10 });
+      this.field("title", { boost: 5 });
       this.field("sub");
       this.field("description");
       this.field("conditions");
       this.field("knowledge");
       this.field("outro");
       this.field("keywords", { boost: 5 });
+      this.field("additional");
 
       data.forEach((item) => {
         this.add(item);
       }, this);
     });
     setSearchIndex(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -44,14 +46,14 @@ export default function Search() {
         <input
           type="search"
           name="search"
-          placeholder="z.B. Entwicklung, Blackberry, Sport"
+          placeholder="z.B. BlackBerry, Entwicklung, Sport"
           className="w-full ghost"
           onChange={(e: ChangeEvent<any>) =>
             setSearch(e.target.value.toLowerCase().trim())
           }
         />
       </div>
-      <div className="flex flex-wrap gap-4 transition-all">
+      <div className="flex flex-wrap gap-2 transition-all">
         {search &&
           searchIndex?.search(`${search} ${search}*`).map((item, index) =>
             data
