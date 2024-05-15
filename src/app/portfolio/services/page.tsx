@@ -2,7 +2,7 @@ import ServiceOverview from "./sections/overview";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dienstleistungen | CoMo Solution GmbH",
+  title: "Leistungen | CoMo Solution GmbH",
 };
 
 export default function Page() {

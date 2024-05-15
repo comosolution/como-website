@@ -5,7 +5,7 @@ import ServiceOverview from "../sections/overview";
 import { twoCols } from "@/app/style/style";
 
 export const metadata: Metadata = {
-  title: "Dienstleistungen | CoMo Solution GmbH",
+  title: "Leistungen | CoMo Solution GmbH",
 };
 
 export function generateStaticParams() {
@@ -52,7 +52,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div className="flex flex-col items-center">
         <ServiceOverview
           filter={params.slug}
-          title="Weitere Dienstleistungen für Sie"
+          title="Weitere Leistungen für Sie"
         />
       </div>
     </main>
