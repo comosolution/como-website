@@ -49,7 +49,7 @@ export default function ProductContent({ product }: { product: Product }) {
           />
         )}
       </div>
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-col items-center md:flex-row md:items-center justify-center gap-4">
         <ContactButton />
         <Button
           type="tertiary"
