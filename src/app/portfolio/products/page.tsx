@@ -16,7 +16,7 @@ export default function Page() {
           return (
             <Slide key={index} direction="up" delay={index * 50} triggerOnce>
               <Link href={`/portfolio/products/${product.id}`} className="tile">
-                <div className="lg:min-h-[360px] flex flex-col justify-between items-center gap-2 pt-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl  transition-all hover:bg-neutral-900 cursor-pointer">
+                <div className="productTile lg:min-h-[360px] flex flex-col justify-between items-center gap-2 pt-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all hover:bg-neutral-900 cursor-pointer">
                   <Image
                     src={`/logos/${product.logo}`}
                     alt="Logo"
@@ -29,7 +29,7 @@ export default function Page() {
                     alt="Product Thumbnail"
                     width={664}
                     height={424}
-                    className="rounded-b-2xl"
+                    className="productImg rounded-b-2xl"
                   />
                 </div>
               </Link>

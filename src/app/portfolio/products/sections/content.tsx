@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Button from "@/app/components/button";
-import { scrollTo } from "../../../utils/utils";
 import { Product } from "@/app/types";
+import ContactButton from "@/app/components/contactButton";
 
 export default function ProductContent({ product }: { product: Product }) {
   return (
@@ -50,12 +50,7 @@ export default function ProductContent({ product }: { product: Product }) {
         )}
       </div>
       <div className="flex justify-center gap-4">
-        <Button
-          type="contact"
-          text="Jetzt anfragen"
-          icon="arrow"
-          onClick={() => scrollTo("contact")}
-        />
+        <ContactButton />
         <Button
           type="tertiary"
           text="Weitere Produkte entdecken"

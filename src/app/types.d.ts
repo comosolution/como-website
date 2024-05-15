@@ -4,6 +4,10 @@ import products from "./data/portfolio/products.json";
 export type Products = typeof products;
 export type Product = Unarray<Products>;
 
+import branches from "./data/portfolio/branches.json";
+export type Branches = typeof branches;
+export type Branch = Unarray<Branch>;
+
 import { getMarkdown } from "./utils/generator";
 const notes = await getMarkdown("notes");
 type Notes = typeof notes;

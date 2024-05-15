@@ -48,9 +48,10 @@ export default function Search() {
           name="search"
           placeholder="z.B. BlackBerry, Entwicklung, Sport"
           className="w-full ghost"
-          onChange={(e: ChangeEvent<any>) =>
-            setSearch(e.target.value.toLowerCase().trim())
-          }
+          onChange={(e: ChangeEvent<any>) => {
+            const searchTerm = e.target.value.replaceAll("-", " ");
+            setSearch(searchTerm.toLowerCase().trim());
+          }}
         />
       </div>
       <div className="flex flex-wrap gap-2 transition-all">

@@ -234,6 +234,15 @@ article img {
   color: rgba(var(--foreground-rgb), 0.7);
 }
 
+.productImg {
+  filter: brightness(0.3);
+  transition: var(--default-transition);
+}
+
+.productTile:hover .productImg {
+  filter: brightness(0.7);
+}
+
 .service {
   transition: var(--default-transition);
 }
