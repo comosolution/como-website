@@ -1,34 +1,79 @@
 [
   {
+    "id": "blackberry",
     "name": "BlackBerry",
-    "img": "blackberry.svg"
+    "img": "blackberry.svg",
+    "description": [
+      "Seit über 10 Jahren ist die CoMo ein Gold Partner von BlackBerry. Die enge Zusammenarbeit zwischen unseren Mitarbeitern und BlackBerry besteht bereits seit dem Markteintritt von BlackBerry in Deutschland. Wir unterstützen bei der Implementierung, Support und Integration von mobilen Endgeräten mit Hilfe der Unified Endpoint Management (UEM) Lösung von BlackBerry Kunden jeder Größe. Mit CoMo und BlackBerry ist Ihr Enterprise Mobility Management bestens versorgt und Ihre Mitarbeiter samt Daten jederzeit sicher unterwegs!"
+    ],
+    "ref": "https://www.blackberry.com/de/de"
   },
   {
+    "id": "codeless",
     "name": "codeless Platforms",
-    "img": "codeless.svg"
+    "img": "codeless.svg",
+    "description": [
+      "Codeless Platforms bietet eine Business Process Automation (BPA)-Plattform, mit der Kunden schnell und einfach automatisierte Prozesse erstellen können, die passgenau und einzigartig für das Unternehmen sind. Die intuitive grafische Drag-and-Drop-Benutzeroberfläche ermöglicht es, Geschäftsprozesse zu optimieren und Zeit sowie Geld zu sparen. Die Plattform ist für Cloud-, Hybrid- und On-Premises-Umgebungen verfügbar und bietet standardmäßig hilfreiche Business Process Automation-Tools.",
+      "Die CoMo ist seit 2024 Partner von Codeless Platforms und setzt die Lowcode-Umgebung erfolgreich in verschiedenen Kundenprojekten ein."
+    ],
+    "ref": "https://www.codelessplatforms.com"
   },
   {
+    "id": "crossware",
     "name": "Crossware",
-    "img": "crossware.png"
+    "img": "crossware.png",
+    "description": [
+      "Bereits seit vielen Jahren arbeiten wir mit der Lösung der Mailsignatur-Spezialisten aus Down-Under: Crossware. Das Thema Branding von E-Mail hat in den letzten Jahren immer mehr an Bedeutung gewonnen - mit Crossware bieten wir die Möglichkeit, einheitliche Signaturen beim Versand der Mail anzuhängen. Und das unabhängig des zu verwendenden Devices. Corporate Identity at its best!"
+    ],
+    "ref": "https://crossware365.com/"
   },
   {
-    "name": "HCL",
-    "img": "hcl.svg"
+    "id": "hcl",
+    "name": "HCL Business Partner",
+    "img": "hcl.svg",
+    "description": [
+      "Die CoMo ist im Bereich Messaging & Collaboration nach der langjährigen Partnerschaft mit IBM nun als HCL Business Partner ein Teil der HCL Familie.",
+      "Unser Fokus und unsere zertifizierten Skills liegen in der Implementierung und der Entwicklung von Lösungen für ihre HCL Domino Infrastruktur. Neben Supportleistungen und eigenen Produkte aus den Bereichen Field Service Management, CRM und Workflow bieten wir auch maßgeschneiderte Entwicklung von Lösungen (siehe hierzu auch unsere Projektreferenzen). Wie der Weg auch ist, wir lösen ihre Anforderungen!"
+    ],
+    "ref": "https://www.hcl-software.com/"
   },
   {
+    "id": "microsoft",
     "name": "Microsoft",
-    "img": "microsoft.png"
+    "img": "microsoft.svg",
+    "description": [
+      "Seit unserer Gründung 2010 sind wir auch im Microsoft Umfeld tätig und Ihr kompetenter Ansprechpartner für Microsoft Office, jetzt M365, Exchange, Azure oder PowerBI sowie Migration und Services.",
+      "Durch unsere lange Erfahrung und die Zusammenarbeit mit Microsoft bieten wir Ihnen umfassendes Know-how, innovative Lösungen, höchsten Support und zuverlässige Umsetzung. So bringen wir Ihre IT-Infrastruktur sicher und zukunftsorientiert in die Cloud und entwickeln effiziente, passgenaue Lösungen auf Azure Basis für Ihr Unternehmen."
+    ],
+    "ref": "https://www.microsoft.com/de-de/"
   },
   {
+    "id": "panagenda",
     "name": "Panagenda",
-    "img": "panagenda.svg"
+    "img": "panagenda.svg",
+    "description": [
+      "Seit 2019 hat die CoMo Solution eine enge Partnerschaft mit panagenda. Dabei unterstützen wir unsere Kunden beim Einsatz der innovativen Softwarelösungen von panagenda für detaillierte Analysen, umsetzbare Erkenntnisse und Admin-Automatisierungen, um IT-Betriebsteams eine effizientere Verwaltung ihrer Kollaboration-Plattformen zu ermöglichen. Der Schwerpunkt liegt dabei vor allem auf HCL Notes/Domino- und Microsoft 365-Umgebungen.",
+      "panagenda zählt weltweit mehr als 12 Millionen eingesetzte Lizenzen in über 70 Ländern. Die Kunden bestehen dabei aus mittelständischen Unternehmen bis hin zu Großkonzernen. Das Ziel des Unternehmens ist es, weltweit die digitale Transformation von Organisationen und Unternehmen zu erleichtern und zu beschleunigen. Wir sind als regionaler Partner für Sie der erste Ansprechpartner, wenn es um die digitale Transformation mit Hilfe der innovativen Softwarelösungen von panagenda geht."
+    ],
+    "ref": "https://www.panagenda.com/"
   },
   {
+    "id": "privatescope",
     "name": "{privatescope}",
-    "img": "privatescope.png"
+    "img": "privatescope.svg",
+    "description": [
+      "Seit 2023 besteht die Partnerschaft mit der {privatescope} GmbH, einem führenden Anbieter von Softwarelösungen in den Bereichen digitale Datenkatalogisierung, Bereitstellung von Trainingsdaten für künstliche Intelligenz (AI) sowie Service und Reporting in heterogenen Datenumgebungen. Mit privatescope unterstützen wir Kunden dabei, ihre Dateninfrastruktur zu optimieren, heterogene Datenumgebungen zu verwalten oder erstklassige Trainingsdaten für KI-Modelle bereitzustellen. Diese Partnerschaft wird es Unternehmen ermöglichen, die vorhandenen Potenziale in völlig neuen Dimensionen auszuschöpfen."
+    ],
+    "ref": "https://privatescope.com"
   },
   {
+    "id": "ringcentral",
     "name": "RingCentral",
-    "img": "ringcentral.svg"
+    "img": "ringcentral.svg",
+    "description": [
+      "Unified Communications ist nicht neu, aber UC als Cloud-Service nimmt gerade richtig Fahrt auf. RingCentral arbeitet daran, die Welt der Kommunikation und Zusammenarbeit in Unternehmen neu zu gestalten. Die große Leidenschaft für Innovation hat RingCentral zu einem weltweit führenden Anbieter für Cloud-Kommunikation gemacht.",
+      "Die flexiblen, kostengünstigen Lösungen für Cloud-Kommunikation und Zusammenarbeit von RingCentral ermöglichen effizientes und effektives Arbeiten. RingCentral entwickelt Lösungen für Unternehmen jeder Größenordnung: von cloudbasierten All-In-One-Telefonsystemen mit Team Messaging und Videokonferenzen bis hin zu einem kompletten Contact Center und vielem mehr."
+    ],
+    "ref": "https://www.ringcentral.com/de/de/"
   }
 ]

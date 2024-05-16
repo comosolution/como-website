@@ -1,5 +1,6 @@
 import News from "@/app/components/news";
 import NoteElement from "@/app/components/note";
+import Pill from "@/app/components/pill";
 import { twoCols } from "@/app/style/style";
 import { getMarkdown } from "@/app/utils/generator";
 import { Metadata } from "next";
@@ -17,9 +18,7 @@ export default async function Page() {
         <p className="text-orange-500 pb-2">
           <b>Corporate Social Responsibility</b>
         </p>
-        <h1>
-          Wir übernehmen <br /> Verantwortung
-        </h1>
+        <h1>Wir übernehmen Verantwortung!</h1>
       </header>
       <section>
         <h2 className="p-8">CSR - Was ist Corporate Social Responsibility?</h2>
@@ -50,8 +49,13 @@ export default async function Page() {
           </div>
         </div>
       </section>
-      <div className="flex flex-col gap-8 p-8">
+      <div className="flex flex-wrap gap-2 transition-all p-8">
         {articles.reverse().map(async (note) => {
+          return <Pill key={note.id} title={note.title} scrollId={note.id} />;
+        })}
+      </div>
+      <div className="flex flex-col gap-8 p-8">
+        {articles.map(async (note) => {
           return <NoteElement key={note.id} note={note} />;
         })}
       </div>
