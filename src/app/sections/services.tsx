@@ -8,11 +8,11 @@ export default function Services() {
   return (
     <section>
       <h2 className="py-8 text-center">Unser Fokus</h2>
-      <Slide direction="up" triggerOnce>
-        <div className={fourCols}>
-          {services.map((service, index) => {
-            return (
-              <div key={index} className="flex flex-col gap-8 p-4">
+      <div className={fourCols}>
+        {services.map((service, index) => {
+          return (
+            <Slide key={index} direction="up" delay={index * 100} triggerOnce>
+              <div className="flex flex-col gap-8 p-4">
                 <Image
                   src={`/services/${service.icon}.svg`}
                   alt={service.name}
@@ -24,10 +24,10 @@ export default function Services() {
                   <p className="muted">{service.description}</p>
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </Slide>
+            </Slide>
+          );
+        })}
+      </div>
     </section>
   );
 }
