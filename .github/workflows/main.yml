@@ -20,24 +20,24 @@ jobs:
           name: out
           path: out
           retention-days: 1
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Get build artifact
-        uses: actions/download-artifact@main
-        with:
-          name: out
-          path: out
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ftp.samkirkland.com
-          username: myFtpUserName
-          password: ${{ secrets.ftp_password }}
-          port: 22
-          protocol: ftps
-          server-dir: /clickandbuilds/Joomla/como2021/
+  # deploy:
+  #   name: Deploy
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@main
+  #     - name: Get build artifact
+  #       uses: actions/download-artifact@main
+  #       with:
+  #         name: out
+  #         path: out
+  #     - name: Sync files
+  #       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  #       with:
+  #         server: ftp.samkirkland.com
+  #         username: myFtpUserName
+  #         password: ${{ secrets.ftp_password }}
+  #         port: 22
+  #         protocol: ftps
+  #         server-dir: /clickandbuilds/Joomla/como2021/
