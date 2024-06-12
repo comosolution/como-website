@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/app/components/button";
 import { Product } from "@/app/types";
 import ContactButton from "@/app/components/contactButton";
+import { twoCols } from "@/app/style/style";
 
 export default function ProductContent({ product }: { product: Product }) {
   return (
@@ -12,50 +13,74 @@ export default function ProductContent({ product }: { product: Product }) {
         <Image
           src={`/logos/${product.logo}`}
           alt="Logo"
-          width={100}
-          height={40}
+          width={160}
+          height={64}
         />
         <h1 className="text-center">{product.name}</h1>
       </header>
-      <div className="flex flex-col py-8">
-        <article>
-          {product.sub && <h2>{product.sub}</h2>}
+      <div className="flex flex-col gap-4 py-8">
+        {product.sub && <h2 className="text-center py-4">{product.sub}</h2>}
+        {product.image ? (
+          <div className={`${twoCols}`}>
+            <div className="relative w-full aspect-square overflow-hidden rounded-lg ring-1 ring-white/10 shadow-2xl">
+              <Image
+                src={`/images/${product.image}`}
+                alt="Branch Image"
+                fill
+                style={{
+                  objectFit: "cover",
+                  borderRadius: 8,
+                  filter: "brightness(0.7)",
+                }}
+              />
+            </div>
+            <h5 className="muted px-8">{product.intro}</h5>
+          </div>
+        ) : (
+          <article className="mx-auto">
+            <h5 className="py-4">{product.intro}</h5>
+          </article>
+        )}
+        <article className="mx-auto">
           {product.description.map((description, index) => {
             return description.startsWith("- ") ? (
               <ul key={index}>
                 <li>{description.substring(2)}</li>
               </ul>
             ) : description.startsWith("# ") ? (
-              <h3>{description.substring(2)}</h3>
-            ) : index === 0 ? (
-              <h5 key={index} className="py-4">
-                {description}
-              </h5>
+              <h3 key={index}>{description.substring(2)}</h3>
+            ) : description.startsWith("[") ? (
+              <a
+                key={index}
+                href={description.replaceAll("]", "").split("|")[1]}
+              >
+                <p>{description.replaceAll("[", "").split("|")[0]}</p>
+              </a>
             ) : (
               <p key={index}>{description}</p>
             );
           })}
+          {product.img && (
+            <img
+              src={`/solutions/${product.img}`}
+              alt={product.name}
+              className="rounded-2xl"
+              width={880}
+              style={{
+                maxHeight: "400px",
+                objectFit: "contain",
+              }}
+            />
+          )}
         </article>
-        {product.img && (
-          <img
-            src={`/solutions/${product.img}`}
-            alt={product.name}
-            className="rounded-2xl"
-            width={880}
-            style={{
-              maxHeight: "400px",
-              objectFit: "contain",
-            }}
+        <div className="flex flex-col items-center md:flex-row md:items-center justify-center gap-4">
+          <ContactButton />
+          <Button
+            type="tertiary"
+            text="Weitere Produkte entdecken"
+            href="/portfolio/products"
           />
-        )}
-      </div>
-      <div className="flex flex-col items-center md:flex-row md:items-center justify-center gap-4">
-        <ContactButton />
-        <Button
-          type="tertiary"
-          text="Weitere Produkte entdecken"
-          href="/portfolio/products"
-        />
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-name: Build and archive
+name: Build and deploy
 on:
   push:
     branches: main
@@ -9,18 +9,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20.x"
+        uses: actions/checkout@main
       - name: Install dependencies and build
         run: |
           npm ci
           npm run build
       - name: Archive build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@main
         with:
           name: out
           path: out
           retention-days: 1
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Get build artifact
+        uses: actions/download-artifact@main
+        with:
+          name: out
+          path: out
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.samkirkland.com
+          username: myFtpUserName
+          password: ${{ secrets.ftp_password }}
+          port: 22
+          protocol: ftps
+          server-dir: /clickandbuilds/Joomla/como2021/

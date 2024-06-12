@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
-    <main className="flex flex-col items-center gap-24 px-16">
+    <main className="flex flex-col items-center gap-24">
       {products
         .filter((product) => product.id === params.slug)
         .map((product, index) => {

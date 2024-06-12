@@ -4,8 +4,8 @@
     "type": "products",
     "name": "MOLIRIS Time",
     "sub": "Mobile Zeiterfassung auf dem Smartphone",
+    "intro": "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen – egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche.",
     "description": [
-      "Vorbei die Zeiten loser Zettelwirtschaft. Mit MOLIRIS Time können Sie die Arbeitszeiten der Kolleginnen und Kollegen digital und mobil erfassen – egal ob auf der Baustelle, im Gastronomiegewerbe, für den Handwerksbetrieb oder in der Veranstaltungsbranche.",
       "Mit dem Smartphone können einzelne Personen oder ganze Gruppen einfach und intuitiv an- und abgemeldet werden. Die erfassten Zeiten werden nach Kostenstellen aufgeschlüsselt und direkt an die Buchhaltung zur Verarbeitung und Abrechnung weitergeleitet. Die Gefahren von Manipulationen werden durch Sicherheitsmechanismen und Eskalationsstufen minimiert, die auch die Einhaltung von definierten Abläufen der Zeiterfassung sicherstellen.",
       "Alle Gewerbe, in denen Arbeitszeiten unterwegs und im Freien erfasst werden, können von MOLIRIS Time profitieren – vom kleinen Sanitärunternehmen, über Eventgastronomie mit wechselnden Locations bis hin zum großen Bauunternehmen."
     ],
@@ -18,8 +18,8 @@
     "type": "products",
     "name": "MOLIRIS Vote",
     "sub": "Sichere Termin- und Online-Umfragen für Ihr Unternehmen",
+    "intro": "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmen-internen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen.",
     "description": [
-      "Umfragen und Abstimmungen im Internet sind heute einfach durchführbar. Doch bei sensiblen firmen-internen Themen sind öffentliche Plattformen nicht geeignet. CoMo Solution bietet mit MOLIRIS Vote eine sichere Lösung für interne Umfragen, Terminabstimmungen und Meinungsumfragen.",
       "Die Anwendung ermöglicht die Einbindung externer Teilnehmer und kann entweder in der Unternehmensumgebung installiert oder als flexibles SaaS-Modell genutzt werden. Sowohl das Frontend für Teilnehmer als auch das Backend für die Erstellung der Umfragen sind browserbasiert. Teilnehmer erhalten einen Link per E-Mail, um an der Umfrage teilzunehmen, während Ersteller jederzeit den Fortschritt überwachen und die Ergebnisse zeitgesteuert oder manuell veröffentlichen können."
     ],
     "logo": "como.svg",
@@ -30,9 +30,10 @@
     "id": "blackberry-cylance",
     "type": "products",
     "name": "Cylance Security",
+    "image": "cylance.png",
     "sub": "Cybersecurity Driven by Cylance AI",
+    "intro": "BlackBerry Cybersecurity Driven by Cylance AI ist eine fortschrittliche Cybersecurity-Lösung, die auf künstlicher Intelligenz basiert und entwickelt wurde, um Organisationen vor einer breiten Palette von Cyberbedrohungen zu schützen. Durch die Nutzung von maschinellem Lernen und Verhaltensanalyse kann die Lösung nicht nur bekannte Bedrohungen erkennen, sondern auch bisher unbekannte Angriffe in Echtzeit abwehren. Die Cylance AI ist eine der ersten Cybersicherheits-KIs mit dem umfangreichsten KI-Wissen, von dem Ihr Unternehmen profitiert.",
     "description": [
-      "BlackBerry Cybersecurity Driven by Cylance AI ist eine fortschrittliche Cybersecurity-Lösung, die auf künstlicher Intelligenz basiert und entwickelt wurde, um Organisationen vor einer breiten Palette von Cyberbedrohungen zu schützen. Durch die Nutzung von maschinellem Lernen und Verhaltensanalyse kann die Lösung nicht nur bekannte Bedrohungen erkennen, sondern auch bisher unbekannte Angriffe in Echtzeit abwehren. Die Cylance AI ist eine der ersten Cybersicherheits-KIs mit dem umfangreichsten KI-Wissen, von dem Ihr Unternehmen profitiert.",
       "Ein wichtiger Vorteil dieser Lösung ist ihre Fähigkeit, präzise Bedrohungen zu identifizieren und gleichzeitig die Anzahl falscher Alarme zu minimieren. Dies bedeutet, dass Sicherheitsteams effektiver arbeiten können, da sie sich auf echte Bedrohungen konzentrieren können, anstatt Zeit mit der Überprüfung von irreführenden Warnungen zu verschwenden.",
       "Die BlackBerry Cylance Sicherheitslösungen bieten eine umfassende Endpunktsicherheit mit zentralisiertem Management und Berichterstattungsfunktionen. Dazu ermöglichen die Lösungen Sicherheitsteams die gesamte Sicherheitslage ihrer Organisation effizient zu verwalten und zu überwachen oder im Managed Service überwachen zu lassen.",
       "Stärken Sie die Cybersicherheit Ihres Unternehmens oder Organisation und verbessern Sie die Reaktionsfähigkeit auf Bedrohungen bei gleichzeitiger Reduzierung der Komplexität Ihrer Sicherheitsinfrastruktur.",
@@ -48,7 +49,7 @@
       "- Die Lösung wird von über 18.000 Unternehmen weltweit eingesetzt.",
       "- BlackBerry hält die meisten Sicherheitszertifizierungen für Cybersicherheitslösungen.",
       "# CylanceEDGE",
-      "BlackBerry CylanceEDGE ist eine cloudbasierte Zero-Trust-Access-Lösung (ZTA), die Unternehmen jeder Größe dabei unterstützt, sicheren Remote-Zugriff auf Unternehmensressourcen zu ermöglichen.",
+      "BlackBerry CylanceEDGE ist eine cloud-basierte Zero-Trust-Access-Lösung (ZTA), die Unternehmen jeder Größe dabei unterstützt, sicheren Remote-Zugriff auf Unternehmensressourcen zu ermöglichen.",
       "Die wichtigsten Funktionen von CylanceEDGE umfassen:",
       "- Sicheren Zugriff auf private und SaaS-Anwendungen: Benutzer können von überall und jederzeit sicher auf Unternehmensanwendungen zugreifen, ohne dass ein VPN erforderlich ist.",
       "- Schutz vor Datenverlust: CylanceEDGE verhindert, dass sensible Daten das Unternehmensnetzwerk verlassen.",
@@ -58,17 +59,20 @@
       "Wussten Sie schon?",
       "- CylanceEDGE ist eine preisgekrönte Lösung, die von unabhängigen Testlaboren als eine der effektivsten ZTA-Lösungen auf dem Markt bewertet wurde.",
       "- Mit CylanceEDGE verbessern Sie durch den optimierten App-Zugriff nicht nur die Anwenderzufriedenheit, sondern stärken auch die Richtliniendurchsetzung – unabhängig davon, wo der Anwender sich gerade befindet.",
-      "# CylanceGUARD",
-      "BlackBerry CylanceGUARD ist ein 24/7 Managed Detection and Response (MDR)-Service, der Unternehmen dabei unterstützt, Bedrohungen schnell zu erkennen und zu stoppen, ohne dass zusätzliche Ressourcen erforderlich sind. Es nutzt die KI-gestützte Cylance-Technologie, um Bedrohungen in Echtzeit zu erkennen und zu neutralisieren, bevor sie Schaden anrichten können.",
-      "Die wichtigsten Funktionen von CylanceGUARD umfassen:",
-      "- Proaktive Bedrohungssuche: CylanceGUARD durchsucht kontinuierlich Ihre Umgebung nach Bedrohungen, auch unbekannte und Zero-Day-Angriffe.",
-      "- Schnelle Reaktion: Bei der Identifizierung einer Bedrohung ergreift CylanceGUARD automatisch Maßnahmen, um sie zu stoppen und den Schaden zu begrenzen.",
-      "- Minimale Alert-Müdigkeit: CylanceGUARD priorisiert Bedrohungen und filtert irrelevante Informationen heraus, sodass sich Ihre Sicherheitsteams auf die wichtigsten Ereignisse konzentrieren können.",
-      "- 24/7-Expertise: Ein Team von erfahrenen Sicherheitsexperten steht Ihnen rund um die Uhr zur Verfügung, um Sie bei der Untersuchung und Behebung von Bedrohungen zu unterstützen.",
-      "Wussten Sie schon?",
-      "- Das CylanceGUARD-Team ist der aktuelle SOC X Champion. In realen Angreifer-Emulationsszenarien hat sich BlackBerry gegen 49 andere SOC Teams durchgesetzt.",
-      "- Jeder BlackBerry Analyst verfügt über ungefähr 15 Jahre Erfahrung im Threat Hunting.",
-      "- Ein Unternehmen kann mit CylanceGUARD einen ROI von 293% erzielen."
+      "# CylanceMDR",
+      "MDR steht für Managed Detection and Response, also Managed Security. CylanceMDR™ ist eine fortschrittliche 24x7x365 Lösung für die Erkennung und Reaktion auf Bedrohungen. Sie kombiniert die Künstliche Intelligenz (KI) der erfahrenen und verlässlichen Cylance™ AI mit führenden Expert:innenwissen, um Ihr Unternehmen rund um die Uhr zu schützen.",
+      "Die wichtigsten Funktionen von CylanceMDR umfassen*:",
+      "- Onboarding-Exzellenz: Nahtlose Einrichtung und Konfiguration durch Expert:innen mit minimalen Aufwand.",
+      "- 24x7x365 Threat-Hunting: Kontinuierliche Überwachung durch ein spezialisiertes und ausgezeichneten Team (Sieger bei der DefCon29 und SOC-X Meisterschaft).",
+      "- Alarm-Triage und Untersuchung: Schnelle Identifizierung und Analyse von Sicherheitsalarmen.",
+      "- Incident Response & Digitale Forensik: Effiziente Reaktion auf Bedrohungen  und Untersuchung von Sicherheitsvorfällen mit Beweissicherung für die Incident Response.",
+      "- Krisenkommunikation mit BlackBerry AtHoc: Speziell entwickelte Plattform für die Kommunikation bei kritischen Ereignissen ist in CylanceMDR (Advanced) integriert.",
+      "Wichtige Vorteile:",
+      "- Reduzierung von Alarmen: die KI reduziert Fehlalarme und Cylance-Spezialisten filtern die Meldungen, sodass sich die Sicherheitsteams sich auf echte Bedrohungen konzentrieren können.",
+      "- 24/7-Schutz: CylanceMDR bietet den Unternehmen eine kontinuierliche Überwachung und Reaktion auf Bedrohungen, auch nachts und an Wochenenden.",
+      "- Erfahrene SOC-Analysten: Unterstützung durch BlackBerry-Expert:innen mit durchschnittlich 15 Jahren Erfahrung.",
+      "Mit CylanceMDR sind Sie mit moderner KI und hochspezialisierten Expert:innen vor modernen Cyberbedrohungen geschützt. Lassen Sie sich bei Ihren Sicherheitsmaßnahmen von den BlackBerry-Spezialisten unterstützen und konzentrieren Sie sich auf Ihr Kerngeschäft.",
+      "*) Abhängig vom gebuchten Abonnement (On-Demand, Standard, Advanced)"
     ],
     "logo": "blackberry.svg",
     "img": "cylance.png",
@@ -79,8 +83,8 @@
     "type": "products",
     "name": "UEM",
     "sub": "Unified Endpoint Management",
+    "intro": "BlackBerry UEM bietet Ihnen eine zentrale Verwaltungskonsole für die vollständiger Endpunktverwaltung und Richtlinienkontrolle für Ihre vielfältige Flotte von Geräten und Apps. Die Unified Endpoint Management Lösung basiert auf einem bewährten Ende-zu-Ende Sicherheitsmodell, das die nötige Flexibilität und Sicherheit in der mobilen Zusammenarbeit Ihrer Mitarbeiter ermöglicht.",
     "description": [
-      "BlackBerry UEM bietet Ihnen eine zentrale Verwaltungskonsole für die vollständiger Endpunktverwaltung und Richtlinienkontrolle für Ihre vielfältige Flotte von Geräten und Apps. Die Unified Endpoint Management Lösung basiert auf einem bewährten Ende-zu-Ende Sicherheitsmodell, das die nötige Flexibilität und Sicherheit in der mobilen Zusammenarbeit Ihrer Mitarbeiter ermöglicht.",
       "Die Hauptmerkmale von BlackBerry UEM umfassen:",
       "- Geräteverwaltung: Unternehmen können Gerätekonfigurationen, Sicherheitsrichtlinien und Anwendungen zentralisiert verwalten und implementieren.",
       "- Sicherheit: BlackBerry UEM bietet robuste Sicherheitsfunktionen wie Datenverschlüsselung, Bedrohungserkennung und -abwehr, sowie erweiterte Authentifizierungsmethoden, um Unternehmensdaten zu schützen.",
@@ -97,8 +101,8 @@
     "type": "products",
     "name": "BPA Platform",
     "sub": "Business Process Automation",
+    "intro": "BPA von Codeless Platforms ermöglicht es Unternehmen Prozesse ohne Programmierkenntnisse zu automatisieren.",
     "description": [
-      "BPA von Codeless Platforms ermöglicht es Unternehmen Prozesse ohne Programmierkenntnisse zu automatisieren.",
       "Mit der BPA Platform können Benutzer sich wiederholende Aufgaben automatisieren, Abläufe rationalisieren und die Effizienz in verschiedenen Abteilungen wie Vertrieb, Marketing, Finanzen und Personalwesen verbessern. Sie bietet eine benutzerfreundliche Oberfläche und intuitive Tools für die Gestaltung und Implementierung von Automatisierungsworkflows. Dank der Drag-and-Drop-Funktionalität können komplexe Workflows einfach erstellt werden und so Zeit & Ressourcen sparen werden.",
       "Einer der Hauptvorteile der Plattform ist die Fähigkeit zur Integration mit bestehenden Systemen und Anwendungen, die einen nahtlosen Datenaustausch und eine reibungslose Zusammenarbeit ermöglicht. Diese Integrationsfähigkeit steigert die Produktivität und die Entscheidungsfindung, indem sie eine einheitliche Sicht auf die Geschäftsprozesse ermöglicht.",
       "In Collaboration mit Codeless Platforms helfen wir Ihnen, Ihre Abläufe zu optimieren, manuelle Arbeiten zu reduzieren und Innovationen voranzutreiben. Wir bieten eine kosteneffiziente und skalierbare Lösung für Unternehmen jeder Größe, um in der dynamischen Marktlandschaft von heute wettbewerbsfähig zu bleiben."
@@ -112,8 +116,8 @@
     "type": "products",
     "name": "Mail Signature",
     "sub": "Most Trusted Email Signature Solution",
+    "intro": "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
     "description": [
-      "Crossware Mail Signature ist eine Lösung für einheitliche und professionelle E-Mail-Signaturen in Unternehmen. Durch die Integration mit verschiedenen E-Mail-Plattformen ermöglicht Crossware eine konsistente Markenpräsenz und fördert die Einhaltung von Unternehmensrichtlinien.",
       "Die Software bietet eine benutzerfreundliche Oberfläche für das Design und die Anpassung von E-Mail-Signaturen, einschließlich personalisierter Informationen wie Namen, Titel und Kontaktinformationen.",
       "Darüber hinaus unterstützt sie die Integration von Unternehmenslogos, sozialen Medien, rechtlichen Haftungsausschlüssen und Marketing-Bannern. Crossware Mail Signature automatisiert den Signaturprozess, spart Zeit und reduziert Fehler. Durch die zentrale Verwaltung wird die Markenkonsistenz gewahrt und das professionelle Erscheinungsbild in der Kommunikation sichergestellt."
     ],
@@ -125,8 +129,8 @@
     "id": "hcl-notes",
     "type": "products",
     "name": "Notes Domino",
+    "intro": "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten.",
     "description": [
-      "Bewährt seit 30 Jahren, bietet Domino von HCL Vielseitigkeit und Skalierbarkeit. Mobilisieren Sie bestehende Apps, erstellen Sie neue schneller. Steigern Sie die Anwendungsentwicklung und Collaboration mit niedrigen Betriebskosten.",
       "Domino ermöglicht komplexe Geschäftsabläufe als professionelle Anwendungen mit modernen Entwicklungstools. Nutzen Sie Pro-Code Tools wie das App Dev Pack sowie Low-Code Optionen wie Domino Volt für schnelle Produktivität.",
       "HCL Notes ist ein moderner E-Mail-Client für Mail, Kalender und Aufgaben sowie für die Ausführung von Businessanwendungen. Mit HCL Nomad greifen Sie mobil auf alle Notes-Anwendungen und Daten zu, erweitern den Wirkungsbereich und steigern den Wert.",
       "Domino bietet eine sichere, stabile Infrastruktur und eine wirtschaftlich rentable Investition mit bis zu 300% ROI und bis zu 25% niedrigeren TCO."
@@ -139,8 +143,8 @@
     "id": "hcl-sametime",
     "type": "products",
     "name": "Sametime",
+    "intro": "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime liefert moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann.",
     "description": [
-      "Ihr Unternehmen kann es sich nicht leisten, Datenrisiken einzugehen, aber Ihre Teams müssen immer noch in der Lage sein, schnell zu interagieren und zu reagieren, wo immer sie arbeiten. Sametime liefert moderne Instant Messaging-, Filesharing-und Online-Meetings mit der bewährten Sicherheit, der Ihr Unternehmen vertrauen kann.",
       "HCL Sametime bietet Ihnen eine moderne Videokonferenzplattform mit persistentem Chat, die an die heutige digitale Arbeitsweise in Unternehmen angepasst ist und vor allem das Zusammenarbeiten schneller, sicherer und aus der Ferne ermöglicht – und das bei halbierten Betriebskosten!"
     ],
     "logo": "hcl.svg",
@@ -151,8 +155,8 @@
     "id": "panagenda",
     "type": "products",
     "name": "Analyse",
+    "intro": "Panagenda Analyse ist eine fortschrittliche Analyseplattform, die Unternehmen dabei unterstützt, umfassende Einblicke in ihre IT-Infrastruktur und -Prozesse zu gewinnen. Die Plattform bietet eine Vielzahl von Funktionen, um Daten zu sammeln, zu analysieren und zu visualisieren, um fundierte Entscheidungen zu treffen und die Leistung zu optimieren.",
     "description": [
-      "Panagenda Analyse ist eine fortschrittliche Analyseplattform, die Unternehmen dabei unterstützt, umfassende Einblicke in ihre IT-Infrastruktur und -Prozesse zu gewinnen. Die Plattform bietet eine Vielzahl von Funktionen, um Daten zu sammeln, zu analysieren und zu visualisieren, um fundierte Entscheidungen zu treffen und die Leistung zu optimieren.",
       "Die Hauptmerkmale von Panagenda Analyse umfassen:",
       "- Datenanalyse: Die Plattform sammelt Daten aus verschiedenen Quellen wie E-Mail-Systemen, Anwendungen, Netzwerken und Endgeräten und ermöglicht es Unternehmen, diese Daten zu analysieren, um Trends, Muster und Probleme zu identifizieren.",
       "- Performance-Optimierung: Panagenda Analyse bietet Tools zur Überwachung und Optimierung der Leistung von IT-Systemen und Anwendungen. Durch die Identifizierung von Engpässen und ineffizienten Prozessen können Unternehmen ihre Systeme verbessern und die Benutzererfahrung optimieren.",
@@ -166,15 +170,38 @@
   {
     "id": "ringcentral",
     "type": "products",
-    "name": "Contact Center",
+    "name": "RingEX™ + RingCX™",
+    "image": "ringcentral.jpg",
+    "sub": "Kommunikation für Unternehmen neu gelebt",
+    "intro": "In der heutigen dynamischen Geschäftswelt ist effiziente Kommunikation unerlässlich. RingCentral bietet mit seinen innovativen Lösungen die perfekte Plattform, um die Zusammenarbeit im Team zu verbessern, die Kundeninteraktion zu stärken und die Produktivität auf neue Höhen zu heben. Moderne RingSense™AI-Funktionen unterstützen Ihre Teams bei den verschiedenen Aufgaben und schaffen ein erstklassiges Kommunikationserlebnis.",
     "description": [
-      "RingCentral ist eine umfassende Kommunikationsplattform, die Unternehmen hilft, ihre Kommunikation und Zusammenarbeit zu verbessern. Mit RingCentral können Teams nahtlos über verschiedene Kanäle wie Sprache, Video, Messaging und Konferenzen kommunizieren, unabhängig von ihrem Standort oder Gerät.",
-      "Die Plattform bietet eine Vielzahl von Funktionen, darunter Cloud-Telefonie, Unternehmens-SMS, Video-Meetings und Team-Messaging. Benutzer können Anrufe tätigen und empfangen, Voicemails verwalten, Fax-Nachrichten senden und empfangen sowie an Video-Meetings teilnehmen, alles über eine einzige intuitive Benutzeroberfläche.",
-      "RingCentral ermöglicht eine nahtlose Integration mit anderen Unternehmensanwendungen wie CRM-Systemen und Helpdesk-Tools, um den Arbeitsablauf zu optimieren und die Produktivität zu steigern. Darüber hinaus bietet es fortschrittliche Funktionen wie automatisierte Anrufweiterleitung, Anrufanalytik und Anrufaufzeichnung für verbessertes Call-Management und -Reporting.",
-      "Durch die Nutzung von RingCentral können Unternehmen die Effizienz steigern, die Kommunikation vereinfachen und die Zusammenarbeit fördern – sowohl innerhalb des Unternehmens als auch mit Kunden und Partnern."
+      "# RingEX: Vereinte Kommunikation mit künstlicher Intelligenz",
+      "RingEX™ ist die nächste Generation der Unified Communications (UC) und vereint Messaging, Video und Telefonie in einer einzigen, intuitiven Plattform. Angetrieben durch künstliche Intelligenz (KI) bietet RingEX eine Vielzahl intelligenter Funktionen, die die Kommunikation intelligenter und effizienter machen.",
+      "Zu den wichtigsten Funktionen von RingEX gehören:",
+      "- Smarte Anrufe: KI-gestützte Funktionen wie Gesprächsempfehlungen, automatische Zusammenfassung und Transkription von Anrufen sorgen für effizientere und produktivere Gespräche.",
+      "- Verbesserte Zusammenarbeit: Einfaches Teilen von Dateien, nahtlose Bildschirmfreigabe und gemeinsame Bearbeitung von Dokumenten in Echtzeit fördern die Zusammenarbeit im Team.",
+      "- Erweiterte Mobilität: Mit der RingCentral-App können Sie jederzeit und von überall aus auf Ihre Kommunikationskanäle zugreifen, unabhängig davon, ob Sie sich auf dem Desktop, Tablet oder Smartphone befinden.",
+      "[Mehr zu RingEX erfahren Sie bei RingCentral.|https://www.ringcentral.com/ringex.html]",
+      "# RingCX: Kundenservice der nächsten Generation",
+      "RingCX™ ist eine cloudbasierte Contact-Center-Lösung, die Unternehmen dabei unterstützt, außergewöhnliche Kundenerlebnisse zu schaffen. Mit RingCX können Unternehmen alle ihre Kundeninteraktionen – per Telefon, Chat, E-Mail und Social Media – in einer einzigen Plattform verwalten.",
+      "Zu den wichtigsten Funktionen von RingCX gehören:",
+      "- Automatische Anrufverteilung: Intelligente Routing-Funktionen sorgen dafür, dass Anrufe an den richtigen Mitarbeiter weitergeleitet werden, wodurch die Wartezeiten verkürzt und die Kundenzufriedenheit gesteigert wird.",
+      "- Umfassende Analyse: Detaillierte Berichte und Analysen geben Unternehmen wertvolle Einblicke in ihre Kundeninteraktionen, sodass sie ihre Prozesse optimieren und die Kundenzufriedenheit verbessern können.",
+      "- Flexible Skalierbarkeit: RingCX lässt sich an die individuellen Bedürfnisse jedes Unternehmens anpassen, unabhängig von der Größe oder Branche.",
+      "- KI-Unterstützung: KI-gestützte Interfaces unterstützen vor, während und nach Gesprächen, automatische Transkriptionen und Zusammenfassungen, Unterstützung und Verhaltenscoaching.",
+      "[Mehr zu RingCX erfahren Sie bei RingCentral.|https://www.ringcentral.com/ringcx.html]",
+      "# Events & Video: Virtuelle Veranstaltungen neu gedacht",
+      "RingCentral bietet verschiedene Lösungen für die Planung, Durchführung und Verwaltung von virtuellen, hybriden und Präsenzveranstaltungen mit verschiedenen Anwendungen passend für Ihre Anlässe, Größen oder Funktionsumfang. Mit RingCentral Events und Video können Unternehmen nahtlose und ansprechende Erlebnisse für ihre Mitarbeiter, Kunden und Partner schaffen.",
+      "Zu den wichtigsten Funktionen von Events und Video gehören:",
+      "- Passende Lösung: Wählen Sie Ihre passende Anwendung für Ihre Events, Webinare, Video Konferenzen oder Meetingräume.",
+      "- Intuitive Eventplanung: Einfache Tools zur Erstellung von Event-Webseiten, Registrierung von Teilnehmern und Verwaltung von Event-Agenden.",
+      "- Engagierende Videokonferenzen: Hochwertige Video- und Audioqualität sorgen für eine reibungslose Kommunikation und Zusammenarbeit während der Veranstaltungen.",
+      "- Umfassende Analyse: Detaillierte Berichte und Analysen geben Unternehmen wertvolle Einblicke in die Teilnehmerbeteiligung und das Engagement, sodass sie ihre zukünftigen Veranstaltungen optimieren können.",
+      "# RingCentral ist die Zukunft der Unternehmenskommunikation",
+      "Mit RingEX, RingCX und den Events- & Videolösungen bietet RingCentral Unternehmen aller Größenordnungen eine umfassende Lösung für ihre Kommunikationsbedürfnisse. Durch die Kombination von innovativer Technologie mit intelligenter KI-Funktionalität ermöglicht RingCentral Unternehmen, die Zusammenarbeit zu verbessern, die Kundenzufriedenheit zu steigern und die Produktivität auf neue Höhen zu heben.",
+      "Sind Sie bereit, die Zukunft der Unternehmenskommunikation zu erleben? Dann vereinbaren Sie noch heute Ihren persönlichen Beratungstermin."
     ],
     "logo": "ringcentral.svg",
-    "img": "ringcentral.png",
-    "additional": "RingCentral"
+    "img": "ringcentral.png"
   }
 ]

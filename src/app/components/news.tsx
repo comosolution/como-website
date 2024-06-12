@@ -55,7 +55,9 @@ export default async function News() {
                       day: "numeric",
                     })}
                   </p>
-                  <h4>{note.title}</h4>
+                  <p>
+                    <b>{note.title}</b>
+                  </p>
                 </div>
               </Tile>
             )
