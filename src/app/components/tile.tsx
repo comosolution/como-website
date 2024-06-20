@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { card } from "../style/style";
 
 export default function Tile({
   children,
@@ -10,8 +11,7 @@ export default function Tile({
   className?: string;
   href?: string;
 }) {
-  const style =
-    "flex flex-col justify-between items-end gap-4 p-8 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all";
+  const style = `flex flex-col justify-between items-end gap-4 p-8 ${card} transition-all`;
 
   const tile = (
     <>

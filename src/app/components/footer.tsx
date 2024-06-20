@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { aboutNav, portfolioNav } from "../config/nav";
 import Link from "next/link";
-import { fourCols } from "../style/style";
+import { card, fourCols } from "../style/style";
 
 export default function Footer() {
   return (
@@ -14,7 +14,9 @@ export default function Footer() {
         className="absolute -bottom-8 -z-1 w-full footerCircles"
       />
       <main>
-        <footer className="relative flex flex-col gap-16 m-8 px-8 py-16 rounded-2xl backdrop-blur-sm bg-neutral-900/10 ring-1 ring-white/10 shadow-2xl">
+        <footer
+          className={`relative flex flex-col gap-16 m-8 px-8 py-10 ${card}`}
+        >
           <header className="flex items-center gap-4 px-8">
             <Image src="/logo.svg" width="72" height="72" alt="Logo" />
             <div id="logoLarge" className="flex flex-col gap-0">

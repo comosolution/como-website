@@ -1,0 +1,104 @@
+[
+  {
+    "id": "bsc",
+    "name": "Hertha BSC",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "ebr",
+    "name": "Eintracht Braunschweig",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "f95",
+    "name": "Fortuna Düsseldorf",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "sve",
+    "name": "SV 07 Elversberg",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "sgf",
+    "name": "SpVgg Greuther Fürth",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "hsv",
+    "name": "Hamburger SV",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "h96",
+    "name": "Hannover 96",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "fck",
+    "name": "1. FC Kaiserslautern",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "ksc",
+    "name": "Karlsruher SC",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "kie",
+    "name": "Holstein Kiel",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "fcm",
+    "name": "1. FC Magdeburg",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "osn",
+    "name": "VfL Osnabrück",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "scp",
+    "name": "SC Paderborn 07",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "fch",
+    "name": "FC Hansa Rostock",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "stp",
+    "name": "FC St. Pauli",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "s04",
+    "name": "FC Schalke 04",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "svw",
+    "name": "SV Wehen Wiesbaden",
+    "date": "Nicht terminiert",
+    "booked": false
+  }
+]

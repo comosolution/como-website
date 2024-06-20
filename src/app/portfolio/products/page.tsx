@@ -4,6 +4,7 @@ import products from "../../data/portfolio/products.json";
 import { Slide } from "react-awesome-reveal";
 import Button from "@/app/components/button";
 import Link from "next/link";
+import { card } from "@/app/style/style";
 
 export default function Page() {
   return (
@@ -16,7 +17,9 @@ export default function Page() {
           return (
             <Slide key={index} direction="up" delay={index * 50} triggerOnce>
               <Link href={`/portfolio/products/${product.id}`} className="tile">
-                <div className="productTile lg:min-h-[360px] flex flex-col justify-between items-center gap-2 pt-4 rounded-2xl backdrop-blur-sm bg-neutral-900/70 ring-1 ring-white/10 shadow-2xl transition-all hover:bg-neutral-900 cursor-pointer">
+                <div
+                  className={`productTile lg:min-h-[360px] flex flex-col justify-between items-center gap-2 pt-4 ${card} cursor-pointer`}
+                >
                   <Image
                     src={`/logos/${product.logo}`}
                     alt="Logo"

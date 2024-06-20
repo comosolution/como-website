@@ -54,7 +54,7 @@ select {
 
 input:not(.ghost),
 select {
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0;
   border-bottom: 1px solid rgba(var(--foreground-rgb), 0.8);
 }
 
@@ -93,6 +93,62 @@ select {
   background-position-x: 100%;
   background-position-y: 12px;
   margin-right: 2rem;
+}
+
+.checkboxContainer {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer:not(:has(input:disabled)):hover p {
+  color: rgba(var(--orange-rgb), 0.8);
+  transition: var(--default-transition);
+}
+
+.checkboxContainer:not(:has(input:disabled)):hover input ~ .check {
+  background-color: rgba(var(--orange-rgb), 0.8);
+  transition: var(--default-transition);
+}
+
+.checkboxContainer input:checked ~ .check {
+  background-color: rgba(var(--orange-rgb), 1);
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .check:after {
+  display: block;
+}
+
+.checkboxContainer:has(input:disabled):hover {
+  cursor: not-allowed;
+}
+
+.checkboxContainer input:disabled ~ .check {
+  opacity: 0.5;
+}
+
+.checkboxContainer:has(input:disabled) p {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.checkboxContainer .check:after {
+  left: 11px;
+  top: 4px;
+  width: 10px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 a:not(.tile),
@@ -231,6 +287,10 @@ article img {
 
 .muted {
   color: rgba(var(--foreground-rgb), 0.7);
+}
+
+.small {
+  font-size: 1rem;
 }
 
 .productImg {
