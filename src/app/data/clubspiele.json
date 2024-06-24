@@ -1,103 +1,97 @@
 [
   {
-    "id": "bsc",
+    "id": "sc_preussen_muenster",
+    "name": "SC Preußen Münster",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "ssv_ulm",
+    "name": "SSV Ulm",
+    "date": "Nicht terminiert",
+    "booked": false
+  },
+  {
+    "id": "hertha_bsc",
     "name": "Hertha BSC",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "ebr",
+    "id": "eintracht_braunschweig",
     "name": "Eintracht Braunschweig",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "f95",
+    "id": "fortuna_duesseldorf",
     "name": "Fortuna Düsseldorf",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "sve",
+    "id": "sv_elversberg",
     "name": "SV 07 Elversberg",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "sgf",
+    "id": "greuther_fuerth",
     "name": "SpVgg Greuther Fürth",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "hsv",
+    "id": "hamburger_sv",
     "name": "Hamburger SV",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "h96",
+    "id": "hannover_96",
     "name": "Hannover 96",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "fck",
+    "id": "fc_kaiserslautern",
     "name": "1. FC Kaiserslautern",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "ksc",
+    "id": "karlsruher_sc",
     "name": "Karlsruher SC",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "kie",
-    "name": "Holstein Kiel",
+    "id": "fc_koeln",
+    "name": "1. FC Köln",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "fcm",
+    "id": "fc_magdeburg",
     "name": "1. FC Magdeburg",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "osn",
-    "name": "VfL Osnabrück",
-    "date": "Nicht terminiert",
-    "booked": false
-  },
-  {
-    "id": "scp",
+    "id": "sc_paderborn",
     "name": "SC Paderborn 07",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "fch",
-    "name": "FC Hansa Rostock",
-    "date": "Nicht terminiert",
-    "booked": false
-  },
-  {
-    "id": "stp",
-    "name": "FC St. Pauli",
-    "date": "Nicht terminiert",
-    "booked": false
-  },
-  {
-    "id": "s04",
+    "id": "schalke_04",
     "name": "FC Schalke 04",
     "date": "Nicht terminiert",
     "booked": false
   },
   {
-    "id": "svw",
-    "name": "SV Wehen Wiesbaden",
+    "id": "svv_jahn_regensburg",
+    "name": "SSV Jahn Regensburg",
     "date": "Nicht terminiert",
     "booked": false
   }

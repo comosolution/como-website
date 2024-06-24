@@ -12,7 +12,9 @@ export default function Page() {
     <main className="flex flex-col gap-16 p-8">
       <header className="flex flex-col items-center text-center gap-4">
         <div className="flex items-center gap-1">
-          <p>Wir sind</p>
+          <p>
+            <b>Wir sind</b>
+          </p>
           <Image
             src="/clubspiele/fcn.svg"
             width="120"
