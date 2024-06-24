@@ -99,7 +99,7 @@ export default function GameForm() {
           <h4>Wählen Sie bis zu 3 Partien</h4>
           <p className="muted small">{selectedGames.length} / 3</p>
         </header>
-        <div className="flex flex-col gap-2 mt-2 p-4 max-h-[320px] overflow-y-auto overscroll-y-contain rounded backdrop-blur-sm bg-black/50 ring-1 ring-white/10 shadow-2xl">
+        <div className="flex flex-col gap-2 mt-2 p-4 max-h-[300px] overflow-y-auto overscroll-y-contain rounded backdrop-blur-sm bg-black/50 ring-1 ring-white/10 shadow-2xl">
           {games.map((game, index) => {
             return (
               <Checkbox
@@ -109,7 +109,7 @@ export default function GameForm() {
                 disabled={game.booked}
                 className="items-center"
               >
-                <div className="flex justify-between items-center gap-2">
+                <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <Image
                       src={`/clubspiele/${game.id}.png`}
@@ -117,12 +117,12 @@ export default function GameForm() {
                       height={36}
                       alt={`Logo ${game.name}`}
                     />
-                    <p>
-                      <b>{game.name}</b>
-                    </p>
+                    <p className="tracking-tighter">{game.name}</p>
                   </div>
                 </div>
-                <p className="muted small">{game.date}</p>
+                <p className="muted small">
+                  {game.booked ? "Ausgebucht" : game.date}
+                </p>
               </Checkbox>
             );
           })}

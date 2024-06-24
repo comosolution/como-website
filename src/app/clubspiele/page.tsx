@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { twoCols } from "../style/style";
 import GameForm from "./sections/form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clubspiele | CoMo Solution GmbH",
+};
 
 export default function Page() {
   return (
@@ -18,18 +23,18 @@ export default function Page() {
         <h1>Mit der CoMo zum Club</h1>
       </header>
       <div className={twoCols}>
-        <div className="flex flex-col gap-4 p-8 muted">
+        <div className="flex flex-col gap-4 p-8 muted lg:h-min lg:sticky lg:top-4">
           <p>Verehrte Kundinnen und Kunden, liebe Partner und Freunde,</p>
           <p>
             ein Stadionbesuch ist immer ein Erlebnis und die Atmosphäre eines
             Fußballspiels mit den Fans im Stadion ist besonders. Als Partner des
             1. FC Nürnberg möchten wir Sie und eine Begleitperson zu einem
-            Heimspiel des 1. FC Nürnberg einladen.
+            Heimspiel in der Saison 2024/25 einladen.
           </p>
           <p>
             Bitte nutzen Sie für die Auswahl der Partie unser Formular. Wir
             bestätigen Ihre Auswahl zeitnah. Bei einer Mehrfachbuchung einer
-            Partie entscheidet das Los!
+            Partie entscheidet das Los.
           </p>
           <p>
             Wir freuen uns auf Ihre Auswahl und ein gemeinsames Sporterlebnis im

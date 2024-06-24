@@ -120,23 +120,24 @@ select {
   content: "";
   position: absolute;
   display: none;
+  transition: var(--default-transition);
 }
 
 .checkboxContainer input:checked ~ .check:after {
   display: block;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .checkboxContainer:has(input:disabled):hover {
   cursor: not-allowed;
 }
 
-.checkboxContainer input:disabled ~ .check {
-  opacity: 0.5;
-}
-
+.checkboxContainer input:disabled ~ .check,
 .checkboxContainer:has(input:disabled) p {
   opacity: 0.5;
-  text-decoration: line-through;
 }
 
 .checkboxContainer .check:after {
@@ -145,10 +146,10 @@ select {
   width: 10px;
   height: 20px;
   border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  border-width: 0 0 0 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 a:not(.tile),

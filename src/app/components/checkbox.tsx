@@ -15,7 +15,7 @@ export default function Checkbox({
 }) {
   return (
     <label
-      className={`checkboxContainer relative flex justify-between gap-4 pl-12 cursor-pointer ${className}`}
+      className={`checkboxContainer relative flex justify-between pl-12 cursor-pointer ${className}`}
     >
       <input
         type="checkbox"
