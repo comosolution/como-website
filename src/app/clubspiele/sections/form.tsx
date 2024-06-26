@@ -9,7 +9,7 @@ import Link from "next/link";
 import { card } from "@/app/style/style";
 
 export default function GameForm() {
-  const [success, setSucces] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -34,12 +34,13 @@ export default function GameForm() {
       onSubmit={(e) => {
         e.preventDefault();
         fetch(
-          "https://hook.como-solution.de/api/runtask?taskid=0&src=formular",
+          "https://hook.como-solution.de/api/runtask?taskid=0&src=clubspiele",
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
+            redirect: "follow",
             body: JSON.stringify(
               {
                 name: `${data.firstName} ${data.lastName}`,
@@ -56,7 +57,7 @@ export default function GameForm() {
           .then((res) => res.text())
           .then((data) => {
             console.log(data);
-            setSucces(true);
+            setSuccess(true);
           })
           .catch((error) => console.error(error));
       }}

@@ -17,14 +17,16 @@ export default function Footer() {
         <footer
           className={`relative flex flex-col gap-16 m-8 px-8 py-10 ${card}`}
         >
-          <header className="flex items-center gap-4 px-8">
-            <Image src="/logo.svg" width="72" height="72" alt="Logo" />
-            <div id="logoLarge" className="flex flex-col gap-0">
-              <span>Collaboration +</span>
-              <span>Mobile</span>
-              <span>Solution</span>
-            </div>
-          </header>
+          <Link href="/">
+            <header className="flex items-center gap-4 px-8">
+              <Image src="/logo.svg" width="72" height="72" alt="Logo" />
+              <div id="logoLarge" className="flex flex-col gap-0">
+                <span>Collaboration +</span>
+                <span>Mobile</span>
+                <span>Solution</span>
+              </div>
+            </header>
+          </Link>
           <div className={fourCols}>
             <div className="sm:col-span-2 px-8 py-4">
               <p>CoMo Solution GmbH</p>
