@@ -7,6 +7,8 @@ import Checkbox from "@/app/components/checkbox";
 import { validateEmail } from "@/app/utils/utils";
 import Link from "next/link";
 import { card } from "@/app/style/style";
+import FormSuccess from "@/app/components/form";
+import { HOOK_API } from "@/app/config/api";
 
 export default function GameForm() {
   const [success, setSuccess] = useState(false);
@@ -33,29 +35,25 @@ export default function GameForm() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        fetch(
-          "https://hook.como-solution.de/api/runtask?taskid=0&src=clubspiele",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
+        fetch(`${HOOK_API}&src=clubspiele`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+            {
+              name: `${data.firstName} ${data.lastName}`,
+              company: data.company,
+              email: data.email,
+              companion,
+              games: selectedGames,
             },
-            body: JSON.stringify(
-              {
-                name: `${data.firstName} ${data.lastName}`,
-                company: data.company,
-                email: data.email,
-                companion,
-                games: selectedGames,
-              },
-              null,
-              2
-            ),
-          }
-        )
+            null,
+            2
+          ),
+        })
           .then((res) => res.text())
           .then((data) => {
-            console.log(data);
             setSuccess(true);
           })
           .catch((error) => console.error(error));
@@ -154,14 +152,6 @@ export default function GameForm() {
       />
     </form>
   ) : (
-    <div
-      className={`flex flex-col justify-center items-center gap-4 p-8 ${card}`}
-    >
-      <Image src="/icons/check.svg" width={64} height={64} alt="Check" />
-      <div className="flex flex-col items-center">
-        <p className="text-orange-500">Vielen Dank für Ihre Anfrage!</p>
-        <p className="muted">Wir melden uns zeitnah bei Ihnen.</p>
-      </div>
-    </div>
+    <FormSuccess />
   );
 }
