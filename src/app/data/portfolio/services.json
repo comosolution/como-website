@@ -10,8 +10,7 @@
       "Prozessoptimierung",
       "Optimierung",
       "Health Check",
-      "Projekt",
-      "Management"
+      "Projekt"
     ],
     "icon": "consulting",
     "services": [
@@ -71,9 +70,42 @@
     "additional": ""
   },
   {
+    "id": "managed",
+    "type": "services",
+    "name": "Managed Services",
+    "title": "Mehr Zeit für Ihre IT-Kernaufgaben.",
+    "icon": "managed",
+    "keywords": [
+      "Desk",
+      "Infrastruktur",
+      "Mobile Device",
+      "Management",
+      "Endpoint Security"
+    ],
+    "services": [
+      {
+        "name": "Service Desk",
+        "description": "Unser Service Desk nimmt Ihnen die Arbeit ab und bietet erstklassigen Support und schnelle Problemlösungen für Ihre Mitarbeitenden - auch als Enterprise Service Management nach ITIL."
+      },
+      {
+        "name": "Infrastruktur Service",
+        "description": "Mit unseren umfassenden Services für HCL Notes Domino Infrastrukturen gewährleisten wir die optimale Leistung und Verfügbarkeit Ihrer Collaboration-Landschaften."
+      },
+      {
+        "name": "Endpoint Management",
+        "description": "Wir bauen Ihr Endpoint Management auf und sorgen für die sichere und effiziente Verwaltung aller Endgeräte in Ihrem Unternehmen."
+      },
+      {
+        "name": "Endpoint Security",
+        "description": "Die Managed Security CylanceMDR von BlackBerry schützt Ihre Geräte vor Cyber-Bedrohungen und erleichtert Ihnen die Arbeit bei der Umsetzung Ihrer Sicherheitsstrategie."
+      }
+    ],
+    "additional": ""
+  },
+  {
     "id": "support",
     "type": "services",
-    "name": "Support + Service",
+    "name": "Support",
     "title": "So läuft Ihre IT reibungslos.",
     "icon": "support",
     "keywords": [
@@ -96,10 +128,6 @@
       {
         "name": "Wartung",
         "description": "Unsere Wartungsdienstleistungen sorgen dafür, dass Ihre Systeme stets auf dem neuesten Stand sind und reibungslos funktionieren, um Ausfallzeiten zu minimieren und die Produktivität zu maximieren."
-      },
-      {
-        "name": "Helpdesk",
-        "description": "Unser Helpdesk steht Ihnen jederzeit zur Verfügung, um Ihnen bei technischen Fragen und Problemen schnell und effizient zu helfen."
       },
       {
         "name": "Support",

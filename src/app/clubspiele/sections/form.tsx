@@ -40,7 +40,6 @@ export default function GameForm() {
             headers: {
               "Content-Type": "application/json",
             },
-            redirect: "follow",
             body: JSON.stringify(
               {
                 name: `${data.firstName} ${data.lastName}`,

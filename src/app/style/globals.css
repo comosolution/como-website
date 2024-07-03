@@ -274,6 +274,38 @@ article img {
   object-fit: cover;
 }
 
+article details {
+  font-size: 1.25rem;
+  color: rgba(var(--foreground-rgb), 0.7);
+  margin-block-end: 1rem;
+  transition: var(--default-transition);
+}
+
+article details summary {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+  letter-spacing: -4%;
+  color: rgba(var(--foreground-rgb), 0.7);
+  margin-block-end: 1rem;
+  cursor: pointer;
+  transition: var(--default-transition);
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+  color: rgb(var(--orange-rgb));
+}
+
+article details[open] summary {
+  color: rgb(var(--foreground-rgb));
+  margin-bottom: 10px;
+}
+
+article details summary:hover {
+  color: rgb(var(--orange-rgb));
+}
+
 .circles {
   max-height: 2000px;
   position: absolute;

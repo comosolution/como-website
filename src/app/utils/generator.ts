@@ -1,4 +1,3 @@
-import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
@@ -7,6 +6,7 @@ import { unified } from "unified";
 import * as fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import rehypeRaw from "rehype-raw";
 
 export async function getMarkdown(folder: string) {
   const noteDirectory = path.join(process.cwd(), folder);
@@ -38,8 +38,8 @@ export async function markdownToHtml(content: string) {
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeSanitize)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeStringify)
     .process(content);
 
