@@ -28,11 +28,11 @@ export const options = [
     label: "Produkte",
     options: [
       {
-        label: "MOLIRIS TIME",
+        label: "MOLIRIS Time",
         value: "moliris time",
       },
       {
-        label: "MOLIRIS VOTE",
+        label: "MOLIRIS Vote",
         value: "moliris vote",
       },
       {

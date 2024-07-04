@@ -131,9 +131,11 @@ export default function Contact() {
             <ReactSelect
               placeholder="Wofür interessieren Sie sich?"
               options={options}
+              isClearable={false}
               isMulti
               styles={customStyles}
               onChange={handleCheck}
+              noOptionsMessage={() => <>Keine Treffer</>}
             />
             <textarea
               name="message"
