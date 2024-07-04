@@ -15,8 +15,8 @@ export default async function News() {
         <img
           src="/glow-2.png"
           alt=""
-          width="2000"
-          height="1200"
+          width="1600"
+          height="1600"
           className="max-w-none origin-top"
         />
       </div>

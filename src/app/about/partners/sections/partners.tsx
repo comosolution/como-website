@@ -11,7 +11,7 @@ export default function Partners() {
           <Slide key={index} direction="up" triggerOnce>
             <div
               id={partner.id}
-              className="flex flex-col lg:flex-row items-start gap-8 lg:gap-24 lg:pt-20 border-t border-solid border-t-white/20"
+              className="flex flex-col lg:flex-row items-start gap-8 lg:gap-24 lg:pt-20 border-t border-solid border-t-white/10"
             >
               <Image
                 key={index}

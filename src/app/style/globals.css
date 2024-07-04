@@ -326,7 +326,7 @@ article details summary:hover {
 }
 
 .footerCircles {
-  max-height: 960px;
+  max-height: 900px;
   position: absolute;
   z-index: -1000;
 }
