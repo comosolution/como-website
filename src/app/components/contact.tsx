@@ -148,7 +148,7 @@ export default function Contact() {
             <p>
               Ich habe die{" "}
               <Link href="/legal/privacy" target="_blank">
-                Datenschutzerklärung
+                Datenschutzhinweise
               </Link>{" "}
               zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten
               zur Beantwortung meiner Anfrage elektronisch erhoben und
