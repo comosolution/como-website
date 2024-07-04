@@ -7,29 +7,10 @@ import { ChangeEvent, useState } from "react";
 import { validateEmail } from "../utils/utils";
 import FormSuccess from "./form";
 import { HOOK_API } from "../config/api";
-
-const options = [
-  {
-    label: "Consulting",
-    value: "consulting",
-  },
-  {
-    label: "Development",
-    value: "development",
-  },
-  {
-    label: "Managed Services",
-    value: "managed services",
-  },
-  {
-    label: "Support",
-    value: "support",
-  },
-  {
-    label: "Training + Workshops",
-    value: "training",
-  },
-];
+import { usePathname } from "next/navigation";
+import ReactSelect, { MultiValue, StylesConfig } from "react-select";
+import { customStyles } from "../style/select";
+import { options } from "../config/options";
 
 export default function Contact() {
   const [success, setSuccess] = useState(false);
@@ -38,9 +19,17 @@ export default function Contact() {
     lastName: "",
     company: "",
     email: "",
+    phone: "",
     message: "",
   });
+  const [topics, setTopics] = useState<MultiValue<unknown>>();
   const [privacy, setPrivacy] = useState(false);
+
+  const handleCheck = (newValue: MultiValue<unknown>) => {
+    setTopics(newValue.map((t: any) => t.label));
+  };
+
+  const pathname = usePathname();
 
   const handleChange = (e: ChangeEvent<any>) =>
     setData({ ...data, [e.target.name]: e.target.value });
@@ -50,10 +39,10 @@ export default function Contact() {
       <div className="flex flex-col items-center gap-12 pt-8 lg:h-min lg:sticky lg:top-4">
         <div className="flex flex-col text-center">
           <header className="flex flex-col">
-            <p className="text-orange-500 pb-2">
+            <p className="text-orange-500">
               <b>Sprechen Sie uns an.</b>
             </p>
-            <h2>Wir sind bereit, gemeinsam mit Ihnen durchzustarten.</h2>
+            <h2>Wir sind bereit, gemeinsam mit Ihnen durchzustarten!</h2>
           </header>
         </div>
         <div className="flex flex-col gap-4 items-center">
@@ -83,6 +72,9 @@ export default function Contact() {
                   name: `${data.firstName} ${data.lastName}`,
                   company: data.company,
                   email: data.email,
+                  phone: data.phone,
+                  page: pathname,
+                  topics: topics,
                   message: data.message,
                 },
                 null,
@@ -95,7 +87,7 @@ export default function Contact() {
               })
               .catch((error) => console.error(error));
           }}
-          className={`flex flex-col gap-8 p-8 ${card}`}
+          className={`flex flex-col gap-8 p-8 ${card} shadow-2xl shadow-orange-500/20`}
         >
           <div className="flex flex-col gap-4">
             <h4>Ihre Daten</h4>
@@ -119,15 +111,30 @@ export default function Contact() {
               placeholder="Unternehmen"
               onChange={handleChange}
             />
-            <input
-              type="text"
-              name="email"
-              placeholder="E-Mail"
-              onChange={handleChange}
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="email"
+                placeholder="E-Mail"
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Telefon"
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <h4>Ihre Nachricht</h4>
+            <ReactSelect
+              placeholder="Wofür interessieren Sie sich?"
+              options={options}
+              isMulti
+              styles={customStyles}
+              onChange={handleCheck}
+            />
             <textarea
               name="message"
               placeholder="Wie können wir Ihnen weiterhelfen?"
