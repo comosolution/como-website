@@ -57,7 +57,7 @@ input:not(.ghost),
 select,
 textarea {
   padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
 }
 
 input:not(.ghost):focus,
@@ -326,7 +326,7 @@ article details summary:hover {
 }
 
 .footerCircles {
-  max-height: 820px;
+  max-height: 960px;
   position: absolute;
   z-index: -1000;
 }

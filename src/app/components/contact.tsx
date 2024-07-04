@@ -135,7 +135,7 @@ export default function Contact() {
               isMulti
               styles={customStyles}
               onChange={handleCheck}
-              noOptionsMessage={() => <>Keine Treffer</>}
+              noOptionsMessage={() => <p>Keine Treffer</p>}
             />
             <textarea
               name="message"

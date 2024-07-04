@@ -10,7 +10,7 @@ export const customStyles: StylesConfig = {
     borderRadius: "0",
     borderBottom: isFocused
       ? "1px solid rgba(var(--orange-rgb), 1)"
-      : "1px solid rgba(var(--foreground-rgb), 0.2)",
+      : "1px solid rgba(var(--foreground-rgb), 0.1)",
     fontSize: "20px",
     padding: "0.4rem 0",
     width: "100%",
@@ -18,14 +18,14 @@ export const customStyles: StylesConfig = {
       ...base[":hover"],
       borderBottom: isFocused
         ? "1px solid rgba(var(--orange-rgb), 1)"
-        : "1px solid rgba(var(--foreground-rgb), 0.2)",
+        : "1px solid rgba(var(--foreground-rgb), 0.1)",
       cursor: "pointer",
     },
   }),
   menu: (base) => ({
     ...base,
     background: "rgb(0,0,0)",
-    border: "1px solid rgba(255, 255, 255, 0.2)",
+    border: "1px solid rgba(var(--foreground-rgb), 0.1)",
     width: "100%",
   }),
   option: (base, { isFocused }) => ({
