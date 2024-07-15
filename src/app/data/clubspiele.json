@@ -2,103 +2,103 @@
   {
     "id": "schalke_04",
     "name": "FC Schalke 04",
-    "date": "Nicht terminiert",
+    "date": "Sa., 10.08.24 13:00",
     "booked": false
   },
   {
     "id": "fc_magdeburg",
     "name": "1. FC Magdeburg",
-    "date": "Nicht terminiert",
+    "date": "30. – 01.09.24",
     "booked": false
   },
   {
     "id": "hertha_bsc",
     "name": "Hertha BSC",
-    "date": "Nicht terminiert",
+    "date": "20. – 22.09.24",
     "booked": false
   },
   {
     "id": "sc_preussen_muenster",
     "name": "SC Preußen Münster",
-    "date": "Nicht terminiert",
+    "date": "04. – 06.10.24",
     "booked": false
   },
   {
     "id": "svv_jahn_regensburg",
     "name": "SSV Jahn Regensburg",
-    "date": "Nicht terminiert",
+    "date": "25. – 27.10.24",
     "booked": false
   },
   {
     "id": "fc_kaiserslautern",
     "name": "1. FC Kaiserslautern",
-    "date": "Nicht terminiert",
+    "date": "08. – 10.11.24",
     "booked": false
   },
   {
     "id": "fortuna_duesseldorf",
     "name": "Fortuna Düsseldorf",
-    "date": "Nicht terminiert",
+    "date": "29. – 01.12.24",
     "booked": false
   },
   {
     "id": "eintracht_braunschweig",
     "name": "Eintracht Braunschweig",
-    "date": "Nicht terminiert",
+    "date": "20. – 22.12.24",
     "booked": false
   },
   {
     "id": "karlsruher_sc",
     "name": "Karlsruher SC",
-    "date": "Nicht terminiert",
+    "date": "17. – 19.01.25",
     "booked": false
   },
   {
     "id": "sv_darmstadt",
     "name": "SV Darmstadt 98",
-    "date": "Nicht terminiert",
+    "date": "31. – 02.02.25",
     "booked": false
   },
   {
     "id": "ssv_ulm",
     "name": "SSV Ulm",
-    "date": "Nicht terminiert",
+    "date": "14. – 16.02.25",
     "booked": false
   },
   {
     "id": "hannover_96",
     "name": "Hannover 96",
-    "date": "Nicht terminiert",
+    "date": "28. – 02.03.25",
     "booked": false
   },
   {
     "id": "greuther_fuerth",
     "name": "SpVgg Greuther Fürth",
-    "date": "Nicht terminiert",
+    "date": "14. – 16.03.25",
     "booked": false
   },
   {
     "id": "hamburger_sv",
     "name": "Hamburger SV",
-    "date": "Nicht terminiert",
+    "date": "04. – 06.04.25",
     "booked": false
   },
   {
     "id": "sc_paderborn",
     "name": "SC Paderborn 07",
-    "date": "Nicht terminiert",
+    "date": "18. – 20.04.25",
     "booked": false
   },
   {
     "id": "sv_elversberg",
     "name": "SV 07 Elversberg",
-    "date": "Nicht terminiert",
+    "date": "02. – 04.05.25",
     "booked": false
   },
   {
     "id": "fc_koeln",
     "name": "1. FC Köln",
-    "date": "Nicht terminiert",
+    "date": "09. – 11.05.25",
     "booked": false
   }
 ]

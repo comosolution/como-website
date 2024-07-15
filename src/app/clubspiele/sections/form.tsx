@@ -102,28 +102,30 @@ export default function GameForm() {
         <div className="flex flex-col gap-2 mt-2 p-4 max-h-[280px] overflow-y-auto overscroll-y-contain rounded backdrop-blur-sm bg-black/50 ring-1 ring-white/10 shadow-2xl">
           {games.map((game, index) => {
             return (
-              <Checkbox
-                key={index}
-                checked={selectedGames.includes(game.id)}
-                onChange={() => handleCheck(game.id)}
-                disabled={game.booked}
-                className="items-center"
-              >
-                <div className="flex justify-between items-center h-10">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={`/clubspiele/${game.id}.png`}
-                      width={36}
-                      height={36}
-                      alt={`Logo ${game.name}`}
-                    />
-                    <p className="tracking-tighter">{game.name}</p>
+              index < 8 && (
+                <Checkbox
+                  key={index}
+                  checked={selectedGames.includes(game.id)}
+                  onChange={() => handleCheck(game.id)}
+                  disabled={game.booked}
+                  className="items-center"
+                >
+                  <div className="flex justify-between items-center h-10">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={`/clubspiele/${game.id}.png`}
+                        width={36}
+                        height={36}
+                        alt={`Logo ${game.name}`}
+                      />
+                      <p className="tracking-tighter">{game.name}</p>
+                    </div>
                   </div>
-                </div>
-                <p className="muted small">
-                  {game.booked ? "Ausgebucht" : game.date}
-                </p>
-              </Checkbox>
+                  <p className="muted small">
+                    {game.booked ? "Ausgebucht" : game.date}
+                  </p>
+                </Checkbox>
+              )
             );
           })}
         </div>

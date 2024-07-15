@@ -22,7 +22,7 @@ export default function Button({
 }) {
   const buttonType = {
     primary: "bg-orange-500 text-white hover:bg-orange-600",
-    secondary: "bg-white text-black",
+    secondary: "bg-white text-black hover:bg-white/80",
     tertiary: "bg-transparent text-white hover:bg-neutral-800/80",
     contact:
       "font-normal text-white/80 border-solid border border-orange-500 hover:bg-orange-600/10",
