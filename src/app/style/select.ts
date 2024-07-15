@@ -13,6 +13,7 @@ export const customStyles: StylesConfig = {
       : "1px solid rgba(var(--foreground-rgb), 0.1)",
     fontSize: "20px",
     padding: "0.4rem 0",
+    transition: "var(--default-transition)",
     width: "100%",
     ":hover": {
       ...base[":hover"],
@@ -47,7 +48,7 @@ export const customStyles: StylesConfig = {
   multiValue: (base) => ({
     ...base,
     background: "none",
-    border: "1px solid rgba(var(--yellow-rgb), 1)",
+    border: "1px solid rgba(var(--orange-rgb), 1)",
     borderRadius: "100px",
     fontSize: "16px",
     letterSpacing: "-4%",

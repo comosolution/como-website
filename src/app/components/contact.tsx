@@ -8,7 +8,7 @@ import { validateEmail } from "../utils/utils";
 import FormSuccess from "./form";
 import { HOOK_API } from "../config/api";
 import { usePathname } from "next/navigation";
-import ReactSelect, { MultiValue, StylesConfig } from "react-select";
+import ReactSelect, { MultiValue } from "react-select";
 import { customStyles } from "../style/select";
 import { options } from "../config/options";
 
@@ -47,7 +47,7 @@ export default function Contact() {
         </div>
         <div className="flex flex-col gap-4 items-center">
           <Button
-            type="secondary"
+            type="contact"
             text="info@como-solution.de"
             href="mailto:info@como-solution.de"
           />
@@ -140,7 +140,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Wie können wir Ihnen weiterhelfen?"
-              rows={4}
+              rows={3}
               onChange={handleChange}
             ></textarea>
           </div>
