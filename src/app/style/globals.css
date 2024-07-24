@@ -276,7 +276,7 @@ article img {
 
 article details {
   font-size: 1.25rem;
-  color: rgba(var(--foreground-rgb), 0.7);
+  color: rgba(var(--foreground-rgb), 1);
   margin-block-end: 1rem;
   transition: var(--default-transition);
 }
