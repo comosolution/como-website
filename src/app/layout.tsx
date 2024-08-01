@@ -31,6 +31,7 @@ export default function RootLayout({
         <PageWrapper>{children}</PageWrapper>
         <Contact />
         <Footer />
+        <script type="text/javascript" src="/static/salesviewer.js" defer />
       </body>
     </html>
   );
