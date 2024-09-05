@@ -102,7 +102,7 @@ export default function GameForm() {
         <div className="flex flex-col gap-2 mt-2 p-4 max-h-[280px] overflow-y-auto overscroll-y-contain rounded backdrop-blur-sm bg-black/50 ring-1 ring-white/10 shadow-2xl">
           {games.map((game, index) => {
             return (
-              index < 8 && (
+              index < 4 && (
                 <Checkbox
                   key={index}
                   checked={selectedGames.includes(game.id)}
@@ -129,6 +129,9 @@ export default function GameForm() {
             );
           })}
         </div>
+        <p className="muted small pt-1 text-right">
+          * Noch nicht final teminiert.
+        </p>
       </div>
       <Checkbox checked={privacy} onChange={() => setPrivacy(!privacy)}>
         <p>
