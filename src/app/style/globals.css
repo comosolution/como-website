@@ -296,6 +296,12 @@ article details summary {
   transition: var(--default-transition);
 }
 
+article details img {
+  margin-top: 1rem;
+  object-fit: contain;
+  object-position: left;
+}
+
 summary::marker,
 summary::-webkit-details-marker {
   color: rgb(var(--orange-rgb));

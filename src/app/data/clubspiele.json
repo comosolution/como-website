@@ -9,36 +9,36 @@
     "id": "fc_magdeburg",
     "name": "1. FC Magdeburg",
     "date": "Sa., 31.08.24 13:00",
-    "booked": false
+    "booked": true
   },
   {
     "id": "hertha_bsc",
     "name": "Hertha BSC",
     "date": "Sa., 21.09.24 13:00",
-    "booked": false
+    "booked": true
   },
   {
     "id": "sc_preussen_muenster",
     "name": "SC Preußen Münster",
-    "date": "04. – 06.10.24 *",
-    "booked": false
+    "date": "Sa., 05.10.24 13:00",
+    "booked": true
   },
   {
     "id": "svv_jahn_regensburg",
     "name": "SSV Jahn Regensburg",
-    "date": "Nicht terminiert",
+    "date": "Fr., 25.10.24 18:30",
     "booked": false
   },
   {
     "id": "fc_kaiserslautern",
     "name": "1. FC Kaiserslautern",
-    "date": "Nicht terminiert",
+    "date": "Fr., 08.11.24 18:30",
     "booked": false
   },
   {
     "id": "fortuna_duesseldorf",
     "name": "Fortuna Düsseldorf",
-    "date": "Nicht terminiert",
+    "date": "So., 01.12.24 13:30",
     "booked": false
   },
   {
