@@ -422,7 +422,7 @@ article details summary:hover {
   input,
   select,
   textarea,
-  #react-select-3-placeholder {
+  .react-select__placeholder {
     font-size: 1.6rem;
   }
 

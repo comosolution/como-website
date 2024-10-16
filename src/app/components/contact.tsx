@@ -91,7 +91,7 @@ export default function Contact() {
         >
           <div className="flex flex-col gap-4">
             <h4>Ihre Daten</h4>
-            <div className="grid grid-cols-2 gap-4">
+            <div className={twoCols}>
               <input
                 type="text"
                 name="firstName"
@@ -111,7 +111,7 @@ export default function Contact() {
               placeholder="Unternehmen *"
               onChange={handleChange}
             />
-            <div className="grid grid-cols-2 gap-4">
+            <div className={twoCols}>
               <input
                 type="text"
                 name="email"
@@ -134,6 +134,7 @@ export default function Contact() {
               isClearable={false}
               isMulti
               styles={customStyles}
+              classNamePrefix="react-select"
               onChange={handleCheck}
               noOptionsMessage={() => <p>Keine Treffer</p>}
             />
