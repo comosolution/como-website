@@ -62,7 +62,7 @@ export default function Contact() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            fetch(`${HOOK_API}&src=formular`, {
+            fetch(`${HOOK_API}&src=kontaktformular`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -95,27 +95,27 @@ export default function Contact() {
               <input
                 type="text"
                 name="firstName"
-                placeholder="Vorname"
+                placeholder="Vorname *"
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="lastName"
-                placeholder="Nachname"
+                placeholder="Nachname *"
                 onChange={handleChange}
               />
             </div>
             <input
               type="text"
               name="company"
-              placeholder="Unternehmen"
+              placeholder="Unternehmen *"
               onChange={handleChange}
             />
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
                 name="email"
-                placeholder="E-Mail"
+                placeholder="E-Mail *"
                 onChange={handleChange}
               />
               <input
@@ -139,10 +139,11 @@ export default function Contact() {
             />
             <textarea
               name="message"
-              placeholder="Wie können wir Ihnen weiterhelfen?"
-              rows={3}
+              placeholder="Wie können wir Ihnen weiterhelfen? *"
+              rows={4}
               onChange={handleChange}
-            ></textarea>
+            />
+            <p className="small muted">* Pflichtfelder</p>
           </div>
           <Checkbox checked={privacy} onChange={() => setPrivacy(!privacy)}>
             <p>

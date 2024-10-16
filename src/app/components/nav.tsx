@@ -50,15 +50,8 @@ export default function Nav() {
             <Link key={entry.name} href={entry.ref}>
               <NavItem href={entry.ref}>{entry.name}</NavItem>
             </Link>
-          ) : entry.child ? (
-            <Menu key={entry.name} content={entry.child} />
           ) : (
-            <Button
-              key={entry.name}
-              text={entry.name}
-              type="contact"
-              onClick={() => scrollTo("contact")}
-            />
+            entry.child && <Menu key={entry.name} content={entry.child} />
           );
         })}
       </nav>

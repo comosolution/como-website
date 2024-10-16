@@ -91,7 +91,8 @@ input[type="search"] {
 }
 
 button[disabled] {
-  opacity: 0.8;
+  opacity: 0.5;
+  background: rgb(var(--gray-rgb));
   cursor: not-allowed;
 }
 
@@ -419,7 +420,9 @@ article details summary:hover {
 
   .button,
   input,
-  select {
+  select,
+  textarea,
+  #react-select-3-placeholder {
     font-size: 1.6rem;
   }
 
