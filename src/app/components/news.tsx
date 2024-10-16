@@ -4,7 +4,7 @@ import Button from "./button";
 import Tile from "./tile";
 import ImageWithFallback from "./image";
 import NewsletterSubscribe from "./newsletter";
-import { header } from "../style/style";
+import { fourCols, header } from "../style/style";
 
 export default async function News() {
   const notes = await getMarkdown("notes");
@@ -28,7 +28,7 @@ export default async function News() {
           href="/about/notes"
         />
       </header>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className={fourCols}>
         {notes.map((note, index) => {
           return (
             // only show last 2 notes
@@ -38,7 +38,10 @@ export default async function News() {
                 href={`/about/notes#${note.id}`}
                 className="gap-4"
               >
-                <div className="relative w-full aspect-video overflow-hidden rounded-lg">
+                <div
+                  className="relative w-full overflow-hidden rounded-lg"
+                  style={{ aspectRatio: "9/4" }}
+                >
                   <ImageWithFallback
                     src={`/notes/${note.id}.png`}
                     alt="Thumbnail"
