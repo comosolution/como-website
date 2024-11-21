@@ -1,5 +1,43 @@
 [
   {
+    "id": "arcticwolf",
+    "type": "products",
+    "name": "Security Operations Cloud",
+    "intro": "Als Partner von Arctic Wolf bieten wir branchenführende Security Operations als Cloudlösung, die Ihre Sicherheitsanforderungen auf höchstem Niveau erfüllen.",
+    "description": [
+      "Arctic Wolf vereint seine Security Operations Cloud mit einem Concierge Delivery Model, das sich durch drei Kernlösungen auszeichnet:",
+      "- Arctic Wolf® Managed Detection and Response (MDR): 24/7-Überwachung Ihrer gesamten IT-Umgebung mit detaillierten Sicherheitsanalysen, proaktiven Reaktionsmaßnahmen und geführten Abhilfemaßnahmen.",
+      "- Arctic Wolf® Managed Risk: Kontinuierliche Scans zur Erkennung externer und interner Schwachstellen für eine klare Risikoeinschätzung und -priorisierung.",
+      "- Arctic Wolf® Managed Security Awareness: Nachhaltige Sensibilisierungsschulungen, die Ihre Mitarbeiter befähigen, Social-Engineering-Angriffe und menschliches Versagen effektiv zu erkennen.",
+      "Zusätzlich zu diesen präventiven Lösungen gibt es Arctic Wolf® Incident Response, das sich auf schnelle Datenwiederherstellung und die Wiederherstellung des Geschäftsbetriebs konzentriert, während parallel forensische Untersuchungen durchgeführt werden. Das ermöglicht eine rasche Wiederaufnahme Ihres Betriebs bei gleichzeitiger Aufklärung des Vorfalls.",
+      "# Arctic Wolf – Für einen sicheren Geschäftsbetrieb",
+      "Diese Lösungen arbeiten nahtlos zusammen, um Unternehmen gegen Cyber-Bedrohungen zu schützen, Angriffe frühzeitig zu erkennen und eine schnelle, effektive Reaktion sicherzustellen. Arctic Wolf stärkt Ihre Sicherheitsinfrastruktur und liefert Ihnen fundierte Beratung durch hochqualifizierte Experten.",
+      "Der große Vorteil der Security Oprations Cloud ist, dass Unternehmen keine zusätzlichen Fachkräfte einstellen müssen und trotzdem von allen Vorteilen eines SOC profitieren.",
+      "CTA",
+      "# Warum Arctic Wolf?",
+      "- Experten-Support: Ein dediziertes Concierge Security® Team aus zertifizierten Sicherheitsexperten stärkt Ihre Sicherheitskompetenz und schafft Vertrauen – ganz ohne zusätzliche personelle Ressourcen.",
+      "- Kalkulierbare Kosten: Arctic Wolf bietet transparente, skalierbare Preise.",
+      "- Cloudnative Plattform: Die cloudnative Arctic Wolf®-Plattform nutzt Security Operations im Concierge-Service-Modell, um Cyberrisiken gezielt abzuwehren.",
+      "- Compliance und Validierung: Arctic Wolf unterstützt Sie bei Compliance-Initiativen und Sicherheitsprüfungen.",
+      "- Offene XDR-Architektur: Bestehende Sicherheitstools lassen sich nahtlos in die Arctic Wolf® Plattform integrieren, was Kosten und Komplexität reduziert."
+    ],
+    "accordion": {
+      "summary": "Merkmale im Überblick",
+      "content": [
+        "- Concierge Security® Team: Individuell zugeordnete Sicherheitsexperten, die maßgeschneiderte Einblicke in Schwachstellen, Risiken und potenzielle Bedrohungen geben und Ihre Sicherheitskompetenz stärken.",
+        "- Managed Detection and Response: Rund-um-die-Uhr-Schutz durch die cloudnative Plattform und die Expertise von Arctic Wolf.",
+        "- Managed Risk: Fortlaufende Analysen interner und externer Schwachstellen mit detaillierten Risiko-Dashboards und -analysen.",
+        "- Managed Security Awareness: Schulungen zum Sicherheitsbewusstsein, integrierte Phishing-Simulationen und kontinuierliches Coaching.",
+        "- 24x7 Überwachung und Reaktion: Permanente Überwachung Ihrer Umgebung mit gezielten Abhilfemaßnahmen.",
+        "- Account-Überwachung: Erkennung von Anmeldedaten im Darknet, um Account-Übernahmen frühzeitig zu verhindern.",
+        "- Berichte: Umfangreiche Berichte, von technischen Details bis hin zu Management-Zusammenfassungen, für vollständige Transparenz.",
+        "- Offene XDR-Architektur: Flexibilität zur Einbindung Ihrer vorhandenen Sicherheitstools."
+      ]
+    },
+    "logo": "arcticwolf.png",
+    "img": "arcticwolf.png"
+  },
+  {
     "id": "moliris-time",
     "type": "products",
     "name": "MOLIRIS Time",

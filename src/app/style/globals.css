@@ -278,7 +278,7 @@ article li::marker {
   color: rgb(var(--orange-rgb));
 }
 
-article img {
+article img:not(.icon) {
   border-radius: var(--default-border-radius);
   margin-bottom: 2rem;
   width: 80vw;
@@ -288,7 +288,8 @@ article img {
   object-fit: cover;
 }
 
-article details {
+article details,
+.details {
   font-size: 1.25rem;
   color: rgba(var(--foreground-rgb), 1);
   margin-block-end: 1rem;

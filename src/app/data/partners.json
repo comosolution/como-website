@@ -1,5 +1,14 @@
 [
   {
+    "id": "arcticwolf",
+    "name": "Arctic Wolf",
+    "img": "arcticwolf_partner.png",
+    "description": [
+      "Arctic Wolf ist ein führender Anbieter von Security-Operations-Lösungen, der Unternehmen dabei unterstützt, ihre Cybersicherheit durch proaktive Überwachung und schnelle Reaktion auf Bedrohungen zu verbessern. Mit seiner cloudbasierten Plattform und einem einzigartigen Concierge Security® Team bietet Arctic Wolf 24/7-Schutz, Schwachstellenmanagement und Sensibilisierungsschulungen, um das Sicherheitsniveau von Unternehmen nachhaltig zu steigern. Die offene XDR-Architektur ermöglicht die nahtlose Integration bestehender Sicherheitstools, was die Effizienz und Kosteneffektivität erhöht. Arctic Wolf setzt dabei auf eine transparente, skalierbare Preisstruktur und hilft Unternehmen nicht nur bei der Bedrohungsabwehr, sondern auch bei Compliance und Sicherheitsvalidierung."
+    ],
+    "ref": "https://arcticwolf.com"
+  },
+  {
     "id": "blackberry",
     "name": "BlackBerry",
     "img": "blackberry.svg",

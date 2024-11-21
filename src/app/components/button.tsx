@@ -41,7 +41,7 @@ export default function Button({
           width={24}
           height={24}
           alt={icon || "icon"}
-          className="transition-all"
+          className="icon transition-all"
           style={{ transform: `rotate(${iconRotation}deg)` }}
         />
       )}

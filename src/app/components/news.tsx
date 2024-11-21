@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import { fourCols, header } from "../style/style";
 import { getMarkdown } from "../utils/generator";
 import Button from "./button";
-import Tile from "./tile";
 import ImageWithFallback from "./image";
 import NewsletterSubscribe from "./newsletter";
-import { fourCols, header } from "../style/style";
+import Tile from "./tile";
 
 export default async function News() {
   const notes = await getMarkdown("notes");
@@ -58,7 +58,7 @@ export default async function News() {
                       day: "numeric",
                     })}
                   </p>
-                  <p>
+                  <p className="hyphens-auto">
                     <b>{note.title}</b>
                   </p>
                 </div>

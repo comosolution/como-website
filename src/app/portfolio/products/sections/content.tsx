@@ -1,10 +1,11 @@
 "use client";
+import Accordion from "@/app/components/accordion";
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import Button from "@/app/components/button";
-import { Product } from "@/app/types";
 import ContactButton from "@/app/components/contactButton";
 import { twoCols } from "@/app/style/style";
+import { Product } from "@/app/types";
+import Image from "next/image";
 
 export default function ProductContent({ product }: { product: Product }) {
   return (
@@ -56,10 +57,21 @@ export default function ProductContent({ product }: { product: Product }) {
               >
                 <p>{description.replaceAll("[", "").split("|")[0]}</p>
               </a>
+            ) : description === "CTA" ? (
+              <div key={index} className="flex justify-center py-4">
+                <ContactButton />
+              </div>
             ) : (
               <p key={index}>{description}</p>
             );
           })}
+          {product.accordion && (
+            <Accordion
+              summary={product.accordion.summary}
+              details={product.accordion.content}
+              isOpen={false}
+            />
+          )}
           {product.img && (
             <img
               src={`/solutions/${product.img}`}
