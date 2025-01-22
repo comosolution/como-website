@@ -2,7 +2,7 @@
 title: Frühkindliche Musikerziehung
 ---
 
-## CoMo und Roland Meinl Musikintrumente fördern Bertlein-Kita
+## CoMo und Roland Meinl Musikinstrumente fördern Bertlein-Kita
 
 Seit November 2020 wurde das Leben immer weiter heruntergefahren, zum zweiten Mal in diesem Jahr! Auch Schulen und Kitas laufen nur noch im Notbetrieb. Gerade für Kinder ist diese Zeit sehr schwer, sie verstehen die Situation teilweise nicht ganz.
 
