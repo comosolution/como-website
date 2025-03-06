@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { mainNav } from "../config/nav";
-import React, { useEffect, useState } from "react";
-import { scrollTo } from "../utils/utils";
-import Button from "./button";
-import NavItem from "./navItem";
 import Menu from "./menu";
+import NavItem from "./navItem";
 
 export default function Nav() {
   const [prevPos, setPrevPos] = useState(0);
@@ -47,7 +45,7 @@ export default function Nav() {
       <nav className="flex items-center gap-6">
         {mainNav.map((entry) => {
           return entry.ref ? (
-            <Link key={entry.name} href={entry.ref}>
+            <Link key={entry.name} href={entry.ref} passHref>
               <NavItem href={entry.ref}>{entry.name}</NavItem>
             </Link>
           ) : (

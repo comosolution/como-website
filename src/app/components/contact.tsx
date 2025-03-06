@@ -1,16 +1,13 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChangeEvent, useState } from "react";
+import { HOOK_API } from "../config/api";
 import { card, twoCols } from "../style/style";
+import { validateEmail } from "../utils/utils";
 import Button from "./button";
 import Checkbox from "./checkbox";
-import Link from "next/link";
-import { ChangeEvent, useState } from "react";
-import { validateEmail } from "../utils/utils";
 import FormSuccess from "./form";
-import { HOOK_API } from "../config/api";
-import { usePathname } from "next/navigation";
-import ReactSelect, { MultiValue } from "react-select";
-import { customStyles } from "../style/select";
-import { options } from "../config/options";
 
 export default function Contact() {
   const [success, setSuccess] = useState(false);
@@ -22,12 +19,7 @@ export default function Contact() {
     phone: "",
     message: "",
   });
-  const [topics, setTopics] = useState<MultiValue<unknown>>();
   const [privacy, setPrivacy] = useState(false);
-
-  const handleCheck = (newValue: MultiValue<unknown>) => {
-    setTopics(newValue.map((t: any) => t.label));
-  };
 
   const pathname = usePathname();
 
@@ -74,7 +66,6 @@ export default function Contact() {
                   email: data.email,
                   phone: data.phone,
                   page: pathname,
-                  topics: topics,
                   message: data.message,
                 },
                 null,
@@ -82,7 +73,7 @@ export default function Contact() {
               ),
             })
               .then((res) => res.text())
-              .then((data) => {
+              .then(() => {
                 setSuccess(true);
               })
               .catch((error) => console.error(error));
@@ -128,16 +119,6 @@ export default function Contact() {
           </div>
           <div className="flex flex-col gap-4">
             <h4>Ihre Nachricht</h4>
-            <ReactSelect
-              placeholder="Wofür interessieren Sie sich?"
-              options={options}
-              isClearable={false}
-              isMulti
-              styles={customStyles}
-              classNamePrefix="react-select"
-              onChange={handleCheck}
-              noOptionsMessage={() => <p>Keine Treffer</p>}
-            />
             <textarea
               name="message"
               placeholder="Wie können wir Ihnen weiterhelfen? *"

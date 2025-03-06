@@ -14,8 +14,11 @@ export default function NavItem({
     (path.includes(href) && href !== "/") || (path === "/" && href === "/");
 
   return (
-    <p className={`navItem ${active ? "text-rose-600" : "link"} ${className}`}>
+    <button
+      tabIndex={0}
+      className={`navItem ${active ? "text-rose-600" : "link"} ${className}`}
+    >
       {children}
-    </p>
+    </button>
   );
 }

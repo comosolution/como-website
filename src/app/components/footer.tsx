@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { aboutNav, portfolioNav } from "../config/nav";
 import Link from "next/link";
-import { card, fourCols } from "../style/style";
 import { Slide } from "react-awesome-reveal";
+import { aboutNav, portfolioNav } from "../config/nav";
+import { card, fourCols } from "../style/style";
 
 export default function Footer() {
   return (
@@ -58,12 +58,15 @@ export default function Footer() {
               })}
             </div>
             <div className={fourCols}>
-              <p className="sm:col-span-2 px-8">© 2024</p>
+              <p className="px-8">© 2025</p>
               <Link href="/legal/privacy" className="px-8">
                 <p>Datenschutz</p>
               </Link>
               <Link href="/legal/imprint" className="px-8">
                 <p>Impressum</p>
+              </Link>
+              <Link href="/legal/accessibility" className="px-8">
+                <p>Barrierefreiheit</p>
               </Link>
             </div>
           </footer>

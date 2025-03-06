@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./style/globals.css";
-import Nav from "./components/nav";
-import Footer from "./components/footer";
 import Contact from "./components/contact";
 import FAB from "./components/fab";
-import ScrollProgress from "./components/scrollProgress";
+import Footer from "./components/footer";
+import Nav from "./components/nav";
 import PageWrapper from "./components/pageWrapper";
+import ScrollProgress from "./components/scrollProgress";
+import "./style/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <link rel="canonical" href="https://como-solution.de" />
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="E6+1lQxOgW1Q4czobbQAuw"
+          async
+        />
+      </head>
       <body className={`${inter.className} pt-32`} id="top">
         <ScrollProgress />
         <Nav />

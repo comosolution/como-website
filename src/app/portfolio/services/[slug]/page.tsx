@@ -1,8 +1,9 @@
-import Image from "next/image";
-import services from "../../../data/portfolio/services.json";
-import { Metadata } from "next";
-import ServiceOverview from "../sections/overview";
 import { twoCols } from "@/app/style/style";
+import { Metadata } from "next";
+import Image from "next/image";
+import React from "react";
+import services from "../../../data/portfolio/services.json";
+import ServiceOverview from "../sections/overview";
 
 export const metadata: Metadata = {
   title: "Leistungen | CoMo Solution GmbH",
@@ -14,11 +15,17 @@ export function generateStaticParams() {
   }));
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = React.use(params);
+
   return (
     <main className="flex flex-col gap-24">
       {services
-        .filter((service) => service.id === params.slug)
+        .filter((service) => service.id === slug)
         .map((service, index) => {
           return (
             <div key={index} className="flex flex-col gap-16">
@@ -50,10 +57,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           );
         })}
       <div className="flex flex-col items-center">
-        <ServiceOverview
-          filter={params.slug}
-          title="Weitere Leistungen für Sie"
-        />
+        <ServiceOverview filter={slug} title="Weitere Leistungen für Sie" />
       </div>
     </main>
   );
