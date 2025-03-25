@@ -1,8 +1,8 @@
 "use client";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Collapse } from "react-collapse";
-import { ChangeEvent, useState } from "react";
-import Button from "./button";
 import { validateEmail } from "../utils/utils";
+import Button from "./button";
 
 export default function NewsletterSubscribe() {
   const [open, setOpen] = useState(false);
@@ -43,6 +43,7 @@ export default function NewsletterSubscribe() {
             disabled={!validateEmail(newsletter.email)}
           />
         </div>
+        <ReCaptcha />
         <Collapse isOpened={open}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 px-10 py-8 overflow-hidden">
             <select
@@ -120,3 +121,41 @@ export function NewsletterUnsubscribe() {
     </form>
   );
 }
+
+const ReCaptcha = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  if (!isClient) return null;
+
+  return (
+    <div
+      id="8915730"
+      rel="recaptcha"
+      className="cr_ipe_item ui-sortable musthave flex justify-center mt-4"
+    >
+      <br />
+      <div
+        id="recaptcha_v2_widget"
+        className="g-recaptcha"
+        data-theme="dark"
+        data-size="normal"
+        data-sitekey="6Lfhcd0SAAAAAOBEHmAVEHJeRnrH8T7wPvvNzEPD"
+      ></div>
+      <br />
+    </div>
+  );
+};
