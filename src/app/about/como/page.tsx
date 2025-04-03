@@ -1,9 +1,8 @@
 import News from "@/app/components/news";
-import Team from "./sections/team";
 import { twoCols } from "@/app/style/style";
-import Principles from "./sections/principles";
-import Map from "./sections/map";
 import { Metadata } from "next";
+import Map from "../../components/map";
+import Principles from "./sections/principles";
 
 export const metadata: Metadata = {
   title: "Unternehmen | CoMo Solution GmbH",

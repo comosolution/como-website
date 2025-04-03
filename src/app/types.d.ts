@@ -12,3 +12,19 @@ import { getMarkdown } from "./utils/generator";
 const notes = await getMarkdown("notes");
 type Notes = typeof notes;
 export type Note = Unarray<Notes>;
+
+declare global {
+  interface Window {
+    CookieConsent?: {
+      consent: {
+        necessary: boolean;
+        preferences: boolean;
+        statistics: boolean;
+        marketing: boolean;
+      };
+    };
+    Cookiebot?: {
+      show: () => {};
+    };
+  }
+}

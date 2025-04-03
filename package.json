@@ -12,9 +12,10 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@react-google-maps/api": "^2.19.3",
+    "@tabler/icons-react": "^3.31.0",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
-    "next": "15.1.6",
+    "next": "^15.2.4",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-awesome-reveal": "^4.2.8",
