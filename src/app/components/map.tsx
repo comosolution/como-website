@@ -3,7 +3,6 @@ import { mapStyle } from "@/app/style/map";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { IconMapX } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
-import Button from "./button";
 
 export default function Map({
   position,
@@ -16,25 +15,26 @@ export default function Map({
 }) {
   const [consentGiven, setConsentGiven] = useState<boolean | null>(null);
 
-  const checkConsent = () => {
-    if (window?.CookieConsent?.consent?.marketing) {
-      setConsentGiven(true);
-    } else {
-      setConsentGiven(false);
-    }
-  };
-
   useEffect(() => {
-    checkConsent();
+    const checkConsent = () => {
+      const marketingConsent = window?.CookieConsent?.consent?.marketing;
+      setConsentGiven(marketingConsent ?? false);
+    };
+
+    const initTimeout = setTimeout(() => {
+      if (window.CookieConsent) {
+        checkConsent();
+      }
+    }, 500);
+
     window.addEventListener("CookieConsentOnUpdate", checkConsent);
+    window.addEventListener("CookiebotOnConsentReady", checkConsent);
 
-    setTimeout(
-      () => window.dispatchEvent(new Event("CookieConsentOnUpdate")),
-      200
-    );
-
-    return () =>
+    return () => {
+      clearTimeout(initTimeout);
       window.removeEventListener("CookieConsentOnUpdate", checkConsent);
+      window.removeEventListener("CookiebotOnConsentReady", checkConsent);
+    };
   }, []);
 
   const { isLoaded } = useLoadScript({
@@ -55,16 +55,17 @@ export default function Map({
 
   if (!consentGiven) {
     return (
-      <div className="w-full h-[480px] rounded-2xl backdrop-blur-sm bg-white/5 ring-1 ring-white/10 shadow-2xl overflow-hidden flex flex-col items-center justify-center gap-8 p-4">
+      <div className="w-full h-[480px] rounded-2xl backdrop-blur-sm bg-white/5 ring-1 ring-white/10 shadow-2xl overflow-hidden flex flex-col items-center justify-center gap-4 p-4">
         <IconMapX size={64} stroke={1} color="rgb(var(--red-rgb))" />
-        <p className="muted text-center">
+        <p className="text-center">
           Bitte akzeptieren Sie die Marketing Cookies um die Karte zu sehen.
         </p>
-        <Button
-          type="contact"
-          text="Cookie Consent aktualisieren"
+        <p
+          className="link text-center"
           onClick={() => window.Cookiebot?.show()}
-        />
+        >
+          Cookie Consent aktualisieren
+        </p>
       </div>
     );
   }

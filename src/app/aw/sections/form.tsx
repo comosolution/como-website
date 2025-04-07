@@ -84,7 +84,7 @@ export default function EventForm() {
             Datenschutzhinweise
           </Link>{" "}
           zur Kenntnis genommen. Ich stimme zu, dass meine Daten zur Erfassung
-          meiner Anmeldung elektronisch erhoben und gespeichert werden.
+          der Anmeldung elektronisch erhoben und gespeichert werden.
         </p>
       </Checkbox>
       <Button

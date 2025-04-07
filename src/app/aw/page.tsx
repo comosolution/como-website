@@ -54,17 +54,18 @@ export default function Page() {
         </div>
         <div className="flex flex-col gap-4 px-8">
           <p>
-            Erfahren Sie Informationen aus erster Hand, wie Sie Ihr Unternehmen
+            Erhalten Sie Informationen aus erster Hand, wie Sie Ihr Unternehmen
             mit effizienten, KI-gestützten Lösungen schützen können und dabei
             auch Ihre eigene IT entlasten können.
           </p>
           <div className="flex flex-col gap-4 py-8">
             {details.map((d, i) => {
               return (
-                <div key={i} className="flex items-center gap-2">
+                <div key={i} className="flex items-center gap-4">
                   {d.icon}
-                  <h4>{d.label}</h4>
-                  <p>{d.addition}</p>
+                  <p>
+                    <b>{d.label}</b> {d.addition}
+                  </p>
                 </div>
               );
             })}
@@ -76,7 +77,7 @@ export default function Page() {
         position={{ lat: 49.448421, lng: 11.0828 }}
         destination="Design+Offices+Nürnberg+City"
       />
-      <div className={twoCols}>
+      <div className={`${twoCols} pb-32`}>
         <div className="flex flex-col gap-4 p-8 lg:h-min lg:sticky lg:top-4">
           <h3>Das erwartet Sie:</h3>
           <ul>

@@ -171,6 +171,7 @@ a:not(.tile),
 a:not(.tile):hover,
 .link:hover {
   color: rgba(var(--orange-rgb), 1);
+  cursor: pointer;
 }
 
 .underlined {

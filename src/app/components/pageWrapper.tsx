@@ -1,11 +1,21 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import Contact from "./contact";
+import FAB from "./fab";
+import Footer from "./footer";
+import Nav from "./nav";
+import ScrollProgress from "./scrollProgress";
 
 export default function PageWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const hideContactFormRoutes = ["/aw/"];
+  const showContact = !hideContactFormRoutes.includes(pathname);
+
   useEffect(() => {
     var _mtm = ((window as any)._mtm = (window as any)._mtm || []);
     _mtm.push({ "mtm.startTime": new Date().getTime(), event: "mtm.Start" });
@@ -18,5 +28,14 @@ export default function PageWrapper({
     s.parentNode!.insertBefore(g, s);
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <ScrollProgress />
+      <Nav />
+      <FAB />
+      {children}
+      {showContact && <Contact />}
+      <Footer />
+    </>
+  );
 }
