@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
-import { scrollTo } from "../utils/utils";
-import clients from "./../data/clients.json";
-import Button from "../components/button";
 import Circles from "../components/circles";
+import clients from "./../data/clients.json";
 
 export default function Hero() {
   return (
@@ -33,12 +31,6 @@ export default function Hero() {
             );
           })}
         </div>
-        <Button
-          type="tertiary"
-          icon="arrow"
-          className="animate-bounce"
-          onClick={() => scrollTo("portfolio", 160)}
-        />
       </section>
     </>
   );

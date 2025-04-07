@@ -1,10 +1,10 @@
 "use client";
-import { ChangeEvent, useEffect, useState } from "react";
 import lunr from "lunr";
+import Link from "next/link";
+import { ChangeEvent, useEffect, useState } from "react";
 import branches from "../data/portfolio/branches.json";
 import products from "../data/portfolio/products.json";
 import services from "../data/portfolio/services.json";
-import Link from "next/link";
 
 export default function Search() {
   const data = [...branches, ...products, ...services];
@@ -42,7 +42,7 @@ export default function Search() {
 
   return (
     <>
-      <div className="flex gap-2 justify-between px-4 py-2 border-solid border border-orange-500 shadow-xl shadow-orange-500/20 rounded-full backdrop-blur-sm bg-neutral-900/70">
+      <div className="flex gap-2 justify-between px-4 py-2 border-solid border border-orange-500 shadow-xl shadow-orange-500/20 rounded-full backdrop-blur-sm bg-white/70">
         <input
           type="search"
           name="search"

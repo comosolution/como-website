@@ -1,51 +1,58 @@
 "use client";
-import { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function Sub() {
   const serviceList = [
-    "analysieren,",
-    "beraten,",
-    "planen,",
-    "entwickeln,",
-    "realisieren,",
-    "migrieren,",
-    "installieren,",
-    "managen,",
-    "supporten.",
+    "analysieren",
+    "beraten",
+    "planen",
+    "entwickeln",
+    "realisieren",
+    "migrieren",
+    "installieren",
+    "managen",
+    "supporten",
   ];
 
+  const [textIndex, setTextIndex] = useState(0);
+  const intervalRef = useRef<number | null>(null);
+
   useEffect(() => {
-    for (let i = 0; i < serviceList.length - 1; i++) {
-      window.addEventListener("scroll", () => {
-        const element = document.querySelector(`.service-${i}`)! as HTMLElement;
-        if (element !== null) {
-          if (
-            element.getBoundingClientRect().top + element.offsetHeight <
-            window.innerHeight / 2
-          ) {
-            element.classList.add("invisible");
-          } else {
-            element.classList.remove("invisible");
-          }
-        }
-      });
+    if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
     }
-  });
+    const interval = window.setInterval(() => {
+      setTextIndex((prev) => (prev + 1) % serviceList.length);
+    }, 2000);
+    intervalRef.current = interval;
+
+    return () => {
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section className="relative z-5 flex gap-2 pt-16">
-      <h2 className="sticky self-start top-1/2">
-        <span className="hidden lg:inline">Wir sind die CoMo. </span>Wir{" "}
+    <section className="relative z-5 flex justify-center gap-2 pt-16">
+      <h2>
+        Wir sind die CoMo. Wir{" "}
+        <span className="inline-block w-64">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={serviceList[textIndex]}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="inline-block"
+            >
+              {serviceList[textIndex]}.
+            </motion.span>
+          </AnimatePresence>
+        </span>
       </h2>
-      <div>
-        {serviceList.map((service, index) => {
-          return (
-            <h2 key={index} className={`service service-${index}`}>
-              {service}
-            </h2>
-          );
-        })}
-      </div>
     </section>
   );
 }

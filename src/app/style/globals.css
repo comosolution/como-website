@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 19, 5, 2;
-  --background-dark-rgb: 22, 22, 22;
-  --orange-rgb: 255, 105, 0;
+  --foreground-rgb: 9, 43, 55;
+  --background-rgb: 255, 255, 255;
+  --accent-rgb: 255, 105, 0;
   --red-rgb: 179, 25, 62;
   --yellow-rgb: 255, 149, 0;
   --gray-rgb: 98, 96, 95;
@@ -63,7 +62,7 @@ textarea {
 input:not(.ghost):focus,
 select:focus,
 textarea:focus {
-  border-bottom: 1px solid rgba(var(--orange-rgb), 1);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 1);
 }
 
 input::placeholder,
@@ -113,17 +112,17 @@ select {
 }
 
 .checkboxContainer:not(:has(input:disabled)):hover p {
-  color: rgba(var(--orange-rgb), 0.8);
+  color: rgba(var(--accent-rgb), 0.8);
   transition: var(--default-transition);
 }
 
 .checkboxContainer:not(:has(input:disabled)):hover input ~ .check {
-  background-color: rgba(var(--orange-rgb), 0.8);
+  background-color: rgba(var(--accent-rgb), 0.8);
   transition: var(--default-transition);
 }
 
 .checkboxContainer input:checked ~ .check {
-  background-color: rgba(var(--orange-rgb), 1);
+  background-color: rgba(var(--accent-rgb), 1);
 }
 
 .check:after {
@@ -170,12 +169,12 @@ a:not(.tile),
 
 a:not(.tile):hover,
 .link:hover {
-  color: rgba(var(--orange-rgb), 1);
+  color: rgba(var(--accent-rgb), 1);
   cursor: pointer;
 }
 
 .underlined {
-  border-bottom: 1px solid rgb(var(--orange-rgb));
+  border-bottom: 1px solid rgb(var(--accent-rgb));
 }
 
 .nav-active {
@@ -189,7 +188,7 @@ li.accordion {
 }
 
 li.accordion::marker {
-  color: rgb(var(--orange-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 h1 {
@@ -265,7 +264,7 @@ article ul {
 }
 
 article a {
-  border-bottom: 1px solid rgb(var(--orange-rgb));
+  border-bottom: 1px solid rgb(var(--accent-rgb));
 }
 
 article li {
@@ -275,7 +274,7 @@ article li {
 }
 
 article li::marker {
-  color: rgb(var(--orange-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 article img:not(.icon) {
@@ -315,7 +314,7 @@ article details img {
 
 summary::marker,
 summary::-webkit-details-marker {
-  color: rgb(var(--orange-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 article details[open] {
@@ -328,7 +327,7 @@ article details[open] summary {
 }
 
 article details summary:hover {
-  color: rgb(var(--orange-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 .circles {
@@ -373,7 +372,7 @@ article details summary:hover {
 }
 
 .mobile {
-  color: rgb(var(--orange-rgb));
+  color: rgb(var(--accent-rgb));
 }
 
 .cybersecurity {

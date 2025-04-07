@@ -21,11 +21,13 @@ export default function Button({
   onClick?: () => void;
 }) {
   const buttonType = {
-    primary: "bg-orange-500 text-white hover:bg-orange-600",
-    secondary: "bg-white text-black hover:bg-white/80",
-    tertiary: "bg-transparent text-white hover:bg-neutral-800/80",
+    primary:
+      "bg-orange-500 text-[rgb(var(--foreground-rgb))] hover:bg-orange-600",
+    secondary: "bg-white text-[rgb(var(--foreground-rgb))] hover:bg-white/80",
+    tertiary:
+      "bg-transparent text-[rgb(var(--foreground-rgb))] hover:bg-neutral-800/80",
     contact:
-      "font-normal text-white/80 border-solid border border-orange-500 hover:bg-orange-600/10",
+      "font-normal text-[rgb(var(--foreground-rgb))] border-solid border border-orange-500 hover:bg-orange-600/10",
   };
 
   var button = (

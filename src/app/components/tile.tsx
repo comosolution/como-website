@@ -11,7 +11,7 @@ export default function Tile({
   className?: string;
   href?: string;
 }) {
-  const style = `flex flex-col justify-between items-end gap-4 p-8 ${card} transition-all`;
+  const style = `flex flex-col justify-between items-end gap-4 p-8 ${card} h-full transition-all`;
 
   const tile = (
     <>
@@ -22,7 +22,7 @@ export default function Tile({
   if (href) {
     return (
       <Link
-        className={`tile ${style} hover:bg-neutral-900 cursor-pointer`}
+        className={`tile ${style} hover:bg-white cursor-pointer`}
         href={href}
       >
         {tile}

@@ -1,13 +1,13 @@
 "use client";
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import partners from "./../data/partners.json";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 import { scrollTo } from "../utils/utils";
+import partners from "./../data/partners.json";
 
 export default function PartnersMarquee({ scroll }: { scroll?: boolean }) {
   return (
-    <Marquee gradient gradientColor="#130502" autoFill pauseOnHover>
+    <Marquee autoFill pauseOnHover>
       <div className="flex justify-between items-center gap-24 p-12 overflow-hidden">
         {partners.map((partner, index) => {
           return scroll ? (

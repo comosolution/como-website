@@ -55,7 +55,7 @@ export default function Menu({ content }: { content: SubNav }) {
         />
       </span>
       {open && (
-        <nav className="fixed flex flex-col gap-1 top-16 -ml-4 p-4 rounded-2xl backdrop-blur-sm bg-neutral-900/80 ring-1 ring-white/10 shadow-2xl">
+        <nav className="fixed flex flex-col gap-1 top-16 -ml-4 p-4 rounded-2xl backdrop-blur-sm bg-white/80 ring-1 ring-white/10 shadow-2xl">
           {content.entries.map((entry) => {
             return (
               <Link key={entry.name} href={entry.ref}>

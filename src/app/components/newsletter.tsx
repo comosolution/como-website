@@ -28,7 +28,7 @@ export default function NewsletterSubscribe() {
         method="post"
         target="_blank"
       >
-        <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full backdrop-blur-sm bg-neutral-900/70">
+        <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full backdrop-blur-sm bg-white/70">
           <input
             id="text6226376"
             className="w-full ml-4 px-4 ghost"

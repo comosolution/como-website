@@ -1,18 +1,19 @@
 "use client";
 import Image from "next/image";
-import services from "./../data/services.json";
 import { Slide } from "react-awesome-reveal";
-import { fourCols } from "../style/style";
+import Tile from "../components/tile";
+import { twoCols } from "../style/style";
+import services from "./../data/services.json";
 
 export default function Services() {
   return (
     <section>
       <h2 className="py-8 text-center">Unser Fokus</h2>
-      <div className={fourCols}>
+      <div className={twoCols}>
         {services.map((service, index) => {
           return (
             <Slide key={index} direction="up" delay={index * 100} triggerOnce>
-              <div className="flex flex-col gap-8 p-4">
+              <Tile className="gap-4">
                 <Image
                   src={`/services/${service.icon}.svg`}
                   alt={service.name}
@@ -23,7 +24,7 @@ export default function Services() {
                   <h4 className={service.id}>{service.name}</h4>
                   <p className="muted">{service.description}</p>
                 </div>
-              </div>
+              </Tile>
             </Slide>
           );
         })}
