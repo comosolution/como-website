@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import { Button } from "@mantine/core";
 import { fourCols, header } from "../style/style";
 import { getMarkdown } from "../utils/generator";
-import Button from "./button";
 import ImageWithFallback from "./image";
 import NewsletterSubscribe from "./newsletter";
 import Tile from "./tile";
@@ -22,17 +22,15 @@ export default async function News() {
       </div>
       <header className={`${header} relative z-5 justify-between px-8`}>
         <h2>Was gibt es Neues?</h2>
-        <Button
-          type="secondary"
-          text="Alle Notizen anzeigen"
-          href="/about/notes"
-        />
+        <Button component="a" variant="light" href="/about/notes">
+          Alle Notizen anzeigen
+        </Button>
       </header>
       <div className={fourCols}>
         {notes.map((note, index) => {
           return (
-            // only show last 2 notes
-            index < 2 && (
+            // show last 4 notes
+            index < 4 && (
               <Tile
                 key={note.id}
                 href={`/about/notes#${note.id}`}
@@ -66,8 +64,8 @@ export default async function News() {
             )
           );
         })}
-        <NewsletterSubscribe />
       </div>
+      <NewsletterSubscribe />
     </section>
   );
 }

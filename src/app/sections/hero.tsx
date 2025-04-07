@@ -9,13 +9,14 @@ export default function Hero() {
       <Circles />
       <section
         id="hero"
-        className="relative z-5 flex flex-col gap-16 items-center max-w-[880px] text-center pb-4"
+        className="relative z-5 flex flex-col gap-8 items-center max-w-[880px] text-center pb-4"
       >
-        <h1>Ihr Partner für smarte IT-Lösungen</h1>
-        <p className="max-w-[680px] muted">
-          Von der Lösungsentwicklung für die mobile Zusammenarbeit bis zum
-          Management und der Absicherung Ihrer digitalen Infrastruktur haben wir
-          immer die passende Lösung für Sie.
+        <h1>Wir sind die Lösungsfinder.</h1>
+        <p className="max-w-[640px]">
+          Wir sind nicht nur IT-Dienstleister für den Mittelstand, sondern
+          Lösungsfinder & -architekten. Sagen Sie uns, was Sie für Ihre sichere
+          digitale Transformation brauchen: Wir setzen es um und begleiten Sie
+          in Ihre Zukunft.
         </p>
         <div className="flex gap-20">
           {clients.map((client, index) => {

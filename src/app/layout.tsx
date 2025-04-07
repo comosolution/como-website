@@ -1,3 +1,5 @@
+import { createTheme, MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import PageWrapper from "./components/pageWrapper";
@@ -11,6 +13,24 @@ export const metadata: Metadata = {
   authors: [{ name: "CoMo Solution GmbH", url: "https://como-solution.de" }],
   keywords: ["collaboration", "mobile", "solution", "cybersecurity"],
 };
+
+const theme = createTheme({
+  primaryColor: "orange",
+  colors: {
+    orange: [
+      "#fff1e2",
+      "#ffe2cc",
+      "#ffc49a",
+      "#ffa464",
+      "#fe8937",
+      "#fe781a",
+      "#ff6e09",
+      "#e45d00",
+      "#cb5100",
+      "#b14400",
+    ],
+  },
+});
 
 export default function RootLayout({
   children,
@@ -28,7 +48,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} pt-32`} id="top">
-        <PageWrapper>{children}</PageWrapper>
+        <MantineProvider theme={theme} defaultColorScheme="light">
+          <PageWrapper>{children}</PageWrapper>
+        </MantineProvider>
       </body>
     </html>
   );

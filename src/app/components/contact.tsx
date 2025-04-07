@@ -1,12 +1,12 @@
 "use client";
+import { Button, Checkbox, Textarea, TextInput } from "@mantine/core";
+import { IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 import { HOOK_API } from "../config/api";
 import { card, twoCols } from "../style/style";
 import { validateEmail } from "../utils/utils";
-import Button from "./button";
-import Checkbox from "./checkbox";
 import FormSuccess from "./form";
 
 export default function Contact() {
@@ -37,17 +37,23 @@ export default function Contact() {
             <h2>Wir sind bereit, gemeinsam mit Ihnen durchzustarten!</h2>
           </header>
         </div>
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex gap-2 items-center">
           <Button
-            type="contact"
-            text="info@como-solution.de"
+            variant="light"
+            component="a"
             href="mailto:info@como-solution.de"
-          />
+            leftSection={<IconMail size={16} />}
+          >
+            info@como-solution.de
+          </Button>
           <Button
-            type="tertiary"
-            text="+49 9123 18337-00"
+            variant="transparent"
+            component="a"
             href="tel:+4991231833700"
-          />
+            leftSection={<IconPhone size={16} />}
+          >
+            +49 9123 18337-00
+          </Button>
         </div>
       </div>
       {!success ? (
@@ -78,70 +84,62 @@ export default function Contact() {
               })
               .catch((error) => console.error(error));
           }}
-          className={`flex flex-col gap-8 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+          className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
         >
-          <div className="flex flex-col gap-4">
-            <h4>Ihre Daten</h4>
-            <div className={twoCols}>
-              <input
-                type="text"
-                name="firstName"
-                placeholder="Vorname *"
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Nachname *"
-                onChange={handleChange}
-              />
-            </div>
-            <input
-              type="text"
-              name="company"
-              placeholder="Unternehmen *"
+          <h4>Ihre Kontaktanfrage</h4>
+          <div className={twoCols}>
+            <TextInput
+              name="firstName"
+              label="Vorname"
               onChange={handleChange}
+              withAsterisk
             />
-            <div className={twoCols}>
-              <input
-                type="text"
-                name="email"
-                placeholder="E-Mail *"
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="phone"
-                placeholder="Telefon"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h4>Ihre Nachricht</h4>
-            <textarea
-              name="message"
-              placeholder="Wie können wir Ihnen weiterhelfen? *"
-              rows={4}
+            <TextInput
+              name="lastName"
+              label="Nachname"
               onChange={handleChange}
+              withAsterisk
             />
-            <p className="small muted">* Pflichtfelder</p>
           </div>
-          <Checkbox checked={privacy} onChange={() => setPrivacy(!privacy)}>
-            <p>
-              Ich habe die{" "}
-              <Link href="/legal/privacy" target="_blank">
-                Datenschutzhinweise
-              </Link>{" "}
-              zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten
-              zur Beantwortung meiner Anfrage elektronisch erhoben und
-              gespeichert werden.
-            </p>
-          </Checkbox>
+          <TextInput
+            name="company"
+            label="Unternehmen"
+            onChange={handleChange}
+            withAsterisk
+          />
+          <div className={twoCols}>
+            <TextInput
+              name="email"
+              label="E-Mail"
+              onChange={handleChange}
+              withAsterisk
+            />
+            <TextInput name="phone" label="Telefon" onChange={handleChange} />
+          </div>
+          <Textarea
+            label="Ihre Nachricht"
+            name="message"
+            placeholder="Wie können wir Ihnen weiterhelfen?"
+            rows={4}
+            onChange={handleChange}
+            withAsterisk
+          />
+          <Checkbox
+            label={
+              <>
+                Ich habe die{" "}
+                <Link href="/legal/privacy" target="_blank">
+                  Datenschutzhinweise
+                </Link>{" "}
+                zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
+                Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
+                gespeichert werden.
+              </>
+            }
+            checked={privacy}
+            onChange={() => setPrivacy(!privacy)}
+          />
           <Button
-            type="primary"
-            text="Jetzt Kontakt aufnehmen"
-            className="w-full flex justify-center"
             disabled={
               data.firstName.length === 0 ||
               data.lastName.length === 0 ||
@@ -150,7 +148,9 @@ export default function Contact() {
               data.message.length === 0 ||
               !privacy
             }
-          />
+          >
+            Jetzt Kontakt aufnehmen
+          </Button>
         </form>
       ) : (
         <FormSuccess />

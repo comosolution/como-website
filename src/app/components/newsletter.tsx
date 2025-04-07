@@ -1,8 +1,9 @@
 "use client";
+import { Button, TextInput } from "@mantine/core";
 import { ChangeEvent, useEffect, useState } from "react";
-import { Collapse } from "react-collapse";
+import { twoCols } from "../style/style";
 import { validateEmail } from "../utils/utils";
-import Button from "./button";
+import Divider from "./divider";
 
 export default function NewsletterSubscribe() {
   const [open, setOpen] = useState(false);
@@ -18,35 +19,45 @@ export default function NewsletterSubscribe() {
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
   return (
-    <div className="relative z-1 sm:col-span-2 flex flex-col gap-4 p-8 items-center justify-center text-center">
-      <div>
-        <p className="muted">Immer informiert bleiben!</p>
+    <div className={twoCols}>
+      <div className="p-8">
         <h3>Der CoMo Newsletter</h3>
+        <Divider />
+        <p>
+          Unsere Short-News sind der direkte Draht zu den neusten Entwicklungen
+          rund um die CoMo. Hier bekommen Sie alle wichtigen Infos – sei es zu
+          bevorstehenden Veranstaltungen, frischen Releases in der Softwarewelt
+          oder spannenden Updates zu unseren Partnern.
+        </p>
       </div>
       <form
         action="https://seu2.cleverreach.com/f/283459-283561/wcs/"
         method="post"
         target="_blank"
+        className="flex flex-col gap-2 p-8"
       >
-        <div className="flex gap-2 justify-between p-2 border-solid border border-orange-500 rounded-full backdrop-blur-sm bg-white/70">
-          <input
-            id="text6226376"
-            className="w-full ml-4 px-4 ghost"
-            name="email"
-            type="text"
-            placeholder="name@unternehmen.de *"
+        <TextInput
+          id="text6226376"
+          name="email"
+          label="E-Mail"
+          onChange={handleChange}
+          withAsterisk
+        />
+        <div className={twoCols}>
+          <TextInput
+            id="text6226471"
+            name="1055887"
+            label="Vorname"
             onChange={handleChange}
           />
-          <Button
-            type="primary"
-            text="Anmelden"
-            disabled={!validateEmail(newsletter.email)}
+          <TextInput
+            id="text6226497"
+            name="1055888"
+            label="Nachname"
+            onChange={handleChange}
           />
         </div>
-        <ReCaptcha />
-        <Collapse isOpened={open}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-4 px-10 py-8 overflow-hidden">
-            <select
+        {/* <select
               id="select_6252620"
               className="cr_font w-full appearance-none"
               name="1055885"
@@ -66,31 +77,16 @@ export default function NewsletterSubscribe() {
               <option value="Dr.">Dr.</option>
               <option value="Prof.">Prof.</option>
               <option value="Prof. Dr.">Prof. Dr.</option>
-            </select>
-            <input
-              id="text6226471"
-              name="1055887"
-              type="text"
-              placeholder="Vorname"
-              onChange={handleChange}
-            />
-            <input
-              id="text6226497"
-              name="1055888"
-              type="text"
-              placeholder="Nachname"
-              onChange={handleChange}
-            />
-          </div>
-        </Collapse>
+            </select> */}
+        <ReCaptcha />
+        <Button
+          type="submit"
+          disabled={!validateEmail(newsletter.email)}
+          fullWidth
+        >
+          Anmelden
+        </Button>
       </form>
-      <Button
-        type="tertiary"
-        text="Newsletter personalisieren"
-        onClick={() => setOpen(!open)}
-        icon="chevron"
-        iconRotation={open ? "180" : "0"}
-      />
     </div>
   );
 }
@@ -105,19 +101,12 @@ export function NewsletterUnsubscribe() {
       action="https://seu2.cleverreach.com/f/283459-283561/wcu/"
       method="post"
       target="_blank"
-      className="flex gap-4"
+      className="flex items-end gap-4"
     >
-      <input
-        type="text"
-        name="email"
-        placeholder="name@unternehmen.de *"
-        onChange={handleChange}
-      />
-      <Button
-        type="secondary"
-        text="Abmelden"
-        disabled={!validateEmail(email)}
-      />
+      <TextInput name="email" label="E-Mail" onChange={handleChange} />
+      <Button type="submit" disabled={!validateEmail(email)}>
+        Abmelden
+      </Button>
     </form>
   );
 }
@@ -151,7 +140,7 @@ const ReCaptcha = () => {
       <div
         id="recaptcha_v2_widget"
         className="g-recaptcha"
-        data-theme="dark"
+        data-theme="light"
         data-size="normal"
         data-sitekey="6Lfhcd0SAAAAAOBEHmAVEHJeRnrH8T7wPvvNzEPD"
       ></div>

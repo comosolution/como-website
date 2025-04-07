@@ -41,45 +41,6 @@ footer {
   margin: auto;
 }
 
-input,
-select,
-textarea {
-  outline: none;
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  transition: var(--default-transition);
-}
-
-input:not(.ghost),
-select,
-textarea {
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
-}
-
-input:not(.ghost):focus,
-select:focus,
-textarea:focus {
-  border-bottom: 1px solid rgba(var(--accent-rgb), 1);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgba(var(--foreground-rgb), 0.5);
-  transition: var(--default-transition);
-}
-
-input:focus::placeholder,
-textarea:focus::placeholder {
-  color: rgba(var(--foreground-rgb), 0.2);
-}
-
-textarea {
-  resize: vertical;
-}
-
 input[type="search"] {
   box-sizing: border-box;
   background-image: url("/icons/search.svg");
@@ -87,12 +48,6 @@ input[type="search"] {
   background-position: 0 0.4rem;
   background-repeat: no-repeat;
   padding: 0.5rem 0.5rem 0.5rem 3rem;
-}
-
-button[disabled] {
-  opacity: 0.5;
-  background: rgb(var(--gray-rgb));
-  cursor: not-allowed;
 }
 
 select {
@@ -161,13 +116,13 @@ select {
   transform: rotate(90deg);
 }
 
-a:not(.tile),
+a:not(.tile):not(.mantine-Button-root),
 .link {
   color: rgba(var(--foreground-rgb), 0.7);
   transition: 300ms color ease-in-out;
 }
 
-a:not(.tile):hover,
+a:not(.tile):not(.mantine-Button-root):hover,
 .link:hover {
   color: rgba(var(--accent-rgb), 1);
   cursor: pointer;
@@ -231,11 +186,6 @@ li {
 b {
   font-weight: bold;
   letter-spacing: -2%;
-}
-
-button:not(.navItem) {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 article {
@@ -416,19 +366,6 @@ article details summary:hover {
   li {
     font-size: 1.6rem;
     line-height: 2.4rem;
-  }
-
-  .button,
-  input,
-  select,
-  textarea,
-  .react-select__placeholder {
-    font-size: 1.6rem;
-  }
-
-  .navItem,
-  .button.contact {
-    font-size: 1.3rem;
   }
 
   .circles {

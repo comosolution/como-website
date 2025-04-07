@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -45,9 +46,15 @@ export default function Nav() {
       <nav className="flex items-center gap-6">
         {mainNav.map((entry) => {
           return entry.ref ? (
-            <Link key={entry.name} href={entry.ref} passHref>
-              <NavItem href={entry.ref}>{entry.name}</NavItem>
-            </Link>
+            entry.ref === "/contact" ? (
+              <Button key={entry.name} component={Link} href={entry.ref}>
+                {entry.name}
+              </Button>
+            ) : (
+              <Link key={entry.name} href={entry.ref} passHref>
+                <NavItem href={entry.ref}>{entry.name}</NavItem>
+              </Link>
+            )
           ) : (
             entry.child && <Menu key={entry.name} content={entry.child} />
           );

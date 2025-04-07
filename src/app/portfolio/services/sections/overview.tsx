@@ -1,6 +1,6 @@
-import services from "../../../data/portfolio/services.json";
 import CardActionButton from "@/app/components/card";
-import Button from "@/app/components/button";
+import { Button } from "@mantine/core";
+import services from "../../../data/portfolio/services.json";
 
 export default function ServiceOverview({
   filter,
@@ -29,7 +29,9 @@ export default function ServiceOverview({
             );
           })}
       </div>
-      <Button type="tertiary" text="Zurück zum Portfolio" href="/portfolio" />
+      <Button component="a" variant="transparent" href="/portfolio">
+        Zurück zum Portfolio
+      </Button>
     </div>
   );
 }

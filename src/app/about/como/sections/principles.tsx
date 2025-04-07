@@ -2,7 +2,6 @@
 import Feature, { FeatureList } from "@/app/components/feature";
 import principles from "@/app/data/principles.json";
 import { twoCols } from "@/app/style/style";
-import { Slide } from "react-awesome-reveal";
 
 export default function Principles() {
   return (
@@ -11,9 +10,7 @@ export default function Principles() {
       <FeatureList>
         {principles.map((principle, index) => {
           return (
-            <Slide key={index} direction="up" triggerOnce>
-              <Feature title={principle.title} sub={principle.sub} />
-            </Slide>
+            <Feature key={index} title={principle.title} sub={principle.sub} />
           );
         })}
       </FeatureList>

@@ -13,11 +13,7 @@ export default function Tile({
 }) {
   const style = `flex flex-col justify-between items-end gap-4 p-8 ${card} h-full transition-all`;
 
-  const tile = (
-    <>
-      <div className={`flex flex-col ${className}`}>{children}</div>
-    </>
-  );
+  const tile = <div className={`flex flex-col ${className}`}>{children}</div>;
 
   if (href) {
     return (
