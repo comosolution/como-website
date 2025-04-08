@@ -21,8 +21,8 @@ const details = [
   },
   {
     icon: <IconMapPin size={20} />,
-    label: "Design Offices Nürnberg City",
-    addition: "Work Lab",
+    label: "FICHTE45",
+    addition: "Fichtestraße 45, 90489 Nürnberg",
   },
 ];
 
@@ -32,7 +32,9 @@ export default function Page() {
       <header className="flex flex-col items-center text-center gap-4 pb-4">
         <Image src="/aw.png" width="128" height="96" alt="CoMo x ArcticWolf" />
         <h1>Richtig verteidigt – mit Cybersecurity der Spitzenklasse!</h1>
-        <h4>Ihr exklusives Event mit Arctic Wolf & CoMo Solution</h4>
+        <h4 className="muted">
+          Ihr exklusives Event mit Arctic Wolf & CoMo Solution
+        </h4>
       </header>
       <div className={twoCols}>
         <div className="flex flex-col gap-4 px-8">
@@ -44,9 +46,9 @@ export default function Page() {
             gegen Angriffe zu schützen. Doch wie gelingt eine sichere Abwehr?
           </p>
           <p>
-            Kommen Sie am 22. Mai 2025 ins Design Office Nürnberg City und
-            erleben ein exklusives Event mit Arctic Wolf, dem Experten für
-            Managed Security & Incident Response, und uns, der CoMo Solution,
+            Kommen Sie am 22. Mai 2025 ins FICHTE45 Co-Working und erleben ein
+            exklusives Event mit Arctic Wolf, dem Experten für Managed Security
+            & Incident Response, und uns, der CoMo Solution,
             Digitalisierungspartner des 1. FC Nürnberg.
           </p>
         </div>
@@ -72,8 +74,8 @@ export default function Page() {
       </div>
       <Map
         zoom={14}
-        position={{ lat: 49.448421, lng: 11.0828 }}
-        destination="Design+Offices+Nürnberg+City"
+        position={{ lat: 49.461703, lng: 11.103155 }}
+        destination="FICHTE45+Nürnberg"
       />
       <div className={`${twoCols} pb-32`}>
         <div className="flex flex-col gap-4 p-8 lg:h-min lg:sticky lg:top-4">

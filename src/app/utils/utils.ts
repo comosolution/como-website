@@ -13,6 +13,6 @@ export function scrollTo(id: string, offset?: number) {
 }
 
 export function validateEmail(email: string) {
-  var reg = /\S+@\S+\.\S+/;
+  const reg = /\S+@\S+\.\S+/;
   return reg.test(email);
 }
