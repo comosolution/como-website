@@ -31,9 +31,7 @@ export default function Page() {
     <main className="flex flex-col gap-16 px-8">
       <header className="flex flex-col items-center text-center gap-4 pb-4">
         <Image src="/aw.png" width="128" height="96" alt="CoMo x ArcticWolf" />
-        <h1 className="bg-gradient-to-r from-[rgb(var(--accent-rgb))] via-white/90 to-[#2358AC] bg-clip-text text-transparent">
-          Richtig verteidigt – mit Cybersecurity der Spitzenklasse!
-        </h1>
+        <h1>Richtig verteidigt – mit Cybersecurity der Spitzenklasse!</h1>
         <h4>Ihr exklusives Event mit Arctic Wolf & CoMo Solution</h4>
       </header>
       <div className={twoCols}>
