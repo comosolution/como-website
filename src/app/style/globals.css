@@ -4,7 +4,11 @@
 
 :root {
   --foreground-rgb: 9, 43, 55;
+  --foreground: #092b37;
   --background-rgb: 255, 255, 255;
+  --background: #ffffff;
+  --light: #f6f4f2;
+  --layers: #778a91;
   --accent-rgb: 255, 105, 0;
   --red-rgb: 179, 25, 62;
   --yellow-rgb: 255, 149, 0;

@@ -22,9 +22,9 @@ export default function ScrollProgress() {
   });
 
   return (
-    <div className="fixed top-0 z-50 w-full h-[1px]">
+    <div className="fixed top-0 z-50 w-full h-[2px]">
       <div
-        className="relative top-0 left-0 h-full bg-orange-600"
+        className="relative top-0 left-0 h-full bg-orange-500"
         style={{ width: scrolled }}
       />
     </div>

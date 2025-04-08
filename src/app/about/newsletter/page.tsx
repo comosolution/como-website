@@ -1,7 +1,9 @@
 "use client";
+import Divider from "@/app/components/divider";
 import NewsletterSubscribe, {
   NewsletterUnsubscribe,
 } from "@/app/components/newsletter";
+import { twoCols } from "@/app/style/style";
 import Link from "next/link";
 
 export default function NewsletterPage() {
@@ -35,19 +37,22 @@ export default function NewsletterPage() {
         </p>
       </article>
       <NewsletterSubscribe />
-      <article id="abmeldung" className="pt-16">
-        <h3>Abmeldung vom Newsletter</h3>
-        <p>
-          Wenn Sie sich von unseren CoMo Solution Mailings abmelden möchten, ist
-          das absolut in Ordnung. Bitte tragen Sie einfach Ihre E-Mail-Adresse
-          in das Feld ein und wir kümmern uns darum.
-        </p>
-        <p>
-          Wenn Sie es sich anders überlegen, können Sie sich hier gerne
-          jederzeit wieder für den Newsletter anmelden.
-        </p>
-      </article>
-      <NewsletterUnsubscribe />
+      <div className={`${twoCols} pt-16`}>
+        <div id="abmeldung" className="p-8">
+          <h3>Abmeldung vom Newsletter</h3>
+          <Divider />
+          <p>
+            Wenn Sie sich von unseren CoMo Solution Mailings abmelden möchten,
+            ist das absolut in Ordnung. Bitte tragen Sie einfach Ihre
+            E-Mail-Adresse in das Feld ein und wir kümmern uns darum.
+          </p>
+          <p>
+            Wenn Sie es sich anders überlegen, können Sie sich hier gerne
+            jederzeit wieder für den Newsletter anmelden.
+          </p>
+        </div>
+        <NewsletterUnsubscribe />
+      </div>
     </main>
   );
 }

@@ -1,11 +1,11 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Blinker } from "next/font/google";
 import PageWrapper from "./components/pageWrapper";
 import "./style/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const blinker = Blinker({ weight: ["200", "400", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CoMo Solution GmbH - Ihr Partner für smarte IT-Lösungen",
@@ -47,7 +47,7 @@ export default function RootLayout({
           async
         />
       </head>
-      <body className={`${inter.className} pt-32`} id="top">
+      <body className={`${blinker.className} pt-32`} id="top">
         <MantineProvider theme={theme} defaultColorScheme="light">
           <PageWrapper>{children}</PageWrapper>
         </MantineProvider>

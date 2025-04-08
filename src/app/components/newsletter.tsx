@@ -6,7 +6,6 @@ import { validateEmail } from "../utils/utils";
 import Divider from "./divider";
 
 export default function NewsletterSubscribe() {
-  const [open, setOpen] = useState(false);
   const [newsletter, setNewsletter] = useState({
     email: "",
     "1055885": "",
@@ -19,7 +18,7 @@ export default function NewsletterSubscribe() {
     setNewsletter({ ...newsletter, [e.target.name]: e.target.value });
 
   return (
-    <div className={twoCols}>
+    <div className={`${twoCols} pt-8`}>
       <div className="p-8">
         <h3>Der CoMo Newsletter</h3>
         <Divider />
@@ -101,9 +100,14 @@ export function NewsletterUnsubscribe() {
       action="https://seu2.cleverreach.com/f/283459-283561/wcu/"
       method="post"
       target="_blank"
-      className="flex items-end gap-4"
+      className="flex flex-col gap-4 p-8"
     >
-      <TextInput name="email" label="E-Mail" onChange={handleChange} />
+      <TextInput
+        name="email"
+        label="E-Mail"
+        onChange={handleChange}
+        withAsterisk
+      />
       <Button type="submit" disabled={!validateEmail(email)}>
         Abmelden
       </Button>
@@ -134,12 +138,12 @@ const ReCaptcha = () => {
     <div
       id="8915730"
       rel="recaptcha"
-      className="cr_ipe_item ui-sortable musthave flex justify-center mt-4"
+      className="cr_ipe_item ui-sortable musthave flex justify-center mt-2"
     >
       <br />
       <div
         id="recaptcha_v2_widget"
-        className="g-recaptcha"
+        className="g-recaptcha w-full"
         data-theme="light"
         data-size="normal"
         data-sitekey="6Lfhcd0SAAAAAOBEHmAVEHJeRnrH8T7wPvvNzEPD"
