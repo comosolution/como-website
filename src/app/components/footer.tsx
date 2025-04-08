@@ -16,15 +16,10 @@ export default function Footer() {
       />
       <main className="relative overflow-y-hidden">
         <Slide direction="up" triggerOnce>
-          <footer className={`flex flex-col gap-16 m-8 px-8 py-10 ${card}`}>
+          <footer className={`flex flex-col gap-8 m-8 px-8 py-10 ${card}`}>
             <Link href="/">
               <header className="flex items-center gap-4 px-8">
-                <Image src="/logo.svg" width="72" height="72" alt="Logo" />
-                <div id="logoLarge" className="flex flex-col gap-0">
-                  <span>Collaboration +</span>
-                  <span>Mobile</span>
-                  <span>Solution</span>
-                </div>
+                <Image src="/logo.svg" width="96" height="96" alt="Logo" />
               </header>
             </Link>
             <div className={fourCols}>

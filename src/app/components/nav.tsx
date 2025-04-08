@@ -36,12 +36,7 @@ export default function Nav() {
       } z-10 w-screen flex justify-between px-4 p-2 sm:px-16 sm:py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
     >
       <Link href="/" className="flex items-center gap-1 sm:gap-2">
-        <Image src="/logo.svg" alt="CoMo Logo" width="48" height="48" />
-        <div id="logoSmall" className="hidden md:flex flex-col gap-0">
-          <span>Collaboration +</span>
-          <span>Mobile</span>
-          <span>Solution</span>
-        </div>
+        <Image src="/logo.svg" alt="CoMo Logo" width="96" height="96" />
       </Link>
       <nav className="flex items-center gap-6">
         {mainNav.map((entry) => {
