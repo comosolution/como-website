@@ -8,6 +8,7 @@ export default function Partners() {
       {partners.map((partner, index) => {
         return (
           <div
+            key={partner.id}
             id={partner.id}
             className="flex flex-col lg:flex-row items-start gap-8 lg:gap-24 lg:pt-20 border-t border-solid border-t-white/10"
           >
