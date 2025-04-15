@@ -10,16 +10,7 @@ export default async function News() {
   const notes = await getMarkdown("notes");
 
   return (
-    <section className="relative flex flex-col gap-8 py-16 border-t border-t-white/10">
-      <div className="absolute -z-1 inset-0 flex justify-center overflow-hidden">
-        <img
-          src="/glow-2.png"
-          alt=""
-          width="1600"
-          height="1600"
-          className="max-w-none origin-top"
-        />
-      </div>
+    <section className="flex flex-col gap-8 py-16">
       <header className={`${header} relative z-5 justify-between px-8`}>
         <h2>Was gibt es Neues?</h2>
         <Button component="a" variant="light" href="/about/notes">
