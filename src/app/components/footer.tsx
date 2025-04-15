@@ -16,7 +16,7 @@ export default function Footer() {
       />
       <main className="relative overflow-y-hidden">
         <Slide direction="up" triggerOnce>
-          <footer className={`flex flex-col gap-8 m-8 px-8 py-10 ${card}`}>
+          <footer className={`flex flex-col gap-8 mx-8 px-8 py-8 ${card}`}>
             <Link href="/">
               <header className="flex items-center gap-4 px-8">
                 <Image src="/logo.svg" width="96" height="96" alt="Logo" />
