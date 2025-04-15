@@ -238,12 +238,12 @@ img.inverted {
 }
 
 .productImg {
-  filter: brightness(0.3);
+  filter: brightness(0.5);
   transition: var(--default-transition);
 }
 
 .productTile:hover .productImg {
-  filter: brightness(0.7);
+  filter: brightness(0.9);
 }
 
 .service {
