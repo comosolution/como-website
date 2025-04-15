@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/app/components/button";
+import { Button } from "@mantine/core";
 import Image from "next/image";
 
 export default function Team() {
@@ -21,11 +21,9 @@ export default function Team() {
       </div>
       <div className="flex flex-col xl:flex-row gap-4 justify-between items-center">
         <h5>Ihr Bild fehlt? Schicken Sie uns gerne Ihre Bewerbung!</h5>
-        <Button
-          type="primary"
-          text="jobs@como-solution.de"
-          href="mailto:jobs@como-solution.de"
-        />
+        <Button component="a" href="mailto:jobs@como-solution.de">
+          jobs@como-solution.de
+        </Button>
       </div>
     </section>
   );

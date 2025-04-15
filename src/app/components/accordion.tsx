@@ -1,5 +1,5 @@
+import { Button } from "@mantine/core";
 import { useEffect, useRef, useState } from "react";
-import Button from "./button";
 
 export default function Accordion({
   summary,
@@ -27,13 +27,9 @@ export default function Accordion({
         onClick={() => setOpen(!open)}
       >
         <h3>{summary}</h3>
-        <Button
-          type="tertiary"
-          text={open ? "Weniger anzeigen" : "Mehr anzeigen"}
-          onClick={() => setOpen(!open)}
-          icon="chevron"
-          iconRotation={open ? "180" : "0"}
-        />
+        <Button onClick={() => setOpen(!open)}>
+          {open ? "Weniger anzeigen" : "Mehr anzeigen"}
+        </Button>
       </div>
       <div
         ref={contentRef}

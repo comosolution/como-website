@@ -1,5 +1,7 @@
 import CardActionButton from "@/app/components/card";
 import { Button } from "@mantine/core";
+import { IconChevronLeft } from "@tabler/icons-react";
+import Link from "next/link";
 import services from "../../../data/portfolio/services.json";
 
 export default function ServiceOverview({
@@ -29,7 +31,12 @@ export default function ServiceOverview({
             );
           })}
       </div>
-      <Button component="a" variant="transparent" href="/portfolio">
+      <Button
+        variant="transparent"
+        component={Link}
+        href="/portfolio"
+        leftSection={<IconChevronLeft size={16} />}
+      >
         Zurück zum Portfolio
       </Button>
     </div>

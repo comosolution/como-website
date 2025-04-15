@@ -1,6 +1,8 @@
-import branches from "../../../data/portfolio/branches.json";
 import CardActionButton from "@/app/components/card";
-import Button from "@/app/components/button";
+import { Button } from "@mantine/core";
+import { IconChevronLeft } from "@tabler/icons-react";
+import Link from "next/link";
+import branches from "../../../data/portfolio/branches.json";
 
 export default function BranchesOverview({
   filter,
@@ -29,7 +31,14 @@ export default function BranchesOverview({
             );
           })}
       </div>
-      <Button type="tertiary" text="Zurück zum Portfolio" href="/portfolio" />
+      <Button
+        variant="transparent"
+        component={Link}
+        href="/portfolio"
+        leftSection={<IconChevronLeft size={16} />}
+      >
+        Zurück zum Portfolio
+      </Button>
     </div>
   );
 }

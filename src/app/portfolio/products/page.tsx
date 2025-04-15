@@ -1,6 +1,7 @@
 "use client";
-import Button from "@/app/components/button";
 import { card } from "@/app/style/style";
+import { Button } from "@mantine/core";
+import { IconChevronLeft } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import products from "../../data/portfolio/products.json";
@@ -42,10 +43,13 @@ export default function Page() {
         })}
         <div className="flex items-center justify-center">
           <Button
-            type="tertiary"
-            text="Zurück zum Portfolio"
+            variant="transparent"
+            component={Link}
             href="/portfolio"
-          />
+            leftSection={<IconChevronLeft size={16} />}
+          >
+            Zurück zum Portfolio
+          </Button>
         </div>
       </div>
     </main>

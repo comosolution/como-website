@@ -1,11 +1,12 @@
 "use client";
 import Accordion from "@/app/components/accordion";
 /* eslint-disable @next/next/no-img-element */
-import Button from "@/app/components/button";
 import ContactButton from "@/app/components/contactButton";
 import { twoCols } from "@/app/style/style";
 import { Product } from "@/app/types";
+import { Button } from "@mantine/core";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductContent({ product }: { product: Product }) {
   return (
@@ -88,10 +89,12 @@ export default function ProductContent({ product }: { product: Product }) {
         <div className="flex flex-col items-center md:flex-row md:items-center justify-center gap-4">
           <ContactButton />
           <Button
-            type="tertiary"
-            text="Weitere Produkte entdecken"
+            variant="transparent"
+            component={Link}
             href="/portfolio/products"
-          />
+          >
+            Weitere Produkte entdecken
+          </Button>
         </div>
       </div>
     </div>
