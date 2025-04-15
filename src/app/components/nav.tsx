@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@mantine/core";
+import { IconSend } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -42,7 +43,12 @@ export default function Nav() {
         {mainNav.map((entry) => {
           return entry.ref ? (
             entry.ref === "/contact" ? (
-              <Button key={entry.name} component={Link} href={entry.ref}>
+              <Button
+                key={entry.name}
+                component={Link}
+                href={entry.ref}
+                leftSection={<IconSend size={16} />}
+              >
                 {entry.name}
               </Button>
             ) : (
