@@ -284,6 +284,10 @@ article details summary:hover {
   color: rgb(var(--accent-rgb));
 }
 
+img.inverted {
+  filter: invert(1) brightness(0.9) contrast(1.2);
+}
+
 .circles {
   max-height: 2000px;
   position: absolute;

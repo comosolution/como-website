@@ -7,7 +7,7 @@ import partners from "./../data/partners.json";
 
 export default function PartnersMarquee({ scroll }: { scroll?: boolean }) {
   return (
-    <Marquee autoFill pauseOnHover>
+    <Marquee gradient gradientColor="#ffffff" autoFill pauseOnHover>
       <div className="flex justify-between items-center gap-24 p-12 overflow-hidden">
         {partners.map((partner, index) => {
           return scroll ? (
@@ -28,6 +28,7 @@ export default function PartnersMarquee({ scroll }: { scroll?: boolean }) {
                 height={160}
                 style={{ objectFit: "contain" }}
                 alt={`Logo ${partner.name}`}
+                className="inverted"
               />
             </Link>
           );

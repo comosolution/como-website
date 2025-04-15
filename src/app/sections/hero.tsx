@@ -18,7 +18,7 @@ export default function Hero() {
           sichere digitale Transformation brauchen: Wir setzen es um und
           begleiten Sie in Ihre Zukunft.
         </p>
-        <div className="flex gap-20">
+        <div className="flex gap-20 mt-8">
           {clients.map((client, index) => {
             return (
               <Image
@@ -26,8 +26,9 @@ export default function Hero() {
                 src={`/logos/${client.img}`}
                 width={48}
                 height={48}
-                style={{ objectFit: "contain", opacity: 0.5 }}
+                style={{ objectFit: "contain" }}
                 alt={`Logo ${client.name}`}
+                className="inverted"
               />
             );
           })}

@@ -51,7 +51,9 @@ export default function Menu({ content }: { content: SubNav }) {
           width="24"
           height="24"
           alt="icon"
-          className={`${open && "rotate-180"} transition-all hidden sm:inline`}
+          className={`${
+            open && "rotate-180"
+          } transition-all hidden sm:inline inverted`}
         />
       </span>
       {open && (

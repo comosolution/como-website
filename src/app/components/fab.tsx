@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import { scrollTo } from "../utils/utils";
 import { useEffect, useState } from "react";
-import { Slide } from "react-awesome-reveal";
+import { scrollTo } from "../utils/utils";
 
 export default function FAB() {
   const [show, setShow] = useState(false);
@@ -30,7 +29,7 @@ export default function FAB() {
           width="20"
           height="20"
           alt="arrow"
-          className="rotate-180"
+          className="rotate-180 inverted"
         />
       </div>
     )
