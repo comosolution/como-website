@@ -45,44 +45,43 @@ export default function Nav() {
           headerVisible ? "top-0" : "-top-24"
         } z-10 w-screen flex justify-between px-16 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
       >
+        <Burger
+          w={106}
+          opened={opened}
+          onClick={open}
+          aria-label="Toggle navigation"
+        />
         <Link href="/">
           <Image src="/logo.svg" alt="CoMo Logo" width="96" height="96" />
         </Link>
-        <div className="flex items-center gap-4">
-          <Button
-            variant="light"
-            component={Link}
-            href="/contact"
-            leftSection={<IconSend size={16} />}
-          >
-            Kontakt
-          </Button>
-          <Burger
-            opened={opened}
-            onClick={open}
-            aria-label="Toggle navigation"
-          />
-          <Drawer
-            opened={opened}
-            onClose={close}
-            title="Menü"
-            position="right"
-            size="xs"
-          >
-            <nav className="flex flex-col gap-4">
-              {mainNav.map((entry) => {
-                return entry.ref ? (
-                  <Link key={entry.name} href={entry.ref} passHref>
-                    <NavItem href={entry.ref}>{entry.name}</NavItem>
-                  </Link>
-                ) : (
-                  entry.child && <Menu key={entry.name} content={entry.child} />
-                );
-              })}
-            </nav>
-          </Drawer>
-        </div>
+        <Button
+          variant="light"
+          component={Link}
+          href="/contact"
+          leftSection={<IconSend size={16} />}
+        >
+          Kontakt
+        </Button>
       </header>
+      <Drawer
+        opened={opened}
+        onClose={close}
+        title="Menü"
+        position="left"
+        size="xs"
+      >
+        <nav className="flex flex-col gap-4">
+          {mainNav.map((entry) => {
+            return entry.ref ? (
+              <Link key={entry.name} href={entry.ref} passHref>
+                <NavItem href={entry.ref}>{entry.name}</NavItem>
+              </Link>
+            ) : (
+              entry.child && <Menu key={entry.name} content={entry.child} />
+            );
+          })}
+        </nav>
+      </Drawer>
     </>
   );
 }
