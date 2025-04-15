@@ -43,7 +43,7 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-10 w-screen flex justify-between items-center px-16 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
+        } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
       >
         <Burger
           w={106}
@@ -66,7 +66,7 @@ export default function Nav() {
       <Drawer
         opened={opened}
         onClose={close}
-        title="Menü"
+        title="CoMo Solution GmbH"
         position="left"
         size="xs"
       >
