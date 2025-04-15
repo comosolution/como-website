@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { highlight } from "../style/style";
 
 export default function Sub() {
   const serviceList = [
@@ -37,7 +38,7 @@ export default function Sub() {
   return (
     <section className="relative z-5 flex justify-center gap-2 pt-16">
       <h2>
-        Wir sind die CoMo. Wir{" "}
+        Wir sind die <span className={highlight}>CoMo</span>. Wir{" "}
         <span className="inline-block w-64">
           <AnimatePresence mode="wait">
             <motion.span

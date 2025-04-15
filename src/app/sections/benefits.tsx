@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@mantine/core";
 import Image from "next/image";
-import { fourCols, header } from "../style/style";
+import { fourCols, header, highlight } from "../style/style";
 import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
@@ -9,8 +9,9 @@ export default function Benefits() {
     <section className="flex flex-col gap-16 pt-64 pb-16">
       <header className={`${header} justify-between`}>
         <h5 className="lg:w-3/4 px-4">
-          Über 14 Jahre Innovation + Expertise – Ihr zuverlässiger Partner für
-          maßgeschneiderte IT Lösungen und erstklassigen Support.
+          Über 14 Jahre Innovation + Expertise – Ihr zuverlässiger Partner für{" "}
+          <span className={highlight}>maßgeschneiderte IT Lösungen</span> und
+          erstklassigen Support.
         </h5>
         <Button component="a" variant="light" href="/about/como">
           Mehr erfahren

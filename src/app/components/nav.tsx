@@ -46,6 +46,7 @@ export default function Nav() {
         } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
       >
         <Burger
+          lineSize={2}
           w={106}
           opened={opened}
           onClick={open}

@@ -18,6 +18,7 @@ export default function Testimonials() {
                 height={48}
                 style={{ objectFit: "contain" }}
                 alt={`Logo ${testimonial.name}`}
+                className="inverted"
               />
               <p className="muted">
                 <i>{testimonial.content}</i>

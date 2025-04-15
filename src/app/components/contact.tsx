@@ -28,13 +28,15 @@ export default function Contact() {
 
   return (
     <main id="contact" className={`relative z-5 ${twoCols} my-32 px-8 py-16`}>
-      <div className="flex flex-col items-center gap-12 pt-8 lg:h-min lg:sticky lg:top-4">
+      <div className="flex flex-col items-center gap-8 pt-8 lg:h-min lg:sticky lg:top-4">
         <div className="flex flex-col text-center">
           <header className="flex flex-col">
             <p className="text-orange-500">
-              <b>Sprechen Sie uns an.</b>
+              <b>Wir sind neugierig auf Ihre Anforderungen!</b>
             </p>
-            <h2>Wir sind bereit, gemeinsam mit Ihnen durchzustarten!</h2>
+            <h2>
+              Nehmen Sie jetzt <br /> Kontakt zu uns auf!
+            </h2>
           </header>
         </div>
         <div className="flex gap-2 items-center">
