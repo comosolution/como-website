@@ -50,6 +50,7 @@ export default function Nav() {
         </Link>
         <div className="flex items-center gap-4">
           <Button
+            variant="light"
             component={Link}
             href="/contact"
             leftSection={<IconSend size={16} />}
@@ -61,8 +62,14 @@ export default function Nav() {
             onClick={open}
             aria-label="Toggle navigation"
           />
-          <Drawer opened={opened} onClose={close} position="right" size="xs">
-            <nav className="flex flex-col gap-8">
+          <Drawer
+            opened={opened}
+            onClose={close}
+            title="Menü"
+            position="right"
+            size="xs"
+          >
+            <nav className="flex flex-col gap-4">
               {mainNav.map((entry) => {
                 return entry.ref ? (
                   <Link key={entry.name} href={entry.ref} passHref>

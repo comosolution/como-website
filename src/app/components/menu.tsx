@@ -9,7 +9,6 @@ export default function Menu({ content }: { content: SubNav }) {
 
   return (
     <nav className="flex flex-col">
-      <p>{content.name}</p>
       {content.entries.map((entry) => {
         return (
           <Link key={entry.name} href={entry.ref}>

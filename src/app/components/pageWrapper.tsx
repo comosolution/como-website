@@ -13,7 +13,7 @@ export default function PageWrapper({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const hideContactFormRoutes = ["/aw/"];
+  const hideContactFormRoutes = ["/security-event/"];
   const showContact = !hideContactFormRoutes.includes(pathname);
 
   useEffect(() => {

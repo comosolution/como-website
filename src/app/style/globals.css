@@ -90,7 +90,8 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
+h3,
+nav a {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 500;
@@ -111,8 +112,7 @@ h5 {
 }
 
 p,
-li,
-nav a {
+li {
   font-size: 1.25rem;
 }
 
