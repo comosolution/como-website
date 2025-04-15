@@ -72,7 +72,7 @@ export default function RootLayout({
           src="/static/etracker.js"
         ></script>
       </head>
-      <body className={`${blinker.className} pt-32`} id="top">
+      <body className={`${blinker.className}`} id="top">
         <MantineProvider theme={theme} defaultColorScheme="light">
           <PageWrapper>{children}</PageWrapper>
         </MantineProvider>

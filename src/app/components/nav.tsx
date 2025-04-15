@@ -41,15 +41,15 @@ export default function Nav() {
   return (
     <>
       <header
-        className={`fixed  ${
+        className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-10 w-screen flex justify-between px-16 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
+        } z-10 w-screen flex justify-between items-center px-16 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
       >
         <Burger
           w={106}
           opened={opened}
           onClick={open}
-          aria-label="Toggle navigation"
+          aria-label="Navigation umschalten"
         />
         <Link href="/">
           <Image src="/logo.svg" alt="CoMo Logo" width="96" height="96" />

@@ -33,7 +33,7 @@ export default function PageWrapper({
       <ScrollProgress />
       <Nav />
       <FAB />
-      {children}
+      <div className="pt-32">{children}</div>
       {showContact && <Contact />}
       <Footer />
     </>
