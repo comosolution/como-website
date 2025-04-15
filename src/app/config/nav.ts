@@ -25,7 +25,6 @@ export const mainNav = [
   { name: "Home", ref: "/" },
   { name: "Portfolio", ref: "/portfolio" },
   { name: "Über uns", child: aboutNav },
-  { name: "Kontakt", ref: "/contact" },
 ];
 
 export type SubNav = typeof aboutNav;

@@ -19,7 +19,7 @@ export default function Partners() {
               height={160}
               style={{ objectFit: "contain" }}
               alt={`Logo ${partner.name}`}
-              className="mt-8"
+              className="mt-8 inverted"
             />
             <article>
               <h4 className="hidden lg:block">{partner.name}</h4>

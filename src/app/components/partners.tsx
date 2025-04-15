@@ -19,6 +19,7 @@ export default function PartnersMarquee({ scroll }: { scroll?: boolean }) {
               style={{ objectFit: "contain", cursor: "pointer" }}
               alt={`Logo ${partner.name}`}
               onClick={() => scrollTo(partner.id)}
+              className="inverted"
             />
           ) : (
             <Link key={index} href={`/about/partners#${partner.id}`}>

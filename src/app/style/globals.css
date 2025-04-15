@@ -24,21 +24,6 @@ body {
   background: rgb(var(--background-rgb));
 }
 
-#logoSmall {
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: -6%;
-  color: rgb(var(--foreground-rgb));
-}
-
-#logoLarge {
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: -6%;
-  font-weight: medium;
-  color: rgb(var(--foreground-rgb));
-}
-
 main,
 footer {
   max-width: 1440px;
@@ -61,63 +46,6 @@ select {
   background-position-x: 100%;
   background-position-y: 12px;
   margin-right: 2rem;
-}
-
-.checkboxContainer {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.checkboxContainer:not(:has(input:disabled)):hover p {
-  color: rgba(var(--accent-rgb), 0.8);
-  transition: var(--default-transition);
-}
-
-.checkboxContainer:not(:has(input:disabled)):hover input ~ .check {
-  background-color: rgba(var(--accent-rgb), 0.8);
-  transition: var(--default-transition);
-}
-
-.checkboxContainer input:checked ~ .check {
-  background-color: rgba(var(--accent-rgb), 1);
-}
-
-.check:after {
-  content: "";
-  position: absolute;
-  display: none;
-  transition: var(--default-transition);
-}
-
-.checkboxContainer input:checked ~ .check:after {
-  display: block;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.checkboxContainer:has(input:disabled):hover {
-  cursor: not-allowed;
-}
-
-.checkboxContainer input:disabled ~ .check,
-.checkboxContainer:has(input:disabled) p {
-  opacity: 0.5;
-}
-
-.checkboxContainer .check:after {
-  left: 11px;
-  top: 4px;
-  width: 10px;
-  height: 20px;
-  border: solid white;
-  border-width: 0 0 0 0;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 a:not(.tile):not(.mantine-Button-root),
@@ -183,7 +111,8 @@ h5 {
 }
 
 p,
-li {
+li,
+nav a {
   font-size: 1.25rem;
 }
 
