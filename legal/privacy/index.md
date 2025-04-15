@@ -124,13 +124,13 @@ Cookies werden auf dem Rechner des Besuchers gespeichert und von diesem an unser
 
 ## Webanalyse
 
-Mit Ihrer Einwilligung verwenden wir die Open-Source-Software Matomo zur Analyse und statistischen Auswertung der Nutzung der Website. Hierzu werden Cookies eingesetzt. Die dadurch erhaltenen Informationen über die Websitenutzung werden ausschließlich an unsere Server übertragen und in pseudonymen Nutzungsprofilen zusammengefasst. Die Daten verwenden wir zur Auswertung der Nutzung der Website. Eine Weitergabe der erfassten Daten an Dritte erfolgt nicht.
+Der Anbieter dieser Website nutzt Dienste der etracker GmbH aus Hamburg, Deutschland ([www.etracker.com](https://www.etracker.com)) zur Analyse von Nutzungsdaten. Wir verwenden standardmäßig keine Cookies für die Web-Analyse. Soweit wir Analyse- und Optimierungs-Cookies einsetzen, holen wir Ihre explizite Einwilligung gesondert im Vorfeld ein. Ist das der Fall und Sie stimmen zu, werden Cookies eingesetzt, die eine statistische Reichweiten-Analyse dieser Website, eine Erfolgsmessung unserer Online-Marketing-Maßnahmen sowie Testverfahren ermöglichen, um z.B. unterschiedliche Versionen unseres Online-Angebotes oder seiner Bestandteile zu testen und zu optimieren. Cookies sind kleine Textdateien, die vom Internet Browser auf dem Endgerät des Nutzers gespeichert werden. etracker Cookies enthalten keine Informationen, die eine Identifikation eines Nutzers ermöglichen.
 
-Die IP-Adressen werden anonymisiert (IPMasking), sodass eine Zuordnung zu einzelnen Nutzern nicht möglich ist.
+Die mit etracker erzeugten Daten werden im Auftrag des Anbieters dieser Website von etracker ausschließlich in Deutschland verarbeitet und gespeichert und unterliegen damit den strengen deutschen und europäischen Datenschutzgesetzen und -standards. etracker wurde diesbezüglich unabhängig geprüft, zertifiziert und mit dem Datenschutz-Gütesiegel ePrivacyseal ausgezeichnet.
 
-Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 S. 1 lit. a DSGVO. Wir verfolgen damit unser berechtigtes Interesse an der Optimierung unserer Webseite für unsere Außendarstellung.
+Die Datenverarbeitung erfolgt auf Basis der gesetzlichen Bestimmungen des Art. 6 Abs. 1 lit. f (berechtigtes Interesse) der Datenschutzgrundverordnung (DSGVO). Unser Anliegen im Sinne der DSGVO (berechtigtes Interesse) ist die Optimierung unseres Online-Angebotes und unseres Webauftritts. Da uns die Privatsphäre unserer Besucher wichtig ist, werden die Daten, die möglicherweise einen Bezug zu einer einzelnen Person zulassen, wie die IP-Adresse, Anmelde- oder Gerätekennungen, frühestmöglich anonymisiert oder pseudonymisiert. Eine andere Verwendung, Zusammenführung mit anderen Daten oder eine Weitergabe an Dritte erfolgt nicht.
 
-Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookies in Ihrem Browser löschen oder Ihre Datenschutzeinstellungen ändern.
+Weitere Informationen zum Datenschutz bei etracker finden Sie [hier](https://www.etracker.com/datenschutz/).
 
 ## Newsletter
 

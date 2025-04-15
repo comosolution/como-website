@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontaktformular | CoMo Solution GmbH",
+};
+
 export default function Page() {
   return (
     <main className="flex flex-col gap-16 px-8 -mb-20">
