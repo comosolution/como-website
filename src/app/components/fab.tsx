@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { scrollTo } from "../utils/utils";
 
@@ -24,13 +24,7 @@ export default function FAB() {
         className="fixed right-8 bottom-8 z-50 p-2 border-solid border border-orange-500 rounded-full cursor-pointer transition-all hover:bg-orange-600/20"
         onClick={() => scrollTo("top")}
       >
-        <Image
-          src="/icons/arrow.svg"
-          width="20"
-          height="20"
-          alt="arrow"
-          className="rotate-180 inverted"
-        />
+        <IconArrowUp size={20} />
       </div>
     )
   );
