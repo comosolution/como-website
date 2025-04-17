@@ -1,10 +1,13 @@
 "use client";
+import { useMantineColorScheme } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { aboutNav, portfolioNav } from "../config/nav";
 import { fourCols } from "../style/style";
 
 export default function Footer() {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <div className="relative">
       {/* eslint-disable-next-line @next/next/no-img-element*/}
@@ -17,7 +20,12 @@ export default function Footer() {
         <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-sm bg-white/70 dark:bg-white/10">
           <Link href="/">
             <header className="flex items-center gap-4 px-8">
-              <Image src="/logo.svg" width="96" height="96" alt="Logo" />
+              <Image
+                src={colorScheme === "dark" ? "/logo_dark.svg" : "/logo.svg"}
+                alt="CoMo Logo"
+                width="96"
+                height="96"
+              />
             </header>
           </Link>
           <div className={fourCols}>

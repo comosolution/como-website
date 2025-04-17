@@ -70,7 +70,12 @@ export default function Nav() {
         />
 
         <Link href="/">
-          <Image src="/logo.svg" alt="CoMo Logo" width="96" height="96" />
+          <Image
+            src={colorScheme === "dark" ? "/logo_dark.svg" : "/logo.svg"}
+            alt="CoMo Logo"
+            width="96"
+            height="96"
+          />
         </Link>
         <div className="flex items-center gap-2">
           <ActionIcon
