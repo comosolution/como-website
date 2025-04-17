@@ -18,7 +18,7 @@ export default function Hero() {
           sichere digitale Transformation brauchen: Wir setzen es um und
           begleiten Sie in Ihre Zukunft.
         </p>
-        <div className="flex gap-20 mt-8">
+        <div className="grid grid-cols-4 items-center gap-12 md:gap-20 mt-8">
           {clients.map((client, index) => {
             return (
               <Image

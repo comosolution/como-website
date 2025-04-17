@@ -286,23 +286,20 @@ img.inverted {
 }
 
 @media (max-width: 640px) {
-  html {
-    font-size: 10px;
-  }
-
   h1 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
   }
 
   h2 {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
   }
 
   h3,
   h5 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 
   h4 {
@@ -312,8 +309,8 @@ img.inverted {
 
   p,
   li {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 
   .circles {

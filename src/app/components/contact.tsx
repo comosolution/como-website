@@ -39,7 +39,7 @@ export default function Contact() {
             </h2>
           </header>
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col sm:flex-row gap-2 items-center">
           <Button
             variant="light"
             component="a"

@@ -6,7 +6,7 @@ import {
   useComputedColorScheme,
   useMantineColorScheme,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconMenuDeep, IconMoon, IconSun } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,6 +17,7 @@ import Menu from "./menu";
 import NavItem from "./navItem";
 
 export default function Nav() {
+  const isMobile = useMediaQuery("(max-width: 620px)");
   const pathname = usePathname();
   const [prevPos, setPrevPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -60,35 +61,70 @@ export default function Nav() {
           headerVisible ? "top-0" : "-top-24"
         } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb), 0.2)] transition-all duration-300`}
       >
-        <Button
-          w={128}
-          variant="transparent"
-          color={colorScheme === "dark" ? "white" : "black"}
-          onClick={open}
-          leftSection={<IconMenuDeep size={20} />}
-        >
-          Menü
-        </Button>
-        <Logo />
-        <div className="flex items-center gap-2">
-          <ActionIcon
-            size="lg"
-            variant="transparent"
-            onClick={() =>
-              setColorScheme(computedColorScheme === "light" ? "dark" : "light")
-            }
-            aria-label="Toggle color scheme"
-          >
-            {colorScheme === "dark" ? (
-              <IconSun size={20} />
-            ) : (
-              <IconMoon size={20} />
-            )}
-          </ActionIcon>
-          <Button variant="light" component={Link} href="/contact">
-            Kontakt
-          </Button>
-        </div>
+        {isMobile ? (
+          <>
+            <Logo />
+            <div className="flex items-center gap-2">
+              <ActionIcon
+                size="lg"
+                variant="transparent"
+                onClick={() =>
+                  setColorScheme(
+                    computedColorScheme === "light" ? "dark" : "light"
+                  )
+                }
+                aria-label="Toggle color scheme"
+              >
+                {colorScheme === "dark" ? (
+                  <IconSun size={20} />
+                ) : (
+                  <IconMoon size={20} />
+                )}
+              </ActionIcon>
+              <Button
+                variant="light"
+                onClick={open}
+                leftSection={<IconMenuDeep size={20} />}
+              >
+                Menü
+              </Button>
+            </div>
+          </>
+        ) : (
+          <>
+            <Button
+              w={128}
+              variant="transparent"
+              color={colorScheme === "dark" ? "white" : "black"}
+              onClick={open}
+              leftSection={<IconMenuDeep size={20} />}
+            >
+              Menü
+            </Button>
+            <Logo />
+            <div className="flex items-center gap-2">
+              <ActionIcon
+                size="lg"
+                variant="transparent"
+                onClick={() =>
+                  setColorScheme(
+                    computedColorScheme === "light" ? "dark" : "light"
+                  )
+                }
+                aria-label="Toggle color scheme"
+              >
+                {colorScheme === "dark" ? (
+                  <IconSun size={20} />
+                ) : (
+                  <IconMoon size={20} />
+                )}
+              </ActionIcon>
+              <Button variant="light" component={Link} href="/contact">
+                Kontakt
+              </Button>
+            </div>
+          </>
+        )}
       </header>
       <Drawer
         opened={opened}
