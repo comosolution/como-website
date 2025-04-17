@@ -8,7 +8,7 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconMoon, IconSend, IconSun } from "@tabler/icons-react";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -87,17 +87,12 @@ export default function Nav() {
             aria-label="Toggle color scheme"
           >
             {colorScheme === "dark" ? (
-              <IconSun size={16} />
+              <IconSun size={20} />
             ) : (
-              <IconMoon size={16} />
+              <IconMoon size={20} />
             )}
           </ActionIcon>
-          <Button
-            variant="light"
-            component={Link}
-            href="/contact"
-            leftSection={<IconSend size={16} />}
-          >
+          <Button variant="light" component={Link} href="/contact">
             Kontakt
           </Button>
         </div>
