@@ -14,7 +14,7 @@ export default function Footer() {
         className="absolute -bottom-8 -z-1 w-full footerCircles"
       />
       <main className="relative overflow-y-hidden">
-        <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-sm bg-white/70 dark:bg-white/10">
+        <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-md bg-[rgba(var(--white-rgb),0.1)]">
           <div className="px-8">
             <Logo />
           </div>
