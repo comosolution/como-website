@@ -17,6 +17,13 @@
   --default-padding: 32px;
   --default-gap: 16px;
   --default-transition: 300ms all ease-in-out;
+  --filter-inverted: invert(1) brightness(0.9) contrast(1.2);
+}
+
+.dark {
+  --background-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
+  --filter-inverted: none;
 }
 
 body {
@@ -214,7 +221,7 @@ article details summary:hover {
 }
 
 img.inverted {
-  filter: invert(1) brightness(0.9) contrast(1.2);
+  filter: var(--filter-inverted);
 }
 
 .circles {

@@ -1,4 +1,3 @@
-import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Blinker } from "next/font/google";
@@ -14,24 +13,6 @@ export const metadata: Metadata = {
   keywords: ["collaboration", "mobile", "solution", "cybersecurity"],
 };
 
-const theme = createTheme({
-  primaryColor: "orange",
-  colors: {
-    orange: [
-      "#fff1e2",
-      "#ffe2cc",
-      "#ffc49a",
-      "#ffa464",
-      "#fe8937",
-      "#fe781a",
-      "#ff6e09",
-      "#e45d00",
-      "#cb5100",
-      "#b14400",
-    ],
-  },
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <meta name="theme-color" content="#FF6900" />
         <link rel="canonical" href="https://como-solution.de" />
         <script
           src="https://analytics.ahrefs.com/analytics.js"
@@ -73,9 +55,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={`${blinker.className}`} id="top">
-        <MantineProvider theme={theme} defaultColorScheme="light">
-          <PageWrapper>{children}</PageWrapper>
-        </MantineProvider>
+        <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
   );

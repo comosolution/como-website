@@ -1,7 +1,14 @@
 "use client";
-import { Burger, Button, Drawer } from "@mantine/core";
+import {
+  ActionIcon,
+  Burger,
+  Button,
+  Drawer,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconSend } from "@tabler/icons-react";
+import { IconMoon, IconSend, IconSun } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,6 +22,15 @@ export default function Nav() {
   const [prevPos, setPrevPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [opened, { open, close }] = useDisclosure(false);
+
+  const { setColorScheme, colorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme("light", {
+    getInitialValueInEffect: true,
+  });
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", colorScheme === "dark");
+  }, [colorScheme]);
 
   useEffect(() => {
     close();
@@ -43,7 +59,7 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-sm bg-white/20 transition-all duration-300`}
+        } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-sm bg-white/20 dark:bg-white/10 transition-all duration-300`}
       >
         <Burger
           lineSize={2}
@@ -52,17 +68,34 @@ export default function Nav() {
           onClick={open}
           aria-label="Navigation umschalten"
         />
+
         <Link href="/">
           <Image src="/logo.svg" alt="CoMo Logo" width="96" height="96" />
         </Link>
-        <Button
-          variant="light"
-          component={Link}
-          href="/contact"
-          leftSection={<IconSend size={16} />}
-        >
-          Kontakt
-        </Button>
+        <div className="flex items-center gap-2">
+          <ActionIcon
+            size="lg"
+            variant="transparent"
+            onClick={() =>
+              setColorScheme(computedColorScheme === "light" ? "dark" : "light")
+            }
+            aria-label="Toggle color scheme"
+          >
+            {colorScheme === "dark" ? (
+              <IconSun size={16} />
+            ) : (
+              <IconMoon size={16} />
+            )}
+          </ActionIcon>
+          <Button
+            variant="light"
+            component={Link}
+            href="/contact"
+            leftSection={<IconSend size={16} />}
+          >
+            Kontakt
+          </Button>
+        </div>
       </header>
       <Drawer
         opened={opened}

@@ -14,7 +14,7 @@ export default function Footer() {
         className="absolute -bottom-8 -z-1 w-full footerCircles"
       />
       <main className="relative overflow-y-hidden">
-        <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-sm bg-white/70">
+        <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-sm bg-white/70 dark:bg-white/10">
           <Link href="/">
             <header className="flex items-center gap-4 px-8">
               <Image src="/logo.svg" width="96" height="96" alt="Logo" />
