@@ -1,9 +1,9 @@
 "use client";
 import { useMantineColorScheme } from "@mantine/core";
-import Image from "next/image";
 import Link from "next/link";
 import { aboutNav, portfolioNav } from "../config/nav";
 import { fourCols } from "../style/style";
+import Logo from "./logo";
 
 export default function Footer() {
   const { colorScheme } = useMantineColorScheme();
@@ -18,16 +18,9 @@ export default function Footer() {
       />
       <main className="relative overflow-y-hidden">
         <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-sm bg-white/70 dark:bg-white/10">
-          <Link href="/">
-            <header className="flex items-center gap-4 px-8">
-              <Image
-                src={colorScheme === "dark" ? "/logo_dark.svg" : "/logo.svg"}
-                alt="CoMo Logo"
-                width="96"
-                height="96"
-              />
-            </header>
-          </Link>
+          <div className="px-8">
+            <Logo />
+          </div>
           <div className={fourCols}>
             <div className="sm:col-span-2 px-8 py-4">
               <p>CoMo Solution GmbH</p>

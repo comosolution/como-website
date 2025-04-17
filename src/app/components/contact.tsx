@@ -35,7 +35,7 @@ export default function Contact() {
               <b>Wir sind neugierig auf Ihre Anforderungen!</b>
             </p>
             <h2>
-              Nehmen Sie jetzt <br /> Kontakt zu uns auf!
+              Nehmen Sie jetzt <br /> Kontakt zu uns auf.
             </h2>
           </header>
         </div>

@@ -9,11 +9,11 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav } from "../config/nav";
+import Logo from "./logo";
 import Menu from "./menu";
 import NavItem from "./navItem";
 
@@ -68,15 +68,7 @@ export default function Nav() {
           onClick={open}
           aria-label="Menü öffnen"
         />
-
-        <Link href="/">
-          <Image
-            src={colorScheme === "dark" ? "/logo_dark.svg" : "/logo.svg"}
-            alt="CoMo Logo"
-            width="96"
-            height="96"
-          />
-        </Link>
+        <Logo />
         <div className="flex items-center gap-2">
           <ActionIcon
             size="lg"

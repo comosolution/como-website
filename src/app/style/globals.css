@@ -10,6 +10,7 @@
   --light: #f6f4f2;
   --layers: #778a91;
   --accent-rgb: 255, 105, 0;
+  --highlight-rgb: 255, 218, 193;
   --red-rgb: 179, 25, 62;
   --yellow-rgb: 255, 149, 0;
   --gray-rgb: 98, 96, 95;
@@ -24,6 +25,7 @@
   --background-rgb: 0, 0, 0;
   --foreground-rgb: 255, 255, 255;
   --layers: #092b37;
+  --highlight-rgb: 255, 105, 0;
   --filter-inverted: none;
 }
 
