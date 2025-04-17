@@ -19,7 +19,7 @@ export default function CardActionButton({
   return (
     <Link href={href} className="tile">
       <div
-        className={`flex items-center gap-6 mx-4 px-8 py-4 ${card} transition-all hover:bg-white cursor-pointer`}
+        className={`flex items-center gap-6 mx-4 px-8 py-4 ${card} transition-all hover:bg-[var(--layers)] cursor-pointer`}
       >
         <Image
           src={icon}

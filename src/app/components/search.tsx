@@ -42,7 +42,7 @@ export default function Search() {
 
   return (
     <>
-      <div className="flex gap-2 justify-between px-4 py-2 border-solid border border-orange-500 shadow-xl shadow-orange-500/20 rounded-full backdrop-blur-sm bg-white/70">
+      <div className="flex gap-2 justify-between px-4 py-2 border-solid border border-orange-500 shadow-xl shadow-orange-500/20 rounded-full backdrop-blur-sm">
         <input
           type="search"
           name="search"
