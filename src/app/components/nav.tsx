@@ -61,6 +61,7 @@ export default function Nav() {
         } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb), 0.2)] transition-all duration-300`}
       >
         <Button
+          w={128}
           variant="transparent"
           color={colorScheme === "dark" ? "white" : "black"}
           onClick={open}
@@ -68,7 +69,6 @@ export default function Nav() {
         >
           Menü
         </Button>
-
         <Logo />
         <div className="flex items-center gap-2">
           <ActionIcon
