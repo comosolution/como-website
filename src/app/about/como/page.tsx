@@ -1,5 +1,5 @@
 import News from "@/app/components/news";
-import { twoCols } from "@/app/style/style";
+import { defaultPadding, twoCols } from "@/app/style/style";
 import { Metadata } from "next";
 import Map from "../../components/map";
 import Principles from "./sections/principles";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <main className="flex flex-col gap-16 p-8">
+    <main className={`flex flex-col gap-16 ${defaultPadding}`}>
       <header className="flex flex-col text-center">
         <p className="text-orange-500 pb-2">
           <b>Willkommen bei der CoMo</b>
@@ -21,12 +21,12 @@ export default async function Page() {
         </h1>
       </header>
       <section>
-        <h5 className="p-8">
+        <h5 className={defaultPadding}>
           Seit über einem Jahrzehnt setzt sich unser Team von Spezialisten für
           Ihre Ziele ein – kompetent, freundlich und bodenständig.
         </h5>
         <div className={twoCols}>
-          <div className="p-8">
+          <div className={defaultPadding}>
             <h3>Unser Anspruch</h3>
             <p className="muted">
               Ihre Anforderungen nicht nur zu erfüllen, sondern zu übertreffen.
@@ -38,7 +38,7 @@ export default async function Page() {
               IT-Landschaft.
             </p>
           </div>
-          <div className="p-8">
+          <div className={defaultPadding}>
             <h3>Das Ergebnis</h3>
             <p className="muted">
               Eine effizientere Infrastruktur und Werkzeuge, die Ihre

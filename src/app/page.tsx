@@ -5,10 +5,13 @@ import Hero from "./sections/hero";
 import Partners from "./sections/partners";
 import Services from "./sections/services";
 import Sub from "./sections/sub";
+import { defaultPadding } from "./style/style";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-16 p-8">
+    <main
+      className={`flex min-h-screen flex-col items-center gap-16 ${defaultPadding}`}
+    >
       <Hero />
       <Sub />
       <PortfolioOverview />

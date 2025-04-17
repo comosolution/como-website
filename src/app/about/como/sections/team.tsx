@@ -1,10 +1,11 @@
 "use client";
+import { defaultPadding } from "@/app/style/style";
 import { Button } from "@mantine/core";
 import Image from "next/image";
 
 export default function Team() {
   return (
-    <section className="flex flex-col gap-16 text-center p-8">
+    <section className={`flex flex-col gap-16 text-center ${defaultPadding}`}>
       <h2>Das Team</h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 place-items-center">
         {[...new Array(16)].map((a, index) => {
