@@ -62,8 +62,8 @@ export default function Nav() {
         } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb), 0.2)] transition-all duration-300`}
       >
         <Burger
-          lineSize={2}
-          w={106}
+          lineSize={1.5}
+          w={128}
           opened={opened}
           onClick={open}
           aria-label="Menü öffnen"

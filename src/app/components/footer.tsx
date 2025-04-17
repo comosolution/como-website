@@ -1,13 +1,10 @@
 "use client";
-import { useMantineColorScheme } from "@mantine/core";
 import Link from "next/link";
 import { aboutNav, portfolioNav } from "../config/nav";
 import { fourCols } from "../style/style";
 import Logo from "./logo";
 
 export default function Footer() {
-  const { colorScheme } = useMantineColorScheme();
-
   return (
     <div className="relative">
       {/* eslint-disable-next-line @next/next/no-img-element*/}

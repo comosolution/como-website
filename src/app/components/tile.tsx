@@ -18,7 +18,7 @@ export default function Tile({
   if (href) {
     return (
       <Link
-        className={`tile ${style} hover:bg-[var(--layers)] cursor-pointer`}
+        className={`tile ${style} hover:bg-[rgba(var(--highlight-rgb),0.4)] cursor-pointer`}
         href={href}
       >
         {tile}
