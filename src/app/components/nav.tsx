@@ -59,14 +59,14 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-sm bg-white/20 dark:bg-white/10 transition-all duration-300`}
+        } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb), 0.2)] transition-all duration-300`}
       >
         <Burger
           lineSize={2}
           w={106}
           opened={opened}
           onClick={open}
-          aria-label="Navigation umschalten"
+          aria-label="Menü öffnen"
         />
 
         <Link href="/">

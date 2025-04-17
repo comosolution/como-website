@@ -23,6 +23,7 @@
 .dark {
   --background-rgb: 0, 0, 0;
   --foreground-rgb: 255, 255, 255;
+  --layers: #092b37;
   --filter-inverted: none;
 }
 
