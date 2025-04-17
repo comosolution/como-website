@@ -1,14 +1,13 @@
 "use client";
 import {
   ActionIcon,
-  Burger,
   Button,
   Drawer,
   useComputedColorScheme,
   useMantineColorScheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconMoon, IconSun } from "@tabler/icons-react";
+import { IconMenuDeep, IconMoon, IconSun } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -61,13 +60,15 @@ export default function Nav() {
           headerVisible ? "top-0" : "-top-24"
         } z-10 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb), 0.2)] transition-all duration-300`}
       >
-        <Burger
-          lineSize={1.5}
-          w={128}
-          opened={opened}
+        <Button
+          variant="transparent"
+          color={colorScheme === "dark" ? "white" : "black"}
           onClick={open}
-          aria-label="Menü öffnen"
-        />
+          leftSection={<IconMenuDeep size={20} />}
+        >
+          Menü
+        </Button>
+
         <Logo />
         <div className="flex items-center gap-2">
           <ActionIcon
@@ -106,6 +107,9 @@ export default function Nav() {
               entry.child && <Menu key={entry.name} content={entry.child} />
             );
           })}
+          <Link href="/contact" passHref>
+            <NavItem href="/contact">Kontakt</NavItem>
+          </Link>
         </nav>
       </Drawer>
     </>
