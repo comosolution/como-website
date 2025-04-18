@@ -130,7 +130,7 @@ export default function Nav() {
         opened={opened}
         onClose={close}
         title="CoMo Solution GmbH"
-        position="left"
+        position={isMobile ? "right" : "left"}
         size="xs"
       >
         <nav className="flex flex-col gap-4">
