@@ -1,5 +1,5 @@
 "use client";
-import { card } from "@/app/style/style";
+import { card, defaultPadding } from "@/app/style/style";
 import { Button } from "@mantine/core";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import products from "../../data/portfolio/products.json";
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center gap-8 px-8">
+    <main className={`flex flex-col items-center gap-8 ${defaultPadding}`}>
       <h3 className="text-center">
         Diese Produkte haben wir für Sie im Angebot
       </h3>

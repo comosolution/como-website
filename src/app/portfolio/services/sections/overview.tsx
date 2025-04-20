@@ -26,7 +26,6 @@ export default function ServiceOverview({
                 name={service.name}
                 icon={`/services/${service.icon}.svg`}
                 href={`/portfolio/services/${service.id}`}
-                delay={index * 100}
               />
             );
           })}

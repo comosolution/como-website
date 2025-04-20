@@ -26,7 +26,6 @@ export default function BranchesOverview({
                 name={branch.name}
                 icon={`/portfolio/${branch.icon}.svg`}
                 href={`/portfolio/branches/${branch.id}`}
-                delay={index * 100}
               />
             );
           })}

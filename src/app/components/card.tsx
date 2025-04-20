@@ -7,13 +7,11 @@ export default function CardActionButton({
   name,
   icon,
   href,
-  delay,
   largeIcon,
 }: {
   name: string;
   icon: string;
   href: string;
-  delay?: number;
   largeIcon?: boolean;
 }) {
   return (
