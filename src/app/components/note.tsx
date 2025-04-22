@@ -1,6 +1,7 @@
 import { defaultPadding } from "../style/style";
 import { Note } from "../types";
 import { markdownToHtml } from "../utils/generator";
+import { formatDate } from "../utils/utils";
 import Article from "./article";
 
 export default async function NoteElement({ note }: { note: Note }) {
@@ -14,13 +15,7 @@ export default async function NoteElement({ note }: { note: Note }) {
       <header className="flex flex-col text-center">
         {note.date && (
           <p className="text-orange-500 pb-2">
-            <b>
-              {new Date(note.date).toLocaleDateString("de-DE", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </b>
+            <b>{formatDate(note.date)}</b>
           </p>
         )}
         <h1>{note.title}</h1>

@@ -42,24 +42,6 @@ footer {
   margin: auto;
 }
 
-input[type="search"] {
-  box-sizing: border-box;
-  background-image: url("/icons/search.svg");
-  background-size: 2.2rem;
-  background-position: 0 0.4rem;
-  background-repeat: no-repeat;
-  padding: 0.5rem 0.5rem 0.5rem 3rem;
-}
-
-select {
-  background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M32.5859 18.5861L23.9999 27.1721L15.4139 18.5861L12.5859 21.4141L23.9999 32.8281L35.4139 21.4141L32.5859 18.5861Z' fill='white'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 12px;
-  margin-right: 2rem;
-}
-
 a:not(.tile):not(.mantine-Button-root),
 .link {
   color: rgba(var(--foreground-rgb), 0.7);
@@ -235,12 +217,6 @@ img.inverted {
   z-index: -1000;
 }
 
-.footerCircles {
-  max-height: 520px;
-  position: absolute;
-  z-index: -1000;
-}
-
 .clip-angled {
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 }
@@ -319,5 +295,9 @@ img.inverted {
     min-height: 2000px;
     max-height: auto;
     object-fit: cover;
+  }
+
+  .clip-angled {
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   }
 }

@@ -6,7 +6,6 @@ export const aboutNav = {
     { name: "CSR", ref: "/about/csr" },
     { name: "Partner", ref: "/about/partners" },
     { name: "Notizen", ref: "/about/notes" },
-    { name: "Newsletter", ref: "/about/newsletter" },
   ],
 };
 

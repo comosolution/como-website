@@ -133,7 +133,7 @@ export default function Nav() {
         position={isMobile ? "right" : "left"}
         size="xs"
       >
-        <nav className="flex flex-col gap-4">
+        <nav className="flex flex-col">
           {mainNav.map((entry) => {
             return entry.ref ? (
               <Link key={entry.name} href={entry.ref} passHref>

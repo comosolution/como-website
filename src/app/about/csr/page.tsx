@@ -59,7 +59,7 @@ export default async function Page() {
           return <NoteElement key={note.id} note={note} />;
         })}
       </div>
-      <News limit={4} />
+      <News />
     </main>
   );
 }

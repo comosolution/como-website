@@ -1,8 +1,7 @@
+import News from "@/app/components/news";
 import NoteElement from "@/app/components/note";
+import { defaultPadding } from "@/app/style/style";
 import { getMarkdown } from "@/app/utils/generator";
-import { Button } from "@mantine/core";
-import { IconChevronLeft } from "@tabler/icons-react";
-import Link from "next/link";
 
 export async function generateStaticParams() {
   const notes = await getMarkdown("notes");
@@ -22,16 +21,9 @@ export default async function Page({
   const note = notes.find((n) => n.id === id);
 
   return (
-    <main className="flex flex-col items-center">
+    <main className={`flex flex-col items-center ${defaultPadding}`}>
       <NoteElement note={note!} />
-      <Button
-        component={Link}
-        href={"/about/notes"}
-        variant="transparent"
-        leftSection={<IconChevronLeft size={16} />}
-      >
-        Zurück zur Übersicht
-      </Button>
+      <News exclude={id} title="Weitere Neuigkeiten" />
     </main>
   );
 }

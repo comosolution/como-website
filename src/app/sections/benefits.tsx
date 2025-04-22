@@ -6,7 +6,7 @@ import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
   return (
-    <div className="relative isolate -mx-7">
+    <div className="relative isolate -mx-4">
       <div className="absolute w-full h-full -z-10 bg-[var(--light)] clip-angled" />
       <section className="flex flex-col gap-16 px-8 py-32">
         <header className={`${header} justify-between`}>

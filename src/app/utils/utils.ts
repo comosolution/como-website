@@ -16,3 +16,11 @@ export function validateEmail(email: string) {
   const reg = /\S+@\S+\.\S+/;
   return reg.test(email);
 }
+
+export function formatDate(date: any) {
+  return new Date(date).toLocaleDateString("de-DE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}

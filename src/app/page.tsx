@@ -19,7 +19,7 @@ export default function Home() {
       <Benefits />
       <Partners />
       {/* <Testimonials /> */}
-      <News limit={4} />
+      <News />
     </main>
   );
 }
