@@ -235,7 +235,7 @@ img.inverted {
 }
 
 .footerCircles {
-  max-height: 900px;
+  max-height: 500px;
   position: absolute;
   z-index: -1000;
 }
