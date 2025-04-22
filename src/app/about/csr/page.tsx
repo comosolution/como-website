@@ -13,7 +13,7 @@ export default async function Page() {
   const articles = await getMarkdown("csr");
 
   return (
-    <main className={`flex flex-col gap-16 p-8 ${defaultPadding}`}>
+    <main className={`flex flex-col gap-8 p-8 ${defaultPadding}`}>
       <header className="flex flex-col text-center">
         <p className="text-orange-500 pb-2">
           <b>Corporate Social Responsibility</b>
