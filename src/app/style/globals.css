@@ -25,6 +25,7 @@
 .dark {
   --background-rgb: 0, 0, 0;
   --foreground-rgb: 255, 255, 255;
+  --light: #222222;
   --layers: #092b37;
   --highlight-rgb: 255, 105, 0;
   --filter-inverted: none;
@@ -238,6 +239,10 @@ img.inverted {
   max-height: 520px;
   position: absolute;
   z-index: -1000;
+}
+
+.clip-angled {
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .muted {
