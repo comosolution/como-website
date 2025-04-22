@@ -27,7 +27,7 @@ export default function Contact() {
     setData({ ...data, [e.target.name]: e.target.value });
 
   return (
-    <main id="contact" className={`relative z-30 ${twoCols} my-32 px-8 py-16`}>
+    <main id="contact" className={`relative z-30 ${twoCols} mb-32 px-8 py-16`}>
       <div className="flex flex-col items-center gap-8 pt-8 lg:h-min lg:sticky lg:top-4">
         <div className="flex flex-col text-center">
           <header className="flex flex-col">

@@ -6,25 +6,28 @@ import ImageWithFallback from "./image";
 import NewsletterSubscribe from "./newsletter";
 import Tile from "./tile";
 
-export default async function News() {
+export default async function News({ limit }: { limit?: number }) {
   const notes = await getMarkdown("notes");
+  const filter = limit ? limit : 1000;
 
   return (
     <section className="flex flex-col gap-8 py-16">
-      <header className={`${header} relative z-5 justify-between px-8`}>
-        <h2>Was gibt es Neues?</h2>
-        <Button component="a" variant="light" href="/about/notes">
-          Alle Notizen anzeigen
-        </Button>
-      </header>
+      {limit && (
+        <header className={`${header} relative z-5 justify-between px-8`}>
+          <h2>Was gibt es Neues?</h2>
+          <Button component="a" variant="light" href="/about/notes">
+            Alle Notizen anzeigen
+          </Button>
+        </header>
+      )}
       <div className={fourCols}>
         {notes.map((note, index) => {
           return (
             // show last 4 notes
-            index < 4 && (
+            index < filter && (
               <Tile
                 key={note.id}
-                href={`/about/notes#${note.id}`}
+                href={`/about/notes/${note.id}`}
                 className="gap-4"
               >
                 <div

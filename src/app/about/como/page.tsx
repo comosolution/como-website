@@ -54,7 +54,7 @@ export default async function Page() {
       {/* <Team /> */}
       <Map />
       <Principles />
-      <News />
+      <News limit={4} />
     </main>
   );
 }
