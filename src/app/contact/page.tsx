@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="flex flex-col gap-16 px-8 -mb-20">
+    <main className="flex flex-col gap-16 px-8">
       <header className="flex flex-col text-center">
         <p className="text-orange-500 pb-2">
           <b>Wir sind für Sie da!</b>
