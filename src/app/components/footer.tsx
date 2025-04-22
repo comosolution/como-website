@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { aboutNav, portfolioNav } from "../config/nav";
-import { fourCols } from "../style/style";
+import { card, defaultPadding, fourCols } from "../style/style";
 import Logo from "./logo";
 
 export default function Footer() {
@@ -13,8 +13,10 @@ export default function Footer() {
         alt=""
         className="absolute -bottom-8 -z-1 w-full footerCircles"
       />
-      <main className="relative overflow-y-hidden">
-        <footer className="flex flex-col gap-8 mx-8 p-8 rounded-2xl backdrop-blur-md bg-[rgba(var(--white-rgb),0.1)]">
+      <main className="relative">
+        <footer
+          className={`flex flex-col gap-8 mx-8 ${defaultPadding} ${card}`}
+        >
           <div className="px-8">
             <Logo />
           </div>
