@@ -13,9 +13,9 @@ export default function ServiceOverview({
 }) {
   return (
     <div className="flex flex-col items-center gap-8">
-      <h3 className="text-center">
+      <h2 className="text-center">
         {title ? title : "An welcher Leistung sind Sie interessiert?"}
-      </h3>
+      </h2>
       <div className="flex flex-col gap-4">
         {services
           .filter((service) => service.id !== filter)

@@ -23,9 +23,9 @@
 }
 
 .dark {
-  --background-rgb: 0, 0, 0;
+  --background-rgb: 10, 26, 35;
   --foreground-rgb: 255, 255, 255;
-  --light: #222222;
+  --light: #000000;
   --layers: #092b37;
   --highlight-rgb: 255, 105, 0;
   --filter-inverted: none;
@@ -268,8 +268,8 @@ img.inverted {
 
 @media (max-width: 640px) {
   h1 {
-    font-size: 2.8rem;
-    line-height: 3.4rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
 
   h2 {
@@ -281,11 +281,13 @@ img.inverted {
   h4,
   h5 {
     font-size: 1.6rem;
-    line-height: 1.8rem;
+    line-height: 2.2rem;
   }
 
   p,
-  li {
+  li,
+  article details,
+  .details {
     font-size: 1rem;
     line-height: 1.4rem;
   }

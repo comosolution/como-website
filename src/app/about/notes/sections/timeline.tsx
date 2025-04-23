@@ -1,22 +1,48 @@
 "use client";
 import { Notes } from "@/app/types";
 import { formatDate } from "@/app/utils/utils";
-import { Timeline } from "@mantine/core";
+import { Button, Timeline } from "@mantine/core";
+import { IconChevronDown, IconStarFilled } from "@tabler/icons-react";
 import Link from "next/link";
+import { useState } from "react";
+
+const INITIAL_VISIBLE = 5;
+const LOAD_MORE_COUNT = 5;
 
 export default function NewsTimeline({ notes }: { notes: Notes }) {
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => Math.min(prev + LOAD_MORE_COUNT, notes.length));
+  };
+
+  const visibleNotes = notes.slice(0, visibleCount);
+
   return (
-    <Timeline bulletSize={24} active={notes.length}>
-      {notes.map((n, i) => {
-        return (
-          <Timeline.Item key={i}>
+    <div className="flex flex-col gap-8 items-center">
+      <Timeline bulletSize={24} active={visibleNotes.length}>
+        {visibleNotes.map((n, i) => (
+          <Timeline.Item
+            key={i}
+            bullet={i === 0 && <IconStarFilled size={16} />}
+          >
             <Link href={`/about/notes/${n.id}`}>
               <p className="muted small">{formatDate(n.date)}</p>
               <h4>{n.title}</h4>
             </Link>
           </Timeline.Item>
-        );
-      })}
-    </Timeline>
+        ))}
+      </Timeline>
+      {visibleCount < notes.length && (
+        <Button
+          variant="light"
+          leftSection={<IconChevronDown size={16} />}
+          onClick={handleLoadMore}
+          fullWidth
+        >
+          Mehr anzeigen
+        </Button>
+      )}
+    </div>
   );
 }

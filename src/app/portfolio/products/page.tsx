@@ -9,9 +9,9 @@ import products from "../../data/portfolio/products.json";
 export default function Page() {
   return (
     <main className={`flex flex-col items-center gap-8 ${defaultPadding}`}>
-      <h3 className="text-center">
+      <h2 className="text-center">
         Diese Produkte haben wir für Sie im Angebot
-      </h3>
+      </h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
         {products.map((product, index) => {
           return (

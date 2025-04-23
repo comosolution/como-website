@@ -1,5 +1,5 @@
+import NoteElement from "@/app/about/notes/sections/note";
 import News from "@/app/components/news";
-import NoteElement from "@/app/components/note";
 import Pill from "@/app/components/pill";
 import { defaultPadding, twoCols } from "@/app/style/style";
 import { getMarkdown } from "@/app/utils/generator";

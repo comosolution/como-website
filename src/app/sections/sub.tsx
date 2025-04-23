@@ -17,27 +17,44 @@ export default function Sub() {
   ];
 
   const [textIndex, setTextIndex] = useState(0);
+  const [isRunning, setIsRunning] = useState(true);
   const intervalRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    if (intervalRef.current) {
-      window.clearInterval(intervalRef.current);
+  const startInterval = () => {
+    if (intervalRef.current === null) {
+      intervalRef.current = window.setInterval(() => {
+        setTextIndex((prev) => (prev + 1) % serviceList.length);
+      }, 2000);
     }
-    const interval = window.setInterval(() => {
-      setTextIndex((prev) => (prev + 1) % serviceList.length);
-    }, 2000);
-    intervalRef.current = interval;
+  };
 
-    return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-      }
-    };
+  const stopInterval = () => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startInterval();
+    return () => stopInterval();
   }, []);
+
+  const handleClick = () => {
+    setIsRunning((prev) => {
+      const next = !prev;
+      if (next) {
+        startInterval();
+      } else {
+        stopInterval();
+      }
+      return next;
+    });
+  };
 
   return (
     <section className="relative z-5 flex justify-center gap-2 pt-16">
-      <h2>
+      <h2 onClick={handleClick} className="cursor-default select-none">
         Wir sind die <span className={highlight}>CoMo</span>. Wir{" "}
         <span className="inline-block w-64">
           <AnimatePresence mode="wait">

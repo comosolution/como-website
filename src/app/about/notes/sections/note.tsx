@@ -1,8 +1,8 @@
-import { defaultPadding } from "../style/style";
-import { Note } from "../types";
-import { markdownToHtml } from "../utils/generator";
-import { formatDate } from "../utils/utils";
-import Article from "./article";
+import Article from "../../../components/article";
+import { defaultPadding } from "../../../style/style";
+import { Note } from "../../../types";
+import { markdownToHtml } from "../../../utils/generator";
+import { formatDate } from "../../../utils/utils";
 
 export default async function NoteElement({ note }: { note: Note }) {
   const html = await markdownToHtml(note.content);
@@ -18,7 +18,9 @@ export default async function NoteElement({ note }: { note: Note }) {
             <b>{formatDate(note.date)}</b>
           </p>
         )}
-        <h1>{note.title}</h1>
+        <h1 className="-mx-4 md:mx-0 hyphens-auto md:hyphens-none">
+          {note.title}
+        </h1>
       </header>
       <Article content={html} />
     </main>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className={`flex flex-col items-center gap-8 ${defaultPadding}`}>
-      <h3 className="text-center">Wie können wir Ihnen helfen?</h3>
+      <h2 className="text-center">Wie können wir Ihnen helfen?</h2>
       <PortfolioOverview />
     </main>
   );
