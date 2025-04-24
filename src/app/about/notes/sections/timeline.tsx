@@ -1,5 +1,5 @@
 "use client";
-import { Notes } from "@/app/types";
+import { Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { Button, Timeline } from "@mantine/core";
 import { IconChevronDown, IconStarFilled } from "@tabler/icons-react";
@@ -9,7 +9,7 @@ import { useState } from "react";
 const INITIAL_VISIBLE = 5;
 const LOAD_MORE_COUNT = 5;
 
-export default function NewsTimeline({ notes }: { notes: Notes }) {
+export default function NewsTimeline({ notes }: { notes: Note[] }) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
   const handleLoadMore = () => {
@@ -26,9 +26,9 @@ export default function NewsTimeline({ notes }: { notes: Notes }) {
             key={i}
             bullet={i === 0 && <IconStarFilled size={16} />}
           >
-            <Link href={`/about/notes/${n.id}`}>
-              <p className="muted small">{formatDate(n.date)}</p>
-              <h4>{n.title}</h4>
+            <Link href={`/about/notes/${n.sys.id}`}>
+              <p className="muted small">{formatDate(n.fields.publishedAt)}</p>
+              <h4>{n.fields.title}</h4>
             </Link>
           </Timeline.Item>
         ))}

@@ -3,7 +3,7 @@ const nextConfig = {
   output: "export",
   devIndicators: false,
   trailingSlash: true,
-  images: { unoptimized: true },
+  images: { unoptimized: true, domains: ["images.ctfassets.net"] },
 };
 
 export default nextConfig;

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from "@mantine/core";
+import Image from "next/image";
 import { fourCols, header } from "../style/style";
-import { getMarkdown } from "../utils/generator";
+import { getAllNotes, Note } from "../utils/contentful";
 import { formatDate } from "../utils/utils";
-import ImageWithFallback from "./image";
 import Tile from "./tile";
 
 export default async function News({
@@ -13,8 +13,8 @@ export default async function News({
   exclude?: string;
   title?: string;
 }) {
-  const notes = await getMarkdown("notes");
-  const filteredNotes = notes.filter((n) => n.id !== exclude);
+  const notes: Note[] = await getAllNotes();
+  const filteredNotes = notes.filter((n) => n.sys.id !== exclude);
 
   return (
     <section className="flex flex-col gap-8 py-16">
@@ -26,30 +26,35 @@ export default async function News({
       </header>
       <div className={fourCols}>
         {filteredNotes.map((note, index) => {
+          const coverImage = note.fields.cover?.fields?.file?.url
+            ? `https:${note.fields.cover.fields.file.url}`
+            : "";
+          const coverAlt =
+            note.fields.cover?.fields?.title || note.fields.title;
+
           return (
             // show last 4 notes
             index < 4 && (
               <Tile
-                key={note.id}
-                href={`/about/notes/${note.id}`}
+                key={note.sys.id}
+                href={`/about/notes/${note.sys.id}`}
                 className="gap-4"
               >
                 <div
-                  className="relative w-full overflow-hidden rounded-lg"
-                  style={{ aspectRatio: "9/4" }}
+                  className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8"
+                  style={{ aspectRatio: "16/9" }}
                 >
-                  <ImageWithFallback
-                    src={`/notes/${note.id}.png`}
-                    alt="Thumbnail"
+                  <Image
+                    src={coverImage ? coverImage : "/notes/thumbnail.svg"}
+                    alt={coverAlt}
                     fill
-                    style={{ objectFit: "cover", borderRadius: 8 }}
-                    fallbackSrc="/notes/thumbnail.svg"
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
                 <div>
-                  <p className="muted">{formatDate(note.date)}</p>
+                  <p className="muted">{formatDate(note.fields.publishedAt)}</p>
                   <p className="hyphens-auto">
-                    <b>{note.title}</b>
+                    <b>{note.fields.title}</b>
                   </p>
                 </div>
               </Tile>
