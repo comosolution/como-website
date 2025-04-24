@@ -1,0 +1,9 @@
+{
+  "builds": [
+    {
+      "src": "pages/**/*.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "ignore": [".next/cache/**"]
+}

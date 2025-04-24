@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Button } from "@mantine/core";
 import Image from "next/image";
 import { fourCols, header } from "../style/style";

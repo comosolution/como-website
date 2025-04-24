@@ -4,6 +4,7 @@ import { getNotizById, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
 
 export default async function NotizDetailPage({
   params,
@@ -37,11 +38,17 @@ export default async function NotizDetailPage({
         <h1 className="text-center">{note.fields.title}</h1>
       </header>
       {coverImage && (
-        <img
-          src={coverImage}
-          alt={coverAlt}
-          className="object-cover rounded-xl shadow-lg"
-        />
+        <div
+          className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8"
+          style={{ aspectRatio: "16/9" }}
+        >
+          <Image
+            src={coverImage ? coverImage : "/fallback.svg"}
+            alt={coverAlt}
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
       )}
       <article dangerouslySetInnerHTML={{ __html: html }} />
       <News exclude={note.sys.id} />
