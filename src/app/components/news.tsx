@@ -45,7 +45,7 @@ export default async function News({
                   style={{ aspectRatio: "16/9" }}
                 >
                   <Image
-                    src={coverImage ? coverImage : "/notes/thumbnail.svg"}
+                    src={coverImage ? coverImage : "/fallback.svg"}
                     alt={coverAlt}
                     fill
                     style={{ objectFit: "cover" }}
