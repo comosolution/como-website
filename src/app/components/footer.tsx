@@ -6,12 +6,12 @@ import Logo from "./logo";
 
 export default function Footer() {
   return (
-    <footer className={`flex flex-col gap-8 mt-16 ${defaultPadding}`}>
+    <footer className={`flex flex-col gap-12 mt-16 ${defaultPadding}`}>
       <div className="px-8">
         <Logo />
       </div>
       <div className={fourCols}>
-        <div className="sm:col-span-2 px-8 py-4">
+        <div className="sm:col-span-2 px-8">
           <p>CoMo Solution GmbH</p>
           <p>Marktplatz 18</p>
           <p>91207 Lauf a. d. Pegnitz</p>
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
         {[portfolioNav, aboutNav].map((nav) => {
           return (
-            <div key={nav.name} className="px-8 py-4">
+            <div key={nav.name} className="px-8">
               <p>{nav.name}</p>
               {nav.entries.map((entry) => {
                 return (
