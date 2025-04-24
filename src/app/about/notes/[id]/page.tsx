@@ -26,7 +26,7 @@ export default async function NotizDetailPage({
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
         const { file, title } = node.data.target.fields;
         const url = file.url.startsWith("//") ? `https:${file.url}` : file.url;
-        return `<img src="${url}" alt="${title}" class="my-6 rounded-lg shadow-md" />`;
+        return `<img src="${url}" alt="${title}" />`;
       },
     },
   });
