@@ -1,10 +1,17 @@
 import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
-import { getNotizById, Note } from "@/app/utils/contentful";
+import { getAllNotes, getNotizById, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
+
+export async function generateStaticParams() {
+  const notes = await getAllNotes();
+  return notes.map((note) => ({
+    id: note.sys.id,
+  }));
+}
 
 export default async function NotizDetailPage({
   params,
