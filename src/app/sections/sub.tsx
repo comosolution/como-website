@@ -1,9 +1,13 @@
 "use client";
+import { useMediaQuery } from "@mantine/hooks";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { highlight } from "../style/style";
+import Divider from "../components/divider";
+import { defaultPadding, highlight } from "../style/style";
 
 export default function Sub() {
+  const isMobile = useMediaQuery("(max-width: 760px)");
+
   const serviceList = [
     "analysieren",
     "beraten",
@@ -53,9 +57,30 @@ export default function Sub() {
   };
 
   return (
-    <section className="relative z-5 flex justify-center gap-2 pt-16">
+    <section
+      className={`relative z-5 flex flex-col items-center gap-32 ${defaultPadding} pt-16`}
+    >
+      <div className="flex flex-col items-center gap-2">
+        <h3>Ihr Partner für smarte IT-Lösungen</h3>
+        <Divider />
+        <div className="muted text-center">
+          <p>Wie setzen Sie Ihr Digitalisierungsprojekt um?</p>
+          <p>
+            Wie gestalten Sie die Sicherheit Ihrer IT – und Ihrer Organisation?
+          </p>
+          <p>
+            Wie sorgen Sie für den reibungslosen, kontinuierlichen Betrieb Ihrer
+            Softwarelösungen und Anwendungen?
+          </p>
+          <p>
+            Drei große Fragen … und eine Antwort: mit den Experten von CoMo
+            Solution!
+          </p>
+        </div>
+      </div>
       <h2 onClick={handleClick} className="cursor-default select-none">
-        Wir sind die <span className={highlight}>CoMo</span>. Wir{" "}
+        Wir sind die <span className={highlight}>CoMo</span>.{" "}
+        {isMobile && <br />}Wir{" "}
         <span className="inline-block w-64">
           <AnimatePresence mode="wait">
             <motion.span

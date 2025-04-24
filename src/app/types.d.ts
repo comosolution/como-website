@@ -15,6 +15,7 @@ export type Note = Unarray<Notes>;
 
 declare global {
   interface Window {
+    et_showOptIn: () => {};
     CookieConsent?: {
       consent: {
         necessary: boolean;

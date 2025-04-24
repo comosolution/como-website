@@ -1,7 +1,6 @@
 "use client";
 import { createTheme, MantineProvider } from "@mantine/core";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 import Contact from "./contact";
 import FAB from "./fab";
 import Footer from "./footer";
@@ -23,6 +22,18 @@ const theme = createTheme({
       "#cb5100",
       "#b14400",
     ],
+    red: [
+      "#ffebf1",
+      "#f9d5de",
+      "#f0a9ba",
+      "#e97a94",
+      "#e25274",
+      "#df3a5f",
+      "#de2d55",
+      "#c52046",
+      "#b1193d",
+      "#9b0b34",
+    ],
   },
 });
 
@@ -34,18 +45,6 @@ export default function PageWrapper({
   const pathname = usePathname();
   const hideContactFormRoutes = ["/security-event/"];
   const showContact = !hideContactFormRoutes.includes(pathname);
-
-  useEffect(() => {
-    var _mtm = ((window as any)._mtm = (window as any)._mtm || []);
-    _mtm.push({ "mtm.startTime": new Date().getTime(), event: "mtm.Start" });
-    var d = document,
-      g = d.createElement("script"),
-      s = d.getElementsByTagName("script")[0];
-    g.async = true;
-    g.src =
-      "https://cdn.matomo.cloud/comosolution.matomo.cloud/container_PS6VgYKR.js";
-    s.parentNode!.insertBefore(g, s);
-  }, []);
 
   return (
     <MantineProvider theme={theme}>

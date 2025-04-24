@@ -6,7 +6,7 @@ import Logo from "./logo";
 
 export default function Footer() {
   return (
-    <footer className={`flex flex-col gap-8 my-16 ${defaultPadding}`}>
+    <footer className={`flex flex-col gap-8 mt-16 ${defaultPadding}`}>
       <div className="px-8">
         <Logo />
       </div>
@@ -41,7 +41,6 @@ export default function Footer() {
         })}
       </div>
       <div className={fourCols}>
-        <p className="px-8">© 2025</p>
         <Link href="/legal/privacy" className="px-8">
           <p>Datenschutz</p>
         </Link>
@@ -51,7 +50,11 @@ export default function Footer() {
         <Link href="/legal/accessibility" className="px-8">
           <p>Barrierefreiheit</p>
         </Link>
+        <p className="link px-8" onClick={() => window.et_showOptIn()}>
+          Cookie Consent
+        </p>
       </div>
+      <p className="px-8">© 2025</p>
     </footer>
   );
 }

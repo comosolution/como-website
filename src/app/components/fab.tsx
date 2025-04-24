@@ -1,4 +1,5 @@
 "use client";
+import { ActionIcon } from "@mantine/core";
 import { IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { scrollTo } from "../utils/utils";
@@ -20,12 +21,17 @@ export default function FAB() {
 
   return (
     show && (
-      <div
-        className="fixed right-8 bottom-8 z-50 p-2 border-solid border border-orange-500 rounded-full cursor-pointer transition-all hover:bg-orange-600/20"
+      <ActionIcon
+        color="red"
+        variant="light"
+        size="xl"
+        radius="xl"
+        aria-label="Zurück nach oben"
+        className="fixed right-8 bottom-8 z-50 shadow-xl shadow-black/10"
         onClick={() => scrollTo("top")}
       >
-        <IconArrowUp size={20} />
-      </div>
+        <IconArrowUp size={24} />
+      </ActionIcon>
     )
   );
 }

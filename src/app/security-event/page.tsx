@@ -94,11 +94,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Map
-        zoom={14}
-        position={{ lat: 49.461703, lng: 11.103155 }}
-        destination="FICHTE45+Nürnberg"
-      />
+      <Map zoom={14} destination="FICHTE45+Nürnberg" />
       <div className={twoCols}>
         <div className="flex flex-col gap-4 p-8 lg:h-min lg:sticky lg:top-4">
           <h3>Das erwartet Sie:</h3>

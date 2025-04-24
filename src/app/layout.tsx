@@ -23,11 +23,6 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#FF6900" />
         <link rel="canonical" href="https://como-solution.de" />
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="E6+1lQxOgW1Q4czobbQAuw"
-          async
-        />
         {/* <!-- Copyright (c) 2000-2025 etracker GmbH. All rights reserved. No reproduction, publication or modification allowed without permission. --> <!-- etracker code 6.0 -->  */}
         <script
           data-cookieconsent="ignore"
