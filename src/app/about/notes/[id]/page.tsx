@@ -1,17 +1,9 @@
 import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
-import { getAllNotes, getNotizById, Note } from "@/app/utils/contentful";
+import { getNotizById, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-
-export async function generateStaticParams() {
-  const notizen = await getAllNotes();
-
-  return notizen.map((n: any) => ({
-    id: n.sys.id,
-  }));
-}
 
 export default async function NotizDetailPage({
   params,
