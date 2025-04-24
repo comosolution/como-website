@@ -60,10 +60,10 @@ export default function Sub() {
     <section
       className={`relative z-5 flex flex-col items-center gap-32 ${defaultPadding} pt-16`}
     >
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center text-center gap-2">
         <h3>Ihr Partner für smarte IT-Lösungen</h3>
         <Divider />
-        <div className="muted text-center">
+        <div className="muted">
           <p>Wie setzen Sie Ihr Digitalisierungsprojekt um?</p>
           <p>
             Wie gestalten Sie die Sicherheit Ihrer IT – und Ihrer Organisation?
