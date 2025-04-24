@@ -18,7 +18,6 @@ export default function Map({
       }&q=${encodeURIComponent(destination || "CoMo Solution GmbH")}&zoom=${
         zoom || 11
       }`}
-      allowFullScreen
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     />

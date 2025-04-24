@@ -1,3 +1,4 @@
+import { defaultPadding } from "@/app/style/style";
 import { getMarkdown, markdownToHtml } from "@/app/utils/generator";
 import { Metadata } from "next";
 
@@ -9,7 +10,7 @@ export default async function Page() {
   const data = await getMarkdown("legal/accessibility");
 
   return (
-    <main className="flex flex-col gap-8 p-8 max-w-[880px]">
+    <main className={`flex flex-col gap-8 ${defaultPadding}`}>
       {data.map(async (file) => {
         return (
           <article
@@ -17,6 +18,7 @@ export default async function Page() {
             dangerouslySetInnerHTML={{
               __html: await markdownToHtml(file.content),
             }}
+            className="mx-auto"
           />
         );
       })}

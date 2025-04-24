@@ -262,8 +262,9 @@ img.inverted {
   color: rgb(var(--gray-rgb));
 }
 
-.ReactCollapse--collapse {
-  transition: height 300ms ease-in-out;
+.mantine-Input-input,
+.mantine-Checkbox-input {
+  background: rgb(var(--background-rgb));
 }
 
 @media (max-width: 640px) {

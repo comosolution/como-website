@@ -36,7 +36,7 @@ export default function Page() {
           width="240"
           height="96"
           alt="CoMo x ArcticWolf"
-          className="inverted opacity-30"
+          className="inverted"
         />
         <h1>Richtig verteidigt – mit Cybersecurity der Spitzenklasse!</h1>
         <h4 className="muted">
