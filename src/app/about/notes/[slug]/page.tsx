@@ -49,7 +49,7 @@ export default async function NotizDetailPage({
           <img
             src={coverImage ? coverImage : "/fallback.svg"}
             alt={coverAlt}
-            className="rounded-xl"
+            className="rounded-xl mx-auto"
           />
         </div>
       )}
