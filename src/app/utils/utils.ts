@@ -1,4 +1,4 @@
-import { differenceInDays, formatDistanceToNow } from "date-fns";
+import { differenceInDays, format, formatDistanceToNow } from "date-fns";
 import { de } from "date-fns/locale";
 
 export function scrollTo(id: string, offset?: number) {
@@ -21,11 +21,15 @@ export function validateEmail(email: string) {
 }
 
 export function formatDate(date: any) {
-  return differenceInDays(new Date(), date) < 10
-    ? formatDistanceToNow(date, { locale: de, addSuffix: true })
-    : new Date(date).toLocaleDateString("de-DE", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
+  try {
+    return differenceInDays(new Date(), date) < 14
+      ? formatDistanceToNow(date, { locale: de, addSuffix: true })
+      : format(date, "dd MMMM yyyy", { locale: de });
+  } catch {
+    return new Date(date).toLocaleDateString("de-DE", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
 }
