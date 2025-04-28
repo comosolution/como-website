@@ -11,7 +11,7 @@ export default function Tile({
   className?: string;
   href?: string;
 }) {
-  const style = `flex flex-col justify-between items-end gap-4 p-8 ${card} h-full transition-all`;
+  const style = `flex flex-col justify-between gap-4 p-8 ${card} h-full transition-all`;
 
   const tile = <div className={`flex flex-col ${className}`}>{children}</div>;
 
