@@ -5,6 +5,27 @@ import { getAllNotes, getNoteBySlug, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import { format } from "date-fns";
+import { de } from "date-fns/locale";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const note: Note = await getNoteBySlug(slug);
+
+  return {
+    title: `${note.fields.title} | CoMo Solution GmbH`,
+    description: `CoMo Notiz vom ${format(
+      note.fields.publishedAt,
+      "dd.MM.yyyy",
+      { locale: de }
+    )}`,
+  };
+}
 
 export async function generateStaticParams() {
   const notes = await getAllNotes();
@@ -45,7 +66,7 @@ export default async function NotizDetailPage({
         <h1 className="text-center">{note.fields.title}</h1>
       </header>
       {coverImage && (
-        <div className="relative w-[calc(100%)] md:w-[calc(100% + 4rem)]">
+        <div className="w-full">
           <img
             src={coverImage ? coverImage : "/fallback.svg"}
             alt={coverAlt}
