@@ -1,4 +1,5 @@
 import { Button } from "@mantine/core";
+import { format } from "date-fns";
 import Image from "next/image";
 import { fourCols, header } from "../style/style";
 import { getAllNotes, Note } from "../utils/contentful";
@@ -36,7 +37,10 @@ export default async function News({
             index < 4 && (
               <Tile
                 key={note.sys.id}
-                href={`/about/notes/${note.sys.id}`}
+                href={`/about/notes/${format(
+                  new Date(note.fields.publishedAt),
+                  "yyyy-MM-dd"
+                )}`}
                 className="gap-4"
               >
                 <div

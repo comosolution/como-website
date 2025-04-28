@@ -1,25 +1,30 @@
 import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
-import { getAllNotes, getNotizById, Note } from "@/app/utils/contentful";
+import {
+  getAllNotes,
+  getNoteByPublishedDate,
+  Note,
+} from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import { format } from "date-fns";
 import Image from "next/image";
 
 export async function generateStaticParams() {
   const notes = await getAllNotes();
   return notes.map((note) => ({
-    id: note.sys.id,
+    slug: format(new Date(note.fields.publishedAt), "yyyy-MM-dd"),
   }));
 }
 
 export default async function NotizDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const note: Note = await getNotizById(id);
+  const { slug } = await params;
+  const note: Note = await getNoteByPublishedDate(slug);
 
   const html = documentToHtmlString(note.fields.content, {
     renderNode: {
