@@ -3,7 +3,6 @@ import { Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { Button, Timeline } from "@mantine/core";
 import { IconChevronDown, IconStarFilled } from "@tabler/icons-react";
-import { format } from "date-fns";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -27,12 +26,7 @@ export default function NewsTimeline({ notes }: { notes: Note[] }) {
             key={i}
             bullet={i === 0 && <IconStarFilled size={16} />}
           >
-            <Link
-              href={`/about/notes/${format(
-                new Date(n.fields.publishedAt),
-                "yyyy-MM-dd"
-              )}`}
-            >
+            <Link href={`/about/notes/${n.fields.slug}`}>
               <p className="muted small">{formatDate(n.fields.publishedAt)}</p>
               <h4>{n.fields.title}</h4>
             </Link>

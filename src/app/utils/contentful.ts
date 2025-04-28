@@ -8,6 +8,7 @@ export interface Note {
   };
   fields: {
     title: string;
+    slug: string;
     content: Document;
     publishedAt: string;
     cover?: {
@@ -49,15 +50,15 @@ export async function getNoteById(id: string): Promise<any> {
   return entry;
 }
 
-export async function getNoteByPublishedDate(date: string): Promise<any> {
+export async function getNoteBySlug(slug: string): Promise<any> {
   const entries = await client.getEntries({
     content_type: "notizen",
-    "fields.publishedAt[gte]": `${date}T00:00:00Z`,
-    "fields.publishedAt[lte]": `${date}T23:59:59Z`,
+    "fields.slug": slug,
     limit: 1,
   });
 
-  if (!entries.items.length) throw new Error(`Note for date ${date} not found`);
+  if (!entries.items.length)
+    throw new Error(`Note with slug ${slug} not found`);
 
   return entries.items[0];
 }
