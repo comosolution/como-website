@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
 import { getAllNotes, getNoteBySlug, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import Image from "next/image";
 
 export async function generateStaticParams() {
   const notes = await getAllNotes();
@@ -45,20 +45,16 @@ export default async function NotizDetailPage({
         <h1 className="text-center">{note.fields.title}</h1>
       </header>
       {coverImage && (
-        <div
-          className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8"
-          style={{ aspectRatio: "16/9" }}
-        >
-          <Image
+        <div className="relative w-[calc(100%)] md:w-[calc(100% + 4rem)]">
+          <img
             src={coverImage ? coverImage : "/fallback.svg"}
             alt={coverAlt}
-            fill
-            style={{ objectFit: "cover" }}
+            className="rounded-xl"
           />
         </div>
       )}
       <article dangerouslySetInnerHTML={{ __html: html }} />
-      <News exclude={note.sys.id} />
+      <News exclude={note.sys.id} title="Weitere Neuigkeiten" />
     </main>
   );
 }
