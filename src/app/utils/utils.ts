@@ -1,3 +1,6 @@
+import { differenceInDays, formatDistanceToNow } from "date-fns";
+import { de } from "date-fns/locale";
+
 export function scrollTo(id: string, offset?: number) {
   var element = document.getElementById(id);
   var scrollOffset = offset || 120;
@@ -18,9 +21,11 @@ export function validateEmail(email: string) {
 }
 
 export function formatDate(date: any) {
-  return new Date(date).toLocaleDateString("de-DE", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return differenceInDays(new Date(), date) < 10
+    ? formatDistanceToNow(date, { locale: de, addSuffix: true })
+    : new Date(date).toLocaleDateString("de-DE", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
 }
