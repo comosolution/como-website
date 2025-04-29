@@ -24,7 +24,7 @@ export function formatDate(date: any) {
   try {
     return differenceInDays(new Date(), date) < 14
       ? formatDistanceToNow(date, { locale: de, addSuffix: true })
-      : format(date, "dd MMMM yyyy", { locale: de });
+      : format(date, "dd. MMMM yyyy", { locale: de });
   } catch {
     return new Date(date).toLocaleDateString("de-DE", {
       year: "numeric",
