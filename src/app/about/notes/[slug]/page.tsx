@@ -4,8 +4,6 @@ import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
 import { getAllNotes, getNoteBySlug, Note } from "@/app/utils/contentful";
 import { formatDate } from "@/app/utils/utils";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import { format } from "date-fns";
 import { de } from "date-fns/locale";
 import { Metadata } from "next";
@@ -42,16 +40,6 @@ export default async function NotizDetailPage({
 }) {
   const { slug } = await params;
   const note: Note = await getNoteBySlug(slug);
-
-  const html = documentToHtmlString(note.fields.content, {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        const { file, title } = node.data.target.fields;
-        const url = file.url.startsWith("//") ? `https:${file.url}` : file.url;
-        return `<img src="${url}" alt="${title}" />`;
-      },
-    },
-  });
 
   const coverImage = note.fields.cover?.fields?.file?.url
     ? `https:${note.fields.cover.fields.file.url}`

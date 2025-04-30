@@ -1,11 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document } from "@contentful/rich-text-types";
 
-type Props = {
-  document: Document;
-};
-
-export const RichTextRenderer = ({ document }: Props) => {
+export function RichTextRenderer({ document }: { document: Document }) {
   return (
     <>
       {documentToReactComponents(document, {
@@ -21,11 +17,9 @@ export const RichTextRenderer = ({ document }: Props) => {
               fields?.content
             ) {
               return (
-                <details className="border rounded-lg p-4 my-4 bg-gray-50">
-                  <summary className="cursor-pointer font-semibold">
-                    {fields.title}
-                  </summary>
-                  <div className="mt-2">
+                <details className="border border-[rgba(var(--foreground-rgb),0.2)] rounded-lg p-4 my-4 bg-[var(--light)]">
+                  <summary>{fields.title}</summary>
+                  <div className="px-4">
                     {documentToReactComponents(fields.content)}
                   </div>
                 </details>
@@ -45,4 +39,4 @@ export const RichTextRenderer = ({ document }: Props) => {
       })}
     </>
   );
-};
+}

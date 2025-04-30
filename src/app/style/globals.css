@@ -178,7 +178,6 @@ article details summary {
   font-weight: bold;
   letter-spacing: -4%;
   color: rgba(var(--foreground-rgb), 0.7);
-  margin-block-end: 1rem;
   cursor: pointer;
   transition: var(--default-transition);
 }
