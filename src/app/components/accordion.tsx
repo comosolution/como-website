@@ -8,7 +8,11 @@ export default function Accordion({
   details: string[];
 }) {
   return (
-    <MantineAccordion variant="separated" className="pb-8">
+    <MantineAccordion
+      variant="separated"
+      chevronPosition="left"
+      className="pb-8"
+    >
       <MantineAccordion.Item value={summary}>
         <MantineAccordion.Control className="text-2xl">
           {summary}
