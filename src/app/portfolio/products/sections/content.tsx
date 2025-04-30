@@ -70,7 +70,6 @@ export default function ProductContent({ product }: { product: Product }) {
             <Accordion
               summary={product.accordion.summary}
               details={product.accordion.content}
-              isOpen={false}
             />
           )}
           {product.img && (
