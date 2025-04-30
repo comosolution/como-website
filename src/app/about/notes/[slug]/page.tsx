@@ -59,7 +59,7 @@ export default async function NotizDetailPage({
           <img src={coverImage} alt={coverAlt} className="rounded-xl mx-auto" />
         </div>
       )}
-      <article className="prose max-w-none">
+      <article>
         <RichTextRenderer document={note.fields.content} />
       </article>
       <News exclude={note.sys.id} title="Weitere Neuigkeiten" />
