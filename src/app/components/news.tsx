@@ -32,7 +32,6 @@ export default async function News({
             note.fields.cover?.fields?.title || note.fields.title;
 
           return (
-            // show last 4 notes
             index < 4 && (
               <Tile
                 key={note.sys.id}

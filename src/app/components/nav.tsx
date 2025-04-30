@@ -17,7 +17,7 @@ import Menu from "./menu";
 import NavItem from "./navItem";
 
 export default function Nav() {
-  const isMobile = useMediaQuery("(max-width: 620px)");
+  const isMobile = useMediaQuery("(max-width: 640px)");
   const pathname = usePathname();
   const [prevPos, setPrevPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -104,6 +104,7 @@ export default function Nav() {
             <Logo />
             <div className="flex items-center gap-2">
               <ActionIcon
+                id="ThemeSwitch"
                 size="lg"
                 variant="transparent"
                 onClick={() =>
