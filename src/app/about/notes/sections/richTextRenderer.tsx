@@ -1,5 +1,7 @@
+"use client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document } from "@contentful/rich-text-types";
+import { Accordion } from "@mantine/core";
 
 export function RichTextRenderer({ document }: { document: Document }) {
   return (
@@ -17,16 +19,20 @@ export function RichTextRenderer({ document }: { document: Document }) {
               fields?.content
             ) {
               return (
-                <details className="border border-[rgba(var(--foreground-rgb),0.2)] rounded-lg p-4 my-4 bg-[var(--light)]">
-                  <summary>{fields.title}</summary>
-                  <div className="px-4">
-                    {documentToReactComponents(fields.content)}
-                  </div>
-                </details>
+                <Accordion variant="separated">
+                  <Accordion.Item value={fields.title}>
+                    <Accordion.Control className="text-2xl">
+                      {fields.title}
+                    </Accordion.Control>
+                    <Accordion.Panel>
+                      {documentToReactComponents(fields.content)}
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                </Accordion>
               );
             }
 
-            return;
+            return null;
           },
           [BLOCKS.EMBEDDED_ASSET]: (node) => {
             const { file, title } = node.data.target.fields;

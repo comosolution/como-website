@@ -157,10 +157,10 @@ article li::marker {
 article img:not(.icon) {
   border-radius: var(--default-border-radius);
   margin-bottom: 2rem;
-  width: 80vw;
+  width: auto;
   max-width: 840px;
   height: auto;
-  max-height: 440px;
+  max-height: 480px;
   object-fit: cover;
 }
 
