@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import News from "@/app/components/news";
 import { defaultPadding } from "@/app/style/style";
 import { getAllNotes, getNoteBySlug, Note } from "@/app/utils/contentful";
@@ -70,7 +71,9 @@ export default async function NotizDetailPage({
           <img src={coverImage} alt={coverAlt} className="rounded-xl mx-auto" />
         </div>
       )}
-      <article dangerouslySetInnerHTML={{ __html: html }} />
+      <article className="prose max-w-none">
+        <RichTextRenderer document={note.fields.content} />
+      </article>
       <News exclude={note.sys.id} title="Weitere Neuigkeiten" />
     </main>
   );
