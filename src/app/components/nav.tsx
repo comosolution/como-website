@@ -54,6 +54,26 @@ export default function Nav() {
     };
   }, [prevPos]);
 
+  const ThemeSwitch = () => {
+    return (
+      <ActionIcon
+        id="ThemeSwitch"
+        size="lg"
+        variant="transparent"
+        onClick={() =>
+          setColorScheme(computedColorScheme === "light" ? "dark" : "light")
+        }
+        aria-label="Toggle color scheme"
+      >
+        {colorScheme === "dark" ? (
+          <IconSun size={20} />
+        ) : (
+          <IconMoon size={20} />
+        )}
+      </ActionIcon>
+    );
+  };
+
   return (
     <>
       <header
@@ -65,22 +85,7 @@ export default function Nav() {
           <>
             <Logo />
             <div className="flex items-center gap-2">
-              <ActionIcon
-                size="lg"
-                variant="transparent"
-                onClick={() =>
-                  setColorScheme(
-                    computedColorScheme === "light" ? "dark" : "light"
-                  )
-                }
-                aria-label="Toggle color scheme"
-              >
-                {colorScheme === "dark" ? (
-                  <IconSun size={20} />
-                ) : (
-                  <IconMoon size={20} />
-                )}
-              </ActionIcon>
+              <ThemeSwitch />
               <Button
                 variant="light"
                 onClick={open}
@@ -103,23 +108,7 @@ export default function Nav() {
             </Button>
             <Logo />
             <div className="flex items-center gap-2">
-              <ActionIcon
-                id="ThemeSwitch"
-                size="lg"
-                variant="transparent"
-                onClick={() =>
-                  setColorScheme(
-                    computedColorScheme === "light" ? "dark" : "light"
-                  )
-                }
-                aria-label="Toggle color scheme"
-              >
-                {colorScheme === "dark" ? (
-                  <IconSun size={20} />
-                ) : (
-                  <IconMoon size={20} />
-                )}
-              </ActionIcon>
+              <ThemeSwitch />
               <Button variant="light" component={Link} href="/contact">
                 Kontakt
               </Button>

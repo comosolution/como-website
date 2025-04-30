@@ -7,7 +7,7 @@ import { scrollTo } from "../utils/utils";
 import partners from "./../data/partners.json";
 
 export default function PartnersMarquee({ scroll }: { scroll?: boolean }) {
-  const isMobile = useMediaQuery("(max-width: 620px)");
+  const isMobile = useMediaQuery("(max-width: 640px)");
   const size = isMobile ? 96 : 128;
 
   return (

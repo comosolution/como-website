@@ -2,8 +2,8 @@ import { format } from "date-fns";
 import { de } from "date-fns/locale";
 
 export function scrollTo(id: string, offset?: number) {
-  var element = document.getElementById(id);
-  var scrollOffset = offset || 120;
+  const element = document.getElementById(id);
+  const scrollOffset = offset || 120;
   const bodyRect = document.body.getBoundingClientRect().top;
   const elementRect = element!.getBoundingClientRect().top;
   const elementPosition = elementRect - bodyRect;
