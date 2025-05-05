@@ -38,10 +38,7 @@ export default async function News({
                 href={`/about/notes/${note.fields.slug}`}
                 className="gap-4"
               >
-                <div
-                  className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8"
-                  style={{ aspectRatio: "16/9" }}
-                >
+                <div className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8 pt-[56.25%]">
                   <Image
                     src={coverImage ? coverImage : "/fallback.svg"}
                     alt={coverAlt}
