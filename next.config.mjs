@@ -5,7 +5,7 @@ const nextConfig = {
   output: "export",
   devIndicators: false,
   trailingSlash: true,
-  basePath: isGithubPages ? "/como-redesign" : "",
+  basePath: isGithubPages ? "/como-redesign/" : "",
   assetPrefix: isGithubPages ? "/como-redesign/" : "",
   images: { unoptimized: true, domains: ["images.ctfassets.net"] },
 };
