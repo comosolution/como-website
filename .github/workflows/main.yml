@@ -35,9 +35,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           script: |
-            if [ -d /clickandbuilds/Joomla/stage2 ]; then
-              rm -rf /clickandbuilds/Joomla/stage2/*
-            fi
+            rm -rf /clickandbuilds/Joomla/stage2
+            mkdir -p /clickandbuilds/Joomla/stage2
+            chmod 755 /clickandbuilds/Joomla/stage2
 
       - name: Upload to server via SFTP
         uses: appleboy/scp-action@v0.1.4
