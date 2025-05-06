@@ -16,28 +16,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Create .env.local
-        run: |
-          echo "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}" >> .env.local
-          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}" >> .env.local
-          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> .env.local
-
       - name: Install dependencies and build
         run: |
           npm ci
           npm run build
-
-      - name: Clean existing directory
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          script: |
-            if [ -d /clickandbuilds/Joomla/stage2 ]; then
-              rm -rf /clickandbuilds/Joomla/stage2/*
-            fi
 
       - name: Upload to server via SFTP
         uses: appleboy/scp-action@v0.1.4
@@ -48,5 +30,5 @@ jobs:
           port: 22
           source: "./out/"
           target: "/clickandbuilds/Joomla/stage2"
-          strip_components: 0
-          debug: true
+          overwrite: true
+          rm: true
