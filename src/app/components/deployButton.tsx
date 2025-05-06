@@ -25,7 +25,7 @@ export default function DeployButton() {
         },
       });
 
-      const data = await res.json();
+      await res.json();
       setStatus(res.ok ? "success" : "error");
     } catch {
       setStatus("error");
