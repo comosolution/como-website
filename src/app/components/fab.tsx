@@ -27,7 +27,7 @@ export default function FAB() {
         size="xl"
         radius="xl"
         aria-label="Zurück nach oben"
-        className="fixed right-8 bottom-8 z-50 shadow-xl shadow-black/10"
+        className="fixed right-8 bottom-8 z-50 shadow-xl shadow-black/10 backdrop-blur-md"
         onClick={() => scrollTo("top")}
       >
         <IconArrowUp size={24} />

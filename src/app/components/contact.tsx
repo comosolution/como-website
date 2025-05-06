@@ -4,7 +4,7 @@ import { IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChangeEvent, useState } from "react";
-import { HOOK_API } from "../config/api";
+import { HOOK_API } from "../config/constants";
 import { card, twoCols } from "../style/style";
 import { validateEmail } from "../utils/utils";
 import FormSuccess from "./form";

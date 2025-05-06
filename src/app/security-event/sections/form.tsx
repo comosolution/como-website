@@ -1,6 +1,6 @@
 "use client";
 import FormSuccess from "@/app/components/form";
-import { HOOK_API } from "@/app/config/api";
+import { HOOK_API } from "@/app/config/constants";
 import { card, twoCols } from "@/app/style/style";
 import { validateEmail } from "@/app/utils/utils";
 import { Button, Checkbox, TextInput } from "@mantine/core";

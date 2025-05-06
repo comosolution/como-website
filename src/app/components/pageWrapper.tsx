@@ -2,6 +2,7 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import { usePathname } from "next/navigation";
 import Contact from "./contact";
+import DeployButton from "./deployButton";
 import FAB from "./fab";
 import Footer from "./footer";
 import Nav from "./nav";
@@ -51,6 +52,7 @@ export default function PageWrapper({
       <ScrollProgress />
       <Nav />
       <FAB />
+      <DeployButton />
       <div className="pt-32">{children}</div>
       {showContact && <Contact />}
       <Footer />
