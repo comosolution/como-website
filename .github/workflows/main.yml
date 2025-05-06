@@ -28,13 +28,11 @@ jobs:
           npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: appleboy/scp-action@v0.1.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
           port: 22
-          server-dir: /clickandbuilds/Joomla/stage2/
-          local-dir: ./out/
-          dangerous-clean-slate: false
+          source: "./out/*"
+          target: "/clickandbuilds/Joomla/stage2/"
