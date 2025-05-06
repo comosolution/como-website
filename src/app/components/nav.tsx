@@ -19,6 +19,7 @@ import NavItem from "./navItem";
 export default function Nav() {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
   const [prevPos, setPrevPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [opened, { open, close }] = useDisclosure(false);
@@ -27,6 +28,10 @@ export default function Nav() {
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
   });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.body.classList.toggle("dark", colorScheme === "dark");
@@ -55,7 +60,7 @@ export default function Nav() {
   }, [prevPos]);
 
   const ThemeSwitch = () => {
-    return (
+    return mounted ? (
       <ActionIcon
         id="ThemeSwitch"
         size="lg"
@@ -71,7 +76,7 @@ export default function Nav() {
           <IconMoon size={20} />
         )}
       </ActionIcon>
-    );
+    ) : null;
   };
 
   return (
