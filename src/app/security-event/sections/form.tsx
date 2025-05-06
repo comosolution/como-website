@@ -104,7 +104,7 @@ export default function EventForm() {
     </form>
   ) : (
     <FormSuccess
-      header="Wir haben Ihre Anmeldung erhalten. Sie erhalten rechtzeitig vor dem Event alle wichtigen Infos per Mail."
+      header="Ihre Anmeldung ist eingegangen. Sie erhalten rechtzeitig vor dem Event alle wichtigen Infos per Mail."
       message="Vielen Dank, wir freuen uns auf Ihre Teilnahme!"
     />
   );
