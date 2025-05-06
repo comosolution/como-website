@@ -35,6 +35,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 22
-          server-dir: /clickandbuilds/Joomla/stage2
+          server-dir: /clickandbuilds/Joomla/stage2/
           local-dir: ./out/
           dangerous-clean-slate: false
