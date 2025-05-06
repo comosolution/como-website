@@ -44,21 +44,21 @@ export default function DeployButton() {
     if (loading)
       return {
         label: "Veröffentlichung wird gestartet...",
-        icon: <IconLoader2 size={18} className="animate-spin" />,
+        icon: <IconLoader2 size={24} className="animate-spin" />,
       };
     if (status === "success")
       return {
         label: "Veröffentlichung läuft... Auf GitHub überprüfen",
-        icon: <IconCheck size={18} />,
+        icon: <IconCheck size={24} />,
       };
     if (status === "error")
       return {
-        label: "Fehler!",
-        icon: <IconX size={18} />,
+        label: "Ein Fehler ist aufgetreten",
+        icon: <IconX size={24} />,
       };
     return {
       label: "Seite veröffentlichen",
-      icon: <IconRocket size={18} />,
+      icon: <IconRocket size={24} />,
     };
   };
 
@@ -87,6 +87,7 @@ export default function DeployButton() {
             : "black"
         }
         variant="light"
+        size="md"
         loading={loading}
         onClick={triggerDeploy}
         leftSection={icon}
