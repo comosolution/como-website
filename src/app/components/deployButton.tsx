@@ -1,10 +1,12 @@
 "use client";
-import { Button } from "@mantine/core";
+import { Button, useMantineColorScheme } from "@mantine/core";
 import { IconCheck, IconLoader2, IconRocket, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 import { REPO_NAME } from "../config/constants";
 
 export default function DeployButton() {
+  const { colorScheme } = useMantineColorScheme();
+
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -76,7 +78,13 @@ export default function DeployButton() {
     >
       <Button
         color={
-          status === "error" ? "red" : status === "success" ? "orange" : "black"
+          status === "error"
+            ? "red"
+            : status === "success"
+            ? "orange"
+            : colorScheme === "dark"
+            ? "white"
+            : "black"
         }
         variant="light"
         loading={loading}
