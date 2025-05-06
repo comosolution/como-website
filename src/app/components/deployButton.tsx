@@ -41,12 +41,12 @@ export default function DeployButton() {
   const getButtonContent = () => {
     if (loading)
       return {
-        label: "Läuft...",
+        label: "Veröffentlichung wird gestartet...",
         icon: <IconLoader2 size={18} className="animate-spin" />,
       };
     if (status === "success")
       return {
-        label: "Veröffentlicht! Auf GitHub überprüfen",
+        label: "Veröffentlichung läuft... Auf GitHub überprüfen",
         icon: <IconCheck size={18} />,
       };
     if (status === "error")
