@@ -103,6 +103,9 @@ export default function EventForm() {
       </Button>
     </form>
   ) : (
-    <FormSuccess message="Wir haben Ihre Anmeldung erhalten und melden uns in Kürze bei Ihnen." />
+    <FormSuccess
+      header="Wir haben Ihre Anmeldung erhalten. Sie erhalten rechtzeitig vor dem Event alle wichtigen Infos per Mail."
+      message="Vielen Dank, wir freuen uns auf Ihre Teilnahme!"
+    />
   );
 }
