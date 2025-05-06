@@ -10,7 +10,7 @@ export default function DeployButton() {
 
   const triggerDeploy = async () => {
     if (status === "success") {
-      window.open(`https://github.com/${REPO_NAME}/actions"`, "_blank");
+      window.open(`https://github.com/${REPO_NAME}/actions`, "_blank");
       return;
     }
 
@@ -18,14 +18,18 @@ export default function DeployButton() {
     setStatus("idle");
 
     try {
-      const res = await fetch("/api/deploy", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_DEPLOY_SECRET}`,
-        },
-      });
+      const res = await fetch(
+        `https://api.github.com/repos/${REPO_NAME}/actions/workflows/main.yml/dispatches`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN}`,
+            Accept: "application/vnd.github+json",
+          },
+          body: JSON.stringify({ ref: "main" }),
+        }
+      );
 
-      await res.json();
       setStatus(res.ok ? "success" : "error");
     } catch {
       setStatus("error");
