@@ -82,9 +82,7 @@ export default function DeployButton() {
             ? "red"
             : status === "success"
             ? "orange"
-            : colorScheme === "dark"
-            ? "white"
-            : "black"
+            : "default"
         }
         variant="light"
         size="md"

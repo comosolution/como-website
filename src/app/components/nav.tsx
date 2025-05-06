@@ -105,7 +105,7 @@ export default function Nav() {
             <Button
               w={128}
               variant="transparent"
-              color={colorScheme === "dark" ? "white" : "black"}
+              color="default"
               onClick={open}
               leftSection={<IconMenuDeep size={20} />}
             >
