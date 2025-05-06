@@ -39,7 +39,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: "./out.tar.gz"
-          target: "clickandbuilds/Joomla/stage2"
+          target: "clickandbuilds/Joomla/como2021"
           overwrite: true
           rm: true
           debug: true
@@ -52,6 +52,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           script: |
-            cd clickandbuilds/Joomla/stage2
+            cd clickandbuilds/Joomla/como2021
             tar -zxf out.tar.gz --overwrite
             rm out.tar.gz
