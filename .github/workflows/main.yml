@@ -27,6 +27,10 @@ jobs:
           npm ci
           npm run build
 
+      - name: Create tarball
+        run: |
+          tar -zcf out.tar.gz -C out .
+
       - name: Upload to server via SFTP
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -34,7 +38,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: "./out/*"
+          source: "./out.tar.gz"
           target: "clickandbuilds/Joomla/stage2"
           overwrite: true
           rm: true
