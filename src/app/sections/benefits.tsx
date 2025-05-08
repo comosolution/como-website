@@ -2,7 +2,7 @@
 import { Button } from "@mantine/core";
 import Image from "next/image";
 import Divider from "../components/divider";
-import { highlight, twoCols } from "../style/style";
+import { defaultPadding, highlight, twoCols } from "../style/style";
 import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
@@ -10,7 +10,7 @@ export default function Benefits() {
     <div className="relative mt-16">
       <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
       <section className={`${twoCols} gap-y-32 items-center py-32 lg:py-0`}>
-        <div className="p-8">
+        <div className={defaultPadding}>
           <h2>Über 14 Jahre Innovation und Expertise</h2>
           <Divider />
           <h3>
