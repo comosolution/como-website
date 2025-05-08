@@ -104,8 +104,8 @@ export default function Sub() {
             Softwarelösungen und Anwendungen?
           </p>
           <p>
-            Drei große Fragen … und eine Antwort: mit den Experten von CoMo
-            Solution!
+            Drei große Fragen … und eine Antwort:{" "}
+            <b>Mit den Experten von CoMo Solution!</b>
           </p>
         </div>
         {/* Hidden measuring element */}
