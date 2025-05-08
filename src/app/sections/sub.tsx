@@ -23,7 +23,7 @@ export default function Sub() {
   const [textIndex, setTextIndex] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
   const [width, setWidth] = useState(0);
-  const measureRef = useRef<HTMLSpanElement | null>(null);
+  const measureRef = useRef<HTMLHeadingElement | null>(null);
   const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -92,15 +92,6 @@ export default function Sub() {
               </motion.span>
             </AnimatePresence>
           </motion.span>
-          {/* Hidden measuring element */}
-          <span
-            ref={measureRef}
-            className="absolute invisible pointer-events-none whitespace-nowrap"
-            aria-hidden="true"
-          >
-            <br />
-            {serviceList[textIndex]}.
-          </span>
         </h2>
         <Divider />
         <div className="muted">
@@ -117,6 +108,14 @@ export default function Sub() {
             Solution!
           </p>
         </div>
+        {/* Hidden measuring element */}
+        <h2
+          ref={measureRef}
+          className="absolute invisible pointer-events-none whitespace-nowrap"
+          aria-hidden="true"
+        >
+          {serviceList[textIndex]}.
+        </h2>
       </div>
     </section>
   );
