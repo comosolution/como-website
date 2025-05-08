@@ -95,9 +95,10 @@ export default function Sub() {
           {/* Hidden measuring element */}
           <span
             ref={measureRef}
-            className="absolute opacity-0 pointer-events-none"
+            className="absolute invisible pointer-events-none whitespace-nowrap"
             aria-hidden="true"
           >
+            <br />
             {serviceList[textIndex]}.
           </span>
         </h2>
