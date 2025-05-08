@@ -6,8 +6,8 @@ import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
   return (
-    <div className="relative isolate -mx-4 md:-mx-8">
-      <div className="absolute w-full h-full -z-10 bg-[var(--light)] clip-angled" />
+    <div className="relative">
+      <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
       <section className="flex flex-col gap-16 px-8 py-32">
         <header className={`${header} justify-between`}>
           <h5 className="lg:w-3/4 px-4">
