@@ -4,7 +4,6 @@ import { Button } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
-import Link from "next/link";
 import Circles from "../components/circles";
 import { scrollTo } from "../utils/utils";
 import clients from "./../data/clients.json";
@@ -40,23 +39,12 @@ export default function Hero() {
             sichere digitale Transformation brauchen: Wir setzen es um und
             begleiten Sie in Ihre Zukunft.
           </p>
-          <div className="flex gap-2">
-            <Button
-              color="red"
-              onClick={() => scrollTo("sub", 96)}
-              leftSection={<IconChevronDown size={16} />}
-            >
-              Mehr erfahren
-            </Button>
-            <Button
-              variant="light"
-              component={Link}
-              href="/contact"
-              className="backdrop-blur-md"
-            >
-              Kontaktieren
-            </Button>
-          </div>
+          <Button
+            onClick={() => scrollTo("sub", 96)}
+            leftSection={<IconChevronDown size={16} />}
+          >
+            Mehr erfahren
+          </Button>
         </section>
       </div>
       <div className="grid grid-cols-4 justify-items-center items-center gap-8 p-8 bg-[var(--layers)]">
