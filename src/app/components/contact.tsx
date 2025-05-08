@@ -1,6 +1,6 @@
 "use client";
 import { Button, Checkbox, Textarea, TextInput } from "@mantine/core";
-import { IconMail, IconPhone } from "@tabler/icons-react";
+import { IconMail, IconPhone, IconSend } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChangeEvent, useState } from "react";
@@ -147,6 +147,7 @@ export default function Contact() {
               onChange={() => setPrivacy(!privacy)}
             />
             <Button
+              leftSection={<IconSend size={16} />}
               disabled={
                 data.firstName.length === 0 ||
                 data.lastName.length === 0 ||
