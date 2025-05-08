@@ -91,11 +91,7 @@ export default function Nav() {
             <Logo />
             <div className="flex items-center gap-2">
               <ThemeSwitch />
-              <Button
-                variant="light"
-                onClick={open}
-                leftSection={<IconMenuDeep size={20} />}
-              >
+              <Button onClick={open} leftSection={<IconMenuDeep size={20} />}>
                 Menü
               </Button>
             </div>

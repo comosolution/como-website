@@ -21,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        {process.env.NEXT_PUBLIC_VERCEL_ENV === "preview" && (
+        {process.env.NEXT_PUBLIC_VERCEL_ENV === "preview" ? (
           <meta name="robots" content="noindex, nofollow" />
+        ) : (
+          <link rel="canonical" href="https://como-solution.de" />
         )}
         <meta name="theme-color" content="#FF6900" />
-        <link rel="canonical" href="https://como-solution.de" />
+
         {/* <!-- Copyright (c) 2000-2025 etracker GmbH. All rights reserved. No reproduction, publication or modification allowed without permission. --> <!-- etracker code 6.0 -->  */}
         <script
           data-cookieconsent="ignore"

@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import Tile from "../components/tile";
-import { highlight, twoCols } from "../style/style";
+import { defaultPadding, highlight, twoCols } from "../style/style";
 import services from "./../data/services.json";
 
 export default function Services() {
   return (
-    <section>
+    <section className={defaultPadding}>
       <h2 className="py-8 text-center">
         Wir finden Lösungen. <span className={highlight}>Für Sie!</span>
       </h2>

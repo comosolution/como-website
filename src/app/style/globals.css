@@ -23,9 +23,9 @@
 }
 
 .dark {
-  --background-rgb: 0, 0, 0;
+  --background-rgb: 0, 16, 24;
   --foreground-rgb: 255, 255, 255;
-  --light: #141414;
+  --light: #000000;
   --layers: #132a36;
   --highlight-rgb: 255, 105, 0;
   --filter-inverted: none;

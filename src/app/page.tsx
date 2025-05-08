@@ -9,17 +9,19 @@ import { defaultPadding } from "./style/style";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center gap-16 ${defaultPadding}`}
-    >
+    <>
       <Hero />
-      <Sub />
-      <PortfolioOverview />
-      <Services />
-      <Benefits />
-      <Partners />
-      {/* <Testimonials /> */}
-      <News />
-    </main>
+      <main
+        className={`flex min-h-screen flex-col items-center gap-16 ${defaultPadding} mt-16`}
+      >
+        <Sub />
+        <PortfolioOverview />
+        <Services />
+        <Benefits />
+        <Partners />
+        {/* <Testimonials /> */}
+        <News />
+      </main>
+    </>
   );
 }

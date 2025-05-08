@@ -22,13 +22,21 @@ export default function Sub() {
 
   const [textIndex, setTextIndex] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
+  const [width, setWidth] = useState(0);
+  const measureRef = useRef<HTMLSpanElement | null>(null);
   const intervalRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (measureRef.current) {
+      setWidth(measureRef.current.offsetWidth);
+    }
+  }, [textIndex]);
 
   const startInterval = () => {
     if (intervalRef.current === null) {
       intervalRef.current = window.setInterval(() => {
         setTextIndex((prev) => (prev + 1) % serviceList.length);
-      }, 2000);
+      }, 1400);
     }
   };
 
@@ -58,10 +66,41 @@ export default function Sub() {
 
   return (
     <section
-      className={`relative z-5 flex flex-col items-center gap-32 ${defaultPadding} pt-16`}
+      id="sub"
+      className={`relative z-5 flex flex-col items-center gap-32 ${defaultPadding}`}
     >
       <div className="flex flex-col items-center text-center gap-2">
-        <h3>Ihr Partner für smarte IT-Lösungen</h3>
+        <h2 onClick={handleClick} className="cursor-default select-none">
+          Wir sind die <span className={highlight}>CoMo</span>.{" "}
+          {isMobile && <br />}Wir{" "}
+          <motion.span
+            className="inline-block text-left align-top"
+            animate={{ width }}
+            transition={{ duration: 0.3 }}
+            style={{ display: "inline-block", overflow: "hidden" }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={serviceList[textIndex]}
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 20, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="inline-block"
+              >
+                {serviceList[textIndex]}.
+              </motion.span>
+            </AnimatePresence>
+          </motion.span>
+          {/* Hidden measuring element */}
+          <span
+            ref={measureRef}
+            className="absolute opacity-0 pointer-events-none"
+            aria-hidden="true"
+          >
+            {serviceList[textIndex]}.
+          </span>
+        </h2>
         <Divider />
         <div className="muted">
           <p>Wie setzen Sie Ihr Digitalisierungsprojekt um?</p>
@@ -78,24 +117,6 @@ export default function Sub() {
           </p>
         </div>
       </div>
-      <h2 onClick={handleClick} className="cursor-default select-none">
-        Wir sind die <span className={highlight}>CoMo</span>.{" "}
-        {isMobile && <br />}Wir{" "}
-        <span className="inline-block w-64">
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={serviceList[textIndex]}
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="inline-block"
-            >
-              {serviceList[textIndex]}.
-            </motion.span>
-          </AnimatePresence>
-        </span>
-      </h2>
     </section>
   );
 }
