@@ -7,7 +7,7 @@ import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
   return (
-    <div className="relative mt-16">
+    <div className="relative mt-32">
       <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
       <section className={`${twoCols} gap-y-32 items-center py-32 lg:py-0`}>
         <div className={defaultPadding}>
