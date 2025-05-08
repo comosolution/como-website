@@ -42,6 +42,7 @@ export default function Hero() {
           </p>
           <div className="flex gap-2">
             <Button
+              color="red"
               onClick={() => scrollTo("sub", 96)}
               leftSection={<IconChevronDown size={16} />}
             >
