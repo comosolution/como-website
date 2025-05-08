@@ -2,7 +2,7 @@
 "use client";
 import { Button } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconChevronDown, IconSend } from "@tabler/icons-react";
+import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import Circles from "../components/circles";
@@ -51,9 +51,9 @@ export default function Hero() {
               variant="light"
               component={Link}
               href="/contact"
-              rightSection={<IconSend size={16} />}
+              className="backdrop-blur-md"
             >
-              Jetzt kontaktieren
+              Kontaktieren
             </Button>
           </div>
         </section>

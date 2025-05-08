@@ -84,7 +84,7 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-50 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md transition-all duration-300`}
+        } z-50 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb),0.1)] transition-all duration-300`}
       >
         {isMobile ? (
           <>
@@ -110,7 +110,7 @@ export default function Nav() {
             <Logo />
             <div className="flex items-center gap-2">
               <ThemeSwitch />
-              <Button variant="light" component={Link} href="/contact">
+              <Button component={Link} href="/contact">
                 Kontakt
               </Button>
             </div>
