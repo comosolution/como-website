@@ -18,7 +18,7 @@ const details = [
   },
   {
     icon: <IconCalendarEvent size={20} />,
-    label: "22. Mai 2025",
+    label: "7. Juli 2025",
   },
   {
     icon: <IconClock size={20} />,
@@ -53,7 +53,7 @@ export default function Page() {
             gegen Angriffe zu schützen. Doch wie gelingt eine sichere Abwehr?
           </p>
           <p>
-            Kommen Sie am <b>22. Mai 2025</b> ins <b>FICHTE45 Co-Working</b> und
+            Kommen Sie am <b>7. Juli 2025</b> ins <b>FICHTE45 Co-Working</b> und
             erleben ein exklusives Event mit ArcticWolf, dem Experten für
             Managed Security & Incident Response, und uns, der CoMo Solution,
             Digitalisierungspartner des 1. FC Nürnberg.
