@@ -38,7 +38,7 @@ export default function Page() {
           alt="CoMo x ArcticWolf"
           className="inverted"
         />
-        <h1>Richtig verteidigt – mit Cybersecurity der Spitzenklasse!</h1>
+        <h1>Sicher und sorgenfrei – mit Cybersecurity der Spitzenklasse!</h1>
         <h4 className="muted">
           Ihr exklusives Event mit ArcticWolf & CoMo Solution
         </h4>
@@ -46,17 +46,27 @@ export default function Page() {
       <div className={twoCols}>
         <div className="flex flex-col gap-4 px-8">
           <p>
-            Die richtige Verteidigung ist in vielen Bereichen entscheidend, zum
-            Beispiel im Sport. Aber auch für Organisationen und Unternehmen ist
-            eine starke Abwehr sehr wichtig. Denn Cyberbedrohungen nehmen stetig
-            zu und Unternehmen jeder Größe stehen vor der Herausforderung, sich
-            gegen Angriffe zu schützen. Doch wie gelingt eine sichere Abwehr?
+            Für viele Unternehmen und Organisationen ist eine starke
+            Cybersecurity-Strategie sehr wichtig, denn Cyberbedrohungen nehmen
+            stetig zu. Dabei stehen die Unternehmen vor der Herausforderung,
+            sich mit den vorhandenen Ressourcen gegen diese Bedrohungen zu
+            schützen.
+          </p>
+          <p>
+            Doch wie gelingt eine sichere und sorgenfreie Abwehr bei den
+            heutigen Anforderungen mit einer permanenten Wachsamkeit der
+            IT-Abteilungen und der damit verbundenen erhöhten Arbeitsbelastung
+            für viele Teams? Angriffe erkennen, bewerten, abwehren – und das
+            rund um die Uhr. Für viele Unternehmen ist es nicht einfach, alle
+            diese Aufgaben zu stemmen.
           </p>
           <p>
             Kommen Sie am <b>7. Juli 2025</b> ins <b>FICHTE45 Co-Working</b> und
-            erleben ein exklusives Event mit ArcticWolf, dem Experten für
-            Managed Security & Incident Response, und uns, der CoMo Solution,
-            Digitalisierungspartner des 1. FC Nürnberg.
+            informieren Sie sich bei unserem exklusiven Event mit ArcticWolf,
+            dem Experten für Managed Security & Incident Response, und uns, der
+            CoMo Solution, IT-Lösungsfinder und Digitalisierungspartner des 1.
+            FC Nürnberg. Die Anmeldung und die Veranstaltung sind für Sie
+            natürlich kostenfrei!
           </p>
           <p>
             Erhalten Sie Informationen aus erster Hand, wie Sie Ihr Unternehmen
@@ -102,14 +112,16 @@ export default function Page() {
             <li className="accordion">
               Cybersecurity-Insights: Die Security-Strategien von ArcticWolf
             </li>
-            {/* <li className="accordion">
-              Behind the scenes: Der Concierge-Service im SOC Frankfurt
-            </li> */}
             <li className="accordion">
-              Das Werkzeug für den Schutz Ihrer IT-Infrastruktur
+              KI-gestützte Security-Lösungen für Ihr Unternehmen
             </li>
             <li className="accordion">
-              Impulsvortrag: „Es kommt auf die richtige Verteidigung an“
+              Managed Security, die sich auch in bestehende
+              IT-Sicherheitsstrukturen integriert
+            </li>
+            <li className="accordion">24/7-Monitoring & Incident Response</li>
+            <li className="accordion">
+              Entlastung Ihrer IT durch ein externes Expertenteam
             </li>
             <li className="accordion">
               Networking & Austausch mit Gästen und Experten
