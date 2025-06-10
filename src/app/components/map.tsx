@@ -22,8 +22,6 @@ export default function Map({
       style={{
         borderRadius: "1rem",
         overflow: "hidden",
-        boxShadow:
-          "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
       }}
     />
   );
