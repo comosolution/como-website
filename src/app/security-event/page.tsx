@@ -1,4 +1,9 @@
-import { IconCalendarEvent, IconClock, IconMapPin } from "@tabler/icons-react";
+import {
+  IconCalendarEvent,
+  IconCheck,
+  IconClock,
+  IconMapPin,
+} from "@tabler/icons-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Map from "../components/map";
@@ -25,20 +30,15 @@ const details = [
     label: "9:30 – 13:30 Uhr",
     addition: "danach Get-Together",
   },
+  { icon: <IconCheck size={20} />, addition: "Die Teilnahme ist kostenfrei." },
 ];
 
 export default function Page() {
   return (
     <main className="flex flex-col gap-16 px-8">
-      <header className="flex flex-col items-center text-center gap-4 pb-4">
-        <Image
-          src="/aw.png"
-          width="240"
-          height="96"
-          alt="CoMo x ArcticWolf"
-          className="inverted"
-        />
-        <h1>Sicher und sorgenfrei – mit Cybersecurity der Spitzenklasse!</h1>
+      <header className="flex flex-col items-center text-center gap-2 pb-4">
+        <h4>Cybersicherheit für den Mittelstand</h4>
+        <h1>Business-Brunch am 7. Juli 2025 in Nürnberg</h1>
         <h4 className="muted">
           Ihr exklusives Event mit ArcticWolf & CoMo Solution
         </h4>
@@ -46,32 +46,41 @@ export default function Page() {
       <div className={twoCols}>
         <div className="flex flex-col gap-4 px-8">
           <p>
-            Für viele Unternehmen und Organisationen ist eine starke
-            Cybersecurity-Strategie sehr wichtig, denn Cyberbedrohungen nehmen
-            stetig zu. Dabei stehen die Unternehmen vor der Herausforderung,
-            sich mit den vorhandenen Ressourcen gegen diese Bedrohungen zu
-            schützen.
+            Am 7. Juli 2025 laden Arctic Wolf und CoMo Solution zum
+            Business-Brunch ein. In einem kompakten Format erhalten Sie aktuelle
+            Informationen zur Sicherheitslage, Einblicke in Sicherheitslösungen
+            und Maßnahmenempfehlungen – für Ihr Unternehmen aus dem Mittelstand.
           </p>
+          <h3>Themenschwerpunkte</h3>
+          <ul>
+            <li className="accordion">
+              Unternehmen technisch absichern ohne großen Aufwand
+            </li>
+            <ul>
+              <li className="accordion accordion-2">
+                Rechtskonform, nach NIS2
+              </li>
+              <li className="accordion accordion-2">BSI zertifiziert</li>
+              <li className="accordion accordion-2">Ressourcensparend</li>
+            </ul>
+            <li className="accordion">
+              Cybersecurity-Insights: Die Security-Strategien von ArcticWolf
+            </li>
+            <li className="accordion">
+              Entlastung Ihrer IT durch ein externes Expertenteam
+            </li>
+            <li className="accordion">
+              Networking & Austausch mit Gästen und Experten
+            </li>
+          </ul>
           <p>
-            Doch wie gelingt eine sichere und sorgenfreie Abwehr bei den
-            heutigen Anforderungen mit einer permanenten Wachsamkeit der
-            IT-Abteilungen und der damit verbundenen erhöhten Arbeitsbelastung
-            für viele Teams? Angriffe erkennen, bewerten, abwehren – und das
-            rund um die Uhr. Für viele Unternehmen ist es nicht einfach, alle
-            diese Aufgaben zu stemmen.
+            Es besteht bei Bedarf während und nach dem Programm die Möglichkeit
+            in tiefergehende 1:1 Gespräche zu gehen.
           </p>
+          <p>Sichern Sie sich Ihren Platz – die Teilnehmerzahl ist begrenzt.</p>
+          <p>Wir freuen uns auf Sie!</p>
           <p>
-            Kommen Sie am <b>7. Juli 2025</b> ins <b>FICHTE45 Co-Working</b> und
-            informieren Sie sich bei unserem exklusiven Event mit ArcticWolf,
-            dem Experten für Managed Security & Incident Response, und uns, der
-            CoMo Solution, IT-Lösungsfinder und Digitalisierungspartner des 1.
-            FC Nürnberg. Die Anmeldung und die Veranstaltung sind für Sie
-            natürlich kostenfrei!
-          </p>
-          <p>
-            Erhalten Sie Informationen aus erster Hand, wie Sie Ihr Unternehmen
-            mit effizienten, KI-gestützten Lösungen schützen können und dabei
-            auch Ihre eigene IT entlasten können.
+            <b>Ihr Team von CoMo Solution & ArcticWolf</b>
           </p>
         </div>
         <div className="flex flex-col gap-8">
@@ -104,55 +113,9 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Map zoom={14} destination="FICHTE45+Nürnberg" />
       <div className={twoCols}>
-        <div className="flex flex-col gap-4 p-8 lg:h-min lg:sticky lg:top-4">
-          <h3>Das erwartet Sie:</h3>
-          <ul>
-            <li className="accordion">
-              Cybersecurity-Insights: Die Security-Strategien von ArcticWolf
-            </li>
-            <li className="accordion">
-              KI-gestützte Security-Lösungen für Ihr Unternehmen
-            </li>
-            <li className="accordion">
-              Managed Security, die sich auch in bestehende
-              IT-Sicherheitsstrukturen integriert
-            </li>
-            <li className="accordion">24/7-Monitoring & Incident Response</li>
-            <li className="accordion">
-              Entlastung Ihrer IT durch ein externes Expertenteam
-            </li>
-            <li className="accordion">
-              Networking & Austausch mit Gästen und Experten
-            </li>
-          </ul>
-          <p>
-            Es besteht bei Bedarf während und nach dem Programm die Möglichkeit
-            in tiefergehende 1:1 Gespräche zu gehen.
-          </p>
-          <p>Sichern Sie sich Ihren Platz – die Teilnehmerzahl ist begrenzt.</p>
-          <p>Wir freuen uns auf Sie!</p>
-          <p>
-            <b>Ihr Team von CoMo Solution & ArcticWolf</b>
-          </p>
-        </div>
         <EventForm />
-      </div>
-      <div
-        className="mb-24 relative w-full overflow-hidden rounded-lg ring-1 ring-white/10 shadow-2xl"
-        style={{ aspectRatio: "9/3" }}
-      >
-        <Image
-          src="/cups.png"
-          alt="Club Lounge"
-          fill
-          style={{
-            objectFit: "cover",
-            borderRadius: 8,
-            filter: "brightness(0.6)",
-          }}
-        />
+        <Map zoom={14} destination="FICHTE45+Nürnberg" />
       </div>
     </main>
   );
