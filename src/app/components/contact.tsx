@@ -147,6 +147,7 @@ export default function Contact() {
               onChange={() => setPrivacy(!privacy)}
             />
             <Button
+              type="submit"
               leftSection={<IconSend size={16} />}
               disabled={
                 data.firstName.length === 0 ||
