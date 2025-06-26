@@ -1,7 +1,7 @@
 import {
   IconCalendarEvent,
-  IconCheck,
   IconClock,
+  IconCurrencyEuroOff,
   IconMapPin,
 } from "@tabler/icons-react";
 import { Metadata } from "next";
@@ -30,39 +30,26 @@ const details = [
     label: "9:30 – 13:30 Uhr",
     addition: "danach Get-Together",
   },
-  { icon: <IconCheck size={20} />, addition: "Die Teilnahme ist kostenfrei." },
+  {
+    icon: <IconCurrencyEuroOff size={20} />,
+    addition: "Die Teilnahme ist kostenfrei.",
+  },
 ];
 
 export default function Page() {
   return (
     <main className="flex flex-col gap-16 px-8">
       <header className="flex flex-col items-center text-center gap-2 pb-4">
-        <h4>Cybersicherheit für den Mittelstand</h4>
-        <h1>Business-Brunch am 7. Juli 2025 in Nürnberg</h1>
-        <h4 className="muted">
-          Ihr exklusives Event mit ArcticWolf & CoMo Solution
-        </h4>
+        <h1>Exklusiver Cybersecurity-Brunch für den Mittelstand in Nürnberg</h1>
       </header>
       <div className={twoCols}>
         <div className="flex flex-col gap-4 px-8">
-          <p>
-            Am 7. Juli 2025 laden Arctic Wolf und CoMo Solution zum
-            Business-Brunch ein. In einem kompakten Format erhalten Sie aktuelle
-            Informationen zur Sicherheitslage, Einblicke in Sicherheitslösungen
-            und Maßnahmenempfehlungen – für Ihr Unternehmen aus dem Mittelstand.
-          </p>
-          <h3>Themenschwerpunkte</h3>
+          <h3>
+            Sprechen Sie mit den Profis und finden Sie die beste Lösung für Ihr
+            Unternehmen!
+          </h3>
+          <h4>Sie bekommen:</h4>
           <ul>
-            <li className="accordion">
-              Unternehmen technisch absichern ohne großen Aufwand
-            </li>
-            <ul>
-              <li className="accordion accordion-2">
-                Rechtskonform, nach NIS2
-              </li>
-              <li className="accordion accordion-2">BSI zertifiziert</li>
-              <li className="accordion accordion-2">Ressourcensparend</li>
-            </ul>
             <li className="accordion">
               Cybersecurity-Insights: Die Security-Strategien von ArcticWolf
             </li>
@@ -89,13 +76,12 @@ export default function Page() {
             style={{ aspectRatio: "16 / 7" }}
           >
             <Image
-              src="/fichte45.png"
-              alt="FICHTE45"
+              src="/aw.png"
+              alt="CoMo x ArcticWolf"
               fill
               style={{
                 objectFit: "cover",
                 borderRadius: 8,
-                filter: "brightness(0.9)",
               }}
             />
           </div>
