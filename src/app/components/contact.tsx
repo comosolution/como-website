@@ -98,12 +98,14 @@ export default function Contact() {
               <TextInput
                 name="firstName"
                 label="Vorname"
+                autoComplete="given-name"
                 onChange={handleChange}
                 withAsterisk
               />
               <TextInput
                 name="lastName"
                 label="Nachname"
+                autoComplete="family-name"
                 onChange={handleChange}
                 withAsterisk
               />
@@ -111,6 +113,7 @@ export default function Contact() {
             <TextInput
               name="company"
               label="Unternehmen"
+              autoComplete="organization"
               onChange={handleChange}
               withAsterisk
             />
@@ -118,10 +121,16 @@ export default function Contact() {
               <TextInput
                 name="email"
                 label="E-Mail"
+                autoComplete="email"
                 onChange={handleChange}
                 withAsterisk
               />
-              <TextInput name="phone" label="Telefon" onChange={handleChange} />
+              <TextInput
+                name="phone"
+                label="Telefon"
+                autoComplete="tel"
+                onChange={handleChange}
+              />
             </div>
             <Textarea
               label="Ihre Nachricht"

@@ -57,20 +57,28 @@ export default function EventForm() {
           <TextInput
             name="firstName"
             label="Vorname"
+            autoComplete="given-name"
             withAsterisk
             onChange={handleChange}
           />
           <TextInput
             name="lastName"
             label="Nachname"
+            autoComplete="family-name"
             withAsterisk
             onChange={handleChange}
           />
         </div>
-        <TextInput name="company" label="Unternehmen" onChange={handleChange} />
+        <TextInput
+          name="company"
+          label="Unternehmen"
+          autoComplete="organization"
+          onChange={handleChange}
+        />
         <TextInput
           name="email"
           label="E-Mail"
+          autoComplete="email"
           withAsterisk
           onChange={handleChange}
         />
