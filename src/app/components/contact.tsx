@@ -150,11 +150,11 @@ export default function Contact() {
               type="submit"
               leftSection={<IconSend size={16} />}
               disabled={
-                data.firstName.length === 0 ||
-                data.lastName.length === 0 ||
-                data.company.length === 0 ||
+                data.firstName.trim().length === 0 ||
+                data.lastName.trim().length === 0 ||
+                data.company.trim().length === 0 ||
                 !validateEmail(data.email) ||
-                data.message.length === 0 ||
+                data.message.trim().length === 0 ||
                 !privacy
               }
             >
