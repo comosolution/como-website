@@ -40,6 +40,7 @@ export default function Hero() {
             begleiten Sie in Ihre Zukunft.
           </p>
           <Button
+            variant="light"
             onClick={() => scrollTo("sub", 96)}
             leftSection={<IconChevronDown size={16} />}
           >
