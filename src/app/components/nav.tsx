@@ -110,7 +110,7 @@ export default function Nav() {
             <Logo />
             <div className="flex items-center gap-2">
               <ThemeSwitch />
-              <Button variant="light" component={Link} href="/contact">
+              <Button component={Link} href="/contact">
                 Kontakt
               </Button>
             </div>
