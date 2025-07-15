@@ -16,11 +16,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const note: Note = await getNoteBySlug(slug);
 
-  const description = `CoMo Notiz vom ${format(
-    note.fields.publishedAt,
-    "dd.MM.yyyy",
-    { locale: de }
-  )}`;
+  const description =
+    note.fields.description.trim() !== ""
+      ? note.fields.description
+      : `CoMo Notiz vom ${format(note.fields.publishedAt, "dd.MM.yyyy", {
+          locale: de,
+        })}`;
 
   return {
     title: `${note.fields.title} | CoMo Solution GmbH`,

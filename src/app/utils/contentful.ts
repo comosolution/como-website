@@ -9,6 +9,7 @@ export interface Note {
   fields: {
     title: string;
     slug: string;
+    description: string;
     content: Document;
     publishedAt: string;
     cover?: {
