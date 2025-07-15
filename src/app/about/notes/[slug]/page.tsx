@@ -17,7 +17,7 @@ export async function generateMetadata({
   const note: Note = await getNoteBySlug(slug);
 
   const description =
-    note.fields.description.trim() !== ""
+    note.fields.description && note.fields.description.trim() !== ""
       ? note.fields.description
       : `CoMo Notiz vom ${format(note.fields.publishedAt, "dd.MM.yyyy", {
           locale: de,
