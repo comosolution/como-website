@@ -31,12 +31,14 @@ export async function generateMetadata({
       type: "article",
       publishedTime: note.fields.publishedAt,
       url: `https://como-solution.de/about/notes/${note.fields.slug}`,
-      images: [
-        {
-          url: note.fields.cover!.fields!.file!.url,
-          alt: note.fields.title,
-        },
-      ],
+      images: note.fields.cover?.fields?.file?.url
+        ? [
+            {
+              url: `https:${note.fields.cover.fields.file.url}`,
+              alt: note.fields.title,
+            },
+          ]
+        : [],
     },
   };
 }
