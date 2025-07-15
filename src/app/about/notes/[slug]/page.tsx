@@ -16,13 +16,28 @@ export async function generateMetadata({
   const { slug } = await params;
   const note: Note = await getNoteBySlug(slug);
 
+  const description = `CoMo Notiz vom ${format(
+    note.fields.publishedAt,
+    "dd.MM.yyyy",
+    { locale: de }
+  )}`;
+
   return {
     title: `${note.fields.title} | CoMo Solution GmbH`,
-    description: `CoMo Notiz vom ${format(
-      note.fields.publishedAt,
-      "dd.MM.yyyy",
-      { locale: de }
-    )}`,
+    description: description,
+    openGraph: {
+      title: note.fields.title,
+      description: description,
+      type: "article",
+      publishedTime: note.fields.publishedAt,
+      url: `https://como-solution.de/about/notes/${note.fields.slug}`,
+      images: [
+        {
+          url: note.fields.cover!.fields!.file!.url,
+          alt: note.fields.title,
+        },
+      ],
+    },
   };
 }
 
