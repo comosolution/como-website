@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   description: "Innovative Lösungen für Collaboration und Mobile Work",
   authors: [{ name: "CoMo Solution GmbH", url: "https://como-solution.de" }],
   keywords: ["collaboration", "mobile", "solution", "cybersecurity"],
+  openGraph: {
+    type: "website",
+    url: "https://como-solution.de",
+    siteName: "CoMo Solution GmbH",
+    title: "CoMo Solution GmbH - Ihr Partner für smarte IT-Lösungen",
+    description: "Innovative Lösungen für Collaboration und Mobile Work",
+    images: [
+      {
+        url: "https://como-solution.de/como.png",
+        alt: "CoMo Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
