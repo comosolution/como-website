@@ -84,12 +84,12 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-50 w-screen flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb),0.1)] transition-all duration-300`}
+        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb),0.1)] transition-all duration-300`}
       >
         {isMobile ? (
           <>
             <Logo />
-            <div className="flex items-center gap-2">
+            <div className="flex justify-end items-center gap-2">
               <ThemeSwitch />
               <Button onClick={open} leftSection={<IconMenuDeep size={20} />}>
                 Menü
@@ -108,7 +108,10 @@ export default function Nav() {
               Menü
             </Button>
             <Logo />
-            <div className="flex items-center gap-2">
+            <div className="flex justify-end items-center gap-2">
+              {process.env.NEXT_PUBLIC_VERCEL_ENV === "preview" && (
+                <pre className="muted small">Dev</pre>
+              )}
               <ThemeSwitch />
               <Button component={Link} href="/contact">
                 Kontakt
