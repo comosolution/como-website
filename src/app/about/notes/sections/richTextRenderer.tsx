@@ -22,7 +22,7 @@ export function RichTextRenderer({ document }: { document: Document }) {
               fields?.content
             ) {
               return (
-                <Accordion variant="separated" chevronPosition="left">
+                <Accordion variant="separated" chevronPosition="left" my="md">
                   <Accordion.Item value={fields.title}>
                     <Accordion.Control className="text-2xl">
                       {fields.title}
