@@ -16,7 +16,7 @@ export default function Logo() {
   }
 
   return (
-    <Link href="/">
+    <Link href="/" className="sm:place-self-center">
       <Image
         src={colorScheme === "dark" ? "/logo_dark.svg" : "/logo.svg"}
         alt="CoMo Logo"
