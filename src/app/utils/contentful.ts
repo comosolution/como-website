@@ -34,8 +34,15 @@ export interface Note {
 
 export const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
-  environment: process.env.CONTENTFUL_ENVIRONMENT!,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+  environment: "master",
+  accessToken:
+    process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
+      ? process.env.CONTENTFUL_PREVIEW_API_TOKEN!
+      : process.env.CONTENTFUL_ACCESS_TOKEN!,
+  host:
+    process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
+      ? "preview.contentful.com"
+      : "cdn.contentful.com",
 });
 
 export async function getAllNotes(): Promise<any[]> {
