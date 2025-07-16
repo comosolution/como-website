@@ -1,7 +1,10 @@
 "use client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document } from "@contentful/rich-text-types";
-import { Accordion } from "@mantine/core";
+import { Accordion, Button } from "@mantine/core";
+import { IconChevronDown } from "@tabler/icons-react";
+import Link from "next/link";
+import { scrollTo } from "../../../utils/utils";
 
 export function RichTextRenderer({ document }: { document: Document }) {
   return (
@@ -29,6 +32,22 @@ export function RichTextRenderer({ document }: { document: Document }) {
                     </Accordion.Panel>
                   </Accordion.Item>
                 </Accordion>
+              );
+            }
+
+            if (contentTypeId === "cta") {
+              return fields.url ? (
+                <Button component={Link} href={fields.url} my="lg">
+                  {fields.text}
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => scrollTo("contact")}
+                  my="lg"
+                  leftSection={<IconChevronDown size={16} />}
+                >
+                  {fields.text}
+                </Button>
               );
             }
 
