@@ -11,6 +11,20 @@ export function RichTextRenderer({ document }: { document: Document }) {
     <>
       {documentToReactComponents(document, {
         renderNode: {
+          [BLOCKS.PARAGRAPH]: (node, children: any) => {
+            const isEmpty =
+              !children ||
+              (children.length === 1 &&
+                typeof children[0] === "string" &&
+                children[0].trim() === "");
+
+            if (isEmpty) {
+              return <div style={{ height: "4rem" }} />;
+            }
+
+            return <p>{children}</p>;
+          },
+
           [BLOCKS.EMBEDDED_ENTRY]: (node) => {
             const entry = node.data.target;
             const fields = entry.fields;
