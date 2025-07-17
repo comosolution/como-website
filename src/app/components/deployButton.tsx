@@ -26,7 +26,7 @@ export default function DeployButton() {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN}`,
             Accept: "application/vnd.github+json",
           },
-          body: JSON.stringify({ ref: "main" }),
+          body: JSON.stringify({ ref: "dev" }),
         }
       );
 
