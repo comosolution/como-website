@@ -109,9 +109,6 @@ export default function Nav() {
             </Button>
             <Logo />
             <div className="flex justify-end items-center gap-2">
-              {process.env.NEXT_PUBLIC_VERCEL_ENV === "preview" && (
-                <pre className="muted small">Dev</pre>
-              )}
               <ThemeSwitch />
               <Button component={Link} href="/contact">
                 Kontakt

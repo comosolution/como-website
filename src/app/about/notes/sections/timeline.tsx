@@ -29,6 +29,7 @@ export default function NewsTimeline({ notes }: { notes: Note[] }) {
             <Link href={`/about/notes/${n.fields.slug}`}>
               <p className="muted small">{formatDate(n.fields.publishedAt)}</p>
               <h4>{n.fields.title}</h4>
+              <p>{n.fields.description}</p>
             </Link>
           </Timeline.Item>
         ))}

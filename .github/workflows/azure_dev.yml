@@ -27,6 +27,7 @@ jobs:
           echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> .env.local
           echo "CONTENTFUL_PREVIEW_API_TOKEN=${{ secrets.CONTENTFUL_PREVIEW_API_TOKEN }}" >> .env.local
           echo "NEXT_PUBLIC_VERCEL_ENV=preview" >> .env.local
+          echo "NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN=${{ secrets.NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN }}" >> .env.local
 
       - name: Deploy to Azure Static Web Apps (Dev)
         uses: Azure/static-web-apps-deploy@v1
