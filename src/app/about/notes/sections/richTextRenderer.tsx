@@ -19,7 +19,12 @@ export function RichTextRenderer({ document }: { document: Document }) {
                 children[0].trim() === "");
 
             if (isEmpty) {
-              return <div style={{ height: "4rem" }} />;
+              return (
+                <>
+                  <br />
+                  <br />
+                </>
+              );
             }
 
             return <p>{children}</p>;
