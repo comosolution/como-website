@@ -168,6 +168,13 @@ article img:not(.icon) {
   object-fit: cover;
 }
 
+article blockquote {
+  font-style: italic;
+  color: rgba(var(--foreground-rgb), 0.7);
+  border-left: 1px solid rgb(var(--accent-rgb));
+  padding-left: 1rem;
+}
+
 article details,
 .details {
   font-size: 1.25rem;
