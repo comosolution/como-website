@@ -77,16 +77,18 @@ export default async function NotizDetailPage({
       <article>
         <RichTextRenderer document={job.fields.content} />
       </article>
-      <div className="flex items-center gap-4">
-        <p>Interessiert?</p>
-        <Button
-          component="a"
-          href={`mailto:info@como-solution.de?subject=Bewerbung: ${job.fields.title}`}
-          leftSection={<IconMailbox size={16} />}
-        >
-          Jetzt bewerben
-        </Button>
-      </div>
+
+      <Button
+        size="xl"
+        color="red"
+        component="a"
+        href={`mailto:info@como-solution.de?subject=Bewerbung: ${job.fields.title}`}
+        leftSection={<IconMailbox size={24} />}
+        fullWidth
+        radius="0"
+      >
+        Jetzt bewerben
+      </Button>
     </div>
   );
 }

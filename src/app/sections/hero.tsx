@@ -49,6 +49,7 @@ export default function Hero() {
               Mehr erfahren
             </Button>
             <Button
+              color="red"
               variant="transparent"
               component={Link}
               href="/about/career"

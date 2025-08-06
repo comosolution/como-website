@@ -66,6 +66,7 @@ export default async function Page() {
               </div>
             </div>
             <Button
+              color="red"
               variant="transparent"
               rightSection={<IconChevronRight size={16} />}
             >
