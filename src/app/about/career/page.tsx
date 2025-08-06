@@ -45,6 +45,7 @@ export default async function Page() {
         </div>
       </section>
       <section className="flex flex-col gap-4">
+        <h2 className="text-center">Offene Stellen</h2>
         {jobs.map((j, i) => (
           <Link
             key={i}
