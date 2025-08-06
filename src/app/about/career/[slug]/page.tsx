@@ -52,18 +52,15 @@ export default async function NotizDetailPage({
   const coverAlt = job.fields.cover?.fields?.title || job.fields.title;
 
   return (
-    <main className="flex flex-col gap-8 items-center">
-      <div
-        id="hero"
-        className="relative w-full min-h-[66vh] overflow-hidden -mt-32"
-      >
+    <div className="flex flex-col gap-8 items-center">
+      <div id="hero" className="relative w-full min-h-[66vh] -mt-32">
         <img
           src={coverImage || ""}
           alt={coverAlt || ""}
           className="absolute inset-0 w-full h-[66vh] object-cover object-center"
         />
-        <div className="absolute inset-0 w-full h-[66vh] bg-gradient-to-t from-[rgba(var(--background-rgb),1)] via-[rgba(var(--background-rgb),0.6)] to-transparent" />
-        <header className="relative h-[66vh] z-10 flex flex-col justify-end items-center text-center px-8 md:px-16 pb-16">
+        <div className="absolute inset-0 w-full h-[66vh] bg-gradient-to-t from-[rgba(var(--background-rgb),1)] via-[rgba(var(--background-rgb),0.5)] to-transparent" />
+        <header className="relative z-10 h-[66vh] max-w-[1440px] mx-auto flex flex-col justify-end items-center text-center px-8 md:px-16 pb-16">
           <div className="flex flex-col md:flex-row items-center gap-4 text-[rgb(var(--red-rgb))] font-bold pb-2">
             <div className="flex items-center gap-1">
               <IconClock size={16} stroke={3} />
@@ -90,6 +87,6 @@ export default async function NotizDetailPage({
           Jetzt bewerben
         </Button>
       </div>
-    </main>
+    </div>
   );
 }
