@@ -4,6 +4,7 @@ import { getAllJobs, getJobBySlug, Job } from "@/app/utils/contentful";
 import { Button } from "@mantine/core";
 import { IconClock, IconId, IconMapPin } from "@tabler/icons-react";
 import { Metadata } from "next";
+import CareerForm from "../sections/form";
 
 export async function generateMetadata({
   params,
@@ -77,7 +78,7 @@ export default async function NotizDetailPage({
       <article>
         <RichTextRenderer document={job.fields.content} />
       </article>
-
+      <CareerForm />
       <Button
         size="xl"
         color="red"
