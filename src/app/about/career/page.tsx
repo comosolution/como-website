@@ -54,7 +54,7 @@ export default async function Page() {
           >
             <div className="flex flex-col items-center lg:items-start gap-2">
               <h3 className="text-center">{j.fields.title}</h3>
-              <div className="flex gap-8">
+              <div className="flex flex-col lg:flex-row items-center lg:gap-8">
                 <div className="flex items-center gap-1 muted">
                   <IconClock size={16} />
                   <p>{j.fields.type}</p>
