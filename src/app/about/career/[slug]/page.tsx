@@ -2,7 +2,7 @@
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import { getAllJobs, getJobBySlug, Job } from "@/app/utils/contentful";
 import { Button } from "@mantine/core";
-import { IconClock, IconMailbox, IconMapPin } from "@tabler/icons-react";
+import { IconClock, IconId, IconMapPin } from "@tabler/icons-react";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -83,7 +83,7 @@ export default async function NotizDetailPage({
         color="red"
         component="a"
         href={`mailto:info@como-solution.de?subject=Bewerbung: ${job.fields.title}`}
-        leftSection={<IconMailbox size={24} />}
+        leftSection={<IconId size={24} />}
         fullWidth
         radius="0"
       >
