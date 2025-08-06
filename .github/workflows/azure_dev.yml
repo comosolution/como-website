@@ -38,4 +38,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           output_location: "out"
-          api_location: "api"
+          api_location: "api/dist"

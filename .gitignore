@@ -21,6 +21,7 @@
 *.pem
 /public/sitemap*.xml
 /public/robots.txt
+/api/dist
 
 # debug
 npm-debug.log*

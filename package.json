@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "svg-to-ico public/logo.svg src/app/favicon.ico && next build",
+    "build": "svg-to-ico public/logo.svg src/app/favicon.ico && next build && npm run build:api",
+    "build:api": "tsc -p api/tsconfig.json",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
