@@ -3,6 +3,7 @@ export const aboutNav = {
   ref: "/about",
   entries: [
     { name: "Unternehmen", ref: "/about/como" },
+    { name: "Karriere", ref: "/about/career" },
     { name: "CSR", ref: "/about/csr" },
     { name: "Partner", ref: "/about/partners" },
     { name: "Notizen", ref: "/about/notes" },
