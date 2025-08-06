@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import { getAllJobs, getJobBySlug, Job } from "@/app/utils/contentful";
-import { IconClock, IconMapPin } from "@tabler/icons-react";
+import { Button } from "@mantine/core";
+import { IconClock, IconMailbox, IconMapPin } from "@tabler/icons-react";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -54,15 +55,15 @@ export default async function NotizDetailPage({
     <main className="flex flex-col gap-8 items-center">
       <div
         id="hero"
-        className="relative w-full min-h-[80vh] overflow-hidden -mt-32"
+        className="relative w-full min-h-[66vh] overflow-hidden -mt-32"
       >
         <img
           src={coverImage || ""}
           alt={coverAlt || ""}
-          className="absolute inset-0 w-full h-[80vh] object-cover object-center"
+          className="absolute inset-0 w-full h-[66vh] object-cover object-center"
         />
-        <div className="absolute inset-0 w-full h-[80vh] bg-gradient-to-tr from-[rgba(var(--background-rgb),1)] via-[rgba(var(--background-rgb),0.4)] to-transparent" />
-        <header className="relative h-[80vh] z-10 flex flex-col justify-end items-center text-center px-8 md:px-16 pb-16">
+        <div className="absolute inset-0 w-full h-[66vh] bg-gradient-to-tr from-[rgba(var(--background-rgb),1)] via-[rgba(var(--background-rgb),0.4)] to-transparent" />
+        <header className="relative h-[66vh] z-10 flex flex-col justify-end items-center text-center px-8 md:px-16 pb-16">
           <div className="flex flex-col md:flex-row items-center gap-4 text-[rgb(var(--red-rgb))] font-bold pb-2">
             <div className="flex items-center gap-1">
               <IconClock size={16} stroke={3} />
@@ -79,6 +80,16 @@ export default async function NotizDetailPage({
       <article>
         <RichTextRenderer document={job.fields.content} />
       </article>
+      <div className="flex items-center gap-2">
+        <p>Interessiert?</p>
+        <Button
+          component="a"
+          href={`mailto:info@como-solution.de?subject=Bewerbung: ${job.fields.title}`}
+          leftSection={<IconMailbox size={16} />}
+        >
+          Jetzt bewerben
+        </Button>
+      </div>
     </main>
   );
 }
