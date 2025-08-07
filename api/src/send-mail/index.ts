@@ -1,7 +1,7 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const httpTrigger: AzureFunction = async function (
   context: Context,
@@ -22,18 +22,16 @@ const httpTrigger: AzureFunction = async function (
       from: 'Resend" <no-reply@tippspiel.fcn.de>',
       to: "eric.schmidt@como-solution.de",
       subject: "New Contact Form Submission",
-      reply_to: email,
       text: `
-New message from your site:
+        New message from your site:
 
-Name: ${name}
-Email: ${email}
-Message:
-${message}
+        Name: ${name}
+        Email: ${email}
+        Message:
+        ${message}
       `,
     };
 
-    // If there's a base64 PDF attachment
     if (attachment?.content && attachment?.filename) {
       emailOptions.attachments = [
         {
