@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const resend_1 = require("resend");
 const resend = new resend_1.Resend(process.env.RESEND_API_KEY);
 const httpTrigger = async function (context, req) {
-    const { name, email, subject, message, attachment } = req.body || {};
+    const { name, email, phone, subject, company, message, filename, content, page, } = req.body || {};
     if (!name || !email || !message) {
         context.res = {
             status: 400,
@@ -11,25 +11,29 @@ const httpTrigger = async function (context, req) {
         };
         return;
     }
+    let text = `Name: ${name}\nE-Mail: ${email}`;
+    if (phone) {
+        text += `\nTelefon: ${company}`;
+    }
+    if (company) {
+        text += `\nUnternehmen: ${company}`;
+    }
+    text += `\n\n${message}`;
+    if (page) {
+        text += `\n\nGesendet von ${page}`;
+    }
     try {
         const emailOptions = {
             from: '"CoMo Service" <no-reply@service.como-solution.de>',
             to: "eric.schmidt@como-solution.de",
             subject: subject ? subject : "Neue Kontaktanfrage",
-            text: `
-        New message from your site:
-
-        Name: ${name}
-        Email: ${email}
-        Message:
-        ${message}
-      `,
+            text: text,
         };
-        if (attachment?.content && attachment?.filename) {
+        if (content && filename) {
             emailOptions.attachments = [
                 {
-                    filename: attachment.filename,
-                    content: attachment.content,
+                    filename: filename,
+                    content: content,
                     contentType: "application/pdf",
                 },
             ];

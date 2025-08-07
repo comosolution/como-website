@@ -7,7 +7,17 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  const { name, email, subject, message, filename, content } = req.body || {};
+  const {
+    name,
+    email,
+    phone,
+    subject,
+    company,
+    message,
+    filename,
+    content,
+    page,
+  } = req.body || {};
 
   if (!name || !email || !message) {
     context.res = {
@@ -17,19 +27,28 @@ const httpTrigger: AzureFunction = async function (
     return;
   }
 
+  let text = `Name: ${name}\nE-Mail: ${email}`;
+
+  if (phone) {
+    text += `\nTelefon: ${phone}`;
+  }
+
+  if (company) {
+    text += `\nUnternehmen: ${company}`;
+  }
+
+  text += `\n\n${message}`;
+
+  if (page) {
+    text += `\n\nGesendet von ${page}`;
+  }
+
   try {
     const emailOptions: any = {
       from: '"CoMo Service" <no-reply@service.como-solution.de>',
       to: "eric.schmidt@como-solution.de",
       subject: subject ? subject : "Neue Kontaktanfrage",
-      text: `
-        New message from your site:
-
-        Name: ${name}
-        Email: ${email}
-        Message:
-        ${message}
-      `,
+      text: text,
     };
 
     if (content && filename) {

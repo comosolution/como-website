@@ -28,7 +28,6 @@ jobs:
           echo "CONTENTFUL_PREVIEW_API_TOKEN=${{ secrets.CONTENTFUL_PREVIEW_API_TOKEN }}" >> .env.local
           echo "NEXT_PUBLIC_VERCEL_ENV=preview" >> .env.local
           echo "NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN=${{ secrets.NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN }}" >> .env.local
-          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
 
       - name: Install dependencies for API
         run: |

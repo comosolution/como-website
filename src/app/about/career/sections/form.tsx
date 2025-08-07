@@ -9,7 +9,13 @@ import {
   TextInput,
   Textarea,
 } from "@mantine/core";
-import { IconCheck, IconId, IconMail, IconX } from "@tabler/icons-react";
+import {
+  IconCheck,
+  IconId,
+  IconMail,
+  IconSend,
+  IconX,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -96,75 +102,66 @@ export default function CareerForm({ subject }: { subject: string }) {
             </Button>
           </div>
         </div>
-        <div>
-          <form
-            onSubmit={handleSubmit}
-            className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
-          >
-            <h4>Deine Bewerbung</h4>
-            <div className={twoCols}>
-              <TextInput
-                label="Name"
-                value={form.name}
-                onChange={(e) => handleChange("name", e.currentTarget.value)}
-                withAsterisk
-              />
-              <TextInput
-                label="E-Mail"
-                type="email"
-                value={form.email}
-                onChange={(e) => handleChange("email", e.currentTarget.value)}
-                withAsterisk
-              />
-            </div>
-            <Textarea
-              label="Deine Nachricht"
-              rows={4}
-              value={form.message}
-              onChange={(e) => handleChange("message", e.currentTarget.value)}
+        <form
+          onSubmit={handleSubmit}
+          className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+        >
+          <h4>Deine Bewerbung</h4>
+          <div className={twoCols}>
+            <TextInput
+              label="Name"
+              name="name"
+              autoComplete="name"
+              value={form.name}
+              onChange={(e) => handleChange("name", e.currentTarget.value)}
               withAsterisk
             />
-            <FileInput
-              label="Dein Lebenslauf"
-              accept="application/pdf"
-              rightSection={<IconId size={16} />}
-              value={form.file}
-              onChange={(file) => handleChange("file", file)}
+            <TextInput
+              label="E-Mail"
+              type="email"
+              name="email"
+              autoComplete="email"
+              value={form.email}
+              onChange={(e) => handleChange("email", e.currentTarget.value)}
+              withAsterisk
             />
-            <Checkbox
-              label={
-                <>
-                  Ich habe die{" "}
-                  <Link href="/legal/privacy" target="_blank">
-                    Datenschutzhinweise
-                  </Link>{" "}
-                  zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
-                  Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
-                  gespeichert werden.
-                </>
-              }
-              checked={privacy}
-              onChange={() => setPrivacy(!privacy)}
-            />
-            <Button
-              color="red"
-              type="submit"
-              loading={status === "sending"}
-              fullWidth
-              disabled={
-                form.name.trim().length === 0 ||
-                !validateEmail(form.email) ||
-                form.message.trim().length === 0 ||
-                !privacy
-              }
-            >
-              Jetzt bewerben
-            </Button>
-          </form>
+          </div>
+          <Textarea
+            label="Deine Nachricht"
+            placeholder="Ein paar Worten zu dir, deinen Interessen und wo du dich bei uns siehst. Wir freuen uns darauf, dich kennenzulernen!"
+            rows={4}
+            value={form.message}
+            onChange={(e) => handleChange("message", e.currentTarget.value)}
+            withAsterisk
+          />
+          <FileInput
+            label="Dein Lebenslauf"
+            placeholder="Ein PDF hinzufügen"
+            accept="application/pdf"
+            leftSection={<IconId size={16} />}
+            clearable
+            value={form.file}
+            onChange={(file) => handleChange("file", file)}
+          />
+          <Checkbox
+            label={
+              <>
+                Ich habe die{" "}
+                <Link href="/legal/privacy" target="_blank">
+                  Datenschutzhinweise
+                </Link>{" "}
+                zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
+                Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
+                gespeichert werden.
+              </>
+            }
+            checked={privacy}
+            onChange={() => setPrivacy(!privacy)}
+          />
           {status === "success" && (
             <Notification
-              mt="lg"
-              color="green"
+              withCloseButton={false}
+              color="orange"
               icon={<IconCheck size={16} />}
               title="Bewerbungsunterlagen abgeschickt!"
             >
@@ -173,15 +170,30 @@ export default function CareerForm({ subject }: { subject: string }) {
           )}
           {status === "error" && (
             <Notification
-              mt="lg"
+              withCloseButton={false}
               color="red"
               icon={<IconX size={16} />}
-              title="Oh, da ist etwas schief gegangen."
+              title="Oh, da ist etwas schief gegangen!"
             >
               Bitte versuche es erneut.
             </Notification>
           )}
-        </div>
+          <Button
+            color="red"
+            type="submit"
+            loading={status === "sending"}
+            fullWidth
+            leftSection={<IconSend size={16} />}
+            disabled={
+              form.name.trim().length === 0 ||
+              !validateEmail(form.email) ||
+              form.message.trim().length === 0 ||
+              !privacy
+            }
+          >
+            Jetzt bewerben
+          </Button>
+        </form>
       </main>
     </div>
   );
