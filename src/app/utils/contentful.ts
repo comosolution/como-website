@@ -32,6 +32,37 @@ export interface Note {
   };
 }
 
+export interface Job {
+  sys: {
+    id: string;
+    createdAt: string;
+  };
+  fields: {
+    title: string;
+    slug: string;
+    location: string;
+    type: string;
+    content: Document;
+    cover?: {
+      fields: {
+        title: string;
+        file: {
+          url: string;
+          details?: {
+            size?: number;
+            image?: {
+              width: number;
+              height: number;
+            };
+          };
+          fileName?: string;
+          contentType?: string;
+        };
+      };
+    };
+  };
+}
+
 export const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   environment: "master",
@@ -67,6 +98,25 @@ export async function getNoteBySlug(slug: string): Promise<any> {
 
   if (!entries.items.length)
     throw new Error(`Note with slug ${slug} not found`);
+
+  return entries.items[0];
+}
+
+export async function getAllJobs(): Promise<any[]> {
+  const entries = await client.getEntries({
+    content_type: "jobs",
+  });
+  return entries.items;
+}
+
+export async function getJobBySlug(slug: string): Promise<any> {
+  const entries = await client.getEntries({
+    content_type: "jobs",
+    "fields.slug": slug,
+    limit: 1,
+  });
+
+  if (!entries.items.length) throw new Error(`Job with slug ${slug} not found`);
 
   return entries.items[0];
 }

@@ -29,6 +29,16 @@ jobs:
           echo "NEXT_PUBLIC_VERCEL_ENV=preview" >> .env.local
           echo "NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN=${{ secrets.NEXT_PUBLIC_GITHUB_DEPLOY_TOKEN }}" >> .env.local
 
+      - name: Install dependencies for API
+        run: |
+          cd api
+          npm install
+
+      - name: Build API functions
+        run: |
+          cd api
+          npm run build
+
       - name: Deploy to Azure Static Web Apps (Dev)
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -36,3 +46,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           output_location: "out"
+          api_location: "api"

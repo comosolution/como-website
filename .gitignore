@@ -22,6 +22,11 @@
 /public/sitemap*.xml
 /public/robots.txt
 
+# api
+/api/send-mail/index.js
+/api/node_modules
+/api/local.settings.json
+
 # debug
 npm-debug.log*
 yarn-debug.log*

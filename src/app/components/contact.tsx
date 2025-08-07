@@ -1,16 +1,27 @@
 "use client";
-import { Button, Checkbox, Textarea, TextInput } from "@mantine/core";
-import { IconMail, IconPhone, IconSend } from "@tabler/icons-react";
+import {
+  Button,
+  Checkbox,
+  Notification,
+  Textarea,
+  TextInput,
+} from "@mantine/core";
+import {
+  IconCheck,
+  IconMail,
+  IconPhone,
+  IconSend,
+  IconX,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChangeEvent, useState } from "react";
-import { HOOK_API } from "../config/constants";
 import { card, twoCols } from "../style/style";
 import { validateEmail } from "../utils/utils";
-import FormSuccess from "./form";
 
 export default function Contact() {
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -25,6 +36,28 @@ export default function Contact() {
 
   const handleChange = (e: ChangeEvent<any>) =>
     setData({ ...data, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const res = await fetch("/api/send-mail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: `${data.firstName} ${data.lastName}`,
+        company: data.company,
+        email: data.email,
+        phone: data.phone,
+        page: pathname,
+        message: data.message,
+      }),
+    });
+
+    if (res.ok) {
+      setSuccess(true);
+    } else {
+      setError("Es ist ein Fehler aufgetreten");
+    }
+  };
 
   return (
     <div className="relative isolate">
@@ -54,6 +87,7 @@ export default function Contact() {
               info@como-solution.de
             </Button>
             <Button
+              color="red"
               variant="transparent"
               component="a"
               href="tel:+4991231833700"
@@ -63,116 +97,107 @@ export default function Contact() {
             </Button>
           </div>
         </div>
-        {!success ? (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              fetch(`${HOOK_API}&src=kontaktformular`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(
-                  {
-                    name: `${data.firstName} ${data.lastName}`,
-                    company: data.company,
-                    email: data.email,
-                    phone: data.phone,
-                    page: pathname,
-                    message: data.message,
-                  },
-                  null,
-                  2
-                ),
-              })
-                .then((res) => res.text())
-                .then(() => {
-                  setSuccess(true);
-                })
-                .catch((error) => console.error(error));
-            }}
-            className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
-          >
-            <h4>Ihre Kontaktanfrage</h4>
-            <div className={twoCols}>
-              <TextInput
-                name="firstName"
-                label="Vorname"
-                autoComplete="given-name"
-                onChange={handleChange}
-                withAsterisk
-              />
-              <TextInput
-                name="lastName"
-                label="Nachname"
-                autoComplete="family-name"
-                onChange={handleChange}
-                withAsterisk
-              />
-            </div>
+        <form
+          onSubmit={handleSubmit}
+          className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+        >
+          <h4>Ihre Kontaktanfrage</h4>
+          <div className={twoCols}>
             <TextInput
-              name="company"
-              label="Unternehmen"
-              autoComplete="organization"
+              name="firstName"
+              label="Vorname"
+              autoComplete="given-name"
               onChange={handleChange}
               withAsterisk
             />
-            <div className={twoCols}>
-              <TextInput
-                name="email"
-                label="E-Mail"
-                autoComplete="email"
-                onChange={handleChange}
-                withAsterisk
-              />
-              <TextInput
-                name="phone"
-                label="Telefon"
-                autoComplete="tel"
-                onChange={handleChange}
-              />
-            </div>
-            <Textarea
-              label="Ihre Nachricht"
-              name="message"
-              placeholder="Wie können wir Ihnen weiterhelfen?"
-              rows={4}
+            <TextInput
+              name="lastName"
+              label="Nachname"
+              autoComplete="family-name"
               onChange={handleChange}
               withAsterisk
             />
-            <Checkbox
-              label={
-                <>
-                  Ich habe die{" "}
-                  <Link href="/legal/privacy" target="_blank">
-                    Datenschutzhinweise
-                  </Link>{" "}
-                  zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
-                  Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
-                  gespeichert werden.
-                </>
-              }
-              checked={privacy}
-              onChange={() => setPrivacy(!privacy)}
+          </div>
+          <TextInput
+            name="company"
+            label="Unternehmen"
+            autoComplete="organization"
+            onChange={handleChange}
+            withAsterisk
+          />
+          <div className={twoCols}>
+            <TextInput
+              name="email"
+              label="E-Mail"
+              autoComplete="email"
+              onChange={handleChange}
+              withAsterisk
             />
-            <Button
-              type="submit"
-              leftSection={<IconSend size={16} />}
-              disabled={
-                data.firstName.trim().length === 0 ||
-                data.lastName.trim().length === 0 ||
-                data.company.trim().length === 0 ||
-                !validateEmail(data.email) ||
-                data.message.trim().length === 0 ||
-                !privacy
-              }
+            <TextInput
+              name="phone"
+              label="Telefon"
+              autoComplete="tel"
+              onChange={handleChange}
+            />
+          </div>
+          <Textarea
+            label="Ihre Nachricht"
+            name="message"
+            placeholder="Wie können wir Ihnen weiterhelfen?"
+            rows={4}
+            onChange={handleChange}
+            withAsterisk
+          />
+          <Checkbox
+            label={
+              <>
+                Ich habe die{" "}
+                <Link href="/legal/privacy" target="_blank">
+                  Datenschutzhinweise
+                </Link>{" "}
+                zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
+                Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
+                gespeichert werden.
+              </>
+            }
+            checked={privacy}
+            onChange={() => setPrivacy(!privacy)}
+          />
+          {error && (
+            <Notification
+              withCloseButton={false}
+              color="red"
+              icon={<IconX size={16} />}
+              title={error}
             >
-              Jetzt Kontakt aufnehmen
-            </Button>
-          </form>
-        ) : (
-          <FormSuccess />
-        )}
+              Bitte versuche es erneut.
+            </Notification>
+          )}
+          {success && (
+            <Notification
+              withCloseButton={false}
+              color="orange"
+              icon={<IconCheck size={16} />}
+              title="Kontaktanfrage abgeschickt!"
+            >
+              Wir melden uns in Kürze bei Ihnen.
+            </Notification>
+          )}
+          <Button
+            type="submit"
+            leftSection={<IconSend size={16} />}
+            disabled={
+              data.firstName.trim().length === 0 ||
+              data.lastName.trim().length === 0 ||
+              data.company.trim().length === 0 ||
+              !validateEmail(data.email) ||
+              data.message.trim().length === 0 ||
+              !privacy
+            }
+          >
+            Jetzt Kontakt aufnehmen
+          </Button>
+        </form>
       </main>
     </div>
   );

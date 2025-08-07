@@ -44,8 +44,9 @@ export default function PageWrapper({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const hideContactFormRoutes = ["/security-event/"];
-  const showContact = !hideContactFormRoutes.includes(pathname);
+  // const hideContactFormRoutes = ["/about/career/"];
+  // const showContact = !hideContactFormRoutes.includes(pathname);
+  const showContact = !pathname.startsWith("/about/career/");
 
   return (
     <MantineProvider theme={theme}>
