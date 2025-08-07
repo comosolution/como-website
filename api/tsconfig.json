@@ -8,7 +8,7 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "types": ["@azure/functions"]
+    "types": ["@azure/functions", "node"]
   },
   "include": ["src"]
 }

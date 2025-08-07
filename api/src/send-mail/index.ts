@@ -1,59 +1,64 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
 const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  if (req.method !== "POST") {
-    context.res = { status: 405, body: "Method Not Allowed" };
-    return;
-  }
-
-  const { name, email, message, content, filename, filetype } = req.body;
+  const { name, email, message, attachment } = req.body || {};
 
   if (!name || !email || !message) {
-    context.res = { status: 400, body: "Missing fields" };
+    context.res = {
+      status: 400,
+      body: "Missing required fields: name, email, and message.",
+    };
     return;
   }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.strato.de",
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.NODEMAILER_USER,
-      pass: process.env.NODEMAILER_PASS,
-    },
-    tls: {
-      ciphers: "SSLv3",
-    },
-  });
-
-  const attachments = content
-    ? [
-        {
-          filename: filename || "attachment.pdf",
-          content: Buffer.from(content, "base64"),
-          contentType: filetype || "application/pdf",
-        },
-      ]
-    : [];
-
-  const mailOptions = {
-    from: process.env.NODEMAILER_USER,
-    to: "eric.schmidt@como-solution.de",
-    subject: "New Contact Form Submission",
-    text: message,
-    attachments,
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
-    context.res = { status: 200, body: "Email sent successfully!" };
-  } catch (error) {
-    context.log("Error sending email:", error);
-    context.res = { status: 500, body: "Failed to send email." };
+    const emailOptions: any = {
+      from: 'Resend" <no-reply@tippspiel.fcn.de>',
+      to: "eric.schmidt@como-solution.de",
+      subject: "New Contact Form Submission",
+      reply_to: email,
+      text: `
+New message from your site:
+
+Name: ${name}
+Email: ${email}
+Message:
+${message}
+      `,
+    };
+
+    // If there's a base64 PDF attachment
+    if (attachment?.content && attachment?.filename) {
+      emailOptions.attachments = [
+        {
+          filename: attachment.filename,
+          content: attachment.content,
+          contentType: "application/pdf",
+        },
+      ];
+    }
+
+    const response = await resend.emails.send(emailOptions);
+
+    context.log("Email sent:", response);
+
+    context.res = {
+      status: 200,
+      body: "Message sent successfully",
+    };
+  } catch (error: any) {
+    context.log.error("Failed to send email:", error);
+
+    context.res = {
+      status: 500,
+      body: "Something went wrong while sending the email.",
+    };
   }
 };
 
