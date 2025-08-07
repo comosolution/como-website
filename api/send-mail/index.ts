@@ -46,7 +46,7 @@ const httpTrigger: AzureFunction = async function (
   try {
     const emailOptions: any = {
       from: '"CoMo Service" <no-reply@service.como-solution.de>',
-      to: "eric.schmidt@como-solution.de, info@como-solution.de",
+      to: ["eric.schmidt@como-solution.de", "info@como-solution.de"],
       subject: subject ? subject : "Neue Kontaktanfrage",
       text: text,
     };

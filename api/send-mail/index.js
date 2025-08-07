@@ -13,7 +13,7 @@ const httpTrigger = async function (context, req) {
     }
     let text = `Name: ${name}\nE-Mail: ${email}`;
     if (phone) {
-        text += `\nTelefon: ${company}`;
+        text += `\nTelefon: ${phone}`;
     }
     if (company) {
         text += `\nUnternehmen: ${company}`;
@@ -25,7 +25,7 @@ const httpTrigger = async function (context, req) {
     try {
         const emailOptions = {
             from: '"CoMo Service" <no-reply@service.como-solution.de>',
-            to: "eric.schmidt@como-solution.de",
+            to: ["eric.schmidt@como-solution.de", "info@como-solution.de"],
             subject: subject ? subject : "Neue Kontaktanfrage",
             text: text,
         };
