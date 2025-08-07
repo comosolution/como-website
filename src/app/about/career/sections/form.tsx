@@ -48,7 +48,6 @@ export default function CareerForm({ subject }: { subject: string }) {
         subject: subject,
         message: form.message,
         filename: form.file?.name,
-        filetype: form.file?.type,
         content: base64,
       }),
     });

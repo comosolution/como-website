@@ -7,7 +7,7 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  const { name, email, subject, message, attachment } = req.body || {};
+  const { name, email, subject, message, filename, content } = req.body || {};
 
   if (!name || !email || !message) {
     context.res = {
@@ -32,11 +32,11 @@ const httpTrigger: AzureFunction = async function (
       `,
     };
 
-    if (attachment?.content && attachment?.filename) {
+    if (content && filename) {
       emailOptions.attachments = [
         {
-          filename: attachment.filename,
-          content: attachment.content,
+          filename: filename,
+          content: content,
           contentType: "application/pdf",
         },
       ];
