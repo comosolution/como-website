@@ -1,13 +1,16 @@
 "use client";
 import { card, twoCols } from "@/app/style/style";
+import { validateEmail } from "@/app/utils/utils";
 import {
   Button,
+  Checkbox,
   FileInput,
   Notification,
   TextInput,
   Textarea,
 } from "@mantine/core";
 import { IconCheck, IconId, IconMail, IconX } from "@tabler/icons-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function CareerForm() {
@@ -17,6 +20,7 @@ export default function CareerForm() {
     message: "",
     file: null as File | null,
   });
+  const [privacy, setPrivacy] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -114,7 +118,8 @@ export default function CareerForm() {
               />
             </div>
             <Textarea
-              label="Nachricht"
+              label="Deine Nachricht"
+              rows={4}
               value={form.message}
               onChange={(e) => handleChange("message", e.currentTarget.value)}
               withAsterisk
@@ -126,11 +131,32 @@ export default function CareerForm() {
               value={form.file}
               onChange={(file) => handleChange("file", file)}
             />
+            <Checkbox
+              label={
+                <>
+                  Ich habe die{" "}
+                  <Link href="/legal/privacy" target="_blank">
+                    Datenschutzhinweise
+                  </Link>{" "}
+                  zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und
+                  Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
+                  gespeichert werden.
+                </>
+              }
+              checked={privacy}
+              onChange={() => setPrivacy(!privacy)}
+            />
             <Button
               color="red"
               type="submit"
               loading={status === "sending"}
               fullWidth
+              disabled={
+                form.name.trim().length === 0 ||
+                !validateEmail(form.email) ||
+                form.message.trim().length === 0 ||
+                !privacy
+              }
             >
               Jetzt bewerben
             </Button>
