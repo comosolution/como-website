@@ -87,6 +87,7 @@ export default function Contact() {
               info@como-solution.de
             </Button>
             <Button
+              color="red"
               variant="transparent"
               component="a"
               href="tel:+4991231833700"

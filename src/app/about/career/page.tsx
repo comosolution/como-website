@@ -50,18 +50,18 @@ export default async function Page() {
           <Link
             key={i}
             href={`/about/career/${j.fields.slug}`}
-            className={`tile flex flex-col lg:flex-row justify-between items-center gap-4 hover:bg-[rgba(var(--highlight-rgb),0.4)] transition-all ${card} ${defaultPadding}`}
+            className={`tile flex flex-col lg:flex-row justify-between items-center gap-4 hover:bg-[rgba(var(--highlight-rgb),0.4)] transition-all ${card} px-8 py-4`}
           >
             <div className="flex flex-col items-center lg:items-start gap-2">
               <h3 className="text-center">{j.fields.title}</h3>
               <div className="flex flex-col lg:flex-row items-center lg:gap-8">
                 <div className="flex items-center gap-1 muted">
                   <IconClock size={16} />
-                  <p>{j.fields.type}</p>
+                  <p className="small">{j.fields.type}</p>
                 </div>
                 <div className="flex items-center gap-1 muted">
                   <IconMapPin size={16} />
-                  <p>{j.fields.location}</p>
+                  <p className="small">{j.fields.location}</p>
                 </div>
               </div>
             </div>
