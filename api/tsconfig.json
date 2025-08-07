@@ -5,6 +5,7 @@
     "outDir": "./",
     "rootDir": "./",
     "strict": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "types": ["node", "@azure/functions"]
   },
