@@ -27,6 +27,16 @@ jobs:
           echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> .env.local
           echo "CONTENTFUL_PREVIEW_API_TOKEN=${{ secrets.CONTENTFUL_PREVIEW_API_TOKEN }}" >> .env.local
 
+      - name: Install dependencies for API
+        run: |
+          cd api
+          npm install
+
+      - name: Build API functions
+        run: |
+          cd api
+          npm run build
+
       - name: Deploy to Azure Static Web Apps (Prod)
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -34,3 +44,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           output_location: "out"
+          api_location: "api"
