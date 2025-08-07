@@ -1,15 +1,13 @@
 "use client";
+import { card, twoCols } from "@/app/style/style";
 import {
   Button,
-  Container,
   FileInput,
-  Group,
   Notification,
   TextInput,
   Textarea,
-  Title,
 } from "@mantine/core";
-import { IconCheck, IconX } from "@tabler/icons-react";
+import { IconCheck, IconId, IconMail, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 
 export default function CareerForm() {
@@ -19,7 +17,6 @@ export default function CareerForm() {
     message: "",
     file: null as File | null,
   });
-
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -69,68 +66,97 @@ export default function CareerForm() {
   };
 
   return (
-    <Container size="sm" mt="lg">
-      <Title order={2} mb="md">
-        Contact Us
-      </Title>
-
-      <form onSubmit={handleSubmit}>
-        <TextInput
-          label="Name"
-          value={form.name}
-          onChange={(e) => handleChange("name", e.currentTarget.value)}
-          required
-          mb="sm"
-        />
-        <TextInput
-          label="Email"
-          type="email"
-          value={form.email}
-          onChange={(e) => handleChange("email", e.currentTarget.value)}
-          required
-          mb="sm"
-        />
-        <Textarea
-          label="Message"
-          value={form.message}
-          onChange={(e) => handleChange("message", e.currentTarget.value)}
-          required
-          mb="sm"
-        />
-        <FileInput
-          label="Attach PDF (optional)"
-          accept="application/pdf"
-          value={form.file}
-          onChange={(file) => handleChange("file", file)}
-          mb="sm"
-        />
-        <Group mt="md">
-          <Button type="submit" loading={status === "sending"}>
-            Send Message
-          </Button>
-        </Group>
-      </form>
-
-      {status === "success" && (
-        <Notification
-          mt="lg"
-          color="green"
-          icon={<IconCheck size={16} />}
-          title="Success"
-        >
-          Your message has been sent!
-        </Notification>
-      )}
-      {status === "error" && (
-        <Notification
-          mt="lg"
-          color="red"
-          icon={<IconX size={16} />}
-          title="Error"
-        >
-          Something went wrong. Please try again.
-        </Notification>
-      )}
-    </Container>
+    <div className="relative isolate">
+      <div className="absolute w-full h-full -z-10 bg-[var(--light)] clip-angled" />
+      <main
+        id="contact"
+        className={`relative z-30 ${twoCols} mb-32 px-8 py-32`}
+      >
+        <div className="flex flex-col items-center gap-8 pt-8 lg:h-min lg:sticky lg:top-4">
+          <div className="flex flex-col text-center">
+            <header className="flex flex-col">
+              <p className="text-orange-500">
+                <b>Klingt nach dir?</b>
+              </p>
+              <h2>Dann schick uns jetzt deine Bewerbung zu</h2>
+            </header>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2 items-center">
+            <Button
+              variant="light"
+              component="a"
+              href="mailto:info@como-solution.de"
+              leftSection={<IconMail size={16} />}
+            >
+              info@como-solution.de
+            </Button>
+          </div>
+        </div>
+        <div>
+          <form
+            onSubmit={handleSubmit}
+            className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+          >
+            <h4>Deine Bewerbung</h4>
+            <div className={twoCols}>
+              <TextInput
+                label="Name"
+                value={form.name}
+                onChange={(e) => handleChange("name", e.currentTarget.value)}
+                withAsterisk
+              />
+              <TextInput
+                label="E-Mail"
+                type="email"
+                value={form.email}
+                onChange={(e) => handleChange("email", e.currentTarget.value)}
+                withAsterisk
+              />
+            </div>
+            <Textarea
+              label="Nachricht"
+              value={form.message}
+              onChange={(e) => handleChange("message", e.currentTarget.value)}
+              withAsterisk
+            />
+            <FileInput
+              label="Dein Lebenslauf"
+              accept="application/pdf"
+              rightSection={<IconId size={16} />}
+              value={form.file}
+              onChange={(file) => handleChange("file", file)}
+            />
+            <Button
+              color="red"
+              type="submit"
+              loading={status === "sending"}
+              fullWidth
+            >
+              Jetzt bewerben
+            </Button>
+          </form>
+          {status === "success" && (
+            <Notification
+              mt="lg"
+              color="green"
+              icon={<IconCheck size={16} />}
+              title="Erfolg"
+            >
+              Bewerbungsunterlagen abgeschickt!
+            </Notification>
+          )}
+          {status === "error" && (
+            <Notification
+              mt="lg"
+              color="red"
+              icon={<IconX size={16} />}
+              title="Fehler"
+            >
+              Oh, da ist etwas schief gegangen. Bitte versuche es erneut.
+            </Notification>
+          )}
+        </div>
+      </main>
+    </div>
   );
 }
