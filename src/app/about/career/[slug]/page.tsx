@@ -78,19 +78,8 @@ export default async function NotizDetailPage({
         <article>
           <RichTextRenderer document={job.fields.content} />
         </article>
-        {/* <Button
-        size="xl"
-        color="red"
-        component="a"
-        href={`mailto:info@como-solution.de?subject=Bewerbung: ${job.fields.title}`}
-        leftSection={<IconId size={24} />}
-        fullWidth
-        radius="0"
-      >
-        Jetzt bewerben
-      </Button> */}
       </div>
-      <CareerForm />
+      <CareerForm subject={`Bewerbung: ${job.fields.title}`} />
     </>
   );
 }

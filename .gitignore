@@ -23,7 +23,7 @@
 /public/robots.txt
 
 # api
-/api/dist
+/api/send-mail/index.js
 /api/node_modules
 /api/local.settings.json
 

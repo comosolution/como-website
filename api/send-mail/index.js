@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const resend_1 = require("resend");
 const resend = new resend_1.Resend(process.env.RESEND_API_KEY);
 const httpTrigger = async function (context, req) {
-    const { name, email, message, attachment } = req.body || {};
+    const { name, email, subject, message, attachment } = req.body || {};
     if (!name || !email || !message) {
         context.res = {
             status: 400,
@@ -13,9 +13,9 @@ const httpTrigger = async function (context, req) {
     }
     try {
         const emailOptions = {
-            from: '"Resend" <no-reply@tippspiel.fcn.de>',
+            from: '"CoMo Service" <no-reply@service.como-solution.de>',
             to: "eric.schmidt@como-solution.de",
-            subject: "New Contact Form Submission",
+            subject: subject ? subject : "Neue Kontaktanfrage",
             text: `
         New message from your site:
 

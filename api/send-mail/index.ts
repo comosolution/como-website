@@ -7,7 +7,7 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  const { name, email, message, attachment } = req.body || {};
+  const { name, email, subject, message, attachment } = req.body || {};
 
   if (!name || !email || !message) {
     context.res = {
@@ -19,9 +19,9 @@ const httpTrigger: AzureFunction = async function (
 
   try {
     const emailOptions: any = {
-      from: '"Resend" <no-reply@tippspiel.fcn.de>',
+      from: '"CoMo Service" <no-reply@service.como-solution.de>',
       to: "eric.schmidt@como-solution.de",
-      subject: "New Contact Form Submission",
+      subject: subject ? subject : "Neue Kontaktanfrage",
       text: `
         New message from your site:
 

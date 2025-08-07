@@ -13,7 +13,7 @@ import { IconCheck, IconId, IconMail, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function CareerForm() {
+export default function CareerForm({ subject }: { subject: string }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -45,6 +45,7 @@ export default function CareerForm() {
       body: JSON.stringify({
         name: form.name,
         email: form.email,
+        subject: subject,
         message: form.message,
         filename: form.file?.name,
         filetype: form.file?.type,
@@ -89,7 +90,7 @@ export default function CareerForm() {
             <Button
               variant="light"
               component="a"
-              href="mailto:info@como-solution.de"
+              href={`mailto:info@como-solution.de?subject=${subject}`}
               leftSection={<IconMail size={16} />}
             >
               info@como-solution.de
@@ -166,9 +167,9 @@ export default function CareerForm() {
               mt="lg"
               color="green"
               icon={<IconCheck size={16} />}
-              title="Erfolg"
+              title="Bewerbungsunterlagen abgeschickt!"
             >
-              Bewerbungsunterlagen abgeschickt!
+              Wir melden uns in Kürze bei dir.
             </Notification>
           )}
           {status === "error" && (
@@ -176,9 +177,9 @@ export default function CareerForm() {
               mt="lg"
               color="red"
               icon={<IconX size={16} />}
-              title="Fehler"
+              title="Oh, da ist etwas schief gegangen."
             >
-              Oh, da ist etwas schief gegangen. Bitte versuche es erneut.
+              Bitte versuche es erneut.
             </Notification>
           )}
         </div>
