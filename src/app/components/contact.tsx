@@ -40,8 +40,11 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(
-      JSON.stringify({
+
+    const res = await fetch("/api/send-mail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
         type: "kontaktanfrage",
         name: data.name,
         company: data.company,
@@ -50,28 +53,14 @@ export default function Contact() {
         page: pathname,
         subject: `Neue Kontaktanfrage ${data.subject}`.trim(),
         message: data.message,
-      })
-    );
-    // const res = await fetch("/api/send-mail", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     type: "kontaktanfrage",
-    //     name: data.name,
-    //     company: data.company,
-    //     email: data.email,
-    //     phone: data.phone,
-    //     page: pathname,
-    //     subject: `Neue Kontaktanfrage ${data.subject}`.trim(),
-    //     message: data.message,
-    //   }),
-    // });
+      }),
+    });
 
-    // if (res.ok) {
-    //   setSuccess(true);
-    // } else {
-    //   setError("Es ist ein Fehler aufgetreten");
-    // }
+    if (res.ok) {
+      setSuccess(true);
+    } else {
+      setError("Es ist ein Fehler aufgetreten");
+    }
   };
 
   return (
@@ -126,9 +115,9 @@ export default function Contact() {
               withAsterisk
             />
             <TextInput
-              name="company"
-              label="Unternehmen"
-              autoComplete="organization"
+              name="firstName"
+              label="Vorname"
+              autoComplete="given-name"
               onChange={handleChange}
             />
           </div>
