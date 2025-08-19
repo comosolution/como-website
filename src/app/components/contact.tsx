@@ -3,6 +3,7 @@ import {
   Button,
   Checkbox,
   Notification,
+  Select,
   Textarea,
   TextInput,
 } from "@mantine/core";
@@ -23,11 +24,11 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     company: "",
     email: "",
     phone: "",
+    subject: "",
     message: "",
   });
   const [privacy, setPrivacy] = useState(false);
@@ -39,15 +40,18 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     const res = await fetch("/api/send-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: `${data.firstName} ${data.lastName}`,
+        type: "kontaktanfrage",
+        name: data.name,
         company: data.company,
         email: data.email,
         phone: data.phone,
         page: pathname,
+        subject: `Neue Kontaktanfrage ${data.subject}`.trim(),
         message: data.message,
       }),
     });
@@ -104,27 +108,19 @@ export default function Contact() {
           <h4>Ihre Kontaktanfrage</h4>
           <div className={twoCols}>
             <TextInput
-              name="firstName"
-              label="Vorname"
-              autoComplete="given-name"
+              name="name"
+              label="Name"
+              autoComplete="name"
               onChange={handleChange}
               withAsterisk
             />
             <TextInput
-              name="lastName"
-              label="Nachname"
-              autoComplete="family-name"
+              name="firstName"
+              label="Vorname"
+              autoComplete="given-name"
               onChange={handleChange}
-              withAsterisk
             />
           </div>
-          <TextInput
-            name="company"
-            label="Unternehmen"
-            autoComplete="organization"
-            onChange={handleChange}
-            withAsterisk
-          />
           <div className={twoCols}>
             <TextInput
               name="email"
@@ -140,10 +136,28 @@ export default function Contact() {
               onChange={handleChange}
             />
           </div>
+          <Select
+            name="subject"
+            label="Wofür interessieren Sie sich?"
+            placeholder="Thema wählen"
+            onChange={(value) => setData({ ...data, subject: value || "" })}
+            data={[
+              "Prozessoptimierung für Unternehmen",
+              "Individuelle Softwarelösungen",
+              "KI-Beratung für den Mittelstand",
+              "Cybersecurity & Endpoint-Management",
+              "Moderne Kommunikation",
+              "Service & Betrieb von IT",
+            ]}
+            checkIconPosition="right"
+            clearable
+            searchable
+            comboboxProps={{ shadow: "xl" }}
+          />
           <Textarea
-            label="Ihre Nachricht"
             name="message"
-            placeholder="Wie können wir Ihnen weiterhelfen?"
+            label="Wie können wir Ihnen weiterhelfen?"
+            placeholder="Hier ist Platz für Ihre Nachricht."
             rows={4}
             onChange={handleChange}
             withAsterisk
@@ -187,9 +201,7 @@ export default function Contact() {
             type="submit"
             leftSection={<IconSend size={16} />}
             disabled={
-              data.firstName.trim().length === 0 ||
-              data.lastName.trim().length === 0 ||
-              data.company.trim().length === 0 ||
+              data.name.trim().length === 0 ||
               !validateEmail(data.email) ||
               data.message.trim().length === 0 ||
               !privacy

@@ -1,9 +1,9 @@
-import { card, defaultPadding, twoCols } from "@/app/style/style";
+import Tile from "@/app/components/tile";
+import { defaultPadding, twoCols } from "@/app/style/style";
 import { getAllJobs, Job } from "@/app/utils/contentful";
-import { Button } from "@mantine/core";
-import { IconChevronRight, IconClock, IconMapPin } from "@tabler/icons-react";
+import { IconClock, IconMapPin } from "@tabler/icons-react";
 import { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Karriere | CoMo Solution GmbH",
@@ -46,34 +46,46 @@ export default async function Page() {
       </section>
       <section className="flex flex-col gap-4">
         <h2 className="text-center">Offene Stellen</h2>
-        {jobs.map((j, i) => (
-          <Link
-            key={i}
-            href={`/about/career/${j.fields.slug}`}
-            className={`tile flex flex-col lg:flex-row justify-between items-center gap-4 hover:bg-[rgba(var(--highlight-rgb),0.4)] transition-all ${card} px-8 py-4`}
-          >
-            <div className="flex flex-col items-center lg:items-start gap-2">
-              <h3 className="text-center">{j.fields.title}</h3>
-              <div className="flex flex-col lg:flex-row items-center lg:gap-8">
-                <div className="flex items-center gap-1 muted">
-                  <IconClock size={16} />
-                  <p className="small">{j.fields.type}</p>
+        <div className={twoCols}>
+          {jobs.map((j, i) => {
+            const coverImage = j.fields.cover?.fields?.file?.url
+              ? `https:${j.fields.cover.fields.file.url}`
+              : null;
+            const coverAlt = j.fields.cover?.fields?.title || j.fields.title;
+
+            return (
+              <Tile
+                key={i}
+                href={`/about/career/${j.fields.slug}`}
+                className="gap-4"
+              >
+                <div className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8 pt-[45%]">
+                  <Image
+                    src={coverImage ? coverImage : "/fallback.svg"}
+                    alt={coverAlt}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
-                <div className="flex items-center gap-1 muted">
-                  <IconMapPin size={16} />
-                  <p className="small">{j.fields.location}</p>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="flex flex-col lg:flex-row items-center lg:gap-4">
+                    <div className="flex items-center gap-0.5 muted">
+                      <IconClock size={16} />
+                      <p className="small">{j.fields.type}</p>
+                    </div>
+                    <div className="flex items-center gap-0.5 muted">
+                      <IconMapPin size={16} />
+                      <p className="small">{j.fields.location}</p>
+                    </div>
+                  </div>
+                  <h4 className="hyphens-auto text-center">
+                    <b>{j.fields.title}</b>
+                  </h4>
                 </div>
-              </div>
-            </div>
-            <Button
-              color="red"
-              variant="transparent"
-              rightSection={<IconChevronRight size={16} />}
-            >
-              Mehr erfahren
-            </Button>
-          </Link>
-        ))}
+              </Tile>
+            );
+          })}
+        </div>
       </section>
     </main>
   );
