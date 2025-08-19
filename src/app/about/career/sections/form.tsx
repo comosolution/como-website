@@ -49,6 +49,7 @@ export default function CareerForm({ subject }: { subject: string }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        type: "bewerbung",
         name: form.name,
         email: form.email,
         subject: subject,
@@ -76,7 +77,7 @@ export default function CareerForm({ subject }: { subject: string }) {
   };
 
   return (
-    <div className="relative isolate">
+    <div className="relative -mt-16">
       <div className="absolute w-full h-full -z-10 bg-[var(--light)] clip-angled" />
       <main
         id="contact"
@@ -95,16 +96,16 @@ export default function CareerForm({ subject }: { subject: string }) {
             <Button
               variant="light"
               component="a"
-              href={`mailto:info@como-solution.de?subject=${subject}`}
+              href={`mailto:bewerbung@como-solution.de?subject=${subject}`}
               leftSection={<IconMail size={16} />}
             >
-              info@como-solution.de
+              bewerbung@como-solution.de
             </Button>
           </div>
         </div>
         <form
           onSubmit={handleSubmit}
-          className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+          className={`flex flex-col gap-4 p-8 ${card} bg-[rgb(var(--background-rgb))] shadow-2xl shadow-orange-500/20`}
         >
           <h4>Deine Bewerbung</h4>
           <div className={twoCols}>
@@ -136,7 +137,7 @@ export default function CareerForm({ subject }: { subject: string }) {
           />
           <FileInput
             label="Dein Lebenslauf"
-            placeholder="Ein PDF hinzufügen"
+            placeholder="PDF hinzufügen"
             accept="application/pdf"
             leftSection={<IconId size={16} />}
             clearable

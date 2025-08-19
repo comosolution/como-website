@@ -1,13 +1,13 @@
-import rehypeStringify from "rehype-stringify";
+import * as fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeRaw from "rehype-raw";
+import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
-import * as fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import rehypeRaw from "rehype-raw";
 
 export async function getMarkdown(folder: string) {
   const noteDirectory = path.join(process.cwd(), folder);

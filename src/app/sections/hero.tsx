@@ -2,7 +2,7 @@
 "use client";
 import { Button } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
+import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import Circles from "../components/circles";
@@ -53,7 +53,6 @@ export default function Hero() {
               variant="transparent"
               component={Link}
               href="/about/career"
-              rightSection={<IconChevronRight size={16} />}
             >
               Offene Stellen entdecken
             </Button>
