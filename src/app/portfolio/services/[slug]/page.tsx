@@ -60,7 +60,7 @@ export default async function Page({
         coverImage={coverImage}
         coverAlt={coverAlt}
       >
-        <div className="flex justify-start items-center gap-1 pb-2 muted">
+        <div className="flex justify-start items-center gap-1 pb-2 text-[rgb(var(--red-rgb))] ">
           <Icon />
           <p>
             <b>{service.fields.name}</b>

@@ -2,7 +2,6 @@
 import { useMediaQuery } from "@mantine/hooks";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Divider from "../components/divider";
 import { defaultPadding, highlight } from "../style/style";
 
 export default function Sub() {
@@ -69,7 +68,7 @@ export default function Sub() {
       id="sub"
       className={`relative z-5 flex flex-col items-center gap-32 ${defaultPadding}`}
     >
-      <div className="flex flex-col items-center text-center gap-2">
+      <div className="flex flex-col items-center text-center gap-4">
         <h2 onClick={handleClick} className="cursor-default select-none">
           Wir sind die <span className={highlight}>CoMo</span>.{" "}
           {isMobile && <br />}Wir{" "}
@@ -93,21 +92,16 @@ export default function Sub() {
             </AnimatePresence>
           </motion.span>
         </h2>
-        <Divider />
-        <div className="muted">
-          <p>Wie setzen Sie Ihr Digitalisierungsprojekt um?</p>
-          <p>
-            Wie gestalten Sie die Sicherheit Ihrer IT – und Ihrer Organisation?
-          </p>
-          <p>
-            Wie sorgen Sie für den reibungslosen, kontinuierlichen Betrieb Ihrer
-            Softwarelösungen und Anwendungen?
-          </p>
-          <p>
-            Drei große Fragen … und eine Antwort:{" "}
-            <b>Mit den Experten von CoMo Solution!</b>
-          </p>
-        </div>
+        <p className="muted">
+          Wie setzen Sie Ihr Digitalisierungsprojekt um? Wie gestalten Sie die
+          Sicherheit Ihrer IT – und Ihrer Organisation? Wie sorgen Sie für den
+          reibungslosen, kontinuierlichen Betrieb Ihrer Softwarelösungen und
+          Anwendungen?
+        </p>
+        <p>
+          Drei große Fragen … und eine Antwort:{" "}
+          <b>Mit den Experten von CoMo Solution!</b>
+        </p>
         {/* Hidden measuring element */}
         <h2
           ref={measureRef}
