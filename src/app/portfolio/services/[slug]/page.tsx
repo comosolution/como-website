@@ -46,13 +46,13 @@ export default async function Page({
   const Icon = icons[service.fields.slug];
 
   return (
-    <main className="flex flex-col gap-16 items-center">
+    <main className="flex flex-col gap-8 items-center">
       <Hero
         title={service.fields.title}
         coverImage={coverImage}
         coverAlt={coverAlt}
       >
-        <div className="flex justify-start items-center gap-1 pb-2 text-orange-500">
+        <div className="flex justify-start items-center gap-1 pb-2 muted">
           <Icon />
           <p>
             <b>{service.fields.name}</b>
