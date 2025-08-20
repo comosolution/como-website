@@ -14,11 +14,19 @@ export async function generateMetadata({
   const service: Service = await getEntryBySlug("services", slug);
 
   return {
-    title: `${service.fields.title} | CoMo Solution GmbH`,
+    title: `${service.fields.name} | CoMo Solution GmbH`,
     openGraph: {
-      title: service.fields.title,
+      title: service.fields.name,
       type: "article",
       url: `https://como-solution.de/portfolio/services/${service.fields.slug}`,
+      images: service.fields.cover?.fields?.file?.url
+        ? [
+            {
+              url: `https:${service.fields.cover.fields.file.url}`,
+              alt: service.fields.title,
+            },
+          ]
+        : [],
     },
   };
 }
