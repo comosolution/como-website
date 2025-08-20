@@ -1,5 +1,5 @@
 "use client";
-import portfolio from "../data/portfolio/overview.json";
+import portfolio from "../data/portfolio.json";
 import Divider from "./divider";
 import Tile from "./tile";
 
