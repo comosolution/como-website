@@ -1,12 +1,12 @@
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import ContactButton from "@/app/components/contactButton";
 import Hero from "@/app/components/hero";
+import { icons } from "@/app/components/icons";
 import {
   getAllEntries,
   getEntryBySlug,
   Portfolio,
 } from "@/app/utils/contentful";
-import { icons } from "@/app/utils/icons";
 import { Metadata } from "next";
 import Overview from "../../sections/overview";
 

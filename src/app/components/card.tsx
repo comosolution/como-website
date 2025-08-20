@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { card } from "../style/style";
-import { icons } from "../utils/icons";
+import { icons } from "./icons";
 
 export default function CardActionButton({
   name,
