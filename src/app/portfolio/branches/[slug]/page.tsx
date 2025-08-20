@@ -1,7 +1,7 @@
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import ContactButton from "@/app/components/contactButton";
 import Hero from "@/app/components/hero";
-import { getAllEntries, getEntryBySlug, Service } from "@/app/utils/contentful";
+import { Branche, getAllEntries, getEntryBySlug } from "@/app/utils/contentful";
 import { icons } from "@/app/utils/icons";
 import { Metadata } from "next";
 import Overview from "../../sections/overview";
@@ -12,19 +12,19 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service: Service = await getEntryBySlug("branchen", slug);
+  const branch: Branche = await getEntryBySlug("branchen", slug);
 
   return {
-    title: `${service.fields.name} | CoMo Solution GmbH`,
+    title: `${branch.fields.name} | CoMo Solution GmbH`,
     openGraph: {
-      title: service.fields.name,
+      title: branch.fields.name,
       type: "article",
-      url: `https://como-solution.de/portfolio/services/${service.fields.slug}`,
-      images: service.fields.cover?.fields?.file?.url
+      url: `https://como-solution.de/portfolio/branches/${branch.fields.slug}`,
+      images: branch.fields.cover?.fields?.file?.url
         ? [
             {
-              url: `https:${service.fields.cover.fields.file.url}`,
-              alt: service.fields.title,
+              url: `https:${branch.fields.cover.fields.file.url}`,
+              alt: branch.fields.title,
             },
           ]
         : [],
@@ -33,9 +33,9 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const services = await getAllEntries("branchen");
-  return services.map((service) => ({
-    slug: service.fields.slug,
+  const branches = await getAllEntries("branchen");
+  return branches.map((branch) => ({
+    slug: branch.fields.slug,
   }));
 }
 
@@ -45,39 +45,35 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service: Service = await getEntryBySlug("branchen", slug);
+  const branch: Branche = await getEntryBySlug("branchen", slug);
 
-  const coverImage = service.fields.cover?.fields?.file?.url
-    ? `https:${service.fields.cover.fields.file.url}`
+  const coverImage = branch.fields.cover?.fields?.file?.url
+    ? `https:${branch.fields.cover.fields.file.url}`
     : null;
-  const coverAlt = service.fields.cover?.fields?.title || service.fields.title;
+  const coverAlt = branch.fields.cover?.fields?.title || branch.fields.title;
 
-  const Icon = icons[service.fields.slug];
+  const Icon = icons[branch.fields.slug];
 
   return (
     <main className="flex flex-col gap-8 items-center">
       <Hero
-        title={service.fields.title}
+        title={branch.fields.title}
         coverImage={coverImage}
         coverAlt={coverAlt}
       >
         <div className="flex justify-start items-center gap-1 pb-2 text-[rgb(var(--red-rgb))] ">
           <Icon />
           <p>
-            <b>{service.fields.name}</b>
+            <b>{branch.fields.name}</b>
           </p>
         </div>
       </Hero>
       <article>
-        <RichTextRenderer document={service.fields.content} />
+        <RichTextRenderer document={branch.fields.content} />
         <ContactButton />
       </article>
       <div className="flex flex-col items-center">
-        <Overview
-          type="branchen"
-          filter={slug}
-          title="Weitere Leistungen für Sie"
-        />
+        <Overview type="branchen" filter={slug} title="Weitere Branchen" />
       </div>
     </main>
   );

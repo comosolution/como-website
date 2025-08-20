@@ -34,7 +34,7 @@ export interface Note {
   };
 }
 
-export interface Service {
+export interface Portfolio {
   sys: {
     id: string;
     createdAt: string;
@@ -48,6 +48,9 @@ export interface Service {
     cover?: Cover;
   };
 }
+
+export interface Service extends Portfolio {}
+export interface Branche extends Portfolio {}
 
 export interface Job {
   sys: {

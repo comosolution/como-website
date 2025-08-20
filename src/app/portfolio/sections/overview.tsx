@@ -1,5 +1,5 @@
 import CardActionButton from "@/app/components/card";
-import { getAllEntries, Service } from "@/app/utils/contentful";
+import { getAllEntries, Portfolio } from "@/app/utils/contentful";
 import { Button } from "@mantine/core";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Link from "next/link";
@@ -15,9 +15,9 @@ export default async function Overview({
 }) {
   const path = type === "branchen" ? "branches" : type;
 
-  const services: Service[] = await getAllEntries(type);
-  const filteredServices = services.filter(
-    (service) => service.fields.slug !== filter
+  const entries: Portfolio[] = await getAllEntries(type);
+  const filteredEntries = entries.filter(
+    (entry) => entry.fields.slug !== filter
   );
 
   return (
@@ -26,13 +26,13 @@ export default async function Overview({
         {title ? title : "An welcher Leistung sind Sie interessiert?"}
       </h4>
       <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {filteredServices.map((service, index) => {
+        {filteredEntries.map((entry, index) => {
           return (
             <CardActionButton
               key={index}
-              name={service.fields.name}
-              id={service.fields.slug}
-              href={`/portfolio/${path}/${service.fields.slug}`}
+              name={entry.fields.name}
+              id={entry.fields.slug}
+              href={`/portfolio/${path}/${entry.fields.slug}`}
             />
           );
         })}
