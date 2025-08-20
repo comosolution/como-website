@@ -1,10 +1,9 @@
 "use client";
+import ContactButton from "@/app/components/contactButton";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document } from "@contentful/rich-text-types";
 import { Accordion, Button } from "@mantine/core";
-import { IconChevronDown } from "@tabler/icons-react";
 import Link from "next/link";
-import { scrollTo } from "../../../utils/utils";
 
 export function RichTextRenderer({ document }: { document: Document }) {
   return (
@@ -60,13 +59,7 @@ export function RichTextRenderer({ document }: { document: Document }) {
                   {fields.text}
                 </Button>
               ) : (
-                <Button
-                  onClick={() => scrollTo("contact")}
-                  my="lg"
-                  leftSection={<IconChevronDown size={16} />}
-                >
-                  {fields.text}
-                </Button>
+                <ContactButton text={fields.text} />
               );
             }
 

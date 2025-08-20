@@ -6,7 +6,7 @@ import { scrollTo } from "../utils/utils";
 export default function ContactButton({ text }: { text?: string }) {
   return (
     <Button
-      onClick={() => scrollTo("contact")}
+      onClick={() => scrollTo("contact", -75)}
       leftSection={<IconChevronDown size={16} />}
     >
       {text ? text : "Jetzt anfragen"}
