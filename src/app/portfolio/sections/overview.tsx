@@ -25,7 +25,7 @@ export default async function Overview({
       <h4 className="text-center">
         {title ? title : "An welcher Leistung sind Sie interessiert?"}
       </h4>
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div className="flex justify-center flex-wrap">
         {filteredEntries.map((entry, index) => {
           return (
             <CardActionButton
