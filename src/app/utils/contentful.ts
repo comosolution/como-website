@@ -107,7 +107,7 @@ export async function getNoteBySlug(slug: string): Promise<any> {
 export async function getAllEntries(type: string): Promise<any[]> {
   const entries = await client.getEntries({
     content_type: type,
-    order: ["-fields.name"],
+    order: ["fields.name"],
   });
   return entries.items;
 }
