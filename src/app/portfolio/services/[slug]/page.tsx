@@ -1,6 +1,10 @@
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import Hero from "@/app/components/hero";
-import { getAllEntries, getEntryBySlug, Service } from "@/app/utils/contentful";
+import {
+  getAllEntries,
+  getEntryBySlug,
+  Portfolio,
+} from "@/app/utils/contentful";
 import { icons } from "@/app/utils/icons";
 import { Metadata } from "next";
 import Overview from "../../sections/overview";
@@ -11,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service: Service = await getEntryBySlug("services", slug);
+  const service: Portfolio = await getEntryBySlug("services", slug);
 
   return {
     title: `${service.fields.name} | CoMo Solution GmbH`,
@@ -44,7 +48,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service: Service = await getEntryBySlug("services", slug);
+  const service: Portfolio = await getEntryBySlug("services", slug);
 
   const coverImage = service.fields.cover?.fields?.file?.url
     ? `https:${service.fields.cover.fields.file.url}`

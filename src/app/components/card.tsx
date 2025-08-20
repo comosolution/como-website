@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { card } from "../style/style";
 import { icons } from "../utils/icons";
 
 export default function CardActionButton({
@@ -14,10 +15,7 @@ export default function CardActionButton({
   const Icon = icons[id];
 
   return (
-    <Link
-      href={href}
-      className={`tile flex flex-col items-center gap-0.5 p-4 rounded-xl hover:bg-[rgba(var(--highlight-rgb),0.4)] hover:text-orange-600 transition-all cursor-pointer`}
-    >
+    <Link href={href} className={card}>
       <Icon size={48} stroke={2} />
       <h5 className="text-center">{name}</h5>
     </Link>

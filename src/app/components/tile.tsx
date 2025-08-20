@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import { card } from "../style/style";
+import { tile } from "../style/style";
 
 export default function Tile({
   children,
@@ -11,9 +11,9 @@ export default function Tile({
   className?: string;
   href?: string;
 }) {
-  const style = `flex flex-col justify-between gap-4 p-8 ${card} h-full transition-all`;
+  const style = `flex flex-col justify-between gap-4 p-8 ${tile} h-full transition-all`;
 
-  const tile = <div className={`flex flex-col ${className}`}>{children}</div>;
+  const card = <div className={`flex flex-col ${className}`}>{children}</div>;
 
   if (href) {
     return (
@@ -21,10 +21,10 @@ export default function Tile({
         className={`tile ${style} hover:bg-[rgba(var(--highlight-rgb),0.4)] cursor-pointer`}
         href={href}
       >
-        {tile}
+        {card}
       </Link>
     );
   } else {
-    return <div className={style}>{tile}</div>;
+    return <div className={style}>{card}</div>;
   }
 }

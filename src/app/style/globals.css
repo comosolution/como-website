@@ -15,7 +15,6 @@
   --yellow-rgb: 255, 149, 0;
   --gray-rgb: 98, 96, 95;
   --white-rgb: 255, 255, 255;
-  --default-border-radius: 16px;
   --default-padding: 32px;
   --default-gap: 16px;
   --default-transition: 300ms all ease-in-out;
@@ -159,7 +158,6 @@ article li::marker {
 }
 
 article img:not(.icon) {
-  border-radius: var(--default-border-radius);
   margin-bottom: 2rem;
   width: auto;
   max-width: 840px;

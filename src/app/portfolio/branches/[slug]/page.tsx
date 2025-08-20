@@ -1,7 +1,11 @@
 import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
 import ContactButton from "@/app/components/contactButton";
 import Hero from "@/app/components/hero";
-import { Branche, getAllEntries, getEntryBySlug } from "@/app/utils/contentful";
+import {
+  getAllEntries,
+  getEntryBySlug,
+  Portfolio,
+} from "@/app/utils/contentful";
 import { icons } from "@/app/utils/icons";
 import { Metadata } from "next";
 import Overview from "../../sections/overview";
@@ -12,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const branch: Branche = await getEntryBySlug("branchen", slug);
+  const branch: Portfolio = await getEntryBySlug("branchen", slug);
 
   return {
     title: `${branch.fields.name} | CoMo Solution GmbH`,
@@ -45,7 +49,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const branch: Branche = await getEntryBySlug("branchen", slug);
+  const branch: Portfolio = await getEntryBySlug("branchen", slug);
 
   const coverImage = branch.fields.cover?.fields?.file?.url
     ? `https:${branch.fields.cover.fields.file.url}`

@@ -24,15 +24,13 @@ export default function ProductContent({ product }: { product: Product }) {
         {product.sub && <h2 className="text-center py-4">{product.sub}</h2>}
         {product.image ? (
           <div className={`${twoCols}`}>
-            <div className="relative w-full aspect-square overflow-hidden rounded-lg ring-1 ring-white/10 shadow-2xl">
+            <div className="relative w-full aspect-square overflow-hidden ring-1 ring-white/10 shadow-2xl">
               <Image
                 src={`/images/${product.image}`}
-                alt="Branch Image"
+                alt="Product Image"
                 fill
                 style={{
                   objectFit: "cover",
-                  borderRadius: 8,
-                  filter: "brightness(0.7)",
                 }}
               />
             </div>
@@ -76,7 +74,6 @@ export default function ProductContent({ product }: { product: Product }) {
             <img
               src={`/solutions/${product.img}`}
               alt={product.name}
-              className="rounded-xl"
               width={880}
               style={{
                 maxHeight: "400px",

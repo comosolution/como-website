@@ -1,57 +1,49 @@
-"use client";
 import { card, defaultPadding } from "@/app/style/style";
+import { getAllEntries, Portfolio } from "@/app/utils/contentful";
 import { Button } from "@mantine/core";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import products from "../../data/portfolio/products.json";
 
-export default function Page() {
+export default async function Page() {
+  const products: Portfolio[] = await getAllEntries("produkte");
+
   return (
     <main className={`flex flex-col items-center gap-8 ${defaultPadding}`}>
-      <h2 className="text-center">
+      <h4 className="text-center">
         Diese Produkte haben wir für Sie im Angebot
-      </h2>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
+      </h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => {
           return (
             <Link
               key={index}
-              href={`/portfolio/products/${product.id}`}
-              className="tile"
+              href={`/portfolio/products/${product.fields.slug}`}
+              className={card}
             >
-              <div
-                className={`productTile lg:min-h-[360px] flex flex-col justify-between items-center gap-2 pt-4 ${card} cursor-pointer`}
-              >
+              <div className="relative overflow-hidden w-[120px] h-[32px]">
                 <Image
-                  src={`/logos/${product.logo}`}
+                  src={`/logos/${product.fields.brand}.svg`}
                   alt="Logo"
-                  width={100}
-                  height={40}
+                  fill
                   className="inverted"
-                />
-                <h4 className="text-center">{product.name}</h4>
-                <Image
-                  src={`/products/${product.img}`}
-                  alt="Product Thumbnail"
-                  width={664}
-                  height={424}
-                  className="productImg rounded-b-2xl"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
+              <h4 className="text-center">{product.fields.name}</h4>
             </Link>
           );
         })}
-        <div className="flex items-center justify-center">
-          <Button
-            variant="transparent"
-            component={Link}
-            href="/portfolio"
-            leftSection={<IconChevronLeft size={16} />}
-          >
-            Zurück zum Portfolio
-          </Button>
-        </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <Button
+          variant="transparent"
+          component={Link}
+          href="/portfolio"
+          leftSection={<IconChevronLeft size={16} />}
+        >
+          Zurück zum Portfolio
+        </Button>
       </div>
     </main>
   );

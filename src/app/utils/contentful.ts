@@ -41,6 +41,7 @@ export interface Portfolio {
   };
   fields: {
     name: string;
+    brand: string;
     title: string;
     slug: string;
     content: Document;
@@ -48,9 +49,6 @@ export interface Portfolio {
     cover?: Cover;
   };
 }
-
-export interface Service extends Portfolio {}
-export interface Branche extends Portfolio {}
 
 export interface Job {
   sys: {
@@ -109,6 +107,7 @@ export async function getNoteBySlug(slug: string): Promise<any> {
 export async function getAllEntries(type: string): Promise<any[]> {
   const entries = await client.getEntries({
     content_type: type,
+    order: ["-fields.name"],
   });
   return entries.items;
 }
