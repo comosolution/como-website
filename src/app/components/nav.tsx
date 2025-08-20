@@ -123,6 +123,7 @@ export default function Nav() {
         title="CoMo Solution GmbH"
         position={isMobile ? "right" : "left"}
         size="xs"
+        overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
       >
         <nav className="flex flex-col">
           {mainNav.map((entry) => {
