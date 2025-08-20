@@ -231,8 +231,9 @@ img.inverted {
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-.muted {
-  color: rgba(var(--foreground-rgb), 0.7);
+.muted,
+.dimmed {
+  color: var(--mantine-color-dimmed);
 }
 
 .small {
