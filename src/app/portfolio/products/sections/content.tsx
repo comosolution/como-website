@@ -76,7 +76,7 @@ export default function ProductContent({ product }: { product: Product }) {
             <img
               src={`/solutions/${product.img}`}
               alt={product.name}
-              className="rounded-2xl"
+              className="rounded-xl"
               width={880}
               style={{
                 maxHeight: "400px",

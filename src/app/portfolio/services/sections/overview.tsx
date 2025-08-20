@@ -1,34 +1,37 @@
 import CardActionButton from "@/app/components/card";
+import { getAllEntries, Service } from "@/app/utils/contentful";
 import { Button } from "@mantine/core";
 import { IconChevronLeft } from "@tabler/icons-react";
 import Link from "next/link";
-import services from "../../../data/portfolio/services.json";
 
-export default function ServiceOverview({
+export default async function ServiceOverview({
   filter,
   title,
 }: {
   filter?: string;
   title?: string;
 }) {
+  const services: Service[] = await getAllEntries("services");
+  const filteredServices = services.filter(
+    (service) => service.fields.slug !== filter
+  );
+
   return (
     <div className="flex flex-col items-center gap-8">
-      <h2 className="text-center">
+      <h4 className="text-center">
         {title ? title : "An welcher Leistung sind Sie interessiert?"}
-      </h2>
-      <div className="flex flex-col gap-4">
-        {services
-          .filter((service) => service.id !== filter)
-          .map((service, index) => {
-            return (
-              <CardActionButton
-                key={index}
-                name={service.name}
-                icon={`/services/${service.icon}.svg`}
-                href={`/portfolio/services/${service.id}`}
-              />
-            );
-          })}
+      </h4>
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {filteredServices.map((service, index) => {
+          return (
+            <CardActionButton
+              key={index}
+              name={service.fields.name}
+              id={service.fields.slug}
+              href={`/portfolio/services/${service.fields.slug}`}
+            />
+          );
+        })}
       </div>
       <Button
         variant="transparent"

@@ -11,24 +11,23 @@ export default function BranchesOverview({
   filter?: string;
   title?: string;
 }) {
+  const filteredBranches = branches.filter((branch) => branch.id !== filter);
   return (
     <div className="flex flex-col items-center gap-8">
-      <h2 className="text-center">
+      <h4 className="text-center">
         {title ? title : "An welcher Leistung sind Sie interessiert?"}
-      </h2>
-      <div className="flex flex-col gap-4">
-        {branches
-          .filter((branch) => branch.id !== filter)
-          .map((branch, index) => {
-            return (
-              <CardActionButton
-                key={index}
-                name={branch.name}
-                icon={`/portfolio/${branch.icon}.svg`}
-                href={`/portfolio/branches/${branch.id}`}
-              />
-            );
-          })}
+      </h4>
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {filteredBranches.map((branch, index) => {
+          return (
+            <CardActionButton
+              key={index}
+              name={branch.name}
+              id={branch.id}
+              href={`/portfolio/branches/${branch.id}`}
+            />
+          );
+        })}
       </div>
       <Button
         variant="transparent"

@@ -1,6 +1,24 @@
 import { Document } from "@contentful/rich-text-types";
 import { createClient } from "contentful";
 
+interface Cover {
+  fields: {
+    title: string;
+    file: {
+      url: string;
+      details?: {
+        size?: number;
+        image?: {
+          width: number;
+          height: number;
+        };
+      };
+      fileName?: string;
+      contentType?: string;
+    };
+  };
+}
+
 export interface Note {
   sys: {
     id: string;
@@ -12,23 +30,22 @@ export interface Note {
     description: string;
     content: Document;
     publishedAt: string;
-    cover?: {
-      fields: {
-        title: string;
-        file: {
-          url: string;
-          details?: {
-            size?: number;
-            image?: {
-              width: number;
-              height: number;
-            };
-          };
-          fileName?: string;
-          contentType?: string;
-        };
-      };
-    };
+    cover?: Cover;
+  };
+}
+
+export interface Service {
+  sys: {
+    id: string;
+    createdAt: string;
+  };
+  fields: {
+    name: string;
+    title: string;
+    slug: string;
+    content: Document;
+    cto?: string;
+    cover?: Cover;
   };
 }
 
@@ -43,23 +60,7 @@ export interface Job {
     location: string;
     type: string;
     content: Document;
-    cover?: {
-      fields: {
-        title: string;
-        file: {
-          url: string;
-          details?: {
-            size?: number;
-            image?: {
-              width: number;
-              height: number;
-            };
-          };
-          fileName?: string;
-          contentType?: string;
-        };
-      };
-    };
+    cover?: Cover;
   };
 }
 
@@ -102,21 +103,22 @@ export async function getNoteBySlug(slug: string): Promise<any> {
   return entries.items[0];
 }
 
-export async function getAllJobs(): Promise<any[]> {
+export async function getAllEntries(type: string): Promise<any[]> {
   const entries = await client.getEntries({
-    content_type: "jobs",
+    content_type: type,
   });
   return entries.items;
 }
 
-export async function getJobBySlug(slug: string): Promise<any> {
+export async function getEntryBySlug(type: string, slug: string): Promise<any> {
   const entries = await client.getEntries({
-    content_type: "jobs",
+    content_type: type,
     "fields.slug": slug,
     limit: 1,
   });
 
-  if (!entries.items.length) throw new Error(`Job with slug ${slug} not found`);
+  if (!entries.items.length)
+    throw new Error(`Entry with slug ${slug} not found`);
 
   return entries.items[0];
 }

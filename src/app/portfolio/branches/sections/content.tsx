@@ -1,23 +1,21 @@
 "use client";
-import { Branch } from "@/app/types";
-import Image from "next/image";
-import { twoCols } from "@/app/style/style";
-import BranchesOverview from "../sections/overview";
-import Tile from "@/app/components/tile";
 import ContactButton from "@/app/components/contactButton";
+import Tile from "@/app/components/tile";
+import { twoCols } from "@/app/style/style";
+import { Branch } from "@/app/types";
+import { icons } from "@/app/utils/icons";
+import Image from "next/image";
+import BranchesOverview from "../sections/overview";
 
 export default function BranchContent({ branch }: { branch: Branch }) {
+  const Icon = icons[branch.id];
+
   return (
     <div className="flex flex-col gap-4">
       <header className="flex flex-col items-center px-8">
-        <div className="flex justify-start items-center gap-1 pb-2">
-          <Image
-            src={`/portfolio/${branch.icon}.svg`}
-            alt="Icon"
-            width={24}
-            height={24}
-          />
-          <p className="text-orange-500">
+        <div className="flex justify-start items-center gap-1 pb-2 text-orange-500">
+          <Icon />
+          <p>
             <b>{branch.name}</b>
           </p>
         </div>
@@ -32,7 +30,7 @@ export default function BranchContent({ branch }: { branch: Branch }) {
         </div>
         <div className="relative w-full aspect-video overflow-hidden rounded-lg ring-1 ring-white/10 shadow-2xl">
           <Image
-            src={`/branches/${branch.icon}.jpg`}
+            src={`/branches/${branch.id}.jpg`}
             alt="Branch Image"
             fill
             style={{

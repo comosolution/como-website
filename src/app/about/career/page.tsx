@@ -1,6 +1,6 @@
 import Tile from "@/app/components/tile";
 import { defaultPadding, twoCols } from "@/app/style/style";
-import { getAllJobs, Job } from "@/app/utils/contentful";
+import { getAllEntries, Job } from "@/app/utils/contentful";
 import { IconClock, IconMapPin } from "@tabler/icons-react";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const jobs: Job[] = await getAllJobs();
+  const jobs: Job[] = await getAllEntries("jobs");
 
   return (
     <main className={`flex flex-col gap-4 ${defaultPadding}`}>
@@ -59,7 +59,7 @@ export default async function Page() {
                 href={`/about/career/${j.fields.slug}`}
                 className="gap-4"
               >
-                <div className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-2xl -mx-8 -mt-8 pt-[45%]">
+                <div className="relative w-[calc(100% + 4rem)] overflow-hidden rounded-t-xl -mx-8 -mt-8 pt-[45%]">
                   <Image
                     src={coverImage ? coverImage : "/fallback.svg"}
                     alt={coverAlt}
