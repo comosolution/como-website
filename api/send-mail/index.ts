@@ -35,7 +35,7 @@ const httpTrigger: AzureFunction = async function (
   }
 
   if (company) {
-    text += `\nUnternehmen: ${company}`;
+    text += `\nFirma: ${company}`;
   }
 
   text += `\n\n${message}`;

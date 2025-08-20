@@ -115,9 +115,9 @@ export default function Contact() {
               withAsterisk
             />
             <TextInput
-              name="firstName"
-              label="Vorname"
-              autoComplete="given-name"
+              name="company"
+              label="Firma"
+              autoComplete="company"
               onChange={handleChange}
             />
           </div>
