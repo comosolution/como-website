@@ -17,7 +17,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChangeEvent, useState } from "react";
-import { card, twoCols } from "../style/style";
+import { tile, twoCols } from "../style/style";
 import { validateEmail } from "../utils/utils";
 
 export default function Contact() {
@@ -103,7 +103,7 @@ export default function Contact() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className={`flex flex-col gap-4 p-8 ${card} shadow-2xl shadow-orange-500/20`}
+          className={`flex flex-col gap-4 p-8 ${tile} shadow-2xl shadow-orange-500/20`}
         >
           <h4>Ihre Kontaktanfrage</h4>
           <div className={twoCols}>
@@ -115,9 +115,9 @@ export default function Contact() {
               withAsterisk
             />
             <TextInput
-              name="firstName"
-              label="Vorname"
-              autoComplete="given-name"
+              name="company"
+              label="Firma"
+              autoComplete="company"
               onChange={handleChange}
             />
           </div>

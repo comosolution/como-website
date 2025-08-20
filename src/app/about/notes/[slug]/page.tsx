@@ -74,7 +74,7 @@ export default async function NotizDetailPage({
       </header>
       {coverImage && (
         <div className="w-full">
-          <img src={coverImage} alt={coverAlt} className="rounded-xl mx-auto" />
+          <img src={coverImage} alt={coverAlt} className="mx-auto" />
         </div>
       )}
       <article>

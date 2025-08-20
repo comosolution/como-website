@@ -84,7 +84,7 @@ export default function Nav() {
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-24"
-        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-4 backdrop-blur-md bg-[rgba(var(--background-rgb),0.1)] transition-all duration-300`}
+        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-4 backdrop-blur-xl transition-all duration-300`}
       >
         {isMobile ? (
           <>
@@ -123,6 +123,7 @@ export default function Nav() {
         title="CoMo Solution GmbH"
         position={isMobile ? "right" : "left"}
         size="xs"
+        overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
       >
         <nav className="flex flex-col">
           {mainNav.map((entry) => {

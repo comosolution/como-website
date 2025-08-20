@@ -1,32 +1,84 @@
+import { RichTextRenderer } from "@/app/about/notes/sections/richTextRenderer";
+import ContactButton from "@/app/components/contactButton";
+import Hero from "@/app/components/hero";
+import { icons } from "@/app/components/icons";
+import {
+  getAllEntries,
+  getEntryBySlug,
+  Portfolio,
+} from "@/app/utils/contentful";
 import { Metadata } from "next";
-import React from "react";
-import branches from "../../../data/portfolio/branches.json";
-import BranchContent from "../sections/content";
+import Overview from "../../sections/overview";
 
-export const metadata: Metadata = {
-  title: "Branchen | CoMo Solution GmbH",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const branch: Portfolio = await getEntryBySlug("branchen", slug);
 
-export function generateStaticParams() {
+  return {
+    title: `${branch.fields.name} | CoMo Solution GmbH`,
+    openGraph: {
+      title: branch.fields.name,
+      type: "article",
+      url: `https://como-solution.de/portfolio/branches/${branch.fields.slug}`,
+      images: branch.fields.cover?.fields?.file?.url
+        ? [
+            {
+              url: `https:${branch.fields.cover.fields.file.url}`,
+              alt: branch.fields.title,
+            },
+          ]
+        : [],
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  const branches = await getAllEntries("branchen");
   return branches.map((branch) => ({
-    slug: branch.id,
+    slug: branch.fields.slug,
   }));
 }
 
-export default function Page({
+export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = React.use(params);
+  const { slug } = await params;
+  const branch: Portfolio = await getEntryBySlug("branchen", slug);
+
+  const coverImage = branch.fields.cover?.fields?.file?.url
+    ? `https:${branch.fields.cover.fields.file.url}`
+    : null;
+  const coverAlt = branch.fields.cover?.fields?.title || branch.fields.title;
+
+  const Icon = icons[branch.fields.slug];
 
   return (
-    <main className="flex flex-col items-center gap-24">
-      {branches
-        .filter((branch) => branch.id === slug)
-        .map((branch, index) => {
-          return <BranchContent key={index} branch={branch} />;
-        })}
+    <main className="flex flex-col gap-8 items-center">
+      <Hero
+        title={branch.fields.title}
+        coverImage={coverImage}
+        coverAlt={coverAlt}
+      >
+        <div className="flex justify-start items-center gap-1 pb-2 text-[rgb(var(--red-rgb))] ">
+          <Icon />
+          <p>
+            <b>{branch.fields.name}</b>
+          </p>
+        </div>
+      </Hero>
+      <article>
+        <RichTextRenderer document={branch.fields.content} />
+        <ContactButton />
+      </article>
+      <div className="flex flex-col items-center">
+        <Overview type="branchen" filter={slug} title="Weitere Branchen" />
+      </div>
     </main>
   );
 }

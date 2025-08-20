@@ -1,5 +1,5 @@
 "use client";
-import { card, twoCols } from "@/app/style/style";
+import { tile, twoCols } from "@/app/style/style";
 import { validateEmail } from "@/app/utils/utils";
 import {
   Button,
@@ -105,7 +105,7 @@ export default function CareerForm({ subject }: { subject: string }) {
         </div>
         <form
           onSubmit={handleSubmit}
-          className={`flex flex-col gap-4 p-8 ${card} bg-[rgb(var(--background-rgb))] shadow-2xl shadow-orange-500/20`}
+          className={`flex flex-col gap-4 p-8 ${tile} bg-[rgb(var(--background-rgb))] shadow-2xl shadow-orange-500/20`}
         >
           <h4>Deine Bewerbung</h4>
           <div className={twoCols}>

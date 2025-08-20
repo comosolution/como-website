@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@mantine/core";
 import Image from "next/image";
-import Divider from "../components/divider";
+import Link from "next/link";
 import { defaultPadding, highlight, twoCols } from "../style/style";
 import benefits from "./../data/benefits.json";
 
@@ -10,20 +10,14 @@ export default function Benefits() {
     <div className="relative mt-32">
       <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
       <section className={`${twoCols} gap-y-32 items-center py-32 lg:py-0`}>
-        <div className={defaultPadding}>
+        <div className={`flex flex-col items-start gap-4 ${defaultPadding}`}>
           <h2>Über 14 Jahre Innovation und Expertise</h2>
-          <Divider />
-          <h3>
+          <h5>
             Ihr zuverlässiger Partner für{" "}
             <span className={highlight}>maßgeschneiderte IT Lösungen</span> und
             erstklassigen Support.
-          </h3>
-          <Button
-            component="a"
-            variant="light"
-            href="/about/como"
-            className="mt-8"
-          >
+          </h5>
+          <Button variant="light" component={Link} href="/about/como">
             Mehr erfahren
           </Button>
         </div>
