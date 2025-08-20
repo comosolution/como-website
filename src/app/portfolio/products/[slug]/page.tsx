@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import products from "../../../data/portfolio/products.json";
-import ProductContent from "../sections/content";
+import ProductContent from "../../sections/content";
 
 export const metadata: Metadata = {
   title: "Produkte | CoMo Solution GmbH",

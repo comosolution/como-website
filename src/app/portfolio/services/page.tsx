@@ -1,5 +1,5 @@
-import ServiceOverview from "./sections/overview";
 import { Metadata } from "next";
+import Overview from "../sections/overview";
 
 export const metadata: Metadata = {
   title: "Leistungen | CoMo Solution GmbH",
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="flex flex-col items-center gap-8 px-8">
-      <ServiceOverview />
+      <Overview type="services" />
     </main>
   );
 }

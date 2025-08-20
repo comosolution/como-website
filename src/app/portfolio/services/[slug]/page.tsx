@@ -3,7 +3,7 @@ import Hero from "@/app/components/hero";
 import { getAllEntries, getEntryBySlug, Service } from "@/app/utils/contentful";
 import { icons } from "@/app/utils/icons";
 import { Metadata } from "next";
-import ServiceOverview from "../sections/overview";
+import Overview from "../../sections/overview";
 
 export async function generateMetadata({
   params,
@@ -71,7 +71,11 @@ export default async function Page({
         <RichTextRenderer document={service.fields.content} />
       </article>
       <div className="flex flex-col items-center">
-        <ServiceOverview filter={slug} title="Weitere Leistungen für Sie" />
+        <Overview
+          type="services"
+          filter={slug}
+          title="Weitere Leistungen für Sie"
+        />
       </div>
     </main>
   );
