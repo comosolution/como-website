@@ -30,7 +30,7 @@ export default async function Page() {
                   style={{ objectFit: "contain" }}
                 />
               </div>
-              <h4 className="text-center">{product.fields.name}</h4>
+              <h5 className="text-center">{product.fields.name}</h5>
             </Link>
           );
         })}
