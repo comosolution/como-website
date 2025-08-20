@@ -5,7 +5,6 @@ import { useMediaQuery } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import Circles from "../components/circles";
 import { scrollTo } from "../utils/utils";
 import clients from "./../data/clients.json";
 
@@ -16,7 +15,6 @@ export default function Hero() {
 
   return (
     <>
-      <Circles />
       <div
         id="hero"
         className="relative w-full min-h-screen overflow-hidden -mt-32"

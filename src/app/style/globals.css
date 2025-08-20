@@ -221,12 +221,6 @@ img.inverted {
   filter: var(--filter-inverted);
 }
 
-.circles {
-  max-height: 2000px;
-  position: absolute;
-  z-index: -1000;
-}
-
 .clip-angled {
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 }
@@ -303,13 +297,6 @@ img.inverted {
   .details {
     font-size: 1rem;
     line-height: 1.4rem;
-  }
-
-  .circles {
-    top: 0;
-    min-height: 2000px;
-    max-height: auto;
-    object-fit: cover;
   }
 
   .clip-angled {
