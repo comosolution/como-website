@@ -12,7 +12,7 @@ export default function Hero({
   coverAlt: string;
 }) {
   return (
-    <div id="hero" className="relative w-full min-h-[66vh] -mt-32">
+    <div id="hero" className="relative w-screen min-h-[66vh] -mt-32">
       <img
         src={coverImage || ""}
         alt={coverAlt || ""}
