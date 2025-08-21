@@ -30,7 +30,7 @@ export default function Principles() {
       <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
       <section className={`${twoCols} gap-y-32 items-center py-32 lg:py-0`}>
         <h2 className="px-8">An diesen Prinzipien lassen wir uns messen</h2>
-        <div className="flex flex-col gap-8 p-8">
+        <div className="flex flex-col gap-8">
           {principles.map((principle, index) => {
             return (
               <div
