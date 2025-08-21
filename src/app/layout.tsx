@@ -39,7 +39,7 @@ export default function RootLayout({
         ) : (
           <link rel="canonical" href="https://como-solution.de" />
         )}
-        <meta name="theme-color" content="#FF6900" />
+        <meta name="theme-color" content="#092b37" />
 
         {/* <!-- Copyright (c) 2000-2025 etracker GmbH. All rights reserved. No reproduction, publication or modification allowed without permission. --> <!-- etracker code 6.0 -->  */}
         <script

@@ -3,9 +3,27 @@ import { Button } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { defaultPadding, highlight, twoCols } from "../style/style";
-import benefits from "./../data/benefits.json";
 
 export default function Benefits() {
+  const benefits = [
+    {
+      title: "Mehr Zeit für die wichtigen Aufgaben",
+      sub: "Wir entlasten Ihre Mitarbeitenden und schaffen entscheidende Freiräume für Ihre Kernaufgaben.",
+    },
+    {
+      title: "Mehr Fachwissen & Erfahrung für Sie",
+      sub: "Unser Team aus Experten agiert auf dem höchsten Level und minimiert potenzielle Fehlerquellen.",
+    },
+    {
+      title: "Mehr finanzieller Spielraum",
+      sub: "Durch passgenaue Lösungen für Ihre spezifischen Anforderungen senken wir die Betriebskosten Ihrer IT.",
+    },
+    {
+      title: "Mehr Flexibilität & Agilität",
+      sub: "Wir helfen Ihnen schneller auf Entwicklungen und Veränderungen im Markt und in Ihrem Unternehmen zu reagieren.",
+    },
+  ];
+
   return (
     <div className="relative mt-32">
       <div className="absolute left-1/2 -translate-x-1/2 -z-10 w-screen h-full bg-[var(--light)] clip-angled" />
