@@ -112,7 +112,7 @@ export default function Nav() {
         } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 transition-all duration-300 ${
           prevPos < 1
             ? ""
-            : "backdrop-blur-xl bg-[rgba(var(--background-rgb), 0.5)]"
+            : "backdrop-blur-md bg-[rgba(var(--background-rgb),0.3)]"
         }`}
       >
         {hintVisible && (

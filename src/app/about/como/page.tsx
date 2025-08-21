@@ -17,7 +17,7 @@ export default async function Page() {
         coverImage="/lauf.jpg"
         coverAlt="Marktplatz Lauf"
       >
-        <p className="text-[rgb(var(--red-rgb))]">
+        <p className="text-orange-500">
           <b>Willkommen bei der CoMo</b>
         </p>
       </Hero>

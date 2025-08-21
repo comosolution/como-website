@@ -65,7 +65,7 @@ export default async function Page({
         coverImage={coverImage}
         coverAlt={coverAlt}
       >
-        <div className="flex justify-start items-center gap-1 pb-2 text-[rgb(var(--red-rgb))]">
+        <div className="flex justify-start items-center gap-1 pb-2 text-orange-500">
           <Icon />
           <p>
             <b>{branch.fields.name}</b>

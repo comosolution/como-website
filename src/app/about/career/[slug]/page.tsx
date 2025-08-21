@@ -59,7 +59,7 @@ export default async function NotizDetailPage({
           coverImage={coverImage}
           coverAlt={coverAlt}
         >
-          <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4 text-[rgb(var(--red-rgb))] font-bold pb-2">
+          <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4 text-orange-500 font-bold pb-2">
             <div className="flex items-center gap-1">
               <IconClock size={16} stroke={3} />
               <p>{job.fields.type}</p>
