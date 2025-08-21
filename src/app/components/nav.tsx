@@ -112,9 +112,9 @@ export default function Nav() {
           headerVisible ? "top-0" : "-top-28"
         } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 transition-all duration-300 ${
           prevPos < 1
-            ? "bg-[rgba(var(--background-rgb),1)]"
-            : "backdrop-blur-md bg-[rgba(var(--background-rgb),0.5)]"
-        } shadow-2xl`}
+            ? "bg-[rgba(var(--background-rgb),0.8)]"
+            : "bg-[rgba(var(--background-rgb),0.5)]"
+        } backdrop-blur-md  shadow-2xl`}
       >
         {hintVisible && (
           <div className="relative col-span-2 sm:col-span-3 px-8 py-1 -mx-8 mb-2 -mt-2 bg-[var(--foreground)] flex items-center sm:justify-center">
