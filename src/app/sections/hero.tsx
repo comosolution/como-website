@@ -6,12 +6,30 @@ import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { scrollTo } from "../utils/utils";
-import clients from "./../data/clients.json";
 
 export default function Hero() {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const isTablet = useMediaQuery("(max-width: 1440px)");
   const size = isMobile ? 32 : 48;
+
+  const clients = [
+    {
+      name: "1. FC Nürnberg",
+      img: "fcn.svg",
+    },
+    {
+      name: "Deltec",
+      img: "deltec.svg",
+    },
+    {
+      name: "Demir",
+      img: "demir.svg",
+    },
+    {
+      name: "Meinl",
+      img: "meinl.svg",
+    },
+  ];
 
   return (
     <div

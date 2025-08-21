@@ -41,10 +41,11 @@ footer {
   margin: auto;
 }
 
-a:not(.tile):not(.mantine-Button-root),
+a:not(.tile):not(.mantine-Button-root):not(.unstyled),
 .link {
   color: rgba(var(--foreground-rgb), 0.7);
   transition: 300ms color ease-in-out;
+  outline: none;
 }
 
 a:not(.tile):not(.mantine-Button-root):hover,

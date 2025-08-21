@@ -7,7 +7,7 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { IconMenuDeep, IconMoon, IconSun } from "@tabler/icons-react";
+import { IconMenuDeep, IconMoon, IconSun, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -16,12 +16,20 @@ import Logo from "./logo";
 import Menu from "./menu";
 import NavItem from "./navItem";
 
+const LOCAL_STORAGE_KEY = "como.website.hint";
+const hint = {
+  label: "Jetzt KI-Beratung anfragen",
+  key: "ki-beratung",
+};
+
 export default function Nav() {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const pathname = usePathname();
+
   const [mounted, setMounted] = useState(false);
   const [prevPos, setPrevPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [hintVisible, setHintVisible] = useState(true);
   const [opened, { open, close }] = useDisclosure(false);
 
   const { setColorScheme, colorScheme } = useMantineColorScheme();
@@ -30,6 +38,10 @@ export default function Nav() {
   });
 
   useEffect(() => {
+    const storedHint = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (storedHint && storedHint === hint.key) {
+      setHintVisible(false);
+    }
     setMounted(true);
   }, []);
 
@@ -83,9 +95,31 @@ export default function Nav() {
     <>
       <header
         className={`fixed ${
-          headerVisible ? "top-0" : "-top-24"
-        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-4 backdrop-blur-xl transition-all duration-300`}
+          headerVisible ? "top-0" : "-top-28"
+        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 backdrop-blur-xl transition-all duration-300`}
       >
+        {hintVisible && (
+          <div className="relative col-span-2 sm:col-span-3 px-8 py-1 -mx-8 mb-2 -mt-2 bg-[var(--foreground)] flex items-center sm:justify-center">
+            <Link
+              href="/portfolio/services/ki-beratung"
+              className="unstyled text-white"
+            >
+              Jetzt KI-Beratung anfragen
+            </Link>
+            <ActionIcon
+              size="xs"
+              color="white"
+              variant="transparent"
+              className="absolute right-8 opacity-50"
+              onClick={() => {
+                setHintVisible(false);
+                localStorage.setItem(LOCAL_STORAGE_KEY, hint.key);
+              }}
+            >
+              <IconX />
+            </ActionIcon>
+          </div>
+        )}
         {isMobile ? (
           <>
             <Logo />
@@ -120,7 +154,7 @@ export default function Nav() {
       <Drawer
         opened={opened}
         onClose={close}
-        title="CoMo Solution GmbH"
+        withCloseButton={false}
         position={isMobile ? "right" : "left"}
         size="xs"
         overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
