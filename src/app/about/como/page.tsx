@@ -13,12 +13,11 @@ export default async function Page() {
   return (
     <>
       <Hero
-        title="Mit innovativen Lösungen machen wir Ihre Arbeit effizienter und
-          sicherer!"
+        title="Wir machen Ihre Arbeit effizienter & sicherer!"
         coverImage="/lauf.jpg"
         coverAlt="Marktplatz Lauf"
       >
-        <p className="text-orange-500">
+        <p className="text-[rgb(var(--red-rgb))]">
           <b>Willkommen bei der CoMo</b>
         </p>
       </Hero>
