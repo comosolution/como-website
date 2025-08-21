@@ -91,12 +91,29 @@ export default function Nav() {
     ) : null;
   };
 
+  const MenuButton = () => {
+    return (
+      <Button
+        variant="light"
+        color="red"
+        onClick={open}
+        leftSection={<IconMenuDeep size={20} />}
+      >
+        Menü
+      </Button>
+    );
+  };
+
   return (
     <>
       <header
         className={`fixed ${
           headerVisible ? "top-0" : "-top-28"
-        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 backdrop-blur-xl transition-all duration-300`}
+        } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 transition-all duration-300 ${
+          prevPos < 1
+            ? ""
+            : "backdrop-blur-xl bg-[rgba(var(--background-rgb), 0.5)]"
+        }`}
       >
         {hintVisible && (
           <div className="relative col-span-2 sm:col-span-3 px-8 py-1 -mx-8 mb-2 -mt-2 bg-[var(--foreground)] flex items-center sm:justify-center">
@@ -125,22 +142,14 @@ export default function Nav() {
             <Logo />
             <div className="flex justify-end items-center gap-2">
               <ThemeSwitch />
-              <Button onClick={open} leftSection={<IconMenuDeep size={20} />}>
-                Menü
-              </Button>
+              <MenuButton />
             </div>
           </>
         ) : (
           <>
-            <Button
-              w={128}
-              variant="transparent"
-              color="default"
-              onClick={open}
-              leftSection={<IconMenuDeep size={20} />}
-            >
-              Menü
-            </Button>
+            <div>
+              <MenuButton />
+            </div>
             <Logo />
             <div className="flex justify-end items-center gap-2">
               <ThemeSwitch />
