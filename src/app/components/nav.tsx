@@ -94,7 +94,8 @@ export default function Nav() {
   const MenuButton = () => {
     return (
       <Button
-        variant="light"
+        size={isMobile ? "sm" : "md"}
+        variant={isMobile ? "light" : "transparent"}
         color="red"
         onClick={open}
         leftSection={<IconMenuDeep size={20} />}
@@ -112,8 +113,8 @@ export default function Nav() {
         } z-50 w-screen grid grid-cols-2 sm:grid-cols-3 items-center px-8 py-2 transition-all duration-300 ${
           prevPos < 1
             ? "bg-[rgba(var(--background-rgb),1)]"
-            : "backdrop-blur-md bg-[rgba(var(--background-rgb),0.3)]"
-        }`}
+            : "backdrop-blur-md bg-[rgba(var(--background-rgb),0.5)]"
+        } shadow-2xl`}
       >
         {hintVisible && (
           <div className="relative col-span-2 sm:col-span-3 px-8 py-1 -mx-8 mb-2 -mt-2 bg-[var(--foreground)] flex items-center sm:justify-center">
@@ -153,7 +154,7 @@ export default function Nav() {
             <Logo />
             <div className="flex justify-end items-center gap-2">
               <ThemeSwitch />
-              <Button component={Link} href="/contact">
+              <Button size="md" component={Link} href="/contact">
                 Kontakt
               </Button>
             </div>

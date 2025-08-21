@@ -7,6 +7,6 @@ export const link = "muted cursor-pointer hover:text-orange-600 transition-all";
 export const tile =
   "rounded-xl backdrop-blur-md bg-[rgba(var(--background-rgb),1)] ring-1 ring-[rgba(var(--foreground-rgb),0.2)] shadow-2xl shadow-black/20";
 export const card =
-  "tile flex flex-col items-center gap-0.5 p-4 rounded-xl hover:bg-[rgba(var(--highlight-rgb),0.4)] hover:text-orange-600 transition-all cursor-pointer";
+  "tile flex flex-col items-center gap-0.5 p-4 rounded-xl ring-1 ring-[rgba(var(--foreground-rgb),0.2)] hover:bg-[rgba(var(--highlight-rgb),0.4)] hover:text-orange-600 transition-all cursor-pointer";
 export const highlight =
   "px-1 backdrop-blur-md bg-[rgba(var(--highlight-rgb),0.5)] rounded-md shadow-md shadow-black/10";

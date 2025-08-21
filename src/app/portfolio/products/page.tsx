@@ -13,7 +13,7 @@ export default async function Page() {
       <h4 className="text-center">
         Diese Produkte haben wir für Sie im Angebot
       </h4>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product, index) => {
           return (
             <Link

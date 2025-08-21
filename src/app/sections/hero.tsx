@@ -43,7 +43,7 @@ export default function Hero() {
         }
         className="absolute inset-0 w-full min-h-screen object-cover object-right"
       />
-      <div className="absolute inset-0 w-full min-h-screen bg-gradient-to-tr from-[rgba(var(--background-rgb),1)] via-[rgba(var(--background-rgb),0.1)] to-transparent" />
+      <div className="absolute inset-0 w-full min-h-screen bg-gradient-to-tr from-[rgba(var(--background-rgb),1)] from-10% via-[rgba(var(--background-rgb),0.1)] to-transparent" />
       <section
         id="hero"
         className="relative z-5 flex flex-col gap-8 items-start justify-end min-h-screen md:max-w-[800px] px-8 md:px-16 pb-16"
