@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const resend_1 = require("resend");
 const resend = new resend_1.Resend(process.env.RESEND_API_KEY);
 const httpTrigger = async function (context, req) {
-    const { name, email, phone, subject, company, message, filename, content, page, } = req.body || {};
+    const { type, name, email, phone, subject, company, message, filename, content, page, } = req.body || {};
     if (!name || !email || !message) {
         context.res = {
             status: 400,
@@ -16,7 +16,7 @@ const httpTrigger = async function (context, req) {
         text += `\nTelefon: ${phone}`;
     }
     if (company) {
-        text += `\nUnternehmen: ${company}`;
+        text += `\nFirma: ${company}`;
     }
     text += `\n\n${message}`;
     if (page) {
@@ -25,7 +25,18 @@ const httpTrigger = async function (context, req) {
     try {
         const emailOptions = {
             from: '"CoMo Service" <no-reply@service.como-solution.de>',
-            to: ["eric.schmidt@como-solution.de", "info@como-solution.de"],
+            to: type === "bewerbung"
+                ? [
+                    "marcus.prell@como-solution.de",
+                    "eric.schmidt@como-solution.de",
+                    "bewerbung@como-solution.de",
+                ]
+                : [
+                    "marcus.prell@como-solution.de",
+                    "eric.schmidt@como-solution.de",
+                    "volkmar.fritz@como-solution.de",
+                    "info@como-solution.de",
+                ],
             subject: subject ? subject : "Neue Kontaktanfrage",
             text: text,
         };
