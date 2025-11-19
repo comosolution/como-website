@@ -49,8 +49,17 @@ const httpTrigger: AzureFunction = async function (
       from: '"CoMo Service" <no-reply@service.como-solution.de>',
       to:
         type === "bewerbung"
-          ? ["eric.schmidt@como-solution.de", "bewerbung@como-solution.de"]
-          : ["eric.schmidt@como-solution.de", "info@como-solution.de"],
+          ? [
+              "marcus.prell@como-solution.de",
+              "eric.schmidt@como-solution.de",
+              "bewerbung@como-solution.de",
+            ]
+          : [
+              "marcus.prell@como-solution.de",
+              "eric.schmidt@como-solution.de",
+              "volkmar.fritz@como-solution.de",
+              "info@como-solution.de",
+            ],
       subject: subject ? subject : "Neue Kontaktanfrage",
       text: text,
     };
