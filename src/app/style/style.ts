@@ -9,4 +9,4 @@ export const tile =
 export const card =
   "tile flex flex-col items-center gap-0.5 p-4 rounded-xl ring-1 ring-[rgba(var(--foreground-rgb),0.2)] hover:bg-[rgba(var(--highlight-rgb),0.4)] hover:text-orange-600 transition-all cursor-pointer";
 export const highlight =
-  "px-1 backdrop-blur-md bg-[rgba(var(--highlight-rgb),0.5)] rounded-md shadow-md shadow-black/10";
+  "px-1 bg-[rgba(var(--highlight-rgb),0.5)] rounded-md shadow-md shadow-black/10";
